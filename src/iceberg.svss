@@ -1,0 +1,342 @@
+@template 'template.vim';
+@name 'iceberg';
+@maintainer 'cocopon <cocopon@me.com>';
+@license 'MIT';
+@background dark;
+
+
+// Definitions {{{
+// gui
+$hue-base: 230;
+
+$hue-red: 0;
+$hue-orange: 25;
+$hue-green: 72;
+$hue-lblue: 190;
+$hue-blue: 215;
+$hue-purple: 265;
+
+$g-blue:   hsl($hue-blue,   37%, 65%);
+$g-green:  hsl($hue-green,  35%, 63%);
+$g-lblue:  hsl($hue-lblue,  35%, 68%);
+$g-orange: hsl($hue-orange, 65%, 68%);
+$g-purple: hsl($hue-purple, 32%, 67%);
+$g-red:    hsl($hue-red,    49%, 62%);
+
+$normal-bg: hsl($hue-base, 20%, 11%);
+$normal-fg: hsl($hue-base, 10%, 80%);
+$folded-bg: lighten($normal-bg, 5%);
+$linenr-bg: lighten($normal-bg, 5%);
+$linenr-fg: lighten($linenr-bg, 20%);
+$pmenu-bg: hsl($hue-base, 20%, 30%);
+$pmenu-fg: $normal-fg;
+$statusline-bg: hsl($hue-base, 9%, 50%);
+$statusline-fg: hsl($hue-base, 9%, 10%);
+$statuslinenc-bg: darken($normal-bg, 3%);
+$statuslinenc-fg: lighten($normal-bg, 20%);
+
+// cterm
+$c-blue: 110;
+$c-green: 150;
+$c-lblue: 109;
+$c-orange: 216;
+$c-purple: 140;
+$c-red: 203;
+
+$c-normal-bg: 234;
+$c-normal-fg: 252;
+$c-linenr-bg: 235;
+$c-linenr-fg: 239;
+$c-pmenu-bg: 236;
+$c-pmenu-fg: 251;
+$c-statusline-bg: 245;
+$c-statusline-fg: 234;
+$c-statuslinenc-bg: 233;
+$c-statuslinenc-fg: 238;
+$c-folded-bg: $c-linenr-bg;
+// }}}
+
+
+// Rules {{{
+ColorColumn, CursorColumn, CursorLine {
+	cterm: NONE;
+	ctermbg: 235;
+	guibg: adjust-color($normal-bg,
+		$saturation: +7%,
+		$lightness: +3%);
+}
+Comment {
+	ctermfg: 242;
+	guifg: hsl($hue-base, 12%, 47%);
+}
+Constant {
+	ctermfg: $c-purple;
+	guifg: $g-purple;
+}
+Cursor {
+	ctermbg: $c-normal-fg;
+	ctermfg: $c-normal-bg;
+	guibg: $normal-fg;
+	guifg: $normal-bg;
+}
+CursorLineNr {
+	ctermbg: 237;
+	ctermfg: 253;
+	guibg: adjust-color($linenr-bg,
+		$saturation: +10%,
+		$lightness: +10%);
+	guifg: adjust-color($linenr-fg,
+		$saturation: +10%, 
+		$lightness: +50%);
+}
+Delimiter {
+	ctermfg: $c-normal-fg;
+	guifg: $normal-fg;
+}
+DiffAdd {
+	ctermbg: 108;
+	ctermfg: $c-normal-bg;
+	guibg: mix($g-green, $normal-bg, 40%);
+	guifg: mix($g-green, $normal-fg, 40%);
+}
+DiffChange {
+	ctermbg: 66;
+	ctermfg: $c-normal-bg;
+	guibg: mix($g-lblue, $normal-bg, 40%);
+	guifg: mix($g-lblue, $normal-fg, 40%);
+}
+DiffDelete {
+	ctermbg: 95;
+	ctermfg: $c-normal-bg;
+	guibg: mix($g-red, $normal-bg, 40%);
+	guifg: mix($g-red, $normal-fg, 40%);
+}
+DiffText {
+	cterm: NONE;
+	ctermbg: 116;
+	ctermfg: $c-normal-bg;
+	gui: NONE;
+	guibg: $g-lblue;
+	guifg: $normal-bg;
+}
+Directory {
+	ctermfg: $c-lblue;
+	guifg: $g-lblue;
+}
+Error, ErrorMsg, WarningMsg {
+	ctermbg: $c-normal-bg;
+	ctermfg: $c-red;
+	guibg: $normal-bg;
+	guifg: $g-red;
+}
+Folded {
+	ctermbg: $c-folded-bg;
+	ctermfg: 245;
+	guibg: $folded-bg;
+	guifg: lighten($folded-bg, 35%);
+}
+FoldColumn {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-linenr-fg;
+	guibg: $linenr-bg;
+	guifg: $linenr-fg;
+}
+Function {
+	ctermfg: $c-orange;
+	guifg: $g-orange;
+}
+Identifier {
+	cterm: NONE;
+	ctermfg: $c-lblue;
+	guifg: $g-lblue;
+}
+LineNr {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-linenr-fg;
+	guibg: $linenr-bg;
+	guifg: $linenr-fg;
+}
+MatchParen {
+	ctermbg: 237;
+	ctermfg: 255;
+	guibg: lighten($normal-bg, 20%);
+	guifg: lighten($normal-fg, 50%);
+}
+MoreMsg {
+	ctermfg: $c-green;
+	guifg: $g-green;
+}
+NonText, SpecialKey {
+	ctermbg: $c-normal-bg;
+	ctermfg: 236;
+	guibg: $normal-bg;
+	guifg: adjust-color($normal-bg,
+		$saturation: +8%,
+		$lightness: +9%);
+}
+Normal {
+	ctermbg: $c-normal-bg;
+	ctermfg: $c-normal-fg;
+	guibg: $normal-bg;
+	guifg: $normal-fg;
+}
+Operator {
+	ctermfg: $c-blue;
+	guifg: $g-blue;
+}
+Pmenu {
+	ctermbg: $c-pmenu-bg;
+	ctermfg: $c-pmenu-fg;
+	guibg: $pmenu-bg;
+	guifg: $pmenu-fg;
+}
+PmenuSbar {
+	ctermbg: $c-pmenu-bg;
+	guibg: $pmenu-bg;
+}
+PmenuSel {
+	ctermbg: 240;
+	ctermfg: 255;
+	guibg: hsl($hue-base, 20%, 45%);
+	guifg: hsl($hue-base, 20%, 95%);
+}
+PmenuThumb {
+	ctermbg: $c-pmenu-fg;
+	guibg: $pmenu-fg;
+}
+PreProc {
+	ctermfg: $c-green;
+	guifg: $g-green;
+}
+Question {
+	ctermfg: $c-green;
+	guifg: $g-green;
+}
+Search {
+	ctermbg: $c-orange;
+	ctermfg: $c-normal-bg;
+	guibg: hsl($hue-orange, 65%, 70%);
+	guifg: hsl($hue-orange, 50%, 15%);
+}
+Special {
+	ctermfg: $c-green;
+	guifg: $g-green;
+}
+Statement {
+	ctermfg: $c-blue;
+	gui: NONE;
+	guifg: $g-blue;
+}
+StatusLine {
+	cterm: reverse;
+	ctermbg: $c-statusline-fg;
+	ctermfg: $c-statusline-bg;
+	gui: reverse;
+	guibg: $statusline-fg;
+	guifg: $statusline-bg;
+	term: reverse;
+}
+StatusLineNC {
+	cterm: reverse;
+	ctermbg: $c-statuslinenc-fg;
+	ctermfg: $c-statuslinenc-bg;
+	gui: reverse;
+	guibg: $statuslinenc-fg;
+	guifg: $statuslinenc-bg;
+}
+String {
+	ctermfg: $c-lblue;
+	guifg: hsl($hue-lblue, 30%, 65%);
+}
+Structure {
+	ctermfg: $c-lblue;
+	guifg: $g-lblue;
+}
+TabLine {
+	cterm: NONE;
+	ctermbg: $c-statusline-bg;
+	ctermfg: $c-statusline-fg;
+	gui: NONE;
+	guibg: $statusline-bg;
+	guifg: $statusline-fg;
+}
+TabLineFill {
+	cterm: reverse;
+	ctermbg: $c-statusline-fg;
+	ctermfg: $c-statusline-bg;
+	gui: reverse;
+	guibg: $statusline-fg;
+	guifg: $statusline-bg;
+}
+TabLineSel {
+	cterm: NONE;
+	ctermbg: $c-normal-bg;
+	ctermfg: $c-normal-fg;
+	gui: NONE;
+	guibg: $normal-bg;
+	guifg: mix($normal-fg, $normal-bg, 75%);
+}
+Title {
+	ctermfg: $c-orange;
+	gui: NONE;
+	guifg: $g-orange;
+}
+Todo {
+	ctermbg: $c-normal-bg;
+	ctermfg: $c-green;
+	guibg: $normal-bg;
+	guifg: hsl($hue-green, 60%, 75%);
+}
+Type {
+	ctermfg: $c-lblue;
+	gui: NONE;
+	guifg: $g-lblue;
+}
+Underlined {
+	cterm: underline;
+	ctermfg: $c-blue;
+	gui: underline;
+	guifg: $g-blue;
+	term: underline;
+}
+VertSplit {
+	ctermbg: $c-statuslinenc-bg;
+	ctermfg: $c-statuslinenc-bg;
+	guibg: $statuslinenc-bg;
+	guifg: $statuslinenc-bg;
+}
+Visual {
+	ctermbg: 236;
+	guibg: adjust-color($normal-bg,
+		$saturation: +5%,
+		$lightness: +10%);
+}
+WildMenu {
+	ctermbg: 255;
+	ctermfg: $c-statusline-fg;
+	guibg: lighten($statusline-bg, +20%);
+	guifg: $statusline-fg;
+}
+// }}}
+
+
+// Filetype-specific rules {{{
+// html
+@link htmlTag to Identifier;
+// markdown
+@link markdownCode to String;
+@link markdownCodeDelimiter to String;
+@link markdownHeadingDelimiter to Comment;
+@link markdownRule to Comment;
+// php
+@link phpVarSelector to Identifier;
+// ruby
+@link rubyDefine to Statement;
+@link rubyInclude to Statement;
+@link rubyInterpolationDelimiter to String;
+@link rubySharpBang to Comment;
+@link rubyStringDelimiter to String;
+// vim
+@link vimContinue to Comment;
+@link vimIsCommand to Statement;
+// }}}
