@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-06 10:55+0900
+" Modified:   2014-01-06 11:42+0900
 " License:    MIT
 
 
@@ -64,6 +64,7 @@ hi! Special ctermfg=150 guifg=#b4c17f
 hi! Statement ctermfg=110 gui=NONE guifg=#84a0c6
 hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#74778a term=reverse
 hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
+hi! StorageClass ctermfg=110 guifg=#84a0c6
 hi! String ctermfg=109 guifg=#8ab7c0
 hi! Structure ctermfg=109 guifg=#90c0c9
 hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#74778a guifg=#17171b
@@ -79,7 +80,6 @@ hi! WildMenu ctermbg=255 ctermfg=234 guibg=#c7c8cf guifg=#17171b
 
 hi! link htmlTag Identifier
 hi! link jsFunction Function
-hi! link jsStorageClass Statement
 hi! link markdownCode String
 hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment

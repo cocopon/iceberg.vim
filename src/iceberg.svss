@@ -244,6 +244,10 @@ StatusLineNC {
 	guibg: $statuslinenc-fg;
 	guifg: $statuslinenc-bg;
 }
+StorageClass {
+    ctermfg: $c-blue;
+    guifg: $g-blue;
+}
 String {
 	ctermfg: $c-lblue;
 	guifg: hsl($hue-lblue, 30%, 65%);
@@ -325,7 +329,6 @@ WildMenu {
 @link htmlTag to Identifier;
 // javascript
 @link jsFunction to Function;
-@link jsStorageClass to Statement;
 // markdown
 @link markdownCode to String;
 @link markdownCodeDelimiter to String;
