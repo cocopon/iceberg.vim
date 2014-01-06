@@ -1,0 +1,14 @@
+Changelog
+=========
+
+
+0.2
+---
+* Added rules for SignColumn, Spell*, StorageClass, WileMenu
+* Added links for css, html, javascript, xml, yaml
+* Minor color updates
+
+
+0.1
+---
+* Hello, world!
