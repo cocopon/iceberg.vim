@@ -326,7 +326,8 @@ WildMenu {
 
 // Filetype-specific rules {{{
 // html
-@link htmlTag to Identifier;
+@link htmlEndTag to Statement;
+@link htmlTag to Statement;
 // javascript
 @link jsFunction to Function;
 // markdown
@@ -345,6 +346,12 @@ WildMenu {
 // vim
 @link vimContinue to Comment;
 @link vimIsCommand to Statement;
+// xml
+@link xmlAttribPunct to Statement;
+@link xmlEndTag to Statement;
+@link xmlNamespace to Statement;
+@link xmlTag to Statement;
+@link xmlTagName to Statement;
 // yaml
 @link yamlKeyValueDelimiter to Delimiter;
 // }}}
