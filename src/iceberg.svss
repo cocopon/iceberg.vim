@@ -325,6 +325,8 @@ WildMenu {
 
 
 // Filetype-specific rules {{{
+// css
+@link cssBraces to Delimiter;
 // html
 @link htmlEndTag to Statement;
 @link htmlTag to Statement;
@@ -343,6 +345,8 @@ WildMenu {
 @link rubyInterpolationDelimiter to String;
 @link rubySharpBang to Comment;
 @link rubyStringDelimiter to String;
+// svss
+@link svssBraces to Delimiter;
 // vim
 @link vimContinue to Comment;
 @link vimIsCommand to Statement;

@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-06 15:18+0900
+" Modified:   2014-01-06 16:01+0900
 " License:    MIT
 
 
@@ -29,7 +29,7 @@ let g:colors_name = 'iceberg'
 hi! ColorColumn cterm=NONE ctermbg=235 guibg=#191d2c
 hi! CursorColumn cterm=NONE ctermbg=235 guibg=#191d2c
 hi! CursorLine cterm=NONE ctermbg=235 guibg=#191d2c
-hi! Comment ctermfg=242 guifg=#696e86
+hi! Comment ctermfg=242 guifg=#6b7089
 hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
 hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2d3555 guifg=#ced2e5
@@ -62,13 +62,13 @@ hi! Question ctermfg=150 guifg=#b8c486
 hi! Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
 hi! Special ctermfg=150 guifg=#b8c486
 hi! Statement ctermfg=110 gui=NONE guifg=#84a0c6
-hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#74778a term=reverse
+hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596 term=reverse
 hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
 hi! StorageClass ctermfg=110 guifg=#84a0c6
 hi! String ctermfg=109 guifg=#8ab8c1
 hi! Structure ctermfg=109 guifg=#8ab8c1
-hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#74778a guifg=#17171b
-hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#74778a
+hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#818596 guifg=#17171b
+hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596
 hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#9a9ca5
 hi! Title ctermfg=216 gui=NONE guifg=#e2a478
 hi! Todo ctermbg=234 ctermfg=150 guibg=#161821 guifg=#d6e599
@@ -76,8 +76,9 @@ hi! Type ctermfg=109 gui=NONE guifg=#8ab8c1
 hi! Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=underline
 hi! VertSplit ctermbg=233 ctermfg=233 guibg=#0f1117 guifg=#0f1117
 hi! Visual ctermbg=236 guibg=#272c42
-hi! WildMenu ctermbg=255 ctermfg=234 guibg=#c7c8cf guifg=#17171b
+hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 
+hi! link cssBraces Delimiter
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
 hi! link jsFunction Function
@@ -91,6 +92,7 @@ hi! link rubyInclude Statement
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
+hi! link svssBraces Delimiter
 hi! link vimContinue Comment
 hi! link vimIsCommand Statement
 hi! link xmlAttribPunct Statement
