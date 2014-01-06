@@ -314,7 +314,7 @@ Visual {
 WildMenu {
 	ctermbg: 255;
 	ctermfg: $c-statusline-fg;
-	guibg: lighten($statusline-bg, +20%);
+	guibg: lighten($statusline-bg, +30%);
 	guifg: $statusline-fg;
 }
 // }}}
