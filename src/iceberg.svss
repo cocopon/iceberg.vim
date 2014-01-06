@@ -67,7 +67,7 @@ ColorColumn, CursorColumn, CursorLine {
 }
 Comment {
 	ctermfg: 242;
-	guifg: hsl($hue-base, 12%, 47%);
+	guifg: hsl($hue-base, 12%, 48%);
 }
 Constant {
 	ctermfg: $c-purple;
