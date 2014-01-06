@@ -228,6 +228,18 @@ Special {
 	ctermfg: $c-green;
 	guifg: $g-green;
 }
+SpellBad {
+    guisp: $g-red;
+}
+SpellCap {
+    guisp: $g-blue;
+}
+SpellLocal {
+    guisp: $g-lblue;
+}
+SpellRare {
+    guisp: $g-purple;
+}
 Statement {
 	ctermfg: $c-blue;
 	gui: NONE;
