@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-06 16:01+0900
+" Modified:   2014-01-06 16:34+0900
 " License:    MIT
 
 
@@ -60,6 +60,7 @@ hi! PmenuThumb ctermbg=251 guibg=#c6c8d1
 hi! PreProc ctermfg=150 guifg=#b8c486
 hi! Question ctermfg=150 guifg=#b8c486
 hi! Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
+hi! SignColumn ctermbg=235 ctermfg=239 guibg=#202330 guifg=#484f6d
 hi! Special ctermfg=150 guifg=#b8c486
 hi! Statement ctermfg=110 gui=NONE guifg=#84a0c6
 hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596 term=reverse

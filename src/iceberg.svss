@@ -218,6 +218,12 @@ Search {
 	guibg: hsl($hue-orange, 65%, 70%);
 	guifg: hsl($hue-orange, 50%, 15%);
 }
+SignColumn {
+    ctermbg: $c-linenr-bg;
+    ctermfg: $c-linenr-fg;
+    guibg: $linenr-bg;
+    guifg: $linenr-fg;
+}
 Special {
 	ctermfg: $c-green;
 	guifg: $g-green;
