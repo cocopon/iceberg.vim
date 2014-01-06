@@ -30,7 +30,7 @@ $linenr-bg: lighten($normal-bg, 5%);
 $linenr-fg: lighten($linenr-bg, 20%);
 $pmenu-bg: hsl($hue-base, 20%, 30%);
 $pmenu-fg: $normal-fg;
-$statusline-bg: hsl($hue-base, 9%, 50%);
+$statusline-bg: hsl($hue-base, 9%, 55%);
 $statusline-fg: hsl($hue-base, 9%, 10%);
 $statuslinenc-bg: darken($normal-bg, 3%);
 $statuslinenc-fg: lighten($normal-bg, 20%);
