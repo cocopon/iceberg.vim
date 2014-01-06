@@ -345,4 +345,6 @@ WildMenu {
 // vim
 @link vimContinue to Comment;
 @link vimIsCommand to Statement;
+// yaml
+@link yamlKeyValueDelimiter to Delimiter;
 // }}}
