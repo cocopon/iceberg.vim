@@ -323,6 +323,9 @@ WildMenu {
 // Filetype-specific rules {{{
 // html
 @link htmlTag to Identifier;
+// javascript
+@link jsFunction to Function;
+@link jsStorageClass to Statement;
 // markdown
 @link markdownCode to String;
 @link markdownCodeDelimiter to String;
