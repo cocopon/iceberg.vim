@@ -345,6 +345,8 @@ WildMenu {
 // Filetype-specific rules {{{
 // css
 @link cssBraces to Delimiter;
+// help
+@link helpHyperTextJump to Constant;
 // html
 @link htmlEndTag to Statement;
 @link htmlTag to Statement;

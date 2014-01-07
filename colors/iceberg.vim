@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-06 16:44+0900
+" Modified:   2014-01-07 12:42+0900
 " License:    MIT
 
 
@@ -84,6 +84,7 @@ hi! Visual ctermbg=236 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 
 hi! link cssBraces Delimiter
+hi! link helpHyperTextJump Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
 hi! link jsFunction Function
