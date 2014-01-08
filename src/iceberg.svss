@@ -6,7 +6,6 @@
 
 
 // Definitions {{{
-// gui
 $hue-base: 230;
 
 $hue-red: 0;
@@ -16,12 +15,13 @@ $hue-lblue: 190;
 $hue-blue: 215;
 $hue-purple: 255;
 
+// gui
 $g-blue:   hsl($hue-blue,   37%, 65%);
-$g-green:  hsl($hue-green,  35%, 65%);
+$g-green:  hsl($hue-green,  36%, 63%);
 $g-lblue:  hsl($hue-lblue,  31%, 65%);
 $g-orange: hsl($hue-orange, 65%, 68%);
-$g-purple: hsl($hue-purple, 32%, 68%);
-$g-red:    hsl($hue-red,    63%, 68%);
+$g-purple: hsl($hue-purple, 32%, 69%);
+$g-red:    hsl($hue-red,    68%, 69%);
 
 $normal-bg: hsl($hue-base, 20%, 11%);
 $normal-fg: hsl($hue-base, 10%, 80%);
