@@ -345,6 +345,15 @@ WildMenu {
 // Filetype-specific rules {{{
 // css
 @link cssBraces to Delimiter;
+// diff
+diffAdded {
+    ctermfg: $c-green;
+    guifg: $g-green;
+}
+diffRemoved {
+    ctermfg: $c-red;
+    guifg: $g-red;
+}
 // help
 @link helpHyperTextJump to Constant;
 // html
