@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-09 17:23+0900
+" Modified:   2014-01-09 17:27+0900
 " License:    MIT
 
 
@@ -42,7 +42,7 @@ hi! Directory ctermfg=109 guifg=#89b8c2
 hi! Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
-hi! Folded ctermbg=235 ctermfg=245 guibg=#202330 guifg=#68719a
+hi! Folded ctermbg=235 ctermfg=245 guibg=#202330 guifg=#6e7594
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
 hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
