@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-09 16:50+0900
+" Modified:   2014-01-09 17:23+0900
 " License:    MIT
 
 
@@ -32,7 +32,7 @@ hi! CursorLine cterm=NONE ctermbg=235 guibg=#191d2c
 hi! Comment ctermfg=242 guifg=#6b7089
 hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
-hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2d3555 guifg=#ced2e5
+hi! CursorLineNr ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
 hi! Delimiter ctermfg=252 guifg=#c6c8d1
 hi! DiffAdd ctermbg=108 ctermfg=234 guibg=#555a47 guifg=#bec4b1
 hi! DiffChange ctermbg=66 ctermfg=234 guibg=#445861 guifg=#adc1cb
@@ -43,10 +43,10 @@ hi! Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! Folded ctermbg=235 ctermfg=245 guibg=#202330 guifg=#68719a
-hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#202330 guifg=#484f6d
+hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
 hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
-hi! LineNr ctermbg=235 ctermfg=239 guibg=#202330 guifg=#484f6d
+hi! LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg ctermfg=150 guifg=#b4be82
 hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
@@ -60,7 +60,7 @@ hi! PmenuThumb ctermbg=251 guibg=#c6c8d1
 hi! PreProc ctermfg=150 guifg=#b4be82
 hi! Question ctermfg=150 guifg=#b4be82
 hi! Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
-hi! SignColumn ctermbg=235 ctermfg=239 guibg=#202330 guifg=#484f6d
+hi! SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Special ctermfg=150 guifg=#b4be82
 hi! SpellBad guisp=#e27878
 hi! SpellCap guisp=#84a0c6
