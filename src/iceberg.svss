@@ -10,7 +10,7 @@ $hue-base: 230;
 
 $hue-red: 0;
 $hue-orange: 25;
-$hue-green: 62;
+$hue-green: 70;
 $hue-lblue: 190;
 $hue-blue: 215;
 $hue-purple: 255;
