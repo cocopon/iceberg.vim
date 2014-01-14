@@ -25,9 +25,8 @@ $g-red:    hsl($hue-red,    65%, 68%);
 
 $normal-bg: hsl($hue-base, 20%, 11%);
 $normal-fg: hsl($hue-base, 10%, 80%);
-$folded-bg: lighten($normal-bg, 5%);
-$folded-fg: adjust-color($folded-bg, $saturation: -5%, $lightness: 35%);
-$linenr-bg: adjust-color($normal-bg, $saturation: +5%, $lightness: 5%);
+
+$linenr-bg: adjust-color($normal-bg, $saturation: +5%, $lightness: +5%);
 $linenr-fg: lighten($linenr-bg, 20%);
 $pmenu-bg: hsl($hue-base, 20%, 30%);
 $pmenu-fg: $normal-fg;
@@ -35,6 +34,10 @@ $statusline-bg: hsl($hue-base, 9%, 55%);
 $statusline-fg: hsl($hue-base, 9%, 10%);
 $statuslinenc-bg: darken($normal-bg, 3%);
 $statuslinenc-fg: lighten($normal-bg, 20%);
+
+$cursorline-bg: $linenr-bg;
+$folded-bg: $linenr-bg;
+$folded-fg: adjust-color($folded-bg, $saturation: -5%, $lightness: +35%);
 
 // cterm
 $c-blue: 110;
@@ -54,6 +57,8 @@ $c-statusline-bg: 245;
 $c-statusline-fg: 234;
 $c-statuslinenc-bg: 233;
 $c-statuslinenc-fg: 238;
+
+$c-cursorline-bg: $c-linenr-bg;
 $c-folded-bg: $c-linenr-bg;
 $c-folded-fg: 245;
 // }}}
@@ -62,10 +67,8 @@ $c-folded-fg: 245;
 // Rules {{{
 ColorColumn, CursorColumn, CursorLine {
 	cterm: NONE;
-	ctermbg: 235;
-	guibg: adjust-color($normal-bg,
-		$saturation: +7%,
-		$lightness: +3%);
+	ctermbg: $c-cursorline-bg;
+	guibg: $cursorline-bg;
 }
 Comment {
 	ctermfg: 242;

@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2014-01-09 17:27+0900
+" Modified:   2014-01-14 16:20+0900
 " License:    MIT
 
 
@@ -26,9 +26,9 @@ endif
 let g:colors_name = 'iceberg'
 
 
-hi! ColorColumn cterm=NONE ctermbg=235 guibg=#191d2c
-hi! CursorColumn cterm=NONE ctermbg=235 guibg=#191d2c
-hi! CursorLine cterm=NONE ctermbg=235 guibg=#191d2c
+hi! ColorColumn cterm=NONE ctermbg=235 guibg=#1e2132
+hi! CursorColumn cterm=NONE ctermbg=235 guibg=#1e2132
+hi! CursorLine cterm=NONE ctermbg=235 guibg=#1e2132
 hi! Comment ctermfg=242 guifg=#6b7089
 hi! Constant ctermfg=140 guifg=#a093c7
 hi! Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
@@ -42,7 +42,7 @@ hi! Directory ctermfg=109 guifg=#89b8c2
 hi! Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
 hi! WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
-hi! Folded ctermbg=235 ctermfg=245 guibg=#202330 guifg=#6e7594
+hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
 hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
