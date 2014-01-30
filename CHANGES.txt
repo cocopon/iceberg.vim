@@ -2,6 +2,13 @@ Changelog
 =========
 
 
+0.3
+---
+* Added rules for diff
+* Added links for help
+* Minor color updates
+
+
 0.2
 ---
 * Added rules for SignColumn, Spell*, StorageClass, WileMenu
