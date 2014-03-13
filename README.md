@@ -7,10 +7,11 @@ Overview
 Iceberg is a dark color scheme for Vim. It brings a cool-headed perspective for
 your happy coding.
 
-![Screenshot](http://cocopon.me/app/vim-iceberg/github/screenshot.png)
+See the [official site](http://cocopon.me/app/vim-iceberg/) or the
+[vimonline page](http://www.vim.org/scripts/script.php?script_id=4820) for more
+information.
 
-Visit the [official site](http://cocopon.me/app/vim-iceberg/) for more
-information!
+![Screenshot](http://cocopon.me/app/vim-iceberg/github/screenshot.png)
 
 
 License
