@@ -2,6 +2,11 @@ Changelog
 =========
 
 
+0.4
+---
+* Updated color for html
+
+
 0.3
 ---
 * Added rules for diff
