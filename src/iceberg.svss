@@ -382,6 +382,8 @@ diffRemoved {
 @link rubyStringDelimiter to String;
 // svss
 @link svssBraces to Delimiter;
+// swift (apple)
+@link swiftIdentifier to Normal;
 // vim
 @link vimContinue to Comment;
 @link vimIsCommand to Statement;
