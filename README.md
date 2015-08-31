@@ -14,6 +14,12 @@ information.
 ![Screenshot](http://cocopon.me/app/vim-iceberg/github/screenshot.png)
 
 
+For other environments
+----------------------
+- [Terminal.app profile](http://cocopon.me/app/vim-iceberg/) by [me](https://github.com/cocopon)
+- [Xresources](https://gist.github.com/97-109-107/063193d150df272a049b) by [97-109-107](https://github.com/97-109-107)
+
+
 License
 -------
 MIT License. See `LICENSE.txt` for more information.
