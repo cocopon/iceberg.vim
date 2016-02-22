@@ -344,6 +344,10 @@ WildMenu {
 	guibg: lighten($statusline-bg, +30%);
 	guifg: $statusline-fg;
 }
+ZenSpace {
+	ctermbg: $c-red;
+	guibg: $g-red;
+}
 // }}}
 
 
