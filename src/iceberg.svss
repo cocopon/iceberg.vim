@@ -99,30 +99,30 @@ Delimiter {
 	guifg: $normal-fg;
 }
 DiffAdd {
-	ctermbg: 108;
-	ctermfg: $c-normal-bg;
-	guibg: mix($g-green, $normal-bg, 40%);
-	guifg: mix($g-green, $normal-fg, 40%);
+	ctermbg: 29;
+	ctermfg: 158;
+	guibg: mix($g-green, $normal-bg, 30%);
+	guifg: mix($g-green, $normal-fg, 30%);
 }
 DiffChange {
-	ctermbg: 66;
-	ctermfg: $c-normal-bg;
-	guibg: mix($g-lblue, $normal-bg, 40%);
-	guifg: mix($g-lblue, $normal-fg, 40%);
+	ctermbg: 23;
+	ctermfg: 159;
+	guibg: mix($g-lblue, $normal-bg, 30%);
+	guifg: mix($g-lblue, $normal-fg, 30%);
 }
 DiffDelete {
 	ctermbg: 95;
-	ctermfg: $c-normal-bg;
-	guibg: mix($g-red, $normal-bg, 40%);
-	guifg: mix($g-red, $normal-fg, 40%);
+	ctermfg: 224;
+	guibg: mix($g-red, $normal-bg, 30%);
+	guifg: mix($g-red, $normal-fg, 30%);
 }
 DiffText {
 	cterm: NONE;
-	ctermbg: 116;
-	ctermfg: $c-normal-bg;
+	ctermbg: 30;
+	ctermfg: 195;
 	gui: NONE;
-	guibg: $g-lblue;
-	guifg: $normal-bg;
+	guibg: mix($g-lblue, $normal-bg, 60%);
+	guifg: $normal-fg;
 }
 Directory {
 	ctermfg: $c-lblue;
