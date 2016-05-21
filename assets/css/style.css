@@ -1,0 +1,2678 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  background-color: #242942;
+  background: -moz-linear-gradient(270deg, #242942, #121421 50%, #121421, #171b2b 95%);
+  background: -webkit-linear-gradient(270deg, #242942, #121421 50%, #121421, #171b2b 95%);
+  background: linear-gradient(180deg, #242942, #121421 50%, #121421, #171b2b 95%);
+  color: #a7abbe;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Play, sans-serif;
+  font-size: 1.0em;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #d3d5de;
+  font-family: Play, sans-serif;
+  font-weight: bold;
+  margin: 2em 0 0.5em;
+  padding: 2px 0;
+}
+
+h1 {
+  font-size: 240%;
+  text-transform: uppercase;
+}
+
+h2 {
+  border-bottom: #2c3149 solid 1px;
+  font-size: 150%;
+}
+
+h3 {
+  font-size: 125%;
+}
+
+pre {
+  background-color: black;
+  border: #2d3353 solid 2px;
+  border-radius: 3px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 90%;
+  margin: 1.0em 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 1.5em 0;
+}
+
+li + li {
+  margin-top: 0.3em;
+}
+
+p {
+  line-height: 150%;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  background-color: #393e54;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+#header {
+  background: url(../img/header-bg.png) repeat-x left top;
+  height: 280px;
+  min-width: 600px;
+  text-align: center;
+  position: relative;
+}
+#header h1 {
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+#header .title-container {
+  top: 120px;
+  position: absolute;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+}
+#header .subtitle {
+  color: #868a9f;
+}
+
+#main {
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+}
+
+ul.icon {
+  padding: 0 0 0 1.5em;
+}
+ul.icon li {
+  list-style-type: none;
+}
+ul.icon .fa {
+  margin-right: 0.5em;
+}
+
+.github {
+  bottom: 48px;
+  height: 20px;
+  left: 50%;
+  margin-left: -300px;
+  position: absolute;
+  text-align: center;
+  width: 600px;
+}
+
+.preview pre {
+  height: 14em;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  background-color: #91c0ca;
+  border-radius: 3px;
+  color: black;
+  display: inline-block;
+  margin: 2.0em 0;
+  padding: 8px 1.0em;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: #bee2e9;
+  color: #242942;
+}
+.button .fa {
+  margin-right: 0.5em;
+}
+
+.screenshot {
+  text-align: center;
+}
+.screenshot img {
+  max-width: 100%;
+}
+.screenshot.osx {
+  text-align: left;
+}
+.screenshot.osx img {
+  width: 294px;
+}
+
+#footer {
+  background: url(../img/footer-bg.png) repeat-x left bottom;
+  font-size: 90%;
+  height: 50px;
+  margin: 4em auto 0;
+  min-width: 600px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.ice-l {
+  background: url(../img/ice-l.png) no-repeat left top;
+  height: 94px;
+  left: 32px;
+  position: absolute;
+  top: 40px;
+  width: 104px;
+}
+
+.ice-m {
+  background: url(../img/ice-m.png) no-repeat left top;
+  height: 74px;
+  position: absolute;
+  right: 120px;
+  top: 40px;
+  width: 94px;
+}
+
+.ice-s {
+  background: url(../img/ice-s.png) no-repeat left top;
+  height: 54px;
+  position: absolute;
+  right: 32px;
+  top: 40px;
+  width: 44px;
+}
+
+.clione {
+  background: url(../img/clione.png) no-repeat left top;
+  height: 40px;
+  left: -80px;
+  position: absolute;
+  width: 30px;
+}
+
+.anchor {
+  background: url(../img/anchor.png) no-repeat left top;
+  bottom: -6em;
+  height: 27px;
+  position: absolute;
+  right: 0;
+  width: 27px;
+}
+
+ul.palette {
+  margin: 4.0em 0;
+  padding: 8px 0;
+  text-align: center;
+}
+ul.palette li {
+  display: inline-block;
+  height: 12px;
+  margin: 0;
+  width: 12px;
+}
+ul.palette li + li {
+  margin-left: 16px;
+}
+ul.palette .item {
+  border-radius: 6px;
+}
+ul.palette .base0 {
+  background-color: #101218;
+}
+ul.palette .base1 {
+  background-color: #161822;
+}
+ul.palette .base2 {
+  background-color: #282d43;
+}
+ul.palette .base3 {
+  background-color: #3d425c;
+}
+ul.palette .base4 {
+  background-color: #74788b;
+}
+ul.palette .base5 {
+  background-color: #c7c9d1;
+}
+ul.palette .blue {
+  background-color: #85a0c7;
+}
+ul.palette .green {
+  background-color: #b8c587;
+}
+ul.palette .lblue {
+  background-color: #8ab8c1;
+}
+ul.palette .orange {
+  background-color: #e2a578;
+}
+ul.palette .purple {
+  background-color: #a093c8;
+}
+ul.palette .red {
+  background-color: #e17a7a;
+}
+
+pre {
+  background-color: #161821;
+  color: #c6c8d1;
+}
+pre .CursorLine .NonText, pre .CursorLine .SpecialKey {
+  background-color: inherit;
+  color: inherit;
+}
+pre .atKeyword {
+  color: #6b7089;
+}
+pre .Boolean {
+  color: #a093c7;
+}
+pre .Character {
+  color: #a093c7;
+}
+pre .ColorColumn {
+  background-color: #1e2132;
+}
+pre .Comment {
+  color: #6b7089;
+}
+pre .Conditional {
+  color: #84a0c6;
+}
+pre .Constant {
+  color: #a093c7;
+}
+pre .cssAnimationAttr {
+  color: #a093c7;
+}
+pre .cssAnimationProp {
+  color: #84a0c6;
+}
+pre .cssAttr {
+  color: #a093c7;
+}
+pre .cssAttrComma {
+  color: #b4be82;
+}
+pre .cssAttributeSelector {
+  color: #89b8c2;
+}
+pre .cssAuralAttr {
+  color: #a093c7;
+}
+pre .cssAuralProp {
+  color: #84a0c6;
+}
+pre .cssBackgroundAttr {
+  color: #a093c7;
+}
+pre .cssBackgroundProp {
+  color: #84a0c6;
+}
+pre .cssBorderAttr {
+  color: #a093c7;
+}
+pre .cssBorderProp {
+  color: #84a0c6;
+}
+pre .cssBoxAttr {
+  color: #a093c7;
+}
+pre .cssBoxProp {
+  color: #84a0c6;
+}
+pre .cssBraceError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .cssBraces {
+  color: #c6c8d1;
+}
+pre .cssClassName {
+  color: #e2a478;
+}
+pre .cssClassNameDot {
+  color: #e2a478;
+}
+pre .cssColor {
+  color: #a093c7;
+}
+pre .cssColorProp {
+  color: #84a0c6;
+}
+pre .cssComment {
+  color: #6b7089;
+}
+pre .cssCommonAttr {
+  color: #a093c7;
+}
+pre .cssContentForPagedMediaAttr {
+  color: #a093c7;
+}
+pre .cssContentForPagedMediaProp {
+  color: #84a0c6;
+}
+pre .cssDeprecated {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .cssDimensionAttr {
+  color: #a093c7;
+}
+pre .cssDimensionProp {
+  color: #84a0c6;
+}
+pre .cssError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .cssFlexibleBoxAttr {
+  color: #a093c7;
+}
+pre .cssFlexibleBoxProp {
+  color: #84a0c6;
+}
+pre .cssFontAttr {
+  color: #a093c7;
+}
+pre .cssFontDescriptor {
+  color: #b4be82;
+}
+pre .cssFontDescriptorAttr {
+  color: #a093c7;
+}
+pre .cssFontDescriptorFunction {
+  color: #a093c7;
+}
+pre .cssFontDescriptorProp {
+  color: #84a0c6;
+}
+pre .cssFontProp {
+  color: #84a0c6;
+}
+pre .cssFunction {
+  color: #a093c7;
+}
+pre .cssFunctionComma {
+  color: #e2a478;
+}
+pre .cssFunctionName {
+  color: #e2a478;
+}
+pre .cssGeneratedContentAttr {
+  color: #a093c7;
+}
+pre .cssGeneratedContentProp {
+  color: #84a0c6;
+}
+pre .cssGradientAttr {
+  color: #a093c7;
+}
+pre .cssGridAttr {
+  color: #a093c7;
+}
+pre .cssGridProp {
+  color: #84a0c6;
+}
+pre .cssHacks {
+  color: #6b7089;
+}
+pre .cssHyerlinkAttr {
+  color: #a093c7;
+}
+pre .cssHyerlinkProp {
+  color: #84a0c6;
+}
+pre .cssIdentifier {
+  color: #e2a478;
+}
+pre .cssIEUIAttr {
+  color: #a093c7;
+}
+pre .cssIEUIProp {
+  color: #84a0c6;
+}
+pre .cssImportant {
+  color: #b4be82;
+}
+pre .cssInclude {
+  color: #b4be82;
+}
+pre .cssIncludeKeyword {
+  color: #6b7089;
+}
+pre .cssKeyFrame {
+  color: #6b7089;
+}
+pre .cssKeyFrameSelector {
+  color: #a093c7;
+}
+pre .cssLineboxAttr {
+  color: #a093c7;
+}
+pre .cssLineboxProp {
+  color: #84a0c6;
+}
+pre .cssListAttr {
+  color: #a093c7;
+}
+pre .cssListProp {
+  color: #84a0c6;
+}
+pre .cssMarginAttr {
+  color: #a093c7;
+}
+pre .cssMarqueeAttr {
+  color: #a093c7;
+}
+pre .cssMarqueeProp {
+  color: #84a0c6;
+}
+pre .cssMedia {
+  color: #6b7089;
+}
+pre .cssMediaAttr {
+  color: #a093c7;
+}
+pre .cssMediaComma {
+  background-color: #161821;
+  color: #c6c8d1;
+}
+pre .cssMediaKeyword {
+  color: #84a0c6;
+}
+pre .cssMediaProp {
+  color: #84a0c6;
+}
+pre .cssMediaType {
+  color: #b4be82;
+}
+pre .cssMobileTextProp {
+  color: #84a0c6;
+}
+pre .cssMultiColumnAttr {
+  color: #a093c7;
+}
+pre .cssMultiColumnProp {
+  color: #84a0c6;
+}
+pre .cssPaddingAttr {
+  color: #a093c7;
+}
+pre .cssPage {
+  color: #6b7089;
+}
+pre .cssPagedMediaAttr {
+  color: #a093c7;
+}
+pre .cssPagedMediaProp {
+  color: #84a0c6;
+}
+pre .cssPageMargin {
+  color: #6b7089;
+}
+pre .cssPageProp {
+  color: #84a0c6;
+}
+pre .cssPagePseudo {
+  color: #b4be82;
+}
+pre .cssPositioningAttr {
+  color: #a093c7;
+}
+pre .cssPositioningProp {
+  color: #84a0c6;
+}
+pre .cssPrintAttr {
+  color: #a093c7;
+}
+pre .cssPrintProp {
+  color: #84a0c6;
+}
+pre .cssProp {
+  color: #84a0c6;
+}
+pre .cssPseudoClassId {
+  color: #b4be82;
+}
+pre .cssPseudoClassLang {
+  color: #a093c7;
+}
+pre .cssRenderAttr {
+  color: #a093c7;
+}
+pre .cssRenderProp {
+  color: #84a0c6;
+}
+pre .cssRubyAttr {
+  color: #a093c7;
+}
+pre .cssRubyProp {
+  color: #84a0c6;
+}
+pre .cssSelectorOp {
+  color: #b4be82;
+}
+pre .cssSelectorOp2 {
+  color: #b4be82;
+}
+pre .cssSpeechAttr {
+  color: #a093c7;
+}
+pre .cssSpeechProp {
+  color: #84a0c6;
+}
+pre .cssStringQ {
+  color: #89b8c2;
+}
+pre .cssStringQQ {
+  color: #89b8c2;
+}
+pre .cssTableAttr {
+  color: #a093c7;
+}
+pre .cssTableProp {
+  color: #84a0c6;
+}
+pre .cssTagName {
+  color: #84a0c6;
+}
+pre .cssTextAttr {
+  color: #a093c7;
+}
+pre .cssTextProp {
+  color: #84a0c6;
+}
+pre .cssTransformAttr {
+  color: #a093c7;
+}
+pre .cssTransformProp {
+  color: #84a0c6;
+}
+pre .cssTransitionAttr {
+  color: #a093c7;
+}
+pre .cssTransitionProp {
+  color: #84a0c6;
+}
+pre .cssUIAttr {
+  color: #a093c7;
+}
+pre .cssUIProp {
+  color: #84a0c6;
+}
+pre .cssUnicodeEscape {
+  color: #b4be82;
+}
+pre .cssUnicodeRange {
+  color: #a093c7;
+}
+pre .cssUnitDecorators {
+  color: #a093c7;
+}
+pre .cssURL {
+  color: #89b8c2;
+}
+pre .cssValueAngle {
+  color: #a093c7;
+}
+pre .cssValueFrequency {
+  color: #a093c7;
+}
+pre .cssValueInteger {
+  color: #a093c7;
+}
+pre .cssValueLength {
+  color: #a093c7;
+}
+pre .cssValueNumber {
+  color: #a093c7;
+}
+pre .cssValueTime {
+  color: #a093c7;
+}
+pre .cssVendor {
+  color: #6b7089;
+}
+pre .Cursor {
+  background-color: #c6c8d1;
+  color: #161821;
+}
+pre .CursorColumn {
+  background-color: #1e2132;
+}
+pre .CursorLine {
+  background-color: #1e2132;
+}
+pre .CursorLineNr {
+  background-color: #2a3158;
+  color: #cdd1e6;
+}
+pre .Debug {
+  color: #b4be82;
+}
+pre .Define {
+  color: #b4be82;
+}
+pre .Delimiter {
+  color: #c6c8d1;
+}
+pre .DiffAdd {
+  background-color: #555a47;
+  color: #bec4b1;
+}
+pre .diffAdded {
+  color: #b4be82;
+}
+pre .DiffChange {
+  background-color: #445861;
+  color: #adc1cb;
+}
+pre .DiffDelete {
+  background-color: #673e43;
+  color: #d1a8ad;
+}
+pre .diffRemoved {
+  color: #e27878;
+}
+pre .DiffText {
+  background-color: #89b8c2;
+  color: #161821;
+}
+pre .Directory {
+  color: #89b8c2;
+}
+pre .Error {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .ErrorMsg {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .Exception {
+  color: #84a0c6;
+}
+pre .Float {
+  color: #a093c7;
+}
+pre .FoldColumn {
+  background-color: #1e2132;
+  color: #444b71;
+}
+pre .Folded {
+  background-color: #1e2132;
+  color: #686f9a;
+}
+pre .Function {
+  color: #e2a478;
+}
+pre .helpHyperTextJump {
+  color: #a093c7;
+}
+pre .htmlArg {
+  color: #a093c7;
+}
+pre .htmlComment {
+  color: #6b7089;
+}
+pre .htmlCommentError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .htmlCommentPart {
+  color: #6b7089;
+}
+pre .htmlCssDefinition {
+  color: #b4be82;
+}
+pre .htmlCssStyleComment {
+  color: #6b7089;
+}
+pre .htmlEndTag {
+  color: #84a0c6;
+}
+pre .htmlError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .htmlH1 {
+  color: #e2a478;
+}
+pre .htmlH2 {
+  color: #e2a478;
+}
+pre .htmlH3 {
+  color: #e2a478;
+}
+pre .htmlH4 {
+  color: #e2a478;
+}
+pre .htmlH5 {
+  color: #e2a478;
+}
+pre .htmlH6 {
+  color: #e2a478;
+}
+pre .htmlHead {
+  color: #b4be82;
+}
+pre .htmlLink {
+  color: #84a0c6;
+}
+pre .htmlPreAttr {
+  color: #89b8c2;
+}
+pre .htmlPreError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .htmlPreProc {
+  color: #b4be82;
+}
+pre .htmlPreProcAttrError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .htmlPreProcAttrName {
+  color: #b4be82;
+}
+pre .htmlPreStmt {
+  color: #b4be82;
+}
+pre .htmlScriptTag {
+  color: #84a0c6;
+}
+pre .htmlSpecial {
+  color: #b4be82;
+}
+pre .htmlSpecialChar {
+  color: #b4be82;
+}
+pre .htmlSpecialTagName {
+  color: #84a0c6;
+}
+pre .htmlStatement {
+  color: #84a0c6;
+}
+pre .htmlString {
+  color: #89b8c2;
+}
+pre .htmlStyleArg {
+  color: #89b8c2;
+}
+pre .htmlTag {
+  color: #84a0c6;
+}
+pre .htmlTagError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .htmlTagName {
+  color: #84a0c6;
+}
+pre .htmlTitle {
+  color: #e2a478;
+}
+pre .htmlValue {
+  color: #89b8c2;
+}
+pre .Identifier {
+  color: #89b8c2;
+}
+pre .Include {
+  color: #b4be82;
+}
+pre .jsArgsObj {
+  color: #b4be82;
+}
+pre .jsBooleanFalse {
+  color: #a093c7;
+}
+pre .jsBooleanTrue {
+  color: #a093c7;
+}
+pre .jsBranch {
+  color: #84a0c6;
+}
+pre .jsBuiltins {
+  color: #b4be82;
+}
+pre .jsCharacter {
+  color: #a093c7;
+}
+pre .jsComment {
+  color: #6b7089;
+}
+pre .jsCommentTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .jsConditional {
+  color: #84a0c6;
+}
+pre .jsCssStyles {
+  color: #84a0c6;
+}
+pre .jsCvsTag {
+  color: #e2a478;
+}
+pre .jsDocComment {
+  color: #6b7089;
+}
+pre .jsDocParam {
+  color: #84a0c6;
+}
+pre .jsDocSeeTag {
+  color: #e2a478;
+}
+pre .jsDocTags {
+  color: #b4be82;
+}
+pre .jsDocType {
+  color: #89b8c2;
+}
+pre .jsDocTypeNoParam {
+  color: #89b8c2;
+}
+pre .jsDomElemAttrs {
+  color: #84a0c6;
+}
+pre .jsDomElemFuncs {
+  color: #b4be82;
+}
+pre .jsDomErrNo {
+  color: #a093c7;
+}
+pre .jsDomNodeConsts {
+  color: #a093c7;
+}
+pre .jsEnvComment {
+  color: #b4be82;
+}
+pre .jsError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .jsException {
+  color: #84a0c6;
+}
+pre .jsExceptions {
+  color: #b4be82;
+}
+pre .jsFloat {
+  color: #a093c7;
+}
+pre .jsFuncName {
+  color: #e2a478;
+}
+pre .jsFunction {
+  color: #e2a478;
+}
+pre .jsFutureKeys {
+  color: #b4be82;
+}
+pre .jsGlobalObjects {
+  color: #b4be82;
+}
+pre .jsHtmlElemAttrs {
+  color: #84a0c6;
+}
+pre .jsHtmlElemFuncs {
+  color: #b4be82;
+}
+pre .jsHtmlEvents {
+  color: #b4be82;
+}
+pre .jsKeyword {
+  color: #84a0c6;
+}
+pre .jsLabel {
+  color: #84a0c6;
+}
+pre .jsLineComment {
+  color: #6b7089;
+}
+pre .jsNan {
+  color: #a093c7;
+}
+pre .jsNull {
+  color: #89b8c2;
+}
+pre .jsNumber {
+  color: #a093c7;
+}
+pre .jsOperator {
+  color: #84a0c6;
+}
+pre .jsParensErrA {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .jsParensErrB {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .jsParensErrC {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .jsParensError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .jsPrototype {
+  color: #b4be82;
+}
+pre .jsRegexpBackRef {
+  color: #b4be82;
+}
+pre .jsRegexpBoundary {
+  color: #b4be82;
+}
+pre .jsRegexpCharClass {
+  color: #a093c7;
+}
+pre .jsRegexpGroup {
+  color: #89b8c2;
+}
+pre .jsRegexpMod {
+  color: #b4be82;
+}
+pre .jsRegexpOr {
+  color: #84a0c6;
+}
+pre .jsRegexpQuantifier {
+  color: #b4be82;
+}
+pre .jsRegexpString {
+  color: #89b8c2;
+}
+pre .jsRepeat {
+  color: #84a0c6;
+}
+pre .jsReturn {
+  color: #84a0c6;
+}
+pre .jsSpecial {
+  color: #b4be82;
+}
+pre .jsStatement {
+  color: #84a0c6;
+}
+pre .jsStorageClass {
+  color: #84a0c6;
+}
+pre .jsStringD {
+  color: #89b8c2;
+}
+pre .jsStringS {
+  color: #89b8c2;
+}
+pre .jsTernaryIfOperator {
+  color: #84a0c6;
+}
+pre .jsThis {
+  color: #b4be82;
+}
+pre .jsUndefined {
+  color: #89b8c2;
+}
+pre .Keyword {
+  color: #84a0c6;
+}
+pre .Label {
+  color: #84a0c6;
+}
+pre .LineNr {
+  background-color: #1e2132;
+  color: #444b71;
+}
+pre .luaBraceError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .luaComment {
+  color: #6b7089;
+}
+pre .luaCond {
+  color: #84a0c6;
+}
+pre .luaConstant {
+  color: #a093c7;
+}
+pre .luaElse {
+  color: #84a0c6;
+}
+pre .luaError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .luaFor {
+  color: #84a0c6;
+}
+pre .luaFunc {
+  color: #89b8c2;
+}
+pre .luaFunction {
+  color: #e2a478;
+}
+pre .luaIn {
+  color: #84a0c6;
+}
+pre .luaLabel {
+  color: #84a0c6;
+}
+pre .luaNumber {
+  color: #a093c7;
+}
+pre .luaOperator {
+  color: #84a0c6;
+}
+pre .luaParenError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .luaRepeat {
+  color: #84a0c6;
+}
+pre .luaSpecial {
+  color: #b4be82;
+}
+pre .luaStatement {
+  color: #84a0c6;
+}
+pre .luaString {
+  color: #89b8c2;
+}
+pre .luaString2 {
+  color: #89b8c2;
+}
+pre .luaTable {
+  color: #89b8c2;
+}
+pre .luaTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .Macro {
+  color: #b4be82;
+}
+pre .markdownAutomaticLink {
+  color: #a093c7;
+}
+pre .markdownBlockquote {
+  color: #6b7089;
+}
+pre .markdownCode {
+  color: #89b8c2;
+}
+pre .markdownCodeDelimiter {
+  color: #89b8c2;
+}
+pre .markdownError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .markdownEscape {
+  color: #b4be82;
+}
+pre .markdownH1 {
+  color: #e2a478;
+}
+pre .markdownH2 {
+  color: #e2a478;
+}
+pre .markdownH3 {
+  color: #e2a478;
+}
+pre .markdownH4 {
+  color: #e2a478;
+}
+pre .markdownH5 {
+  color: #e2a478;
+}
+pre .markdownH6 {
+  color: #e2a478;
+}
+pre .markdownHeadingDelimiter {
+  color: #6b7089;
+}
+pre .markdownHeadingRule {
+  color: #6b7089;
+}
+pre .markdownId {
+  color: #89b8c2;
+}
+pre .markdownIdDeclaration {
+  color: #89b8c2;
+}
+pre .markdownLinkText {
+  color: #84a0c6;
+}
+pre .markdownListMarker {
+  color: #84a0c6;
+}
+pre .markdownOrderedListMarker {
+  color: #84a0c6;
+}
+pre .markdownRule {
+  color: #6b7089;
+}
+pre .markdownUrl {
+  color: #a093c7;
+}
+pre .markdownUrlDelimiter {
+  color: #84a0c6;
+}
+pre .markdownUrlTitle {
+  color: #89b8c2;
+}
+pre .markdownUrlTitleDelimiter {
+  color: #c6c8d1;
+}
+pre .MatchParen {
+  background-color: #3e445e;
+  color: #ffffff;
+}
+pre .MoreMsg {
+  color: #b4be82;
+}
+pre .NonText {
+  background-color: #161821;
+  color: #242940;
+}
+pre .Normal {
+  background-color: #161821;
+  color: #c6c8d1;
+}
+pre .Number {
+  color: #a093c7;
+}
+pre .Operator {
+  color: #84a0c6;
+}
+pre .perlAnglesDQ {
+  color: #89b8c2;
+}
+pre .perlAnglesSQ {
+  color: #89b8c2;
+}
+pre .perlArrow {
+  color: #89b8c2;
+}
+pre .perlBracesDQ {
+  color: #89b8c2;
+}
+pre .perlBracesSQ {
+  color: #89b8c2;
+}
+pre .perlBracketsDQ {
+  color: #89b8c2;
+}
+pre .perlBracketsSQ {
+  color: #89b8c2;
+}
+pre .perlCharacter {
+  color: #a093c7;
+}
+pre .perlComment {
+  color: #6b7089;
+}
+pre .perlConditional {
+  color: #84a0c6;
+}
+pre .perlControl {
+  color: #b4be82;
+}
+pre .perlDATA {
+  color: #6b7089;
+}
+pre .perlElseIfError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .perlFiledescRead {
+  color: #89b8c2;
+}
+pre .perlFiledescStatement {
+  color: #89b8c2;
+}
+pre .perlFloat {
+  color: #a093c7;
+}
+pre .perlFormatField {
+  color: #89b8c2;
+}
+pre .perlFormatName {
+  color: #89b8c2;
+}
+pre .perlFunction {
+  color: #84a0c6;
+}
+pre .perlFunctionName {
+  color: #89b8c2;
+}
+pre .perlFunctionPRef {
+  color: #89b8c2;
+}
+pre .perlHereDoc {
+  color: #89b8c2;
+}
+pre .perlIdentifier {
+  color: #89b8c2;
+}
+pre .perlInclude {
+  color: #b4be82;
+}
+pre .perlLabel {
+  color: #84a0c6;
+}
+pre .perlList {
+  color: #84a0c6;
+}
+pre .perlMatch {
+  color: #89b8c2;
+}
+pre .perlMatchStartEnd {
+  color: #84a0c6;
+}
+pre .perlMethod {
+  color: #89b8c2;
+}
+pre .perlMisc {
+  color: #84a0c6;
+}
+pre .perlNotEmptyLine {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .perlNumber {
+  color: #a093c7;
+}
+pre .perlOperator {
+  color: #84a0c6;
+}
+pre .perlPackageDecl {
+  color: #89b8c2;
+}
+pre .perlPackageRef {
+  color: #89b8c2;
+}
+pre .perlParensDQ {
+  color: #89b8c2;
+}
+pre .perlParensSQ {
+  color: #89b8c2;
+}
+pre .perlPOD {
+  color: #6b7089;
+}
+pre .perlQQ {
+  color: #89b8c2;
+}
+pre .perlRepeat {
+  color: #84a0c6;
+}
+pre .perlSharpBang {
+  color: #b4be82;
+}
+pre .perlShellCommand {
+  color: #89b8c2;
+}
+pre .perlSpecial {
+  color: #b4be82;
+}
+pre .perlSpecialAscii {
+  color: #b4be82;
+}
+pre .perlSpecialDollar {
+  color: #b4be82;
+}
+pre .perlSpecialMatch {
+  color: #b4be82;
+}
+pre .perlSpecialString {
+  color: #b4be82;
+}
+pre .perlSpecialStringU {
+  color: #b4be82;
+}
+pre .perlSpecialStringU2 {
+  color: #89b8c2;
+}
+pre .perlStatement {
+  color: #84a0c6;
+}
+pre .perlStatementControl {
+  color: #84a0c6;
+}
+pre .perlStatementFiledesc {
+  color: #84a0c6;
+}
+pre .perlStatementFiles {
+  color: #84a0c6;
+}
+pre .perlStatementFlow {
+  color: #84a0c6;
+}
+pre .perlStatementHash {
+  color: #84a0c6;
+}
+pre .perlStatementInclude {
+  color: #84a0c6;
+}
+pre .perlStatementIndirObj {
+  color: #84a0c6;
+}
+pre .perlStatementIOfunc {
+  color: #84a0c6;
+}
+pre .perlStatementIPC {
+  color: #84a0c6;
+}
+pre .perlStatementList {
+  color: #84a0c6;
+}
+pre .perlStatementMisc {
+  color: #84a0c6;
+}
+pre .perlStatementNetwork {
+  color: #84a0c6;
+}
+pre .perlStatementNumeric {
+  color: #84a0c6;
+}
+pre .perlStatementPackage {
+  color: #84a0c6;
+}
+pre .perlStatementProc {
+  color: #84a0c6;
+}
+pre .perlStatementPword {
+  color: #84a0c6;
+}
+pre .perlStatementRegexp {
+  color: #84a0c6;
+}
+pre .perlStatementScalar {
+  color: #84a0c6;
+}
+pre .perlStatementSocket {
+  color: #84a0c6;
+}
+pre .perlStatementStorage {
+  color: #84a0c6;
+}
+pre .perlStatementTime {
+  color: #84a0c6;
+}
+pre .perlStatementVector {
+  color: #84a0c6;
+}
+pre .perlStorageClass {
+  color: #89b8c2;
+}
+pre .perlString {
+  color: #89b8c2;
+}
+pre .perlStringStartEnd {
+  color: #89b8c2;
+}
+pre .perlStringUnexpanded {
+  color: #89b8c2;
+}
+pre .perlSubAttributes {
+  color: #b4be82;
+}
+pre .perlSubAttributesCont {
+  color: #b4be82;
+}
+pre .perlSubError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .perlSubName {
+  color: #e2a478;
+}
+pre .perlSubPrototype {
+  color: #89b8c2;
+}
+pre .perlSubPrototypeError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .perlSubstitutionGQQ {
+  color: #89b8c2;
+}
+pre .perlSubstitutionSQ {
+  color: #89b8c2;
+}
+pre .perlTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .perlTranslationGQ {
+  color: #89b8c2;
+}
+pre .perlType {
+  color: #89b8c2;
+}
+pre .perlVarNotInMatches {
+  color: #89b8c2;
+}
+pre .perlVarPlain {
+  color: #89b8c2;
+}
+pre .perlVarPlain2 {
+  color: #89b8c2;
+}
+pre .perlVarSimpleMember {
+  color: #89b8c2;
+}
+pre .perlVarSimpleMemberName {
+  color: #89b8c2;
+}
+pre .perlVarSlash {
+  color: #89b8c2;
+}
+pre .perlVStringV {
+  color: #89b8c2;
+}
+pre .phpAssignByRef {
+  color: #89b8c2;
+}
+pre .phpBackslashDoubleQuote {
+  color: #b4be82;
+}
+pre .phpBackslashSequences {
+  color: #b4be82;
+}
+pre .phpBackslashSingleQuote {
+  color: #b4be82;
+}
+pre .phpBacktick {
+  color: #89b8c2;
+}
+pre .phpBaselib {
+  color: #e2a478;
+}
+pre .phpBoolean {
+  color: #a093c7;
+}
+pre .phpBrackets {
+  color: #c6c8d1;
+}
+pre .phpClasses {
+  color: #e2a478;
+}
+pre .phpComment {
+  color: #6b7089;
+}
+pre .phpComparison {
+  color: #84a0c6;
+}
+pre .phpConditional {
+  color: #84a0c6;
+}
+pre .phpConstant {
+  color: #a093c7;
+}
+pre .phpCoreConstant {
+  color: #a093c7;
+}
+pre .phpDefine {
+  color: #b4be82;
+}
+pre .phpDocCustomTags {
+  color: #89b8c2;
+}
+pre .phpDocTags {
+  color: #b4be82;
+}
+pre .phpDocTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .phpEnvVar {
+  color: #89b8c2;
+}
+pre .phpException {
+  color: #84a0c6;
+}
+pre .phpFCKeyword {
+  color: #b4be82;
+}
+pre .phpFloat {
+  color: #a093c7;
+}
+pre .phpFunctions {
+  color: #e2a478;
+}
+pre .phpIdentifier {
+  color: #89b8c2;
+}
+pre .phpIdentifierConst {
+  color: #c6c8d1;
+}
+pre .phpIdentifierSimply {
+  color: #89b8c2;
+}
+pre .phpInclude {
+  color: #b4be82;
+}
+pre .phpInterfaces {
+  color: #a093c7;
+}
+pre .phpInterpBogusDollarCurley {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpInterpDollarCurly1 {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpInterpDollarCurly2 {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpinterpSimpleBracketsInner {
+  color: #89b8c2;
+}
+pre .phpInterpSimpleCurly {
+  color: #c6c8d1;
+}
+pre .phpInterpSimpleError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpInterpVarname {
+  color: #89b8c2;
+}
+pre .phpIntVar {
+  color: #89b8c2;
+}
+pre .phpKeyword {
+  color: #84a0c6;
+}
+pre .phpLabel {
+  color: #84a0c6;
+}
+pre .phpMemberSelector {
+  color: #89b8c2;
+}
+pre .phpMethods {
+  color: #e2a478;
+}
+pre .phpNumber {
+  color: #a093c7;
+}
+pre .phpOctalError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpOperator {
+  color: #84a0c6;
+}
+pre .phpParent {
+  color: #c6c8d1;
+}
+pre .phpParentError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .phpRelation {
+  color: #84a0c6;
+}
+pre .phpRepeat {
+  color: #84a0c6;
+}
+pre .phpSCKeyword {
+  color: #84a0c6;
+}
+pre .phpSpecialFunction {
+  color: #84a0c6;
+}
+pre .phpStatement {
+  color: #84a0c6;
+}
+pre .phpStorageClass {
+  color: #84a0c6;
+}
+pre .phpStringDouble {
+  color: #89b8c2;
+}
+pre .phpStringSingle {
+  color: #89b8c2;
+}
+pre .phpStructure {
+  color: #89b8c2;
+}
+pre .phpTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .phpType {
+  color: #89b8c2;
+}
+pre .phpVarSelector {
+  color: #89b8c2;
+}
+pre .Pmenu {
+  background-color: #3d425b;
+  color: #c6c8d1;
+}
+pre .PmenuSbar {
+  background-color: #3d425b;
+}
+pre .PmenuSel {
+  background-color: #5b6389;
+  color: #eff0f4;
+}
+pre .PmenuThumb {
+  background-color: #c6c8d1;
+}
+pre .podCmdText {
+  color: #89b8c2;
+}
+pre .podCommand {
+  color: #84a0c6;
+}
+pre .podEscape {
+  color: #89b8c2;
+}
+pre .podEscape2 {
+  color: #a093c7;
+}
+pre .podForKeywd {
+  color: #89b8c2;
+}
+pre .podFormat {
+  color: #89b8c2;
+}
+pre .podOverIndent {
+  color: #a093c7;
+}
+pre .podSpecial {
+  color: #89b8c2;
+}
+pre .podVerbatimLine {
+  color: #b4be82;
+}
+pre .PreCondit {
+  color: #b4be82;
+}
+pre .PreProc {
+  color: #b4be82;
+}
+pre .pythonBuiltin {
+  color: #e2a478;
+}
+pre .pythonComment {
+  color: #6b7089;
+}
+pre .pythonConditional {
+  color: #84a0c6;
+}
+pre .pythonDecorator {
+  color: #b4be82;
+}
+pre .pythonDoctest {
+  color: #b4be82;
+}
+pre .pythonDoctestValue {
+  color: #b4be82;
+}
+pre .pythonEscape {
+  color: #b4be82;
+}
+pre .pythonException {
+  color: #84a0c6;
+}
+pre .pythonExceptions {
+  color: #89b8c2;
+}
+pre .pythonFunction {
+  color: #e2a478;
+}
+pre .pythonInclude {
+  color: #b4be82;
+}
+pre .pythonNumber {
+  color: #a093c7;
+}
+pre .pythonOperator {
+  color: #84a0c6;
+}
+pre .pythonRawString {
+  color: #89b8c2;
+}
+pre .pythonRepeat {
+  color: #84a0c6;
+}
+pre .pythonStatement {
+  color: #84a0c6;
+}
+pre .pythonString {
+  color: #89b8c2;
+}
+pre .pythonTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .Question {
+  color: #b4be82;
+}
+pre .Repeat {
+  color: #84a0c6;
+}
+pre .rubyAccess {
+  color: #84a0c6;
+}
+pre .rubyASCIICode {
+  color: #a093c7;
+}
+pre .rubyAttribute {
+  color: #84a0c6;
+}
+pre .rubyBeginEnd {
+  color: #84a0c6;
+}
+pre .rubyBlockParameter {
+  color: #89b8c2;
+}
+pre .rubyBoolean {
+  color: #a093c7;
+}
+pre .rubyClass {
+  color: #84a0c6;
+}
+pre .rubyClassVariable {
+  color: #89b8c2;
+}
+pre .rubyComment {
+  color: #6b7089;
+}
+pre .rubyConditional {
+  color: #84a0c6;
+}
+pre .rubyConditionalModifier {
+  color: #84a0c6;
+}
+pre .rubyConstant {
+  color: #89b8c2;
+}
+pre .rubyControl {
+  color: #84a0c6;
+}
+pre .rubyData {
+  color: #6b7089;
+}
+pre .rubyDataDirective {
+  color: #c6c8d1;
+}
+pre .rubyDefine {
+  color: #84a0c6;
+}
+pre .rubyDocumentation {
+  color: #6b7089;
+}
+pre .rubyError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .rubyEval {
+  color: #84a0c6;
+}
+pre .rubyException {
+  color: #84a0c6;
+}
+pre .rubyExceptional {
+  color: #84a0c6;
+}
+pre .rubyFloat {
+  color: #a093c7;
+}
+pre .rubyFunction {
+  color: #e2a478;
+}
+pre .rubyGlobalVariable {
+  color: #89b8c2;
+}
+pre .rubyHeredoc {
+  color: #89b8c2;
+}
+pre .rubyIdentifier {
+  color: #89b8c2;
+}
+pre .rubyInclude {
+  color: #84a0c6;
+}
+pre .rubyInstanceVariable {
+  color: #89b8c2;
+}
+pre .rubyInteger {
+  color: #a093c7;
+}
+pre .rubyInterpolationDelimiter {
+  color: #89b8c2;
+}
+pre .rubyInvalidVariable {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .rubyKeyword {
+  color: #84a0c6;
+}
+pre .rubyMethodExceptional {
+  color: #84a0c6;
+}
+pre .rubyModule {
+  color: #84a0c6;
+}
+pre .rubyNoInterpolation {
+  color: #89b8c2;
+}
+pre .rubyOperator {
+  color: #84a0c6;
+}
+pre .rubyOptionalDo {
+  color: #84a0c6;
+}
+pre .rubyPredefinedConstant {
+  color: #89b8c2;
+}
+pre .rubyPredefinedIdentifier {
+  color: #89b8c2;
+}
+pre .rubyPredefinedVariable {
+  color: #89b8c2;
+}
+pre .rubyPseudoVariable {
+  color: #a093c7;
+}
+pre .rubyQuoteEscape {
+  color: #b4be82;
+}
+pre .rubyRegexp {
+  color: #89b8c2;
+}
+pre .rubyRegexpAnchor {
+  color: #b4be82;
+}
+pre .rubyRegexpCharClass {
+  color: #b4be82;
+}
+pre .rubyRegexpComment {
+  color: #6b7089;
+}
+pre .rubyRegexpDelimiter {
+  color: #89b8c2;
+}
+pre .rubyRegexpDot {
+  color: #b4be82;
+}
+pre .rubyRegexpEscape {
+  color: #b4be82;
+}
+pre .rubyRegexpQuantifier {
+  color: #b4be82;
+}
+pre .rubyRegexpSpecial {
+  color: #b4be82;
+}
+pre .rubyRepeat {
+  color: #84a0c6;
+}
+pre .rubyRepeatModifier {
+  color: #84a0c6;
+}
+pre .rubySharpBang {
+  color: #6b7089;
+}
+pre .rubySpaceError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .rubyString {
+  color: #89b8c2;
+}
+pre .rubyStringDelimiter {
+  color: #89b8c2;
+}
+pre .rubyStringEscape {
+  color: #b4be82;
+}
+pre .rubySymbol {
+  color: #a093c7;
+}
+pre .rubySymbolDelimiter {
+  color: #89b8c2;
+}
+pre .rubyTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .Search {
+  background-color: #e4aa80;
+  color: #392313;
+}
+pre .SignColumn {
+  background-color: #1e2132;
+  color: #444b71;
+}
+pre .Special {
+  color: #b4be82;
+}
+pre .SpecialChar {
+  color: #b4be82;
+}
+pre .SpecialComment {
+  color: #b4be82;
+}
+pre .SpecialKey {
+  background-color: #161821;
+  color: #242940;
+}
+pre .sqlComment {
+  color: #6b7089;
+}
+pre .sqlKeyword {
+  color: #b4be82;
+}
+pre .sqlNumber {
+  color: #a093c7;
+}
+pre .sqlOperator {
+  color: #84a0c6;
+}
+pre .sqlSpecial {
+  color: #b4be82;
+}
+pre .sqlStatement {
+  color: #84a0c6;
+}
+pre .sqlString {
+  color: #89b8c2;
+}
+pre .sqlTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .sqlType {
+  color: #89b8c2;
+}
+pre .Statement {
+  color: #84a0c6;
+}
+pre .StatusLine {
+  background-color: #17171b;
+  color: #818596;
+}
+pre .StatusLineNC {
+  background-color: #3e445e;
+  color: #0f1117;
+}
+pre .StorageClass {
+  color: #84a0c6;
+}
+pre .String {
+  color: #89b8c2;
+}
+pre .Structure {
+  color: #89b8c2;
+}
+pre .svssBraces {
+  color: #c6c8d1;
+}
+pre .SyntasticErrorSign {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .SyntasticStyleErrorSign {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .SyntasticStyleWarningSign {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .SyntasticWarningSign {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .TabLine {
+  background-color: #818596;
+  color: #17171b;
+}
+pre .TabLineFill {
+  background-color: #17171b;
+  color: #818596;
+}
+pre .TabLineSel {
+  background-color: #161821;
+  color: #9a9ca5;
+}
+pre .Tag {
+  color: #b4be82;
+}
+pre .Title {
+  color: #e2a478;
+}
+pre .Todo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .Type {
+  color: #89b8c2;
+}
+pre .Typedef {
+  color: #89b8c2;
+}
+pre .Underlined {
+  color: #84a0c6;
+}
+pre .vbBoolean {
+  color: #a093c7;
+}
+pre .vbComment {
+  color: #6b7089;
+}
+pre .vbConditional {
+  color: #84a0c6;
+}
+pre .vbConst {
+  color: #a093c7;
+}
+pre .vbDefine {
+  color: #a093c7;
+}
+pre .vbError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vbEvents {
+  color: #b4be82;
+}
+pre .vbFloat {
+  color: #a093c7;
+}
+pre .vbFunction {
+  color: #89b8c2;
+}
+pre .vbIdentifier {
+  color: #89b8c2;
+}
+pre .vbKeyword {
+  color: #84a0c6;
+}
+pre .vbLineNumber {
+  color: #6b7089;
+}
+pre .vbMethods {
+  color: #b4be82;
+}
+pre .vbNumber {
+  color: #a093c7;
+}
+pre .vbOperator {
+  color: #84a0c6;
+}
+pre .vbRepeat {
+  color: #84a0c6;
+}
+pre .vbStatement {
+  color: #84a0c6;
+}
+pre .vbString {
+  color: #89b8c2;
+}
+pre .vbTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .vbTypes {
+  color: #89b8c2;
+}
+pre .vbTypeSpecifier {
+  color: #89b8c2;
+}
+pre .VertSplit {
+  background-color: #0f1117;
+  color: #0f1117;
+}
+pre .vimAbb {
+  color: #84a0c6;
+}
+pre .vimAddress {
+  color: #a093c7;
+}
+pre .vimAugroupKey {
+  color: #84a0c6;
+}
+pre .vimAuHighlight {
+  color: #84a0c6;
+}
+pre .vimAutoCmd {
+  color: #84a0c6;
+}
+pre .vimAutoCmdOpt {
+  color: #b4be82;
+}
+pre .vimAutoEvent {
+  color: #89b8c2;
+}
+pre .vimAutoSet {
+  color: #84a0c6;
+}
+pre .vimBehave {
+  color: #84a0c6;
+}
+pre .vimBehaveError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimBehaveModel {
+  color: #84a0c6;
+}
+pre .vimBracket {
+  color: #c6c8d1;
+}
+pre .vimBufnrWarn {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimCmplxRepeat {
+  color: #b4be82;
+}
+pre .vimCollClassErr {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimCommand {
+  color: #84a0c6;
+}
+pre .vimComment {
+  color: #6b7089;
+}
+pre .vimCommentString {
+  color: #89b8c2;
+}
+pre .vimCommentTitle {
+  color: #b4be82;
+}
+pre .vimCondHL {
+  color: #84a0c6;
+}
+pre .vimContinue {
+  color: #6b7089;
+}
+pre .vimCtrlChar {
+  color: #b4be82;
+}
+pre .vimEchoHL {
+  color: #84a0c6;
+}
+pre .vimEchoHLNone {
+  color: #89b8c2;
+}
+pre .vimElseif {
+  color: #84a0c6;
+}
+pre .vimElseIfErr {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimEmbedError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimEnvvar {
+  color: #b4be82;
+}
+pre .vimError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimErrSetting {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimFBVar {
+  color: #89b8c2;
+}
+pre .vimFgBgAttrib {
+  color: #b4be82;
+}
+pre .vimFold {
+  background-color: #1e2132;
+  color: #686f9a;
+}
+pre .vimFTCmd {
+  color: #84a0c6;
+}
+pre .vimFTError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimFTOption {
+  color: #89b8c2;
+}
+pre .vimFunc {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimFuncKey {
+  color: #84a0c6;
+}
+pre .vimFuncName {
+  color: #e2a478;
+}
+pre .vimFuncSID {
+  color: #b4be82;
+}
+pre .vimFunctionError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimFuncVar {
+  color: #89b8c2;
+}
+pre .vimGroup {
+  color: #89b8c2;
+}
+pre .vimGroupAdd {
+  color: #b4be82;
+}
+pre .vimGroupName {
+  color: #89b8c2;
+}
+pre .vimGroupRem {
+  color: #b4be82;
+}
+pre .vimGroupSpecial {
+  color: #b4be82;
+}
+pre .vimHiAttrib {
+  color: #b4be82;
+}
+pre .vimHiAttribList {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimHiClear {
+  color: #84a0c6;
+}
+pre .vimHiCTerm {
+  color: #89b8c2;
+}
+pre .vimHiCtermError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimHiCtermFgBg {
+  color: #89b8c2;
+}
+pre .vimHighlight {
+  color: #84a0c6;
+}
+pre .vimHiGroup {
+  color: #89b8c2;
+}
+pre .vimHiGui {
+  color: #89b8c2;
+}
+pre .vimHiGuiFgBg {
+  color: #89b8c2;
+}
+pre .vimHiGuiFont {
+  color: #89b8c2;
+}
+pre .vimHiGuiRgb {
+  color: #a093c7;
+}
+pre .vimHiKeyError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimHiNmbr {
+  color: #a093c7;
+}
+pre .vimHiStartStop {
+  color: #89b8c2;
+}
+pre .vimHiTerm {
+  color: #89b8c2;
+}
+pre .vimHLGroup {
+  color: #89b8c2;
+}
+pre .vimHLMod {
+  color: #b4be82;
+}
+pre .vimInsert {
+  color: #89b8c2;
+}
+pre .vimIsCommand {
+  color: #84a0c6;
+}
+pre .vimKeyCode {
+  color: #89b8c2;
+}
+pre .vimKeyCodeError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimKeyword {
+  color: #84a0c6;
+}
+pre .vimLet {
+  color: #84a0c6;
+}
+pre .vimLineComment {
+  color: #6b7089;
+}
+pre .vimMap {
+  color: #84a0c6;
+}
+pre .vimMapBang {
+  color: #84a0c6;
+}
+pre .vimMapMod {
+  color: #c6c8d1;
+}
+pre .vimMapModErr {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimMapModKey {
+  color: #b4be82;
+}
+pre .vimMark {
+  color: #a093c7;
+}
+pre .vimMarkNumber {
+  color: #a093c7;
+}
+pre .vimMenuMod {
+  color: #c6c8d1;
+}
+pre .vimMenuName {
+  color: #b4be82;
+}
+pre .vimMenuNameMore {
+  color: #b4be82;
+}
+pre .vimMtchComment {
+  color: #6b7089;
+}
+pre .vimNorm {
+  color: #84a0c6;
+}
+pre .vimNotation {
+  color: #b4be82;
+}
+pre .vimNotFunc {
+  color: #84a0c6;
+}
+pre .vimNotPatSep {
+  color: #89b8c2;
+}
+pre .vimNumber {
+  color: #a093c7;
+}
+pre .vimOper {
+  color: #84a0c6;
+}
+pre .vimOperError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimOption {
+  color: #b4be82;
+}
+pre .vimParenSep {
+  color: #c6c8d1;
+}
+pre .vimPatSep {
+  color: #b4be82;
+}
+pre .vimPatSepErr {
+  color: #b4be82;
+}
+pre .vimPatSepR {
+  color: #b4be82;
+}
+pre .vimPatSepZ {
+  color: #b4be82;
+}
+pre .vimPatSepZone {
+  color: #89b8c2;
+}
+pre .vimPattern {
+  color: #89b8c2;
+}
+pre .vimPlainMark {
+  color: #a093c7;
+}
+pre .vimPlainRegister {
+  color: #b4be82;
+}
+pre .vimRegister {
+  color: #b4be82;
+}
+pre .vimScriptDelim {
+  color: #6b7089;
+}
+pre .vimSearch {
+  color: #89b8c2;
+}
+pre .vimSearchDelim {
+  color: #84a0c6;
+}
+pre .vimSep {
+  color: #c6c8d1;
+}
+pre .vimSetMod {
+  color: #b4be82;
+}
+pre .vimSetSep {
+  color: #84a0c6;
+}
+pre .vimSetString {
+  color: #89b8c2;
+}
+pre .vimSpecFile {
+  color: #89b8c2;
+}
+pre .vimSpecFileMod {
+  color: #89b8c2;
+}
+pre .vimSpecial {
+  color: #89b8c2;
+}
+pre .vimStatement {
+  color: #84a0c6;
+}
+pre .vimString {
+  color: #89b8c2;
+}
+pre .vimStringCont {
+  color: #89b8c2;
+}
+pre .vimSubst {
+  color: #84a0c6;
+}
+pre .vimSubst1 {
+  color: #84a0c6;
+}
+pre .vimSubstDelim {
+  color: #c6c8d1;
+}
+pre .vimSubstFlagErr {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimSubstFlags {
+  color: #b4be82;
+}
+pre .vimSubstSubstr {
+  color: #b4be82;
+}
+pre .vimSubstTwoBS {
+  color: #89b8c2;
+}
+pre .vimSynCase {
+  color: #89b8c2;
+}
+pre .vimSynCaseError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimSyncC {
+  color: #89b8c2;
+}
+pre .vimSyncError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimSyncGroup {
+  color: #89b8c2;
+}
+pre .vimSyncGroupName {
+  color: #89b8c2;
+}
+pre .vimSyncKey {
+  color: #89b8c2;
+}
+pre .vimSyncNone {
+  color: #89b8c2;
+}
+pre .vimSynContains {
+  color: #b4be82;
+}
+pre .vimSynError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimSynKeyContainedin {
+  color: #b4be82;
+}
+pre .vimSynKeyOpt {
+  color: #b4be82;
+}
+pre .vimSynMtchGrp {
+  color: #b4be82;
+}
+pre .vimSynMtchOpt {
+  color: #b4be82;
+}
+pre .vimSynNextgroup {
+  color: #b4be82;
+}
+pre .vimSynNotPatRange {
+  color: #89b8c2;
+}
+pre .vimSynOption {
+  color: #b4be82;
+}
+pre .vimSynPatRange {
+  color: #89b8c2;
+}
+pre .vimSynReg {
+  color: #89b8c2;
+}
+pre .vimSynRegOpt {
+  color: #b4be82;
+}
+pre .vimSynRegPat {
+  color: #89b8c2;
+}
+pre .vimSyntax {
+  color: #84a0c6;
+}
+pre .vimSynType {
+  color: #89b8c2;
+}
+pre .vimTodo {
+  background-color: #161821;
+  color: #d8e599;
+}
+pre .vimUnmap {
+  color: #84a0c6;
+}
+pre .vimUserAttrb {
+  color: #89b8c2;
+}
+pre .vimUserAttrbCmplt {
+  color: #89b8c2;
+}
+pre .vimUserAttrbCmpltFunc {
+  color: #b4be82;
+}
+pre .vimUserAttrbKey {
+  color: #b4be82;
+}
+pre .vimUserCmdError {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .vimUserCommand {
+  color: #84a0c6;
+}
+pre .vimUserFunc {
+  background-color: #161821;
+  color: #c6c8d1;
+}
+pre .vimVar {
+  color: #89b8c2;
+}
+pre .vimWarn {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .Visual {
+  background-color: #272c42;
+}
+pre .WarningMsg {
+  background-color: #161821;
+  color: #e27878;
+}
+pre .WildMenu {
+  background-color: #d4d5db;
+  color: #17171b;
+}
+pre .xmlAttribPunct {
+  color: #84a0c6;
+}
+pre .xmlEndTag {
+  color: #84a0c6;
+}
+pre .xmlNamespace {
+  color: #84a0c6;
+}
+pre .xmlTag {
+  color: #84a0c6;
+}
+pre .xmlTagName {
+  color: #84a0c6;
+}
+pre .yamlKeyValueDelimiter {
+  color: #c6c8d1;
+}

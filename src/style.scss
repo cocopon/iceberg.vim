@@ -1,0 +1,292 @@
+$background-color: hsl(230deg, 30%, 20%);
+$color: hsl(230deg, 15%, 70%);
+$font-family-sans-serif: Play, sans-serif;
+$font-family-title: Play, sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace;
+
+$ground-color: darken($background-color, 10%);
+$a-color: white;
+$button-background-color: hsl(190deg, 35%, 68%);
+$button-border-radius: 3px;
+$button-color: $background-color;
+$button-hover-background-color: adjust-color(
+	$button-background-color,
+	$saturation: +15%,
+	$lightness: +15%);
+$button-hover-color: $button-color;
+$header-height: 280px;
+$heading-color: lighten($color, 15%);
+$heading-margin: 2.0em 0 0.5em;
+$iceberg-height: 144px;
+$iceberg-left: 32px;
+$iceberg-top: 40px;
+$iceberg-width: 110px;
+$title-offset: 120px;
+$main-width: 600px;
+$pre-border-radius: 3px;
+$pre-margin: 1.0em 0;
+$preview-pre-height: 14em;
+$footer-spacing: 4.0em;
+
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+html {
+	background-color: $background-color;
+	background: -moz-linear-gradient(270deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
+	background: -webkit-linear-gradient(270deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
+	background: linear-gradient(180deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
+	color: $color;
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: $font-family-sans-serif;
+	font-size: 1.0em;
+	margin: 0;
+	padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $heading-color;
+	font-family: $font-family-title;
+	font-weight: bold;
+	margin: $heading-margin;
+	padding: 2px 0;
+}
+h1 {
+	font-size: 240%;
+	text-transform: uppercase;
+}
+h2 {
+	border-bottom: mix($heading-color, $background-color, 5%) solid 1px;
+	font-size: 150%;
+}
+h3 {
+	font-size: 125%;
+}
+pre {
+	background-color: black;
+	border: lighten($background-color, 5%) solid 2px;
+	border-radius: $pre-border-radius;
+	font-family: $font-family-monospace;
+	font-size: 90%;
+	margin: 1.0em 0;
+	overflow: auto;
+	overflow-x: hidden;
+}
+ul {
+	margin: 1.5em 0;
+}
+li + li {
+	margin-top: 0.3em;
+}
+p {
+	line-height: 150%;
+}
+a {
+	color: $a-color;
+
+	&:hover {
+		background-color: mix($a-color, $background-color, 10%);
+		border-radius: 3px;
+		text-decoration: none;
+	}
+}
+
+#header {
+	background: url(../img/header-bg.png) repeat-x left top;
+	height: $header-height;
+	min-width: $main-width;
+	text-align: center;
+	position: relative;
+
+	h1 {
+		letter-spacing: 0.02em;
+		margin: 0;
+	}
+	.title-container {
+		top: $title-offset;
+		position: absolute;
+		left: 50%;
+		margin-left: -$main-width / 2;
+		width: $main-width;
+	}
+	.subtitle {
+		color: mix($color, $background-color, 75%);
+	}
+}
+#main {
+	margin: 0 auto;
+	position: relative;
+	width: $main-width;
+}
+ul.icon {
+	padding: 0 0 0 1.5em;
+
+	li {
+		list-style-type: none;
+	}
+	.fa {
+		margin-right: 0.5em;
+	}
+}
+.github {
+	bottom: 48px;
+	height: 20px;
+	left: 50%;
+	margin-left: -$main-width / 2;
+	position: absolute;
+	text-align: center;
+	width: $main-width;
+}
+.preview {
+	pre {
+		height: $preview-pre-height;
+	}
+	.title {
+	}
+}
+.button-container {
+	text-align: center;
+}
+.button {
+	background-color: $button-background-color;
+	border-radius: $button-border-radius;
+	color: black;
+	display: inline-block;
+	margin: 2.0em 0;
+	padding: 8px 1.0em;
+	text-align: center;
+	text-decoration: none;
+
+	&:hover {
+		background-color: $button-hover-background-color;
+		color: $button-hover-color;
+	}
+	.fa {
+		margin-right: 0.5em;
+	}
+}
+.screenshot {
+	text-align: center;
+
+	img {
+		max-width: 100%;
+	}
+
+	&.osx {
+		text-align: left;
+
+		img {
+			width: 294px;
+		}
+	}
+}
+#footer {
+	background: url(../img/footer-bg.png) repeat-x left bottom;
+	font-size: 90%;
+	height: 50px;
+	margin: $footer-spacing auto 0;
+	min-width: $main-width;
+	padding-top: 28px;
+	text-align: center;
+}
+
+// Decorations
+.ice-l {
+	background: url(../img/ice-l.png) no-repeat left top;
+	height: 94px;
+	left: 32px;
+	position: absolute;
+	top: $iceberg-top;
+	width: 104px;
+}
+.ice-m {
+	background: url(../img/ice-m.png) no-repeat left top;
+	height: 74px;
+	position: absolute;
+	right: 120px;
+	top: $iceberg-top;
+	width: 94px;
+}
+.ice-s {
+	background: url(../img/ice-s.png) no-repeat left top;
+	height: 54px;
+	position: absolute;
+	right: 32px;
+	top: $iceberg-top;
+	width: 44px;
+}
+.clione {
+	background: url(../img/clione.png) no-repeat left top;
+	height: 40px;
+	left: -80px;
+	position: absolute;
+	width: 30px;
+}
+.anchor {
+	background: url(../img/anchor.png) no-repeat left top;
+	bottom: -($footer-spacing + 2.0em);
+	height: 27px;
+	position: absolute;
+	right: 0;
+	width: 27px;
+}
+
+// Palette
+ul.palette {
+	$palette-size: 12px;
+
+	margin: 4.0em 0;
+	padding: 8px 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		height: $palette-size;
+		margin: 0;
+		width: $palette-size;
+	}
+	li + li {
+		margin-left: 16px;
+	}
+
+	.item {
+		border-radius: 6px;
+	}
+
+	$base-hue: 230deg;
+	$normal-bg: hsl(230deg, 20%, 11%);
+	.base0 {background-color: darken($normal-bg, 3%);}
+	.base1 {background-color: $normal-bg;}
+	.base2 {background-color: adjust-color($normal-bg,
+		$saturation: +5%,
+		$lightness: +10%);}
+	.base3 {background-color: hsl($base-hue, 20%, 30%);}
+	.base4 {background-color: hsl($base-hue, 9%, 50%);}
+	.base5 {background-color: hsl($base-hue, 10%, 80%);}
+
+	.blue {
+		background-color: hsl(215deg, 37%, 65%);
+	}
+	.green {
+		background-color: hsl(72deg, 35%, 65%);
+	}
+	.lblue {
+		background-color: hsl(190deg, 31%, 65%);
+	}
+	.orange {
+		background-color: hsl(25deg, 65%, 68%);
+	}
+	.purple {
+		background-color: hsl(255deg, 32%, 68%);
+	}
+	.red {
+		background-color: hsl(0, 63%, 68%);
+	}
+}
+
+
+@import 'iceberg';
