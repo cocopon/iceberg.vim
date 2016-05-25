@@ -2,6 +2,13 @@ Changelog
 =========
 
 
+0.5
+---
+* Improve visibility of diff with cursorline
+* Updated color for swift
+* Minor color updates
+
+
 0.4
 ---
 * Updated color for html
