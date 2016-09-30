@@ -134,6 +134,14 @@ Error, ErrorMsg, WarningMsg {
 	guibg: $normal-bg;
 	guifg: $g-red;
 }
+EndOfBuffer, NonText, SpecialKey {
+	ctermbg: $c-normal-bg;
+	ctermfg: 236;
+	guibg: $normal-bg;
+	guifg: adjust-color($normal-bg,
+		$saturation: +8%,
+		$lightness: +9%);
+}
 Folded {
 	ctermbg: $c-folded-bg;
 	ctermfg: $c-folded-fg;
@@ -170,14 +178,6 @@ MatchParen {
 MoreMsg {
 	ctermfg: $c-green;
 	guifg: $g-green;
-}
-NonText, SpecialKey {
-	ctermbg: $c-normal-bg;
-	ctermfg: 236;
-	guibg: $normal-bg;
-	guifg: adjust-color($normal-bg,
-		$saturation: +8%,
-		$lightness: +9%);
 }
 Normal {
 	ctermbg: $c-normal-bg;
