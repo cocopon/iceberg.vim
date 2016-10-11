@@ -371,6 +371,7 @@ diffRemoved {
 @link htmlEndTag to Statement;
 @link htmlTag to Statement;
 // javascript
+@link jsArrowFunction to Operator;
 @link jsFunction to Function;
 @link jsGlobalObjects to Statement;
 @link jsModuleDefault to Statement;
