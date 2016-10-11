@@ -372,6 +372,11 @@ diffRemoved {
 @link htmlTag to Statement;
 // javascript
 @link jsFunction to Function;
+@link jsGlobalObjects to Statement;
+@link jsModuleDefault to Statement;
+@link jsModuleKeywords to Statement;
+@link jsModuleOperators to Statement;
+@link jsSuper to Statement;
 // markdown
 @link markdownCode to String;
 @link markdownCodeDelimiter to String;
