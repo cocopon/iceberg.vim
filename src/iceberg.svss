@@ -354,6 +354,7 @@ ZenSpace {
 // Filetype-specific rules {{{
 // css
 @link cssBraces to Delimiter;
+@link cssTagName to Statement;
 // diff
 diffAdded {
     ctermfg: $c-green;
