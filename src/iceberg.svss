@@ -378,6 +378,8 @@ diffRemoved {
 @link jsModuleKeywords to Statement;
 @link jsModuleOperators to Statement;
 @link jsSuper to Statement;
+// json
+@link jsonQuote to Normal;
 // markdown
 @link markdownBold to Special;
 @link markdownCode to String;
