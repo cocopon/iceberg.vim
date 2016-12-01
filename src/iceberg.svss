@@ -379,6 +379,7 @@ diffRemoved {
 @link jsModuleOperators to Statement;
 @link jsSuper to Statement;
 // markdown
+@link markdownBold to Special;
 @link markdownCode to String;
 @link markdownCodeDelimiter to String;
 @link markdownHeadingDelimiter to Comment;

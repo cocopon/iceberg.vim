@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-10-11 13:31+0900
+" Modified:   2016-12-01 15:34+0900
 " License:    MIT
 
 
@@ -100,6 +100,7 @@ hi! link jsModuleDefault Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
 hi! link jsSuper Statement
+hi! link markdownBold Special
 hi! link markdownCode String
 hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
