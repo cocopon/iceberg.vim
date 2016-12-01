@@ -93,6 +93,7 @@ hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
+hi! link jsArrowFunction Operator
 hi! link jsFunction Function
 hi! link jsGlobalObjects Statement
 hi! link jsModuleDefault Statement
