@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-01 15:36+0900
+" Modified:   2016-12-07 08:55+0900
 " License:    MIT
 
 
@@ -112,6 +112,7 @@ hi! link rubyInclude Statement
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
+hi! link shFunction Normal
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
 hi! link vimContinue Comment

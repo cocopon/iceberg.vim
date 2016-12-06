@@ -394,6 +394,8 @@ diffRemoved {
 @link rubyInterpolationDelimiter to String;
 @link rubySharpBang to Comment;
 @link rubyStringDelimiter to String;
+// sh
+@link shFunction to Normal;
 // svss
 @link svssBraces to Delimiter;
 // swift (apple)
