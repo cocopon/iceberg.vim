@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-07 08:55+0900
+" Modified:   2016-12-13 18:25+0900
 " License:    MIT
 
 
@@ -86,6 +86,18 @@ hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi! ZenSpace ctermbg=203 guibg=#e27878
 hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
+hi! icebergLLBase ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80
+hi! icebergLLTabFill ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80
+hi! icebergLLGradient ctermbg=241 ctermfg=234 guibg=#5a5f72 guifg=#17171b
+hi! icebergLLEdge ctermbg=245 ctermfg=234 guibg=#818596 guifg=#17171b
+hi! icebergLLNormal ctermbg=245 ctermfg=234 guibg=#818596 guifg=#17171b
+hi! icebergLLTabSel ctermbg=245 ctermfg=234 guibg=#818596 guifg=#17171b
+hi! icebergLLNC ctermbg=233 ctermfg=238 guibg=#0f1117 guifg=#3e445e
+hi! icebergLLError ctermbg=203 ctermfg=234 guibg=#e27878 guifg=#161821
+hi! icebergLLInsert ctermbg=110 ctermfg=234 guibg=#84a0c6 guifg=#161821
+hi! icebergLLReplace ctermbg=216 ctermfg=234 guibg=#e2a478 guifg=#161821
+hi! icebergLLWarning ctermbg=216 ctermfg=234 guibg=#e2a478 guifg=#161821
+hi! icebergLLVisual ctermbg=150 ctermfg=234 guibg=#b4be82 guifg=#161821
 
 hi! link cssBraces Delimiter
 hi! link cssTagName Statement
