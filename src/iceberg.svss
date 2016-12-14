@@ -39,6 +39,13 @@ $cursorline-bg: $linenr-bg;
 $folded-bg: $linenr-bg;
 $folded-fg: adjust-color($folded-bg, $saturation: -5%, $lightness: +35%);
 
+$lightline-base-bg: lighten($normal-bg, 15%);
+$lightline-base-fg: adjust-color($normal-bg, $saturation: -10%, $lightness: 35%);
+$lightline-edge-bg: $statusline-bg;
+$lightline-edge-fg: $statusline-fg;
+$lightline-gradient-bg: mix($lightline-base-bg, $lightline-edge-bg, 50%);
+$lightline-gradient-fg: $lightline-edge-fg;
+
 // cterm
 $c-blue: 110;
 $c-green: 150;
@@ -61,6 +68,13 @@ $c-statuslinenc-fg: 238;
 $c-cursorline-bg: $c-linenr-bg;
 $c-folded-bg: $c-linenr-bg;
 $c-folded-fg: 245;
+
+$c-lightline-base-bg: 237;
+$c-lightline-base-fg: 243;
+$c-lightline-edge-bg: $c-statusline-bg;
+$c-lightline-edge-fg: $c-statusline-fg;
+$c-lightline-gradient-bg: 241;
+$c-lightline-gradient-fg: $c-lightline-edge-fg;
 // }}}
 
 
@@ -411,4 +425,60 @@ diffRemoved {
 @link xmlTagName to Statement;
 // yaml
 @link yamlKeyValueDelimiter to Delimiter;
+// }}}
+
+
+// Palettes for statusline plugins {{{
+icebergLLBase,
+icebergLLTabFill {
+	ctermbg: $c-lightline-base-bg;
+	ctermfg: $c-lightline-base-fg;
+	guibg: $lightline-base-bg;
+	guifg: $lightline-base-fg;
+}
+icebergLLGradient {
+	ctermbg: $c-lightline-gradient-bg;
+	ctermfg: $c-lightline-gradient-fg;
+	guibg: $lightline-gradient-bg;
+	guifg: $lightline-gradient-fg;
+}
+icebergLLEdge,
+icebergLLNormal,
+icebergLLTabSel {
+	ctermbg: $c-lightline-edge-bg;
+	ctermfg: $c-lightline-edge-fg;
+	guibg: $lightline-edge-bg;
+	guifg: $lightline-edge-fg;
+}
+icebergLLNC {
+	ctermbg: $c-statuslinenc-bg;
+	ctermfg: $c-statuslinenc-fg;
+	guibg: $statuslinenc-bg;
+	guifg: $statuslinenc-fg;
+}
+icebergLLError {
+	ctermbg: $c-red;
+	ctermfg: $c-normal-bg;
+	guibg: $g-red;
+	guifg: $normal-bg;
+}
+icebergLLInsert {
+	ctermbg: $c-blue;
+	ctermfg: $c-normal-bg;
+	guibg: $g-blue;
+	guifg: $normal-bg;
+}
+icebergLLReplace,
+icebergLLWarning {
+	ctermbg: $c-orange;
+	ctermfg: $c-normal-bg;
+	guibg: $g-orange;
+	guifg: $normal-bg;
+}
+icebergLLVisual {
+	ctermbg: $c-green;
+	ctermfg: $c-normal-bg;
+	guibg: $g-green;
+	guifg: $normal-bg;
+}
 // }}}
