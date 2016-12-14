@@ -31,14 +31,20 @@ function! s:build_palette() abort
 				\ 'visual':   {},
 				\ 'tabline':  {}}
 
+	let col_base     = s:col('icebergLLBase')
+	let col_edge     = s:col('icebergLLEdge')
+	let col_gradient = s:col('icebergLLGradient')
+	let col_nc       = s:col('icebergLLNC')
+	let col_tabfill  = s:col('icebergLLTabFill')
+
 	let p.normal.middle = [
-				\ s:col('icebergLLBase')]
+				\ col_base]
 	let p.normal.left = [
 				\ s:col('icebergLLNormal'),
-				\ s:col('icebergLLGradient')]
+				\ col_gradient]
 	let p.normal.right = [
-				\ s:col('icebergLLEdge'),
-				\ s:col('icebergLLGradient')]
+				\ col_edge,
+				\ col_gradient]
 	let p.normal.error = [
 				\ s:col('icebergLLError')]
 	let p.normal.warning = [
@@ -46,27 +52,27 @@ function! s:build_palette() abort
 
 	let p.insert.left = [
 				\ s:col('icebergLLInsert'),
-				\ s:col('icebergLLGradient')]
+				\ col_gradient]
 	let p.replace.left = [
 				\ s:col('icebergLLReplace'),
-				\ s:col('icebergLLGradient')]
+				\ col_gradient]
 	let p.visual.left = [
 				\ s:col('icebergLLVisual'),
-				\ s:col('icebergLLGradient')]
+				\ col_gradient]
 
 	let p.inactive.middle = [
-				\ s:col('icebergLLNC')]
+				\ col_nc]
 	let p.inactive.left = [
-				\ s:col('icebergLLNC'),
-				\ s:col('icebergLLNC')]
+				\ col_nc,
+				\ col_nc]
 	let p.inactive.right = [
-				\ s:col('icebergLLNC'),
-				\ s:col('icebergLLNC')]
+				\ col_nc,
+				\ col_nc]
 
 	let p.tabline.middle = [
-				\ s:col('icebergLLTabFill')]
+				\ col_tabfill]
 	let p.tabline.left = [
-				\ s:col('icebergLLTabFill')]
+				\ col_tabfill]
 	let p.tabline.tabsel = [
 				\ s:col('icebergLLTabSel')]
 
