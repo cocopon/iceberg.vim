@@ -84,7 +84,7 @@ if g:colors_name !=# 'iceberg'
 	let message = 'iceberg.vim: Execute `:colorscheme iceberg` before loading lightline colorscheme'
 
 	" Call both echomsg and echoerr
-	" because lightline.vim doesn't show thrown error message
+	" because lightline doesn't show thrown error message
 	echomsg message
 	echoerr message
 endif
