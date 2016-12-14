@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-13 18:25+0900
+" Modified:   2016-12-14 10:50+0900
 " License:    MIT
 
 
@@ -98,6 +98,7 @@ hi! icebergLLInsert ctermbg=110 ctermfg=234 guibg=#84a0c6 guifg=#161821
 hi! icebergLLReplace ctermbg=216 ctermfg=234 guibg=#e2a478 guifg=#161821
 hi! icebergLLWarning ctermbg=216 ctermfg=234 guibg=#e2a478 guifg=#161821
 hi! icebergLLVisual ctermbg=150 ctermfg=234 guibg=#b4be82 guifg=#161821
+hi! icebergALAccentRed ctermfg=203 guifg=#e27878
 
 hi! link cssBraces Delimiter
 hi! link cssTagName Statement

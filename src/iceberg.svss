@@ -481,4 +481,8 @@ icebergLLVisual {
 	guibg: $g-green;
 	guifg: $normal-bg;
 }
+icebergALAccentRed {
+	ctermfg: $c-red;
+	guifg: $g-red;
+}
 // }}}
