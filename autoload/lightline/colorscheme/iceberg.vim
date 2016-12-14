@@ -31,8 +31,6 @@ function! s:build_palette() abort
 				\ 'visual':   {},
 				\ 'tabline':  {}}
 
-	echomsg string(s:col('icebergLLBase'))
-
 	let p.normal.middle = [
 				\ s:col('icebergLLBase')]
 	let p.normal.left = [
