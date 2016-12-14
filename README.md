@@ -6,20 +6,24 @@
 Overview
 --------
 Iceberg is a dark blue color scheme for Vim. It brings a cool-headed perspective
-for your happy coding.
+for your happy coding!
+
+![Screenshot](http://cocopon.github.io/iceberg.vim/assets/github/screenshot.png)
+
+![Palette](https://cocopon.github.io/iceberg.vim/assets/github/palette.png)
 
 See the [official site](http://cocopon.github.io/iceberg.vim/) or the
 [vimonline page](http://www.vim.org/scripts/script.php?script_id=4820) for more
 information.
 
-![Screenshot](http://cocopon.github.io/iceberg.vim/assets/github/screenshot.png)
 
 
 
-
-Palette
--------
-![Palette](https://cocopon.github.io/iceberg.vim/assets/github/palette.png)
+Features
+--------
+- Support 256-colors terminal
+- Support [airline](https://github.com/vim-airline/vim-airline/) theme
+- Support [lightline](https://github.com/itchyny/lightline.vim) colorscheme
 
 
 
