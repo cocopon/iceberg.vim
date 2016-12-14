@@ -2,6 +2,15 @@ Changelog
 =========
 
 
+0.6
+---
+* Added airline support
+* Added lightline support
+* Added rules for new highlight group: `EndOfBuffer`
+* Improved colors for javascript, markdown, etc.
+* Minor color updates
+
+
 0.5
 ---
 * Improved visibility of diff with cursorline
@@ -23,7 +32,7 @@ Changelog
 
 0.2
 ---
-* Added rules for SignColumn, Spell*, StorageClass, WileMenu
+* Added rules for `SignColumn`, `Spell*`, `StorageClass`, `WileMenu`
 * Added links for css, html, javascript, xml, yaml
 * Minor color updates
 
