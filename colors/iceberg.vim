@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-14 10:50+0900
+" Modified:   2016-12-15 16:39+0900
 " License:    MIT
 
 
@@ -102,6 +102,10 @@ hi! icebergALAccentRed ctermfg=203 guifg=#e27878
 
 hi! link cssBraces Delimiter
 hi! link cssTagName Statement
+hi! link CtrlPPrtCursor Cursor
+hi! link CtrlPMatch Title
+hi! link CtrlPMode1 icebergLLGradient
+hi! link CtrlPMode2 StatusLine
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement

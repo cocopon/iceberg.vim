@@ -369,6 +369,11 @@ ZenSpace {
 // css
 @link cssBraces to Delimiter;
 @link cssTagName to Statement;
+// ctrlp
+@link CtrlPPrtCursor to Cursor;
+@link CtrlPMatch to Title;
+@link CtrlPMode1 to icebergLLGradient;
+@link CtrlPMode2 to StatusLine;
 // diff
 diffAdded {
     ctermfg: $c-green;
