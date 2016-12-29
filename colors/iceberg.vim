@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-15 16:39+0900
+" Modified:   2016-12-29 16:39+0900
 " License:    MIT
 
 
@@ -83,9 +83,9 @@ hi! Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=unde
 hi! VertSplit ctermbg=233 ctermfg=233 guibg=#0f1117 guifg=#0f1117
 hi! Visual ctermbg=236 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
-hi! ZenSpace ctermbg=203 guibg=#e27878
 hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
+hi! ZenSpace ctermbg=203 guibg=#e27878
 hi! icebergLLBase ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80
 hi! icebergLLTabFill ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80
 hi! icebergLLGradient ctermbg=241 ctermfg=234 guibg=#5a5f72 guifg=#17171b
@@ -102,27 +102,11 @@ hi! icebergALAccentRed ctermfg=203 guifg=#e27878
 
 hi! link cssBraces Delimiter
 hi! link cssTagName Statement
-hi! link CtrlPPrtCursor Cursor
-hi! link CtrlPMatch Title
-hi! link CtrlPMode1 icebergLLGradient
-hi! link CtrlPMode2 StatusLine
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
-hi! link jsArrowFunction Operator
-hi! link jsFunction Function
-hi! link jsGlobalObjects Statement
-hi! link jsModuleDefault Statement
-hi! link jsModuleKeywords Statement
-hi! link jsModuleOperators Statement
-hi! link jsSuper Statement
 hi! link jsonQuote Normal
-hi! link markdownBold Special
-hi! link markdownCode String
-hi! link markdownCodeDelimiter String
-hi! link markdownHeadingDelimiter Comment
-hi! link markdownRule Comment
 hi! link phpVarSelector Identifier
 hi! link rubyDefine Statement
 hi! link rubyInclude Statement
@@ -130,8 +114,6 @@ hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
 hi! link shFunction Normal
-hi! link svssBraces Delimiter
-hi! link swiftIdentifier Normal
 hi! link vimContinue Comment
 hi! link vimIsCommand Statement
 hi! link xmlAttribPunct Statement
@@ -140,3 +122,21 @@ hi! link xmlNamespace Statement
 hi! link xmlTag Statement
 hi! link xmlTagName Statement
 hi! link yamlKeyValueDelimiter Delimiter
+hi! link CtrlPPrtCursor Cursor
+hi! link CtrlPMatch Title
+hi! link CtrlPMode1 icebergLLGradient
+hi! link CtrlPMode2 StatusLine
+hi! link jsArrowFunction Operator
+hi! link jsFunction Function
+hi! link jsGlobalObjects Statement
+hi! link jsModuleDefault Statement
+hi! link jsModuleKeywords Statement
+hi! link jsModuleOperators Statement
+hi! link jsSuper Statement
+hi! link markdownBold Special
+hi! link markdownCode String
+hi! link markdownCodeDelimiter String
+hi! link markdownHeadingDelimiter Comment
+hi! link markdownRule Comment
+hi! link svssBraces Delimiter
+hi! link swiftIdentifier Normal

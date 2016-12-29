@@ -358,22 +358,13 @@ WildMenu {
 	guibg: lighten($statusline-bg, +30%);
 	guifg: $statusline-fg;
 }
-ZenSpace {
-	ctermbg: $c-red;
-	guibg: $g-red;
-}
 // }}}
 
 
-// Filetype-specific rules {{{
+// Rules for filetypes {{{
 // css
 @link cssBraces to Delimiter;
 @link cssTagName to Statement;
-// ctrlp
-@link CtrlPPrtCursor to Cursor;
-@link CtrlPMatch to Title;
-@link CtrlPMode1 to icebergLLGradient;
-@link CtrlPMode2 to StatusLine;
 // diff
 diffAdded {
     ctermfg: $c-green;
@@ -389,22 +380,8 @@ diffRemoved {
 @link htmlArg to Constant;
 @link htmlEndTag to Statement;
 @link htmlTag to Statement;
-// javascript
-@link jsArrowFunction to Operator;
-@link jsFunction to Function;
-@link jsGlobalObjects to Statement;
-@link jsModuleDefault to Statement;
-@link jsModuleKeywords to Statement;
-@link jsModuleOperators to Statement;
-@link jsSuper to Statement;
 // json
 @link jsonQuote to Normal;
-// markdown
-@link markdownBold to Special;
-@link markdownCode to String;
-@link markdownCodeDelimiter to String;
-@link markdownHeadingDelimiter to Comment;
-@link markdownRule to Comment;
 // php
 @link phpVarSelector to Identifier;
 // ruby
@@ -415,10 +392,6 @@ diffRemoved {
 @link rubyStringDelimiter to String;
 // sh
 @link shFunction to Normal;
-// svss
-@link svssBraces to Delimiter;
-// swift (apple)
-@link swiftIdentifier to Normal;
 // vim
 @link vimContinue to Comment;
 @link vimIsCommand to Statement;
@@ -430,6 +403,38 @@ diffRemoved {
 @link xmlTagName to Statement;
 // yaml
 @link yamlKeyValueDelimiter to Delimiter;
+// }}}
+
+
+// Rules for plugins {{{
+// [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+@link CtrlPPrtCursor to Cursor;
+@link CtrlPMatch to Title;
+@link CtrlPMode1 to icebergLLGradient;
+@link CtrlPMode2 to StatusLine;
+// [vim-javascript](https://github.com/pangloss/vim-javascript)
+@link jsArrowFunction to Operator;
+@link jsFunction to Function;
+@link jsGlobalObjects to Statement;
+@link jsModuleDefault to Statement;
+@link jsModuleKeywords to Statement;
+@link jsModuleOperators to Statement;
+@link jsSuper to Statement;
+// [vim-markdown](https://github.com/tpope/vim-markdown)
+@link markdownBold to Special;
+@link markdownCode to String;
+@link markdownCodeDelimiter to String;
+@link markdownHeadingDelimiter to Comment;
+@link markdownRule to Comment;
+// [SVSS](https://github.com/cocopon/svss.vim)
+@link svssBraces to Delimiter;
+// [vim-swift](https://github.com/toyamarinyon/vim-swift)
+@link swiftIdentifier to Normal;
+// [zenspace.vim](https://github.com/thinca/vim-zenspace)
+ZenSpace {
+	ctermbg: $c-red;
+	guibg: $g-red;
+}
 // }}}
 
 
