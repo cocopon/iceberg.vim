@@ -426,6 +426,10 @@ diffRemoved {
 @link markdownCodeDelimiter to String;
 @link markdownHeadingDelimiter to Comment;
 @link markdownRule to Comment;
+// [vim-plug](https://github.com/junegunn/vim-plug)
+@link plug1 to Normal;
+@link plugDash to Comment;
+@link plugMessage to Special;
 // [SVSS](https://github.com/cocopon/svss.vim)
 @link svssBraces to Delimiter;
 // [vim-swift](https://github.com/toyamarinyon/vim-swift)
