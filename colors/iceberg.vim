@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-31 20:12+0900
+" Modified:   2016-12-31 21:21+0900
 " License:    MIT
 
 
@@ -85,6 +85,10 @@ hi! Visual ctermbg=236 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
+hi! EasyMotionShade ctermfg=239 guifg=#3d425b
+hi! EasyMotionTarget ctermfg=150 guifg=#b4be82
+hi! EasyMotionTarget2First ctermfg=216 guifg=#e2a478
+hi! EasyMotionTarget2Second ctermfg=216 guifg=#e2a478
 hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#1e2132 guifg=#b4be82
 hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
 hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2

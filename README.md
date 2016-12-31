@@ -25,6 +25,7 @@ Features
 - Support [airline](https://github.com/vim-airline/vim-airline/) theme
 - Support [lightline](https://github.com/itchyny/lightline.vim) colorscheme
 - Support [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+- Support [EasyMotion](https://github.com/easymotion/vim-easymotion)
 - Support [Git Gutter](https://github.com/airblade/vim-gitgutter)
 - Better syntax highlight with [vim-javavscript](https://github.com/pangloss/vim-javascript)
 - Work fine with other various plugins: [tpope/vim-markdown](https://github.com/tpope/vim-markdown), [thinca/vim-zenspace](https://github.com/thinca/vim-zenspace), etc.
