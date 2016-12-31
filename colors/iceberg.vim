@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-30 11:33+0900
+" Modified:   2016-12-31 20:12+0900
 " License:    MIT
 
 
@@ -85,6 +85,10 @@ hi! Visual ctermbg=236 guibg=#272c42
 hi! WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi! diffAdded ctermfg=150 guifg=#b4be82
 hi! diffRemoved ctermfg=203 guifg=#e27878
+hi! GitGutterAdd ctermbg=235 ctermfg=150 guibg=#1e2132 guifg=#b4be82
+hi! GitGutterChange ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
+hi! GitGutterChangeDelete ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
+hi! GitGutterDelete ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
 hi! ZenSpace ctermbg=203 guibg=#e27878
 hi! icebergLLBase ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80
 hi! icebergLLTabFill ctermbg=237 ctermfg=243 guibg=#34394e guifg=#696d80

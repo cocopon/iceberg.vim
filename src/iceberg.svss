@@ -412,6 +412,26 @@ diffRemoved {
 @link CtrlPMatch to Title;
 @link CtrlPMode1 to icebergLLGradient;
 @link CtrlPMode2 to StatusLine;
+// [Git Gutter](https://github.com/airblade/vim-gitgutter)
+GitGutterAdd {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-green;
+	guibg: $linenr-bg;
+	guifg: $g-green;
+}
+GitGutterChange,
+GitGutterChangeDelete {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-lblue;
+	guibg: $linenr-bg;
+	guifg: $g-lblue;
+}
+GitGutterDelete {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-red;
+	guibg: $linenr-bg;
+	guifg: $g-red;
+}
 // [vim-javascript](https://github.com/pangloss/vim-javascript)
 @link jsArrowFunction to Operator;
 @link jsFunction to Function;
