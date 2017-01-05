@@ -412,6 +412,9 @@ diffRemoved {
 @link CtrlPMatch to Title;
 @link CtrlPMode1 to icebergLLGradient;
 @link CtrlPMode2 to StatusLine;
+// [Denite](https://github.com/Shougo/denite.nvim)
+@link deniteMatched to Normal;
+@link deniteMatchedChar to Function;
 // [EasyMotion](https://github.com/easymotion/vim-easymotion)
 EasyMotionShade {
 	ctermfg: 239;

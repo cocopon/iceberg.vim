@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2016-12-31 21:21+0900
+" Modified:   2017-01-05 16:32+0900
 " License:    MIT
 
 
@@ -134,6 +134,8 @@ hi! link CtrlPPrtCursor Cursor
 hi! link CtrlPMatch Title
 hi! link CtrlPMode1 icebergLLGradient
 hi! link CtrlPMode2 StatusLine
+hi! link deniteMatched Normal
+hi! link deniteMatchedChar Function
 hi! link jsArrowFunction Operator
 hi! link jsFunction Function
 hi! link jsGlobalObjects Statement
