@@ -469,6 +469,21 @@ GitGutterDelete {
 @link plugMessage to Special;
 // [SVSS](https://github.com/cocopon/svss.vim)
 @link svssBraces to Delimiter;
+// [Syntastic](http://github.com/vim-syntastic/syntastic)
+SyntasticErrorSign,
+SyntasticStyleErrorSign {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-red;
+	guibg: $linenr-bg;
+	guifg: $g-red;
+}
+SyntasticStyleWarningSign,
+SyntasticWarningSign {
+	ctermbg: $c-linenr-bg;
+	ctermfg: $c-orange;
+	guibg: $linenr-bg;
+	guifg: $g-orange;
+}
 // [vim-swift](https://github.com/toyamarinyon/vim-swift)
 @link swiftIdentifier to Normal;
 // [zenspace.vim](https://github.com/thinca/vim-zenspace)
