@@ -451,11 +451,13 @@ GitGutterDelete {
 }
 // [vim-javascript](https://github.com/pangloss/vim-javascript)
 @link jsArrowFunction to Operator;
+@link jsFuncName to Normal;
 @link jsFunction to Function;
 @link jsGlobalObjects to Statement;
 @link jsModuleDefault to Statement;
 @link jsModuleKeywords to Statement;
 @link jsModuleOperators to Statement;
+@link jsObjectKey to Identifier;
 @link jsSuper to Statement;
 // [vim-markdown](https://github.com/tpope/vim-markdown)
 @link markdownBold to Special;

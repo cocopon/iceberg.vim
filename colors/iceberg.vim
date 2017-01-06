@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-01-06 00:36+0900
+" Modified:   2017-01-07 02:05+0900
 " License:    MIT
 
 
@@ -141,11 +141,13 @@ hi! link CtrlPMode2 StatusLine
 hi! link deniteMatched Normal
 hi! link deniteMatchedChar Function
 hi! link jsArrowFunction Operator
+hi! link jsFuncName Normal
 hi! link jsFunction Function
 hi! link jsGlobalObjects Statement
 hi! link jsModuleDefault Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
+hi! link jsObjectKey Identifier
 hi! link jsSuper Statement
 hi! link markdownBold Special
 hi! link markdownCode String
