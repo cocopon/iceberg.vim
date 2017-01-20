@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-01-07 02:05+0900
+" Modified:   2017-01-20 14:27+0900
 " License:    MIT
 
 
@@ -155,6 +155,7 @@ hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
 hi! link markdownRule Comment
 hi! link plug1 Normal
+hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
 hi! link svssBraces Delimiter

@@ -467,6 +467,7 @@ GitGutterDelete {
 @link markdownRule to Comment;
 // [vim-plug](https://github.com/junegunn/vim-plug)
 @link plug1 to Normal;
+@link plug2 to Structure;
 @link plugDash to Comment;
 @link plugMessage to Special;
 // [SVSS](https://github.com/cocopon/svss.vim)
