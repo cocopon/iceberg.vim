@@ -160,3 +160,9 @@ hi! link plugDash Comment
 hi! link plugMessage Special
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
+
+
+if exists('g:iceberg_emphasize_comments') && g:iceberg_emphasize_comments
+    hi! Comment ctermfg=255 guifg=#ffffff
+endif
+
