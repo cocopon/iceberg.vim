@@ -489,6 +489,16 @@ SyntasticWarningSign {
 }
 // [vim-swift](https://github.com/toyamarinyon/vim-swift)
 @link swiftIdentifier to Normal;
+// [typescript-vim](https://github.com/leafgarland/typescript-vim)
+@link typescriptAjaxMethods to Normal;
+@link typescriptBraces to Normal;
+@link typescriptEndColons to Normal;
+@link typescriptGlobalObjects to Statement;
+@link typescriptHtmlElemProperties to Normal;
+@link typescriptIdentifier to Statement;
+@link typescriptMessage to Normal;
+@link typescriptNull to Constant;
+@link typescriptParens to Normal;
 // [zenspace.vim](https://github.com/thinca/vim-zenspace)
 ZenSpace {
 	ctermbg: $c-red;
