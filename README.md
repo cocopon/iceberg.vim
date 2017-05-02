@@ -42,7 +42,7 @@ For other environments
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
-
+- [Terminator](https://github.com/snowiow/terminator-iceberg) by [snowiow](https://github.com/snowiow)
 
 
 
