@@ -6,24 +6,26 @@
 "  cool-headed perspective for your coding
 "
 "
-" File:       ${file}
-" Maintainer: ${maintainer}
-" Modified:   ${date}
-" License:    ${license}
+" File:       iceberg.vim
+" Maintainer: cocopon <cocopon@me.com>
+" Modified:   {{ modified }}
+" License:    MIT
 
 
 if !has('gui_running') && &t_Co < 256
   finish
 endif
 
-set background=${background}
+set background=dark
 hi clear
 
 if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = '${name}'
+let g:colors_name = 'iceberg'
 
 
-${highlights}
+{{ rules }}
+
+{{ links }}
