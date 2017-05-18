@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-04-13 10:48+0900
+" Modified:   2017-05-18 18:40+0900
 " License:    MIT
 
 
@@ -113,6 +113,9 @@ hi! icebergLLVisual ctermbg=150 ctermfg=234 guibg=#b4be82 guifg=#161821
 hi! icebergALAccentRed ctermfg=203 guifg=#e27878
 
 hi! link cssBraces Delimiter
+hi! link cssClassName Special
+hi! link cssClassNameDot Normal
+hi! link cssPseudoClassId Function
 hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
@@ -125,6 +128,7 @@ hi! link rubyInclude Statement
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
+hi! link sassClass Special
 hi! link shFunction Normal
 hi! link vimContinue Comment
 hi! link vimIsCommand Statement

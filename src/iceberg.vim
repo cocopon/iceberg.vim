@@ -428,6 +428,9 @@ function! s:create_context() abort
 	" Rules for filetypes {{{
 	" css
 	call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
+	call add(links, pgmnt#hi#link('cssClassName', 'Special'))
+	call add(links, pgmnt#hi#link('cssClassNameDot', 'Normal'))
+	call add(links, pgmnt#hi#link('cssPseudoClassId', 'Function'))
 	call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
 
 	" diff
@@ -462,6 +465,9 @@ function! s:create_context() abort
 	call add(links, pgmnt#hi#link('rubyInterpolationDelimiter', 'String'))
 	call add(links, pgmnt#hi#link('rubySharpBang', 'Comment'))
 	call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
+
+	" sass
+	call add(links, pgmnt#hi#link('sassClass', 'Special'))
 
 	" sh
 	call add(links, pgmnt#hi#link('shFunction', 'Normal'))
