@@ -314,7 +314,7 @@ function! s:create_context() abort
 				\ 	'guifg': g_blue,
 				\ }))
 	call extend(rules, pgmnt#hi#group(
-				\ 'StatusLine', {
+				\ ['StatusLine', 'StatusLineTerm'], {
 				\ 	'cterm': 'reverse',
 				\ 	'ctermbg': c_statusline_fg,
 				\ 	'ctermfg': c_statusline_bg,
