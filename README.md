@@ -37,7 +37,6 @@ Features
 For other environments
 ----------------------
 - [Terminal.app profile](http://cocopon.me/app/vim-iceberg/) by [cocopon](https://github.com/cocopon)
-- [Xresources](https://gist.github.com/97-109-107/063193d150df272a049b) by [97-109-107](https://github.com/97-109-107)
 - [iTerm2](https://github.com/aseom/dotfiles/blob/master/osx/iterm2/iceberg.itermcolors) by [aseom](https://github.com/aseom)
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
