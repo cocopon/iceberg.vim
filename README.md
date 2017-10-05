@@ -28,7 +28,7 @@ Features
 - Support [EasyMotion](https://github.com/easymotion/vim-easymotion)
 - Support [Git Gutter](https://github.com/airblade/vim-gitgutter)
 - Support [Syntastic](http://github.com/vim-syntastic/syntastic)
-- Better syntax highlight with [vim-javavscript](https://github.com/pangloss/vim-javascript)
+- Better syntax highlight with [vim-javavscript](https://github.com/pangloss/vim-javascript), [vim-flow](https://github.com/flowtype/vim-flow)
 - Work fine with other various plugins: [tpope/vim-markdown](https://github.com/tpope/vim-markdown), [thinca/vim-zenspace](https://github.com/thinca/vim-zenspace), etc.
 
 

@@ -515,6 +515,10 @@ function! s:create_context() abort
         \   'guifg': g_orange,
         \ }))
 
+  " [vim-flow](https://github.com/flowtype/vim-flow)
+  call add(links, pgmnt#hi#link('jsFlowType', 'Statement'))
+  call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
+
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterAdd', {
@@ -540,6 +544,7 @@ function! s:create_context() abort
 
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
+  call add(links, pgmnt#hi#link('jsClassMethodType', 'Statement'))
   call add(links, pgmnt#hi#link('jsFuncName', 'Normal'))
   call add(links, pgmnt#hi#link('jsFunction', 'Function'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
