@@ -21,15 +21,24 @@ information.
 
 Features
 --------
-- Support 256-colors terminal
-- Support [airline](https://github.com/vim-airline/vim-airline/) theme
-- Support [lightline](https://github.com/itchyny/lightline.vim) colorscheme
-- Support [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
-- Support [EasyMotion](https://github.com/easymotion/vim-easymotion)
-- Support [Git Gutter](https://github.com/airblade/vim-gitgutter)
-- Support [Syntastic](http://github.com/vim-syntastic/syntastic)
-- Better syntax highlight with [vim-javavscript](https://github.com/pangloss/vim-javascript), [vim-flow](https://github.com/flowtype/vim-flow)
-- Work fine with other various plugins: [tpope/vim-markdown](https://github.com/tpope/vim-markdown), [thinca/vim-zenspace](https://github.com/thinca/vim-zenspace), etc.
+- Supports 256-colors terminal
+- Includes [airline][airline] theme and [lightline][lightline] colorscheme
+- Works fine with various plugins:
+  [CtrlP][ctrlp]
+  / [Denite][denite]
+  / [EasyMotion][easymotion]
+  / [Git Gutter][git-gutter]
+  / [Syntastic][syntastic]
+  / [vim-plug][vim-plug]
+  / [thinca/vim-zenspace][vim-zenspace]
+  etc.
+- Better syntax highlight with:
+  [typescript-vim][typescript-vim]
+  / [vim-flow][vim-flow]
+  / [vim-graphql][vim-graphql]
+  / [vim-javavscript][vim-javascript]
+  / [vim-markdown][vim-markdown]
+  etc.
 
 
 
@@ -48,3 +57,21 @@ For other environments
 License
 -------
 MIT License. See `LICENSE.txt` for more information.
+
+
+
+
+[airline]:https://github.com/vim-airline/vim-airline/
+[ctrlp]:https://github.com/ctrlpvim/ctrlp.vim
+[denite]:https://github.com/Shougo/denite.nvim
+[easymotion]:https://github.com/easymotion/vim-easymotion
+[git-gutter]:https://github.com/airblade/vim-gitgutter
+[lightline]:https://github.com/itchyny/lightline.vim
+[syntastic]:http://github.com/vim-syntastic/syntastic
+[typescript-vim]:https://github.com/leafgarland/typescript-vim
+[vim-flow]:https://github.com/flowtype/vim-flow
+[vim-graphql]:https://github.com/jparise/vim-graphql
+[vim-javascript]:https://github.com/pangloss/vim-javascript
+[vim-markdown]:https://github.com/tpope/vim-markdown
+[vim-plug]:https://github.com/junegunn/vim-plug
+[vim-zenspace]:https://github.com/thinca/vim-zenspace

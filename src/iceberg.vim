@@ -524,6 +524,11 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
   call add(links, pgmnt#hi#link('jsFlowObject', 'Normal'))
 
+  " [vim-graphql](https://github.com/jparise/vim-graphql)
+  call add(links, pgmnt#hi#link('graphqlIdentifier', 'Normal'))
+  call add(links, pgmnt#hi#link('graphqlOperator', 'Normal'))
+  call add(links, pgmnt#hi#link('graphqlStructure', 'Statement'))
+
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterAdd', {

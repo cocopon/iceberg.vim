@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-10-05 19:30+0900
+" Modified:   2017-10-13 16:29+0900
 " License:    MIT
 
 
@@ -148,6 +148,9 @@ hi! link deniteMatchedChar Function
 hi! link jsFlowType Statement
 hi! link jsFlowMaybe Normal
 hi! link jsFlowObject Normal
+hi! link graphqlIdentifier Normal
+hi! link graphqlOperator Normal
+hi! link graphqlStructure Statement
 hi! link jsArrowFunction Operator
 hi! link jsClassMethodType Statement
 hi! link jsExport Statement
