@@ -208,6 +208,11 @@ function! s:create_context() abort
         \   'guifg': g_lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
+        \ 'Include', {
+        \   'ctermfg': c_blue,
+        \   'guifg': g_blue,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
         \ 'LineNr', {
         \   'ctermbg': c_linenr_bg,
         \   'ctermfg': c_linenr_fg,
@@ -461,7 +466,6 @@ function! s:create_context() abort
 
   " ruby
   call add(links, pgmnt#hi#link('rubyDefine', 'Statement'))
-  call add(links, pgmnt#hi#link('rubyInclude', 'Statement'))
   call add(links, pgmnt#hi#link('rubyInterpolationDelimiter', 'String'))
   call add(links, pgmnt#hi#link('rubySharpBang', 'Comment'))
   call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
@@ -518,6 +522,7 @@ function! s:create_context() abort
   " [vim-flow](https://github.com/flowtype/vim-flow)
   call add(links, pgmnt#hi#link('jsFlowType', 'Statement'))
   call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
+  call add(links, pgmnt#hi#link('jsFlowObject', 'Normal'))
 
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
@@ -545,10 +550,10 @@ function! s:create_context() abort
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
   call add(links, pgmnt#hi#link('jsClassMethodType', 'Statement'))
+  call add(links, pgmnt#hi#link('jsExport', 'Statement'))
   call add(links, pgmnt#hi#link('jsFuncName', 'Normal'))
   call add(links, pgmnt#hi#link('jsFunction', 'Function'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
-  call add(links, pgmnt#hi#link('jsModuleDefault', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleKeywords', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleOperators', 'Statement'))
   call add(links, pgmnt#hi#link('jsObjectKey', 'Identifier'))

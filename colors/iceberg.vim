@@ -49,6 +49,7 @@ hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Function ctermfg=216 guifg=#e2a478
 hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
+hi! Include ctermfg=110 guifg=#84a0c6
 hi! LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi! MoreMsg ctermfg=150 guifg=#b4be82
@@ -125,7 +126,6 @@ hi! link htmlTag Statement
 hi! link jsonQuote Normal
 hi! link phpVarSelector Identifier
 hi! link rubyDefine Statement
-hi! link rubyInclude Statement
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
@@ -147,12 +147,13 @@ hi! link deniteMatched Normal
 hi! link deniteMatchedChar Function
 hi! link jsFlowType Statement
 hi! link jsFlowMaybe Normal
+hi! link jsFlowObject Normal
 hi! link jsArrowFunction Operator
 hi! link jsClassMethodType Statement
+hi! link jsExport Statement
 hi! link jsFuncName Normal
 hi! link jsFunction Function
 hi! link jsGlobalObjects Statement
-hi! link jsModuleDefault Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
 hi! link jsObjectKey Identifier
