@@ -51,8 +51,10 @@ For other environments
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
-- Other : [terminal.sexy](http://terminal.sexy) provides configuration files for most Terminal
-emulators. Use this .Xresources file as Import and Export it for the emulator of your choice :
+- [Other](https://en.wikipedia.org/wiki/ANSI_escape_code#3.2F4_bit) :
+[terminal.sexy](http://terminal.sexy) provides configuration files for the 16 ANSI colors
+for many Terminal emulators. Use this .Xresources file as Import (Colorscheme used for
+the neovim terminal emulator) and Export it for the emulator of your choice :
 ```Xresources
 ! special
 *.foreground:   #d2d4de
