@@ -408,8 +408,10 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'VertSplit', {
+        \   'cterm': 'NONE',
         \   'ctermbg': c_statuslinenc_bg,
         \   'ctermfg': c_statuslinenc_bg,
+        \   'gui': 'NONE',
         \   'guibg': statuslinenc_bg,
         \   'guifg': statuslinenc_bg,
         \ }))
