@@ -55,7 +55,7 @@ For other environments
 [terminal.sexy](http://terminal.sexy) provides configuration files for the 16 ANSI colors
 for many Terminal emulators. Use this .Xresources file as Import (Colorscheme used for
 the neovim terminal emulator) and Export it for the emulator of your choice :
-```Xresources
+```
 ! special
 *.foreground:   #d2d4de
 *.background:   #161821
