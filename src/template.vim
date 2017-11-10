@@ -29,3 +29,7 @@ let g:colors_name = 'iceberg'
 {{ rules }}
 
 {{ links }}
+
+if has('nvim')
+{{ neovim_term_defs }}
+endif

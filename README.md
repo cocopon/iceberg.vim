@@ -21,9 +21,9 @@ information.
 
 Features
 --------
-- Supports 256-colors terminal
-- Includes [airline][airline] theme and [lightline][lightline] colorscheme
-- Works fine with various plugins:
+- 256-colors terminal support
+- [airline][airline] theme and [lightline][lightline] colorscheme
+- Various plugins support:
   [CtrlP][ctrlp]
   / [Denite][denite]
   / [EasyMotion][easymotion]
@@ -39,6 +39,7 @@ Features
   / [vim-javavscript][vim-javascript]
   / [vim-markdown][vim-markdown]
   etc.
+- [Neovim][neovim] terminal colors support
 
 
 
@@ -67,6 +68,7 @@ MIT License. See `LICENSE.txt` for more information.
 [easymotion]:https://github.com/easymotion/vim-easymotion
 [git-gutter]:https://github.com/airblade/vim-gitgutter
 [lightline]:https://github.com/itchyny/lightline.vim
+[neovim]:https://neovim.io/
 [syntastic]:http://github.com/vim-syntastic/syntastic
 [typescript-vim]:https://github.com/leafgarland/typescript-vim
 [vim-flow]:https://github.com/flowtype/vim-flow

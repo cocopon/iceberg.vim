@@ -25,6 +25,7 @@ function! s:create_context() abort
   let normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
   let normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
 
+  let comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
   let linenr_bg = pgmnt#color#adjust_color(normal_bg, {
         \   'saturation': +0.05,
         \   'lightness': +0.05,
@@ -64,6 +65,8 @@ function! s:create_context() abort
 
   let c_normal_bg = 234
   let c_normal_fg = 252
+
+  let c_comment_fg = 242
   let c_linenr_bg = 235
   let c_linenr_fg = 239
   let c_pmenu_bg = 236
@@ -97,8 +100,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Comment', {
-        \   'ctermfg': 242,
-        \   'guifg': pgmnt#color#hsl(hue_base, 0.12, 0.48),
+        \   'ctermfg': c_comment_fg,
+        \   'guifg': comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Constant', {
@@ -683,10 +686,33 @@ function! s:create_context() abort
         \   'guifg': g_red,
         \ }))
   " }}}
+
+  let term_colors = [
+        \   normal_bg,
+        \   g_red,
+        \   g_green,
+        \   g_orange,
+        \   g_blue,
+        \   g_purple,
+        \   g_lblue,
+        \   normal_fg,
+        \   comment_fg,
+        \   pgmnt#color#adjust_color(g_red,     {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g_green,   {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g_orange,  {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g_blue,    {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g_purple,  {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(g_lblue,   {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
+        \ ]
+  let neovim_term_defs = map(
+        \ term_colors,
+        \ '"let g:terminal_color_" . v:key . " = ''" . v:val . "''"')
   
   return {
         \   'links': links,
         \   'modified': strftime('%Y-%m-%d %H:%M%z'),
+        \   'neovim_term_defs': neovim_term_defs,
         \   'rules': rules,
         \ }
 endfunction
