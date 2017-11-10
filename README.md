@@ -51,8 +51,47 @@ For other environments
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
+- Other : [terminal.sexy](http://terminal.sexy) provides configuration files for most Terminal
+emulators. Use this .Xresources file as Import and Export it for the emulator of your choice :
+```Xresources
+! special
+*.foreground:   #d2d4de
+*.background:   #161821
+*.cursorColor:  #d2d4de
 
+! black
+*.color0:       #161821
+*.color8:       #6b7089
 
+! red
+*.color1:       #e27878
+*.color9:       #e98989
+
+! green
+*.color2:       #b4be82
+*.color10:      #c0ca8e
+
+! yellow
+*.color3:       #e2a478
+*.color11:      #e9b189
+
+! blue
+*.color4:       #84a0c6
+*.color12:      #91acd1
+
+! magenta
+*.color5:       #a093c7
+*.color13:      #ada0d3
+
+! cyan
+*.color6:       #89b8c2
+*.color14:      #95c4ce
+
+! white
+*.color7:       #c6c8d1
+*.color15:      #d2d4de
+
+```
 
 
 License
