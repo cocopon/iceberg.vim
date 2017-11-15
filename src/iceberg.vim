@@ -332,7 +332,7 @@ function! s:create_context() abort
         \   'term': 'reverse',
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ 'StatusLineNC', {
+        \ ['StatusLineNC', 'StatusLineTermNC'], {
         \   'cterm': 'reverse',
         \   'ctermbg': c_statuslinenc_fg,
         \   'ctermfg': c_statuslinenc_bg,

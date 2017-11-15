@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2017-11-10 20:05+0900
+" Modified:   2017-11-15 13:17+0900
 " License:    MIT
 
 
@@ -72,6 +72,7 @@ hi! Statement ctermfg=110 gui=NONE guifg=#84a0c6
 hi! StatusLine cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596 term=reverse
 hi! StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596 term=reverse
 hi! StatusLineNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
+hi! StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
 hi! StorageClass ctermfg=110 guifg=#84a0c6
 hi! String ctermfg=109 guifg=#89b8c2
 hi! Structure ctermfg=109 guifg=#89b8c2
