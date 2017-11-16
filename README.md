@@ -62,6 +62,10 @@ For other environments
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
 
+NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
+the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
+as import and export it for the emulator of your choice.
+
 
 
 
@@ -80,6 +84,7 @@ MIT License. See `LICENSE.txt` for more information.
 [lightline]:https://github.com/itchyny/lightline.vim
 [neovim]:https://neovim.io/
 [syntastic]:http://github.com/vim-syntastic/syntastic
+[terminal-sexy]:http://terminal.sexy
 [typescript-vim]:https://github.com/leafgarland/typescript-vim
 [vim-flow]:https://github.com/flowtype/vim-flow
 [vim-graphql]:https://github.com/jparise/vim-graphql
@@ -89,3 +94,4 @@ MIT License. See `LICENSE.txt` for more information.
 [vim-zenspace]:https://github.com/thinca/vim-zenspace
 [vimconf-presentation]:https://speakerdeck.com/cocopon/creating-your-lovely-color-scheme
 [vimconf2017]:http://vimconf.vim-jp.org/2017/
+[xresources]:https://gist.github.com/cocopon/1d481941907d12db7a0df2f8806cfd41
