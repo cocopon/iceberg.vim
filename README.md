@@ -46,7 +46,7 @@ Features
 
 Philosophy
 ----------
-Creator of Iceberg talked about how to creating your lovely color scheme in [VimConf 2017][vimconf2017], international Vim conference. [This presentation][vimconf-presentation] also explained the philosophy of Iceberg.
+Creator of Iceberg talked about how to create your lovely color scheme in [VimConf 2017][vimconf2017], international Vim conference. [This presentation][vimconf-presentation] also explained the philosophy of Iceberg.
 
 [![Creating Your Lovely Color Scheme](http://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-presentation]
 
