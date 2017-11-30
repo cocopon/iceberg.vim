@@ -3,91 +3,95 @@
 " See the official site for more information:
 " https://github.com/cocopon/pgmnt.vim
 
+
+" Definitions {{{
+let s:hue_base = 230
+
+let s:hue_red = 0
+let s:hue_orange = 25
+let s:hue_green = 70
+let s:hue_lblue = 190
+let s:hue_blue = 215
+let s:hue_purple = 255
+
+" gui
+let s:g = {}
+let s:g.blue   = pgmnt#color#hsl(s:hue_blue,   0.37, 0.65)
+let s:g.green  = pgmnt#color#hsl(s:hue_green,  0.32, 0.63)
+let s:g.lblue  = pgmnt#color#hsl(s:hue_lblue,  0.32, 0.65)
+let s:g.orange = pgmnt#color#hsl(s:hue_orange, 0.65, 0.68)
+let s:g.purple = pgmnt#color#hsl(s:hue_purple, 0.32, 0.68)
+let s:g.red    = pgmnt#color#hsl(s:hue_red,    0.65, 0.68)
+
+let s:g.normal_bg = pgmnt#color#hsl(s:hue_base, 0.20, 0.11)
+let s:g.normal_fg = pgmnt#color#hsl(s:hue_base, 0.10, 0.80)
+
+let s:g.comment_fg = pgmnt#color#hsl(s:hue_base, 0.12, 0.48)
+let s:g.linenr_bg = pgmnt#color#adjust_color(s:g.normal_bg, {
+      \   'saturation': +0.05,
+      \   'lightness': +0.05,
+      \ })
+let s:g.linenr_fg = pgmnt#color#lighten(s:g.linenr_bg, 0.20)
+let s:g.pmenu_bg = pgmnt#color#hsl(s:hue_base, 0.20, 0.30)
+let s:g.pmenu_fg = s:g.normal_fg
+let s:g.statusline_bg = pgmnt#color#hsl(s:hue_base, 0.09, 0.55)
+let s:g.statusline_fg = pgmnt#color#hsl(s:hue_base, 0.09, 0.10)
+let s:g.statuslinenc_bg = pgmnt#color#darken(s:g.normal_bg, 0.03)
+let s:g.statuslinenc_fg = pgmnt#color#lighten(s:g.normal_bg, 0.20)
+
+let s:g.cursorline_bg = s:g.linenr_bg
+let s:g.folded_bg = s:g.linenr_bg
+let s:g.folded_fg = pgmnt#color#adjust_color(s:g.folded_bg, {
+      \   'saturation': -0.05,
+      \   'lightness': +0.35,
+      \ })
+
+let s:g.xline_base_bg = pgmnt#color#lighten(s:g.normal_bg, 0.15)
+let s:g.xline_base_fg = pgmnt#color#adjust_color(s:g.normal_bg, {
+      \   'saturation': -0.10,
+      \   'lightness': +0.35,
+      \ })
+let s:g.xline_edge_bg = s:g.statusline_bg
+let s:g.xline_edge_fg = s:g.statusline_fg
+let s:g.xline_gradient_bg = pgmnt#color#mix(s:g.xline_base_bg, s:g.xline_edge_bg, 0.50)
+let s:g.xline_gradient_fg = s:g.xline_edge_fg
+
+" cterm
+let s:c = {}
+let s:c.blue = 110
+let s:c.green = 150
+let s:c.lblue = 109
+let s:c.orange = 216
+let s:c.purple = 140
+let s:c.red = 203
+
+let s:c.normal_bg = 234
+let s:c.normal_fg = 252
+
+let s:c.comment_fg = 242
+let s:c.linenr_bg = 235
+let s:c.linenr_fg = 239
+let s:c.pmenu_bg = 236
+let s:c.pmenu_fg = 251
+let s:c.statusline_bg = 245
+let s:c.statusline_fg = 234
+let s:c.statuslinenc_bg = 233
+let s:c.statuslinenc_fg = 238
+
+let s:c.cursorline_bg = s:c.linenr_bg
+let s:c.folded_bg = s:c.linenr_bg
+let s:c.folded_fg = 245
+
+let s:c.xline_base_bg = 237
+let s:c.xline_base_fg = 243
+let s:c.xline_edge_bg = s:c.statusline_bg
+let s:c.xline_edge_fg = s:c.statusline_fg
+let s:c.xline_gradient_bg = 241
+let s:c.xline_gradient_fg = s:c.xline_edge_fg
+" }}}
+
+
 function! s:create_context() abort
-  " Definitions {{{
-  let hue_base = 230
-
-  let hue_red = 0
-  let hue_orange = 25
-  let hue_green = 70
-  let hue_lblue = 190
-  let hue_blue = 215
-  let hue_purple = 255
-
-  " gui
-  let g_blue   = pgmnt#color#hsl(hue_blue,   0.37, 0.65)
-  let g_green  = pgmnt#color#hsl(hue_green,  0.32, 0.63)
-  let g_lblue  = pgmnt#color#hsl(hue_lblue,  0.32, 0.65)
-  let g_orange = pgmnt#color#hsl(hue_orange, 0.65, 0.68)
-  let g_purple = pgmnt#color#hsl(hue_purple, 0.32, 0.68)
-  let g_red    = pgmnt#color#hsl(hue_red,    0.65, 0.68)
-
-  let normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
-  let normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
-
-  let comment_fg = pgmnt#color#hsl(hue_base, 0.12, 0.48)
-  let linenr_bg = pgmnt#color#adjust_color(normal_bg, {
-        \   'saturation': +0.05,
-        \   'lightness': +0.05,
-        \ })
-  let linenr_fg = pgmnt#color#lighten(linenr_bg, 0.20)
-  let pmenu_bg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
-  let pmenu_fg = normal_fg
-  let statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
-  let statusline_fg = pgmnt#color#hsl(hue_base, 0.09, 0.10)
-  let statuslinenc_bg = pgmnt#color#darken(normal_bg, 0.03)
-  let statuslinenc_fg = pgmnt#color#lighten(normal_bg, 0.20)
-
-  let cursorline_bg = linenr_bg
-  let folded_bg = linenr_bg
-  let folded_fg = pgmnt#color#adjust_color(folded_bg, {
-        \   'saturation': -0.05,
-        \   'lightness': +0.35,
-        \ })
-
-  let lightline_base_bg = pgmnt#color#lighten(normal_bg, 0.15)
-  let lightline_base_fg = pgmnt#color#adjust_color(normal_bg, {
-        \   'saturation': -0.10,
-        \   'lightness': +0.35,
-        \ })
-  let lightline_edge_bg = statusline_bg
-  let lightline_edge_fg = statusline_fg
-  let lightline_gradient_bg = pgmnt#color#mix(lightline_base_bg, lightline_edge_bg, 0.50)
-  let lightline_gradient_fg = lightline_edge_fg
-
-  " cterm
-  let c_blue = 110
-  let c_green = 150
-  let c_lblue = 109
-  let c_orange = 216
-  let c_purple = 140
-  let c_red = 203
-
-  let c_normal_bg = 234
-  let c_normal_fg = 252
-
-  let c_comment_fg = 242
-  let c_linenr_bg = 235
-  let c_linenr_fg = 239
-  let c_pmenu_bg = 236
-  let c_pmenu_fg = 251
-  let c_statusline_bg = 245
-  let c_statusline_fg = 234
-  let c_statuslinenc_bg = 233
-  let c_statuslinenc_fg = 238
-
-  let c_cursorline_bg = c_linenr_bg
-  let c_folded_bg = c_linenr_bg
-  let c_folded_fg = 245
-
-  let c_lightline_base_bg = 237
-  let c_lightline_base_fg = 243
-  let c_lightline_edge_bg = c_statusline_bg
-  let c_lightline_edge_fg = c_statusline_fg
-  let c_lightline_gradient_bg = 241
-  let c_lightline_gradient_fg = c_lightline_edge_fg
-  " }}}
-
   let links = []
   let rules = []
 
@@ -95,64 +99,64 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ ['ColorColumn', 'CursorColumn', 'CursorLine'], {
         \   'cterm': 'NONE',
-        \   'ctermbg': c_cursorline_bg,
-        \   'guibg': cursorline_bg,
+        \   'ctermbg': s:c.cursorline_bg,
+        \   'guibg': s:g.cursorline_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Comment', {
-        \   'ctermfg': c_comment_fg,
-        \   'guifg': comment_fg,
+        \   'ctermfg': s:c.comment_fg,
+        \   'guifg': s:g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Constant', {
-        \   'ctermfg': c_purple,
-        \   'guifg': g_purple,
+        \   'ctermfg': s:c.purple,
+        \   'guifg': s:g.purple,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Cursor', {
-        \   'ctermbg': c_normal_fg,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': normal_fg,
-        \   'guifg': normal_bg,
+        \   'ctermbg': s:c.normal_fg,
+        \   'ctermfg': s:c.normal_bg,
+        \   'guibg': s:g.normal_fg,
+        \   'guifg': s:g.normal_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'CursorLineNr', {
         \   'ctermbg': 237,
         \   'ctermfg': 253,
-        \   'guibg': pgmnt#color#adjust_color(linenr_bg, {
+        \   'guibg': pgmnt#color#adjust_color(s:g.linenr_bg, {
         \     'saturation': +0.10,
         \     'lightness': +0.10,
         \   }),
-        \   'guifg': pgmnt#color#adjust_color(linenr_fg, {
+        \   'guifg': pgmnt#color#adjust_color(s:g.linenr_fg, {
         \     'saturation': +0.10, 
         \     'lightness': +0.50,
         \   }),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Delimiter', {
-        \   'ctermfg': c_normal_fg,
-        \   'guifg': normal_fg,
+        \   'ctermfg': s:c.normal_fg,
+        \   'guifg': s:g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffAdd', {
         \   'ctermbg': 29,
         \   'ctermfg': 158,
-        \   'guibg': pgmnt#color#mix(g_green, normal_bg, 0.30),
-        \   'guifg': pgmnt#color#mix(g_green, normal_fg, 0.30),
+        \   'guibg': pgmnt#color#mix(s:g.green, s:g.normal_bg, 0.30),
+        \   'guifg': pgmnt#color#mix(s:g.green, s:g.normal_fg, 0.30),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffChange', {
         \   'ctermbg': 23,
         \   'ctermfg': 159,
-        \   'guibg': pgmnt#color#mix(g_lblue, normal_bg, 0.30),
-        \   'guifg': pgmnt#color#mix(g_lblue, normal_fg, 0.30),
+        \   'guibg': pgmnt#color#mix(s:g.lblue, s:g.normal_bg, 0.30),
+        \   'guifg': pgmnt#color#mix(s:g.lblue, s:g.normal_fg, 0.30),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffDelete', {
         \   'ctermbg': 95,
         \   'ctermfg': 224,
-        \   'guibg': pgmnt#color#mix(g_red, normal_bg, 0.30),
-        \   'guifg': pgmnt#color#mix(g_red, normal_fg, 0.30),
+        \   'guibg': pgmnt#color#mix(s:g.red, s:g.normal_bg, 0.30),
+        \   'guifg': pgmnt#color#mix(s:g.red, s:g.normal_fg, 0.30),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffText', {
@@ -160,268 +164,268 @@ function! s:create_context() abort
         \   'ctermbg': 30,
         \   'ctermfg': 195,
         \   'gui': 'NONE',
-        \   'guibg': pgmnt#color#mix(g_lblue, normal_bg, 0.6),
-        \   'guifg': normal_fg,
+        \   'guibg': pgmnt#color#mix(s:g.lblue, s:g.normal_bg, 0.6),
+        \   'guifg': s:g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Directory', {
-        \   'ctermfg': c_lblue,
-        \   'guifg': g_lblue,
+        \   'ctermfg': s:c.lblue,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['Error', 'ErrorMsg', 'WarningMsg'], {
-        \   'ctermbg': c_normal_bg,
-        \   'ctermfg': c_red,
-        \   'guibg': normal_bg,
-        \   'guifg': g_red,
+        \   'ctermbg': s:c.normal_bg,
+        \   'ctermfg': s:c.red,
+        \   'guibg': s:g.normal_bg,
+        \   'guifg': s:g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['EndOfBuffer', 'NonText', 'SpecialKey'], {
-        \   'ctermbg': c_normal_bg,
+        \   'ctermbg': s:c.normal_bg,
         \   'ctermfg': 236,
-        \   'guibg': normal_bg,
-        \   'guifg': pgmnt#color#adjust_color(normal_bg, {
+        \   'guibg': s:g.normal_bg,
+        \   'guifg': pgmnt#color#adjust_color(s:g.normal_bg, {
         \     'saturation': +0.08,
         \     'lightness': +0.09,
         \   }),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Folded', {
-        \   'ctermbg': c_folded_bg,
-        \   'ctermfg': c_folded_fg,
-        \   'guibg': folded_bg,
-        \   'guifg': folded_fg,
+        \   'ctermbg': s:c.folded_bg,
+        \   'ctermfg': s:c.folded_fg,
+        \   'guibg': s:g.folded_bg,
+        \   'guifg': s:g.folded_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'FoldColumn', {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_linenr_fg,
-        \   'guibg': linenr_bg,
-        \   'guifg': linenr_fg,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.linenr_fg,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.linenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Function', {
-        \   'ctermfg': c_orange,
-        \   'guifg': g_orange,
+        \   'ctermfg': s:c.orange,
+        \   'guifg': s:g.orange,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
         \   'cterm': 'NONE',
-        \   'ctermfg': c_lblue,
-        \   'guifg': g_lblue,
+        \   'ctermfg': s:c.lblue,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Include', {
-        \   'ctermfg': c_blue,
-        \   'guifg': g_blue,
+        \   'ctermfg': s:c.blue,
+        \   'guifg': s:g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'LineNr', {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_linenr_fg,
-        \   'guibg': linenr_bg,
-        \   'guifg': linenr_fg,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.linenr_fg,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.linenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'MatchParen', {
         \   'ctermbg': 237,
         \   'ctermfg': 255,
-        \   'guibg': pgmnt#color#lighten(normal_bg, 0.20),
-        \   'guifg': pgmnt#color#lighten(normal_fg, 0.50),
+        \   'guibg': pgmnt#color#lighten(s:g.normal_bg, 0.20),
+        \   'guifg': pgmnt#color#lighten(s:g.normal_fg, 0.50),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'MoreMsg', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Normal', {
-        \   'ctermbg': c_normal_bg,
-        \   'ctermfg': c_normal_fg,
-        \   'guibg': normal_bg,
-        \   'guifg': normal_fg,
+        \   'ctermbg': s:c.normal_bg,
+        \   'ctermfg': s:c.normal_fg,
+        \   'guibg': s:g.normal_bg,
+        \   'guifg': s:g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Operator', {
-        \   'ctermfg': c_blue,
-        \   'guifg': g_blue,
+        \   'ctermfg': s:c.blue,
+        \   'guifg': s:g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Pmenu', {
-        \   'ctermbg': c_pmenu_bg,
-        \   'ctermfg': c_pmenu_fg,
-        \   'guibg': pmenu_bg,
-        \   'guifg': pmenu_fg,
+        \   'ctermbg': s:c.pmenu_bg,
+        \   'ctermfg': s:c.pmenu_fg,
+        \   'guibg': s:g.pmenu_bg,
+        \   'guifg': s:g.pmenu_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSbar', {
-        \   'ctermbg': c_pmenu_bg,
-        \   'guibg': pmenu_bg,
+        \   'ctermbg': s:c.pmenu_bg,
+        \   'guibg': s:g.pmenu_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSel', {
         \   'ctermbg': 240,
         \   'ctermfg': 255,
-        \   'guibg': pgmnt#color#hsl(hue_base, 0.20, 0.45),
-        \   'guifg': pgmnt#color#hsl(hue_base, 0.20, 0.95),
+        \   'guibg': pgmnt#color#hsl(s:hue_base, 0.20, 0.45),
+        \   'guifg': pgmnt#color#hsl(s:hue_base, 0.20, 0.95),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuThumb', {
-        \   'ctermbg': c_pmenu_fg,
-        \   'guibg': pmenu_fg,
+        \   'ctermbg': s:c.pmenu_fg,
+        \   'guibg': s:g.pmenu_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PreProc', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Question', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Search', {
-        \   'ctermbg': c_orange,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': pgmnt#color#hsl(hue_orange, 0.65, 0.70),
-        \   'guifg': pgmnt#color#hsl(hue_orange, 0.50, 0.15),
+        \   'ctermbg': s:c.orange,
+        \   'ctermfg': s:c.normal_bg,
+        \   'guibg': pgmnt#color#hsl(s:hue_orange, 0.65, 0.70),
+        \   'guifg': pgmnt#color#hsl(s:hue_orange, 0.50, 0.15),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SignColumn', {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_linenr_fg,
-        \   'guibg': linenr_bg,
-        \   'guifg': linenr_fg,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.linenr_fg,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.linenr_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Special', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellBad', {
-        \   'guisp': g_red,
+        \   'guisp': s:g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellCap', {
-        \   'guisp': g_blue,
+        \   'guisp': s:g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellLocal', {
-        \   'guisp': g_lblue,
+        \   'guisp': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellRare', {
-        \   'guisp': g_purple,
+        \   'guisp': s:g.purple,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Statement', {
-        \   'ctermfg': c_blue,
+        \   'ctermfg': s:c.blue,
         \   'gui': 'NONE',
-        \   'guifg': g_blue,
+        \   'guifg': s:g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['StatusLine', 'StatusLineTerm'], {
         \   'cterm': 'reverse',
-        \   'ctermbg': c_statusline_fg,
-        \   'ctermfg': c_statusline_bg,
+        \   'ctermbg': s:c.statusline_fg,
+        \   'ctermfg': s:c.statusline_bg,
         \   'gui': 'reverse',
-        \   'guibg': statusline_fg,
-        \   'guifg': statusline_bg,
+        \   'guibg': s:g.statusline_fg,
+        \   'guifg': s:g.statusline_bg,
         \   'term': 'reverse',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['StatusLineNC', 'StatusLineTermNC'], {
         \   'cterm': 'reverse',
-        \   'ctermbg': c_statuslinenc_fg,
-        \   'ctermfg': c_statuslinenc_bg,
+        \   'ctermbg': s:c.statuslinenc_fg,
+        \   'ctermfg': s:c.statuslinenc_bg,
         \   'gui': 'reverse',
-        \   'guibg': statuslinenc_fg,
-        \   'guifg': statuslinenc_bg,
+        \   'guibg': s:g.statuslinenc_fg,
+        \   'guifg': s:g.statuslinenc_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'StorageClass', {
-        \     'ctermfg': c_blue,
-        \     'guifg': g_blue,
+        \     'ctermfg': s:c.blue,
+        \     'guifg': s:g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'String', {
-        \   'ctermfg': c_lblue,
-        \   'guifg': g_lblue,
+        \   'ctermfg': s:c.lblue,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Structure', {
-        \   'ctermfg': c_lblue,
-        \   'guifg': g_lblue,
+        \   'ctermfg': s:c.lblue,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLine', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c_statusline_bg,
-        \   'ctermfg': c_statusline_fg,
+        \   'ctermbg': s:c.statusline_bg,
+        \   'ctermfg': s:c.statusline_fg,
         \   'gui': 'NONE',
-        \   'guibg': statusline_bg,
-        \   'guifg': statusline_fg,
+        \   'guibg': s:g.statusline_bg,
+        \   'guifg': s:g.statusline_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLineFill', {
         \   'cterm': 'reverse',
-        \   'ctermbg': c_statusline_fg,
-        \   'ctermfg': c_statusline_bg,
+        \   'ctermbg': s:c.statusline_fg,
+        \   'ctermfg': s:c.statusline_bg,
         \   'gui': 'reverse',
-        \   'guibg': statusline_fg,
-        \   'guifg': statusline_bg,
+        \   'guibg': s:g.statusline_fg,
+        \   'guifg': s:g.statusline_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLineSel', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c_normal_bg,
-        \   'ctermfg': c_normal_fg,
+        \   'ctermbg': s:c.normal_bg,
+        \   'ctermfg': s:c.normal_fg,
         \   'gui': 'NONE',
-        \   'guibg': normal_bg,
-        \   'guifg': pgmnt#color#mix(normal_fg, normal_bg, 0.75),
+        \   'guibg': s:g.normal_bg,
+        \   'guifg': pgmnt#color#mix(s:g.normal_fg, s:g.normal_bg, 0.75),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Title', {
-        \   'ctermfg': c_orange,
+        \   'ctermfg': s:c.orange,
         \   'gui': 'NONE',
-        \   'guifg': g_orange,
+        \   'guifg': s:g.orange,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Todo', {
-        \   'ctermbg': c_normal_bg,
-        \   'ctermfg': c_green,
-        \   'guibg': normal_bg,
-        \   'guifg': pgmnt#color#hsl(hue_green, 0.60, 0.75),
+        \   'ctermbg': s:c.normal_bg,
+        \   'ctermfg': s:c.green,
+        \   'guibg': s:g.normal_bg,
+        \   'guifg': pgmnt#color#hsl(s:hue_green, 0.60, 0.75),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Type', {
-        \   'ctermfg': c_lblue,
+        \   'ctermfg': s:c.lblue,
         \   'gui': 'NONE',
-        \   'guifg': g_lblue,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Underlined', {
         \   'cterm': 'underline',
-        \   'ctermfg': c_blue,
+        \   'ctermfg': s:c.blue,
         \   'gui': 'underline',
-        \   'guifg': g_blue,
+        \   'guifg': s:g.blue,
         \   'term': 'underline',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'VertSplit', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c_statuslinenc_bg,
-        \   'ctermfg': c_statuslinenc_bg,
+        \   'ctermbg': s:c.statuslinenc_bg,
+        \   'ctermfg': s:c.statuslinenc_bg,
         \   'gui': 'NONE',
-        \   'guibg': statuslinenc_bg,
-        \   'guifg': statuslinenc_bg,
+        \   'guibg': s:g.statuslinenc_bg,
+        \   'guifg': s:g.statuslinenc_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Visual', {
         \   'ctermbg': 236,
-        \   'guibg': pgmnt#color#adjust_color(normal_bg, {
+        \   'guibg': pgmnt#color#adjust_color(s:g.normal_bg, {
         \     'saturation': +0.05,
         \     'lightness': +0.10,
         \   }),
@@ -429,9 +433,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'WildMenu', {
         \   'ctermbg': 255,
-        \   'ctermfg': c_statusline_fg,
-        \   'guibg': pgmnt#color#lighten(statusline_bg, 0.30),
-        \   'guifg': statusline_fg,
+        \   'ctermfg': s:c.statusline_fg,
+        \   'guibg': pgmnt#color#lighten(s:g.statusline_bg, 0.30),
+        \   'guifg': s:g.statusline_fg,
         \ }))
   " }}}
 
@@ -446,13 +450,13 @@ function! s:create_context() abort
   " diff
   call extend(rules, pgmnt#hi#group(
         \ 'diffAdded', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'diffRemoved', {
-        \   'ctermfg': c_red,
-        \   'guifg': g_red,
+        \   'ctermfg': s:c.red,
+        \   'guifg': s:g.red,
         \ }))
 
   " help
@@ -500,7 +504,13 @@ function! s:create_context() abort
   " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call add(links, pgmnt#hi#link('CtrlPPrtCursor', 'Cursor'))
   call add(links, pgmnt#hi#link('CtrlPMatch', 'Title'))
-  call add(links, pgmnt#hi#link('CtrlPMode1', 'icebergLLGradient'))
+  call extend(rules, pgmnt#hi#group(
+        \ 'CtrlPMode1', {
+        \   'ctermbg': s:c.xline_gradient_bg,
+        \   'ctermfg': s:c.xline_gradient_fg,
+        \   'guibg': s:g.xline_gradient_bg,
+        \   'guifg': s:g.xline_gradient_fg,
+        \ }))
   call add(links, pgmnt#hi#link('CtrlPMode2', 'StatusLine'))
 
   " [Denite](https://github.com/Shougo/denite.nvim)
@@ -511,17 +521,17 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'EasyMotionShade', {
         \   'ctermfg': 239,
-        \   'guifg': pgmnt#color#hsl(hue_base, 0.20, 0.30),
+        \   'guifg': pgmnt#color#hsl(s:hue_base, 0.20, 0.30),
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'EasyMotionTarget', {
-        \   'ctermfg': c_green,
-        \   'guifg': g_green,
+        \   'ctermfg': s:c.green,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['EasyMotionTarget2First', 'EasyMotionTarget2Second'], {
-        \   'ctermfg': c_orange,
-        \   'guifg': g_orange,
+        \   'ctermfg': s:c.orange,
+        \   'guifg': s:g.orange,
         \ }))
 
   " [vim-flow](https://github.com/flowtype/vim-flow)
@@ -537,24 +547,24 @@ function! s:create_context() abort
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterAdd', {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_green,
-        \   'guibg': linenr_bg,
-        \   'guifg': g_green,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.green,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['GitGutterChange', 'GitGutterChangeDelete'], {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_lblue,
-        \   'guibg': linenr_bg,
-        \   'guifg': g_lblue,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.lblue,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'GitGutterDelete', {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_red,
-        \   'guibg': linenr_bg,
-        \   'guifg': g_red,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.red,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.red,
         \ }))
 
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
@@ -588,17 +598,17 @@ function! s:create_context() abort
   " [Syntastic](http://github.com/vim-syntastic/syntastic)
   call extend(rules, pgmnt#hi#group(
         \ ['SyntasticErrorSign', 'SyntasticStyleErrorSign'], {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_red,
-        \   'guibg': linenr_bg,
-        \   'guifg': g_red,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.red,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ ['SyntasticStyleWarningSign', 'SyntasticWarningSign'], {
-        \   'ctermbg': c_linenr_bg,
-        \   'ctermfg': c_orange,
-        \   'guibg': linenr_bg,
-        \   'guifg': g_orange,
+        \   'ctermbg': s:c.linenr_bg,
+        \   'ctermfg': s:c.orange,
+        \   'guibg': s:g.linenr_bg,
+        \   'guifg': s:g.orange,
         \ }))
 
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
@@ -618,92 +628,36 @@ function! s:create_context() abort
   " [zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(
         \ 'ZenSpace', {
-        \   'ctermbg': c_red,
-        \   'guibg': g_red,
+        \   'ctermbg': s:c.red,
+        \   'guibg': s:g.red,
         \ }))
   " }}}
 
   " Palettes for statusline plugins {{{
   call extend(rules, pgmnt#hi#group(
-        \ ['icebergLLBase', 'icebergLLTabFill'], {
-        \   'ctermbg': c_lightline_base_bg,
-        \   'ctermfg': c_lightline_base_fg,
-        \   'guibg': lightline_base_bg,
-        \   'guifg': lightline_base_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergLLGradient', {
-        \   'ctermbg': c_lightline_gradient_bg,
-        \   'ctermfg': c_lightline_gradient_fg,
-        \   'guibg': lightline_gradient_bg,
-        \   'guifg': lightline_gradient_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ ['icebergLLEdge', 'icebergLLNormal', 'icebergLLTabSel'], {
-        \   'ctermbg': c_lightline_edge_bg,
-        \   'ctermfg': c_lightline_edge_fg,
-        \   'guibg': lightline_edge_bg,
-        \   'guifg': lightline_edge_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergLLNC', {
-        \   'ctermbg': c_statuslinenc_bg,
-        \   'ctermfg': c_statuslinenc_fg,
-        \   'guibg': statuslinenc_bg,
-        \   'guifg': statuslinenc_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergLLError', {
-        \   'ctermbg': c_red,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': g_red,
-        \   'guifg': normal_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergLLInsert', {
-        \   'ctermbg': c_blue,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': g_blue,
-        \   'guifg': normal_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ ['icebergLLReplace', 'icebergLLWarning'], {
-        \   'ctermbg': c_orange,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': g_orange,
-        \   'guifg': normal_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergLLVisual', {
-        \   'ctermbg': c_green,
-        \   'ctermfg': c_normal_bg,
-        \   'guibg': g_green,
-        \   'guifg': normal_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
         \ 'icebergALAccentRed', {
-        \   'ctermfg': c_red,
-        \   'guifg': g_red,
+        \   'ctermfg': s:c.red,
+        \   'guifg': s:g.red,
         \ }))
   " }}}
 
   let term_colors = [
-        \   normal_bg,
-        \   g_red,
-        \   g_green,
-        \   g_orange,
-        \   g_blue,
-        \   g_purple,
-        \   g_lblue,
-        \   normal_fg,
-        \   comment_fg,
-        \   pgmnt#color#adjust_color(g_red,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g_green,   {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g_orange,  {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g_blue,    {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g_purple,  {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g_lblue,   {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
+        \   s:g.normal_bg,
+        \   s:g.red,
+        \   s:g.green,
+        \   s:g.orange,
+        \   s:g.blue,
+        \   s:g.purple,
+        \   s:g.lblue,
+        \   s:g.normal_fg,
+        \   s:g.comment_fg,
+        \   pgmnt#color#adjust_color(s:g.red,       {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.green,     {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.orange,    {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.blue,      {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.purple,    {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.lblue,     {'saturation': +0.05, 'lightness': +0.05}),
+        \   pgmnt#color#adjust_color(s:g.normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
         \ ]
   let neovim_term_defs = map(
         \ term_colors,
@@ -717,7 +671,89 @@ function! s:create_context() abort
         \ }
 endfunction
 
+
 call pgmnt#compile(s:create_context(), {
       \   'output': '../colors/iceberg.vim',
       \   'template': './template.vim',
+      \ })
+
+
+function! s:create_xline_context() abort
+  let col_base = string([
+        \   s:g.xline_base_fg,
+        \   s:g.xline_base_bg,
+        \   s:c.xline_base_fg,
+        \   s:c.xline_base_bg,
+        \ ])
+  let col_edge = string([
+        \   s:g.xline_edge_fg,
+        \   s:g.xline_edge_bg,
+        \   s:c.xline_edge_fg,
+        \   s:c.xline_edge_bg,
+        \ ])
+  return {
+        \   'col_base': col_base,
+        \   'col_tabfill': col_base,
+        \   'col_edge': col_edge,
+        \   'col_normal': col_edge,
+        \   'col_tabsel': col_edge,
+        \   'col_error': string([
+        \     s:g.normal_bg,
+        \     s:g.red,
+        \     s:c.normal_bg,
+        \     s:c.red,
+        \   ]),
+        \   'col_gradient': string([
+        \     s:g.xline_gradient_fg,
+        \     s:g.xline_gradient_bg,
+        \     s:c.xline_gradient_fg,
+        \     s:c.xline_gradient_bg,
+        \   ]),
+        \   'col_nc': string([
+        \     s:g.statuslinenc_fg,
+        \     s:g.statuslinenc_bg,
+        \     s:c.statuslinenc_fg,
+        \     s:c.statuslinenc_bg,
+        \   ]),
+        \   'col_warning': string([
+        \     s:g.normal_bg,
+        \     s:g.orange,
+        \     s:c.normal_bg,
+        \     s:c.orange,
+        \   ]),
+        \   'col_insert': string([
+        \     s:g.normal_bg,
+        \     s:g.blue,
+        \     s:c.normal_bg,
+        \     s:c.blue,
+        \   ]),
+        \   'col_replace': string([
+        \     s:g.normal_bg,
+        \     s:g.orange,
+        \     s:c.normal_bg,
+        \     s:c.orange,
+        \   ]),
+        \   'col_visual': string([
+        \     s:g.normal_bg,
+        \     s:g.green,
+        \     s:c.normal_bg,
+        \     s:c.green,
+        \   ]),
+        \   'col_red': string([
+        \     s:g.red,
+        \     s:g.normal_bg,
+        \     s:c.red,
+        \     s:c.normal_bg,
+        \   ]),
+        \ }
+endfunction
+
+
+call pgmnt#compile(s:create_xline_context(), {
+      \   'output': '../autoload/airline/themes/iceberg.vim',
+      \   'template': './template-airline.vim',
+      \ })
+call pgmnt#compile(s:create_xline_context(), {
+      \   'output': '../autoload/lightline/colorscheme/iceberg.vim',
+      \   'template': './template-lightline.vim',
       \ })
