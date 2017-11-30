@@ -31,5 +31,5 @@ let g:colors_name = 'iceberg'
 {{ links }}
 
 if has('nvim')
-{{ neovim_term_defs }}
+  {{ neovim_term_defs }}
 endif
