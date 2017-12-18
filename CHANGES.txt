@@ -8,7 +8,7 @@ Changelog
 * Improve filetype supports: css, javascript, sass, graphql, etc.
 * Added new highlight supports: StatusLineTerm, StatusLineTermNC
 * Added Neovim terminal colors support
-* Improve stability of airlinr/lightline support
+* Improve stability of airline/lightline support
 
 
 0.6
