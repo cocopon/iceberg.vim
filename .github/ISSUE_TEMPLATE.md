@@ -5,6 +5,6 @@ Environment:
 - Vim (`:version`)
 - Terminal
 
-If you are using Vim/Neovim with terminal:
+If you have a trouble with coloration and are using Vim/Neovim with terminal:
 - [ ] Does your Vim support full colors? (`:set termguicolors`)
 - [ ] Does your terminal support full colors? (e.g. Terminal.app doesn't support it)
