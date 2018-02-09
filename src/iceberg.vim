@@ -394,6 +394,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
 
   " xml
+  call add(links, pgmnt#hi#link('xmlAttrib', 'Constant'))
   call add(links, pgmnt#hi#link('xmlAttribPunct', 'Statement'))
   call add(links, pgmnt#hi#link('xmlEndTag', 'Statement'))
   call add(links, pgmnt#hi#link('xmlNamespace', 'Statement'))

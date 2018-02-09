@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-01-26 23:22+0900
+" Modified:   2018-02-09 17:14+0900
 " License:    MIT
 
 
@@ -123,6 +123,7 @@ hi! link sassClass Special
 hi! link shFunction Normal
 hi! link vimContinue Comment
 hi! link vimIsCommand Statement
+hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
 hi! link xmlNamespace Statement
