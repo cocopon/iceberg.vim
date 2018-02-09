@@ -497,6 +497,22 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
 
+  " [Sneak](https://github.com/justinmk/vim-sneak/)
+  call extend(rules, pgmnt#hi#group(
+        \ 'Sneak', {
+        \   'ctermbg': c.purple,
+        \   'ctermfg': c.normal_bg,
+        \   'guibg': g.purple,
+        \   'guifg': g.normal_bg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'SneakScope', {
+        \   'ctermbg': c.visual_bg,
+        \   'ctermfg': c.comment_fg,
+        \   'guibg': g.visual_bg,
+        \   'guifg': g.comment_fg,
+        \ }))
+
   " [SVSS](https://github.com/cocopon/svss.vim)
   call add(links, pgmnt#hi#link('svssBraces', 'Delimiter'))
   
