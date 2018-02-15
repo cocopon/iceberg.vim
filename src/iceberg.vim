@@ -192,6 +192,13 @@ function! s:create_context() abort
         \   'guifg': g.green,
         \ }))
   call extend(rules, pgmnt#hi#group(
+        \ 'QuickFixLine', {
+        \   'ctermbg': c.visual_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.visual_bg,
+        \   'guifg': g.normal_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
         \ 'Search', {
         \   'ctermbg': c.search_bg,
         \   'ctermfg': c.search_fg,

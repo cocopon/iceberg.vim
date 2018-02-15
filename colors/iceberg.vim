@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-02-09 20:28+0900
+" Modified:   2018-02-16 16:55+0900
 " License:    MIT
 
 
@@ -61,6 +61,7 @@ hi! PmenuSel ctermbg=240 ctermfg=255 guibg=#5b6389 guifg=#eff0f4
 hi! PmenuThumb ctermbg=251 guibg=#c6c8d1
 hi! PreProc ctermfg=150 guifg=#b4be82
 hi! Question ctermfg=150 guifg=#b4be82
+hi! QuickFixLine ctermbg=236 ctermfg=252 guibg=#272c42 guifg=#c6c8d1
 hi! Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
 hi! SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi! Special ctermfg=150 guifg=#b4be82
