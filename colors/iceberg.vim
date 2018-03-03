@@ -174,6 +174,11 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
+hi! link SignifySignAdd GitGutterAdd
+hi! link SignifySignChange GitGutterChange
+hi! link SignifySignDelete GitGutterDelete
+hi! link SignifySignChangeDelete GitGutterChangeDelete
+hi! link SignifySignDeleteFirstLine SignifySignDelete
 
 if has('nvim')
   let g:terminal_color_0 = '#161821'
