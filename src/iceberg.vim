@@ -504,6 +504,13 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
 
+  " [Signify](https://github.com/mhinz/vim-signify/)
+  call add(links, pgmnt#hi#link('SignifySignAdd', 'GitGutterAdd'))
+  call add(links, pgmnt#hi#link('SignifySignChange', 'GitGutterChange'))
+  call add(links, pgmnt#hi#link('SignifySignChangeDelete', 'GitGutterChangeDelete'))
+  call add(links, pgmnt#hi#link('SignifySignDelete', 'GitGutterDelete'))
+  call add(links, pgmnt#hi#link('SignifySignDeleteFirstLine', 'SignifySignDelete'))
+
   " [Sneak](https://github.com/justinmk/vim-sneak/)
   call extend(rules, pgmnt#hi#group(
         \ 'Sneak', {
