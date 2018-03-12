@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-02-16 16:55+0900
+" Modified:   2018-03-12 10:53+0900
 " License:    MIT
 
 
@@ -163,6 +163,11 @@ hi! link plug1 Normal
 hi! link plug2 Structure
 hi! link plugDash Comment
 hi! link plugMessage Special
+hi! link SignifySignAdd GitGutterAdd
+hi! link SignifySignChange GitGutterChange
+hi! link SignifySignChangeDelete GitGutterChangeDelete
+hi! link SignifySignDelete GitGutterDelete
+hi! link SignifySignDeleteFirstLine SignifySignDelete
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
 hi! link typescriptAjaxMethods Normal
@@ -174,11 +179,6 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage Normal
 hi! link typescriptNull Constant
 hi! link typescriptParens Normal
-hi! link SignifySignAdd GitGutterAdd
-hi! link SignifySignChange GitGutterChange
-hi! link SignifySignDelete GitGutterDelete
-hi! link SignifySignChangeDelete GitGutterChangeDelete
-hi! link SignifySignDeleteFirstLine SignifySignDelete
 
 if has('nvim')
   let g:terminal_color_0 = '#161821'
