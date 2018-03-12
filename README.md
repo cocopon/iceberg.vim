@@ -28,10 +28,11 @@ Features
   / [Denite][denite]
   / [EasyMotion][easymotion]
   / [Git Gutter][git-gutter]
+  / [Signify][signify]
   / [Sneak][sneak]
   / [Syntastic][syntastic]
   / [vim-plug][vim-plug]
-  / [thinca/vim-zenspace][vim-zenspace]
+  / [vim-zenspace][vim-zenspace]
   etc.
 - Better syntax highlight with:
   [typescript-vim][typescript-vim]
@@ -84,6 +85,7 @@ MIT License. See `LICENSE.txt` for more information.
 [git-gutter]:https://github.com/airblade/vim-gitgutter
 [lightline]:https://github.com/itchyny/lightline.vim
 [neovim]:https://neovim.io/
+[signify]:https://github.com/mhinz/vim-signify/
 [sneak]:https://github.com/justinmk/vim-sneak
 [syntastic]:http://github.com/vim-syntastic/syntastic
 [terminal-sexy]:http://terminal.sexy
