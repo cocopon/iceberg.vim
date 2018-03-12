@@ -181,7 +181,7 @@ hi! link typescriptNull Constant
 hi! link typescriptParens Normal
 
 if has('nvim')
-  let g:terminal_color_0 = '#161821'
+  let g:terminal_color_0 = '#1D2030'
   let g:terminal_color_1 = '#e27878'
   let g:terminal_color_2 = '#b4be82'
   let g:terminal_color_3 = '#e2a478'
