@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-03-12 10:53+0900
+" Modified:   2018-03-19 20:59+0900
 " License:    MIT
 
 
@@ -181,7 +181,7 @@ hi! link typescriptNull Constant
 hi! link typescriptParens Normal
 
 if has('nvim')
-  let g:terminal_color_0 = '#1D2030'
+  let g:terminal_color_0 = '#1e2132'
   let g:terminal_color_1 = '#e27878'
   let g:terminal_color_2 = '#b4be82'
   let g:terminal_color_3 = '#e2a478'

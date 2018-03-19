@@ -577,7 +577,7 @@ function! s:create_context() abort
   " }}}
 
   let term_colors = [
-        \   g.normal_bg,
+        \   g.cursorline_bg,
         \   g.red,
         \   g.green,
         \   g.orange,
