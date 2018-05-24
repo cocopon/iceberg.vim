@@ -594,15 +594,24 @@ function! s:create_context() abort
         \   pgmnt#color#adjust_color(g.lblue,     {'saturation': +0.05, 'lightness': +0.05}),
         \   pgmnt#color#adjust_color(g.normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
         \ ]
+  let quoted_term_colors = map(
+        \ copy(term_colors),
+        \ '"''" . v:val . "''"')
+
   let neovim_term_defs = map(
-        \ term_colors,
-        \ '"let g:terminal_color_" . v:key . " = ''" . v:val . "''"')
+        \ copy(quoted_term_colors),
+        \ '"let g:terminal_color_" . v:key . " = " . v:val')
+  let vim_term_defs = printf(
+        \ 'let g:terminal_ansi_colors = [%s]',
+        \ join(quoted_term_colors, ', '),
+        \ )
   
   return {
         \   'links': links,
         \   'modified': strftime('%Y-%m-%d %H:%M%z'),
         \   'neovim_term_defs': neovim_term_defs,
         \   'rules': rules,
+        \   'vim_term_defs': vim_term_defs,
         \ }
 endfunction
 
