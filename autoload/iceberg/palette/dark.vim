@@ -79,7 +79,8 @@ function! iceberg#palette#dark#create() abort
         \   'saturation': +0.08,
         \   'lightness': +0.09,
         \ })
-  let g.todo_fg = pgmnt#color#hsl(hue_green, 0.60, 0.75)
+  let g.todo_bg = pgmnt#color#mix(g.green, g.normal_bg, 0.3)
+  let g.todo_fg = g.green
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
         \   'saturation': +0.05,
@@ -155,6 +156,7 @@ function! iceberg#palette#dark#create() abort
   let c.search_bg = c.orange
   let c.search_fg = c.normal_bg
   let c.specialkey_fg = 236
+  let c.todo_bg = c.normal_bg
   let c.todo_fg = c.green
   let c.visual_bg = 236
   let c.wildmenu_bg = 255

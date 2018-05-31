@@ -308,9 +308,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Todo', {
-        \   'ctermbg': c.normal_bg,
-        \   'ctermfg': c.green,
-        \   'guibg': g.normal_bg,
+        \   'ctermbg': c.todo_bg,
+        \   'ctermfg': c.todo_fg,
+        \   'guibg': g.todo_bg,
         \   'guifg': g.todo_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(

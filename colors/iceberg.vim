@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-05-24 15:26+0900
+" Modified:   2018-05-31 14:54+0900
 " License:    MIT
 
 
@@ -81,7 +81,7 @@ hi! TabLine cterm=NONE ctermbg=245 ctermfg=234 gui=NONE guibg=#818596 guifg=#171
 hi! TabLineFill cterm=reverse ctermbg=234 ctermfg=245 gui=reverse guibg=#17171b guifg=#818596
 hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#9a9ca5
 hi! Title ctermfg=216 gui=NONE guifg=#e2a478
-hi! Todo ctermbg=234 ctermfg=150 guibg=#161821 guifg=#d8e599
+hi! Todo ctermbg=234 ctermfg=150 guibg=#45493e guifg=#b4be82
 hi! Type ctermfg=109 gui=NONE guifg=#89b8c2
 hi! Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=underline
 hi! VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#0f1117 guifg=#0f1117
