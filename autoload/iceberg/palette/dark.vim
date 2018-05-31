@@ -23,6 +23,18 @@ function! iceberg#palette#dark#create() abort
   let g.normal_bg = pgmnt#color#hsl(hue_base, 0.20, 0.11)
   let g.normal_fg = pgmnt#color#hsl(hue_base, 0.10, 0.80)
 
+  " tint
+  let g.blue_tint_bg   = pgmnt#color#mix(g.blue, g.normal_bg, 0.30)
+  let g.blue_tint_fg   = pgmnt#color#mix(g.blue, g.normal_fg, 0.30)
+  let g.green_tint_bg  = pgmnt#color#mix(g.green, g.normal_bg, 0.30)
+  let g.green_tint_fg  = pgmnt#color#mix(g.green, g.normal_fg, 0.30)
+  let g.lblue_tint_bg  = pgmnt#color#mix(g.lblue, g.normal_bg, 0.30)
+  let g.lblue_tint_fg  = pgmnt#color#mix(g.lblue, g.normal_fg, 0.30)
+  let g.purple_tint_bg = pgmnt#color#mix(g.purple, g.normal_bg, 0.30)
+  let g.purple_tint_fg = pgmnt#color#mix(g.purple, g.normal_fg, 0.30)
+  let g.red_tint_bg    = pgmnt#color#mix(g.red, g.normal_bg, 0.30)
+  let g.red_tint_fg    = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
+
   " linenr
   let g.linenr_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
@@ -40,14 +52,6 @@ function! iceberg#palette#dark#create() abort
         \   'saturation': +0.10, 
         \   'lightness': +0.50,
         \ })
-
-  " diff
-  let g.diffadd_bg = pgmnt#color#mix(g.green, g.normal_bg, 0.30)
-  let g.diffadd_fg = pgmnt#color#mix(g.green, g.normal_fg, 0.30)
-  let g.diffchange_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.30)
-  let g.diffchange_fg = pgmnt#color#mix(g.lblue, g.normal_fg, 0.30)
-  let g.diffdelete_bg = pgmnt#color#mix(g.red, g.normal_bg, 0.30)
-  let g.diffdelete_fg = pgmnt#color#mix(g.red, g.normal_fg, 0.30)
 
   " statusline
   let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
@@ -79,7 +83,7 @@ function! iceberg#palette#dark#create() abort
         \   'saturation': +0.08,
         \   'lightness': +0.09,
         \ })
-  let g.todo_bg = pgmnt#color#mix(g.green, g.normal_bg, 0.3)
+  let g.todo_bg = g.green_tint_bg
   let g.todo_fg = g.green
   let g.visual_bg = pgmnt#color#adjust_color(
         \ g.normal_bg, {
@@ -120,19 +124,23 @@ function! iceberg#palette#dark#create() abort
   let c.normal_bg = 234
   let c.normal_fg = 252
 
+  " tint
+  let c.blue_tint_bg   = 24
+  let c.blue_tint_fg   = 153
+  let c.green_tint_bg  = 29
+  let c.green_tint_fg  = 158
+  let c.lblue_tint_bg  = 23
+  let c.lblue_tint_fg  = 159
+  let c.purple_tint_bg = 97
+  let c.purple_tint_fg = 225
+  let c.red_tint_bg    = 95
+  let c.red_tint_fg    = 224
+
   " linenr
   let c.linenr_bg = 235
   let c.linenr_fg = 239
   let c.cursorlinenr_bg = 237
   let c.cursorlinenr_fg = 253
-
-  " diff
-  let c.diffadd_bg = 29
-  let c.diffadd_fg = 158
-  let c.diffchange_bg = 23
-  let c.diffchange_fg = 159
-  let c.diffdelete_bg = 95
-  let c.diffdelete_fg = 224
 
   " statusline
   let c.statusline_bg = 245
