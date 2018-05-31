@@ -24,7 +24,8 @@ Features
 - 256-colors terminal support
 - [airline][airline] theme and [lightline][lightline] colorscheme
 - Various plugins support:
-  [CtrlP][ctrlp]
+  [ALE][ale]
+  / [CtrlP][ctrlp]
   / [Denite][denite]
   / [EasyMotion][easymotion]
   / [Git Gutter][git-gutter]
@@ -78,6 +79,7 @@ MIT License. See `LICENSE.txt` for more information.
 
 
 
+[ale]:https://github.com/w0rp/ale
 [airline]:https://github.com/vim-airline/vim-airline/
 [ctrlp]:https://github.com/ctrlpvim/ctrlp.vim
 [denite]:https://github.com/Shougo/denite.nvim

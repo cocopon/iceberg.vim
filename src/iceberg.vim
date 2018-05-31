@@ -425,6 +425,22 @@ function! s:create_context() abort
   " }}}
 
   " Rules for plugins {{{
+  " [ALE](https://github.com/w0rp/ale)
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEErrorSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEWarningSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.orange,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.orange,
+        \ }))
+
   " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call add(links, pgmnt#hi#link('CtrlPPrtCursor', 'Cursor'))
   call add(links, pgmnt#hi#link('CtrlPMatch', 'Title'))
