@@ -56,6 +56,26 @@ Creator of Iceberg talked about how to create your lovely color scheme in [VimCo
 
 
 
+Building your own Iceberg
+-------------------------
+1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme, to your Vim.
+
+2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`.
+
+3. To modify highlighting groups or links, edit `src/iceberg.vim`.
+
+4. After editing, compile the source file as below:
+
+    ```vim
+    :e src/iceberg.vim
+    :cd %:h
+    :source %
+    ```
+
+    Compiled files will be output into `autoload` directory.
+
+
+
 
 For other environments
 ----------------------
@@ -87,6 +107,7 @@ MIT License. See `LICENSE.txt` for more information.
 [git-gutter]:https://github.com/airblade/vim-gitgutter
 [lightline]:https://github.com/itchyny/lightline.vim
 [neovim]:https://neovim.io/
+[pgmnt]:https://github.com/cocopon/pgmnt.vim
 [signify]:https://github.com/mhinz/vim-signify/
 [sneak]:https://github.com/justinmk/vim-sneak
 [syntastic]:http://github.com/vim-syntastic/syntastic
