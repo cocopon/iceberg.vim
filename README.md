@@ -60,7 +60,9 @@ Building your own Iceberg
 -------------------------
 1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme, to your Vim.
 
-2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`.
+2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`. If you 
+   make changes, be sure to `:source` this file before step 4 otherwise your color
+   palette changes will not be reflected.
 
 3. To modify highlighting groups or links, edit `src/iceberg.vim`.
 
