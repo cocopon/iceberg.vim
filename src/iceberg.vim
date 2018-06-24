@@ -555,6 +555,17 @@ function! s:create_context() abort
         \   'guifg': g.comment_fg,
         \ }))
 
+  " [Startify](https://github.com/mhinz/vim-startify)
+  call add(links, pgmnt#hi#link('StartifyBracket', 'Comment'))
+  call add(links, pgmnt#hi#link('StartifyFile', 'String'))
+  call add(links, pgmnt#hi#link('StartifyFooter', 'Constant'))
+  call add(links, pgmnt#hi#link('StartifyHeader', 'Constant'))
+  call add(links, pgmnt#hi#link('StartifyNumber', 'Special'))
+  call add(links, pgmnt#hi#link('StartifyPath', 'Comment'))
+  call add(links, pgmnt#hi#link('StartifySection', 'Statement'))
+  call add(links, pgmnt#hi#link('StartifySlash', 'Comment'))
+  call add(links, pgmnt#hi#link('StartifySpecial', 'Normal'))
+
   " [SVSS](https://github.com/cocopon/svss.vim)
   call add(links, pgmnt#hi#link('svssBraces', 'Delimiter'))
   

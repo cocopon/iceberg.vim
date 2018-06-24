@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-05-31 17:57+0900
+" Modified:   2018-06-24 10:37+0900
 " License:    MIT
 
 
@@ -170,6 +170,15 @@ hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete
 hi! link SignifySignDelete GitGutterDelete
 hi! link SignifySignDeleteFirstLine SignifySignDelete
+hi! link StartifyNumber Special
+hi! link StartifyFile String
+hi! link StartifyPath Comment
+hi! link StartifySlash Comment
+hi! link StartifyBracket Comment
+hi! link StartifyHeader Constant
+hi! link StartifyFooter Constant
+hi! link StartifySpecial Normal
+hi! link StartifySection Statement
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
 hi! link typescriptAjaxMethods Normal
