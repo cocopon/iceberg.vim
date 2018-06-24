@@ -31,6 +31,7 @@ Features
   / [Git Gutter][git-gutter]
   / [Signify][signify]
   / [Sneak][sneak]
+  / [Startify][startify]
   / [Syntastic][syntastic]
   / [vim-plug][vim-plug]
   / [vim-zenspace][vim-zenspace]
@@ -112,6 +113,7 @@ MIT License. See `LICENSE.txt` for more information.
 [pgmnt]:https://github.com/cocopon/pgmnt.vim
 [signify]:https://github.com/mhinz/vim-signify/
 [sneak]:https://github.com/justinmk/vim-sneak
+[startify]:https://github.com/mhinz/vim-startify
 [syntastic]:http://github.com/vim-syntastic/syntastic
 [terminal-sexy]:http://terminal.sexy
 [typescript-vim]:https://github.com/leafgarland/typescript-vim
