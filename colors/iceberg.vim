@@ -127,6 +127,8 @@ hi! link rubyStringDelimiter String
 hi! link sassClass Special
 hi! link shFunction Normal
 hi! link vimContinue Comment
+hi! link vimFunction Function
+hi! link vimFuncName Statement
 hi! link vimIsCommand Statement
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement

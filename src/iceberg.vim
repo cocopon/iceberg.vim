@@ -410,6 +410,8 @@ function! s:create_context() abort
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
+  call add(links, pgmnt#hi#link('vimFunction', 'Function'))
+  call add(links, pgmnt#hi#link('vimFuncName', 'Statement'))
   call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
 
   " xml
