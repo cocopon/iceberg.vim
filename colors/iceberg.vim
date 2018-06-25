@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-06-24 10:37+0900
+" Modified:   2018-06-24 19:45-0500
 " License:    MIT
 
 
@@ -149,10 +149,12 @@ hi! link graphqlIdentifier Normal
 hi! link graphqlOperator Normal
 hi! link graphqlStructure Statement
 hi! link jsArrowFunction Operator
+hi! link jsClassDefinition Type
+hi! link jsClassFuncName Function
 hi! link jsClassMethodType Statement
 hi! link jsExport Statement
-hi! link jsFuncName Normal
-hi! link jsFunction Function
+hi! link jsFuncName Function
+hi! link jsFunction Statement
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
@@ -172,15 +174,15 @@ hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete
 hi! link SignifySignDelete GitGutterDelete
 hi! link SignifySignDeleteFirstLine SignifySignDelete
-hi! link StartifyNumber Special
-hi! link StartifyFile String
-hi! link StartifyPath Comment
-hi! link StartifySlash Comment
 hi! link StartifyBracket Comment
-hi! link StartifyHeader Constant
+hi! link StartifyFile String
 hi! link StartifyFooter Constant
-hi! link StartifySpecial Normal
+hi! link StartifyHeader Constant
+hi! link StartifyNumber Special
+hi! link StartifyPath Comment
 hi! link StartifySection Statement
+hi! link StartifySlash Comment
+hi! link StartifySpecial Normal
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
 hi! link typescriptAjaxMethods Normal
