@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-06-24 19:45-0500
+" Modified:   2018-07-01 09:15-0500
 " License:    MIT
 
 
@@ -152,14 +152,20 @@ hi! link jsArrowFunction Operator
 hi! link jsClassDefinition Type
 hi! link jsClassFuncName Function
 hi! link jsClassMethodType Statement
+hi! link jsDestructuringBlock Identifier
 hi! link jsExport Statement
+hi! link jsFuncArgs Identifier
 hi! link jsFuncName Function
 hi! link jsFunction Statement
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
+hi! link jsNull Constant
 hi! link jsObjectKey Identifier
 hi! link jsSuper Statement
+hi! link jsTemplateBraces Special
+hi! link jsTemplateExpression Special
+hi! link jsVariableDef Identifier
 hi! link markdownBold Special
 hi! link markdownCode String
 hi! link markdownCodeDelimiter String
