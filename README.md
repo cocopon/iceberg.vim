@@ -87,6 +87,7 @@ For other environments
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
+- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish) by [pkazmier](https://github.com/pkazmier)
 
 NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
 the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
