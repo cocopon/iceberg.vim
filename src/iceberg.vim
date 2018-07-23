@@ -112,8 +112,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Function', {
-        \   'ctermfg': c.orange,
-        \   'guifg': g.orange,
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
@@ -282,8 +282,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Structure', {
-        \   'ctermfg': c.lblue,
-        \   'guifg': g.lblue,
+        \   'ctermfg': c.blue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLine', {
@@ -327,9 +327,9 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Type', {
-        \   'ctermfg': c.lblue,
+        \   'ctermfg': c.blue,
         \   'gui': 'NONE',
-        \   'guifg': g.lblue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Underlined', {
@@ -367,7 +367,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
   call add(links, pgmnt#hi#link('cssClassName', 'Special'))
   call add(links, pgmnt#hi#link('cssClassNameDot', 'Normal'))
-  call add(links, pgmnt#hi#link('cssPseudoClassId', 'Function'))
+  call add(links, pgmnt#hi#link('cssPseudoClassId', 'Special'))
   call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
 
   " diff
@@ -396,21 +396,31 @@ function! s:create_context() abort
   " php
   call add(links, pgmnt#hi#link('phpVarSelector', 'Identifier'))
 
+  " python
+  call add(links, pgmnt#hi#link('pythonFunction', 'Title'))
+
   " ruby
   call add(links, pgmnt#hi#link('rubyDefine', 'Statement'))
+  call add(links, pgmnt#hi#link('rubyFunction', 'Title'))
   call add(links, pgmnt#hi#link('rubyInterpolationDelimiter', 'String'))
   call add(links, pgmnt#hi#link('rubySharpBang', 'Comment'))
   call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
 
   " sass
   call add(links, pgmnt#hi#link('sassClass', 'Special'))
+  call add(links, pgmnt#hi#link('sassFunction', 'Statement'))
 
   " sh
   call add(links, pgmnt#hi#link('shFunction', 'Normal'))
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
+  call add(links, pgmnt#hi#link('vimFunction', 'Title'))
+  call add(links, pgmnt#hi#link('vimGroup', 'Statement'))
+  call add(links, pgmnt#hi#link('vimHiGroup', 'Statement'))
+  call add(links, pgmnt#hi#link('vimHiTerm', 'Identifier'))
   call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
+  call add(links, pgmnt#hi#link('vimOption', 'Identifier'))
 
   " xml
   call add(links, pgmnt#hi#link('xmlAttrib', 'Constant'))
@@ -455,7 +465,7 @@ function! s:create_context() abort
 
   " [Denite](https://github.com/Shougo/denite.nvim)
   call add(links, pgmnt#hi#link('deniteMatched', 'Normal'))
-  call add(links, pgmnt#hi#link('deniteMatchedChar', 'Function'))
+  call add(links, pgmnt#hi#link('deniteMatchedChar', 'Title'))
 
   " [EasyMotion](https://github.com/easymotion/vim-easymotion)
   call extend(rules, pgmnt#hi#group(
@@ -475,14 +485,13 @@ function! s:create_context() abort
         \ }))
 
   " [vim-flow](https://github.com/flowtype/vim-flow)
-  call add(links, pgmnt#hi#link('jsFlowType', 'Statement'))
   call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
   call add(links, pgmnt#hi#link('jsFlowObject', 'Normal'))
+  call add(links, pgmnt#hi#link('jsFlowType', 'PreProc'))
 
   " [vim-graphql](https://github.com/jparise/vim-graphql)
-  call add(links, pgmnt#hi#link('graphqlIdentifier', 'Normal'))
+  call add(links, pgmnt#hi#link('graphqlName', 'Normal'))
   call add(links, pgmnt#hi#link('graphqlOperator', 'Normal'))
-  call add(links, pgmnt#hi#link('graphqlStructure', 'Statement'))
 
   " [Git Gutter](https://github.com/airblade/vim-gitgutter)
   call extend(rules, pgmnt#hi#group(
@@ -509,15 +518,20 @@ function! s:create_context() abort
 
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
-  call add(links, pgmnt#hi#link('jsClassMethodType', 'Statement'))
+  call add(links, pgmnt#hi#link('jsClassDefinition', 'Normal'))
+  call add(links, pgmnt#hi#link('jsClassFuncName', 'Title'))
   call add(links, pgmnt#hi#link('jsExport', 'Statement'))
-  call add(links, pgmnt#hi#link('jsFuncName', 'Normal'))
-  call add(links, pgmnt#hi#link('jsFunction', 'Function'))
+  call add(links, pgmnt#hi#link('jsFuncName', 'Title'))
+  call add(links, pgmnt#hi#link('jsFunction', 'Statement'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleKeywords', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleOperators', 'Statement'))
+  call add(links, pgmnt#hi#link('jsNull', 'Constant'))
+  call add(links, pgmnt#hi#link('jsObjectFuncName', 'Title'))
   call add(links, pgmnt#hi#link('jsObjectKey', 'Identifier'))
   call add(links, pgmnt#hi#link('jsSuper', 'Statement'))
+  call add(links, pgmnt#hi#link('jsTemplateBraces', 'Special'))
+  call add(links, pgmnt#hi#link('jsUndefined', 'Constant'))
 
   " [vim-markdown](https://github.com/tpope/vim-markdown)
   call add(links, pgmnt#hi#link('markdownBold', 'Special'))
@@ -528,7 +542,7 @@ function! s:create_context() abort
 
   " [vim-plug](https://github.com/junegunn/vim-plug)
   call add(links, pgmnt#hi#link('plug1', 'Normal'))
-  call add(links, pgmnt#hi#link('plug2', 'Structure'))
+  call add(links, pgmnt#hi#link('plug2', 'Identifier'))
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
 
@@ -557,7 +571,7 @@ function! s:create_context() abort
 
   " [Startify](https://github.com/mhinz/vim-startify)
   call add(links, pgmnt#hi#link('StartifyBracket', 'Comment'))
-  call add(links, pgmnt#hi#link('StartifyFile', 'String'))
+  call add(links, pgmnt#hi#link('StartifyFile', 'Identifier'))
   call add(links, pgmnt#hi#link('StartifyFooter', 'Constant'))
   call add(links, pgmnt#hi#link('StartifyHeader', 'Constant'))
   call add(links, pgmnt#hi#link('StartifyNumber', 'Special'))
@@ -592,6 +606,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Normal'))
   call add(links, pgmnt#hi#link('typescriptBraces', 'Normal'))
   call add(links, pgmnt#hi#link('typescriptEndColons', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptFuncKeyword', 'Statement'))
   call add(links, pgmnt#hi#link('typescriptGlobalObjects', 'Statement'))
   call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'Normal'))
   call add(links, pgmnt#hi#link('typescriptIdentifier', 'Statement'))
