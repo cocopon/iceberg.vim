@@ -546,6 +546,9 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
 
+  " [vim-processing](https://github.com/sophacles/vim-processing)
+  call add(links, pgmnt#hi#link('processingFunction', 'Statement'))
+
   " [Signify](https://github.com/mhinz/vim-signify/)
   call add(links, pgmnt#hi#link('SignifySignAdd', 'GitGutterAdd'))
   call add(links, pgmnt#hi#link('SignifySignChange', 'GitGutterChange'))

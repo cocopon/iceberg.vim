@@ -177,6 +177,7 @@ hi! link plug1 Normal
 hi! link plug2 Identifier
 hi! link plugDash Comment
 hi! link plugMessage Special
+hi! link processingFunction Statement
 hi! link SignifySignAdd GitGutterAdd
 hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete
