@@ -415,12 +415,16 @@ function! s:create_context() abort
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
+  call add(links, pgmnt#hi#link('vimFuncName', 'Statement'))
+  call add(links, pgmnt#hi#link('vimFuncSID', 'vimFunction'))
+  call add(links, pgmnt#hi#link('vimFuncVar', 'Normal'))
   call add(links, pgmnt#hi#link('vimFunction', 'Title'))
   call add(links, pgmnt#hi#link('vimGroup', 'Statement'))
   call add(links, pgmnt#hi#link('vimHiGroup', 'Statement'))
   call add(links, pgmnt#hi#link('vimHiTerm', 'Identifier'))
-  call add(links, pgmnt#hi#link('vimIsCommand', 'Statement'))
+  call add(links, pgmnt#hi#link('vimMapModKey', 'Special'))
   call add(links, pgmnt#hi#link('vimOption', 'Identifier'))
+  call add(links, pgmnt#hi#link('vimVar', 'Normal'))
 
   " xml
   call add(links, pgmnt#hi#link('xmlAttrib', 'Constant'))
