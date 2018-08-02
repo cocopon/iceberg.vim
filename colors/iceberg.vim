@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-07-27 15:10+0900
+" Modified:   2018-08-02 13:01+0900
 " License:    MIT
 
 
@@ -177,6 +177,7 @@ hi! link markdownCode String
 hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
 hi! link markdownRule Comment
+hi! link ngxDirective Statement
 hi! link plug1 Normal
 hi! link plug2 Identifier
 hi! link plugDash Comment

@@ -544,6 +544,9 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('markdownHeadingDelimiter', 'Comment'))
   call add(links, pgmnt#hi#link('markdownRule', 'Comment'))
 
+  " [nginx.vim](https://github.com/chr4/nginx.vim)
+  call add(links, pgmnt#hi#link('ngxDirective', 'Statement'))
+
   " [vim-plug](https://github.com/junegunn/vim-plug)
   call add(links, pgmnt#hi#link('plug1', 'Normal'))
   call add(links, pgmnt#hi#link('plug2', 'Identifier'))
