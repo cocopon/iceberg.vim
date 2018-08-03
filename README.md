@@ -1,10 +1,5 @@
-![Iceberg](https://cocopon.github.io/iceberg.vim/assets/github/title.png)
+![Iceberg](https://cocopon.github.io/iceberg.vim/assets/github/20180804/cover.png)
 
-
-
-
-Overview
---------
 Iceberg is a dark blue color scheme for Vim. It brings a cool-headed perspective
 for your happy coding!
 
@@ -19,8 +14,7 @@ information.
 
 
 
-Features
---------
+# Features
 - 256-colors terminal support
 - [airline][airline] theme and [lightline][lightline] colorscheme
 - Various plugins support:
@@ -48,8 +42,7 @@ Features
 
 
 
-Philosophy
-----------
+# Philosophy
 Creator of Iceberg talked about how to create your lovely color scheme in [VimConf 2017][vimconf2017], international Vim conference. [This presentation][vimconf-presentation] also explained the philosophy of Iceberg.
 
 [![Creating Your Lovely Color Scheme](http://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-presentation]
@@ -57,8 +50,7 @@ Creator of Iceberg talked about how to create your lovely color scheme in [VimCo
 
 
 
-Building your own Iceberg
--------------------------
+# Building your own Iceberg
 1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme, to your Vim.
 
 2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`. If you 
@@ -80,8 +72,7 @@ Building your own Iceberg
 
 
 
-For other environments
-----------------------
+# For other environments
 - [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp) by [cocopon](https://github.com/cocopon)
 - [iTerm2](https://github.com/aseom/dotfiles/blob/master/osx/iterm2/iceberg.itermcolors) by [aseom](https://github.com/aseom)
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
@@ -96,8 +87,7 @@ as import and export it for the emulator of your choice.
 
 
 
-License
--------
+# License
 MIT License. See `LICENSE.txt` for more information.
 
 
