@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200px" height="400px" viewBox="0 0 1200 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>final</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#161821" x="0" y="0" width="1200" height="403"></rect>
+        <rect id="Rectangle-2" fill="#1E2132" x="0" y="270" width="1200" height="133"></rect>
+        <text id="ICEBERG" font-family="Bison-Bold, Bison" font-size="96" font-weight="bold" letter-spacing="4.5" fill="#C6C8D1">
+            <tspan x="60.0999985" y="131">ICEBER</tspan>
+            <tspan x="287.835998" y="131" letter-spacing="5.4">G</tspan>
+        </text>
+        <text id="Dark-blue-color-sche" font-family="Bison-DemiBold, Bison" font-size="16" font-weight="500" letter-spacing="1.454546" fill="#6B7089">
+            <tspan x="63.5999985" y="157">Dark blue color scheme for vim</tspan>
+        </text>
+        <g id="Group" transform="translate(541.000000, 254.000000)">
+            <polygon id="Triangle-2" fill="#C6C8D1" points="16 0 32 16 0 16"></polygon>
+            <polygon id="Triangle-2-Copy" fill="#6B7089" transform="translate(16.000000, 24.000000) scale(1, -1) translate(-16.000000, -24.000000) " points="16 16 32 32 0 32"></polygon>
+        </g>
+        <polygon id="Polygon-Copy-3" fill="#E27878" points="432 64 440 72 424 72"></polygon>
+        <polygon id="Polygon-Copy-4" fill="#E2A478" points="415 81 423 89 407 89"></polygon>
+        <polygon id="Polygon-Copy-6" fill="#B4BE82" points="398 98 406 106 390 106"></polygon>
+        <polygon id="Polygon-Copy-5" fill="#89B8C2" points="381 115 389 123 373 123"></polygon>
+        <polygon id="Polygon-Copy-8" fill="#84A0C6" points="364 132 372 140 356 140"></polygon>
+        <polygon id="Polygon-Copy-7" fill="#A093C7" points="347 149 355 157 339 157"></polygon>
+        <g id="Group-Copy" transform="translate(637.000000, 32.000000)">
+            <polygon id="Triangle-2-Copy-2" fill="#C6C8D1" points="119 119 238 238 0 238"></polygon>
+            <polygon id="Triangle-2-Copy-4" fill="#6B7089" transform="translate(476.000000, 297.500000) scale(1, -1) translate(-476.000000, -297.500000) " points="476 238 595 357 357 357"></polygon>
+            <polygon id="Triangle-2-Copy-3" fill="#C6C8D1" points="357 0 595 238 119 238"></polygon>
+            <polygon id="Triangle-2-Copy-5" fill="#6B7089" transform="translate(238.000000, 357.000000) scale(1, -1) translate(-238.000000, -357.000000) " points="238 238 476 476 0 476"></polygon>
+        </g>
+    </g>
+</svg>
