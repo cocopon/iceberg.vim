@@ -1,292 +1,254 @@
-$background-color: hsl(230deg, 30%, 20%);
-$color: hsl(230deg, 15%, 70%);
-$font-family-sans-serif: Play, sans-serif;
-$font-family-title: Play, sans-serif;
-$font-family-monospace: 'Source Code Pro', monospace;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,700');
 
-$ground-color: darken($background-color, 10%);
-$a-color: white;
-$button-background-color: hsl(190deg, 35%, 68%);
-$button-border-radius: 3px;
-$button-color: $background-color;
-$button-hover-background-color: adjust-color(
-	$button-background-color,
-	$saturation: +15%,
-	$lightness: +15%);
-$button-hover-color: $button-color;
-$header-height: 280px;
-$heading-color: lighten($color, 15%);
-$heading-margin: 2.0em 0 0.5em;
-$iceberg-height: 144px;
-$iceberg-left: 32px;
-$iceberg-top: 40px;
-$iceberg-width: 110px;
-$title-offset: 120px;
-$main-width: 600px;
-$pre-border-radius: 3px;
-$pre-margin: 1.0em 0;
-$preview-pre-height: 14em;
-$footer-spacing: 4.0em;
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+@import 'iceberg';
 
 
-* {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}
-html {
-	background-color: $background-color;
-	background: -moz-linear-gradient(270deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
-	background: -webkit-linear-gradient(270deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
-	background: linear-gradient(180deg, $background-color, $ground-color 50%, $ground-color, darken($background-color, 7%) 95%);
-	color: $color;
-	margin: 0;
-	padding: 0;
-}
-body {
-	font-family: $font-family-sans-serif;
-	font-size: 1.0em;
-	margin: 0;
-	padding: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-	color: $heading-color;
-	font-family: $font-family-title;
-	font-weight: bold;
-	margin: $heading-margin;
-	padding: 2px 0;
-}
-h1 {
-	font-size: 240%;
-	text-transform: uppercase;
-}
-h2 {
-	border-bottom: mix($heading-color, $background-color, 5%) solid 1px;
-	font-size: 150%;
-}
-h3 {
-	font-size: 125%;
-}
-pre {
-	background-color: black;
-	border: lighten($background-color, 5%) solid 2px;
-	border-radius: $pre-border-radius;
-	font-family: $font-family-monospace;
-	font-size: 90%;
-	margin: 1.0em 0;
-	overflow: auto;
-	overflow-x: hidden;
-}
-ul {
-	margin: 1.5em 0;
-}
-li + li {
-	margin-top: 0.3em;
-}
-p {
-	line-height: 150%;
-}
-a {
-	color: $a-color;
-
-	&:hover {
-		background-color: mix($a-color, $background-color, 10%);
-		border-radius: 3px;
-		text-decoration: none;
-	}
+.main {
+	overflow: hidden;
 }
 
-#header {
-	background: url(../img/header-bg.png) repeat-x left top;
-	height: $header-height;
-	min-width: $main-width;
-	text-align: center;
+.header {
+	background-color: $iceberg-normal-bg;
+	padding-bottom: 128px;
+	padding-top: 64px;
 	position: relative;
 
-	h1 {
-		letter-spacing: 0.02em;
-		margin: 0;
+	@include sp() {
+		padding-bottom: 256px;
 	}
-	.title-container {
-		top: $title-offset;
+
+	&_icebergLayout {
+		height: 0;
+		left: 0;
 		position: absolute;
-		left: 50%;
-		margin-left: -$main-width / 2;
-		width: $main-width;
+		right: 0;
+		bottom: 0;
 	}
-	.subtitle {
-		color: mix($color, $background-color, 75%);
-	}
-}
-#main {
-	margin: 0 auto;
-	position: relative;
-	width: $main-width;
-}
-ul.icon {
-	padding: 0 0 0 1.5em;
+	&_iceberg {
+		background-position: center;
+		background-repeat: no-repeat;
+		position: absolute;
 
-	li {
-		list-style-type: none;
+		&#{&}-s {
+			background-image: url(../img/iceberg-s.svg);
+			height: 32px;
+			right: 595px;
+			top: (-32px / 2);
+			width: 32px;
+
+			@include sp() {
+				right: 499px;
+			}
+		}
+		&#{&}-l {
+			background-image: url(../img/iceberg-l.svg);
+			height: 476px;
+			right: -32px;
+			top: (-476px / 2);
+			width: 595px;
+
+			@include sp() {
+				right: -128px;
+			}
+		}
 	}
-	.fa {
-		margin-right: 0.5em;
+	&_innerLayout {
+		padding-left: 32px;
+		padding-right: 32px;
+		position: relative;
+
+		@include sp() {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+	&_titleLayout {
+		max-width: 377px;
+	}
+	&_title {
+		@include hide-text();
+
+		background: url(../img/title.svg) no-repeat center;
+		background-size: contain;
+		height: 0;
+		padding-top: percentage(95 / 377);
+	}
+	&_bannerLayout {
+		font-size: 0;
+		height: 20px;
+		margin-top: 32px;
+		opacity: 0.7;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
-.github {
-	bottom: 48px;
-	height: 20px;
-	left: 50%;
-	margin-left: -$main-width / 2;
-	position: absolute;
-	text-align: center;
-	width: $main-width;
-}
-.preview {
-	pre {
-		height: $preview-pre-height;
-	}
-	.title {
-	}
-}
-.button-container {
-	text-align: center;
-}
+
 .button {
-	background-color: $button-background-color;
-	border-radius: $button-border-radius;
-	color: black;
+	background-color: $button-bg-color;
+	box-shadow: 0 2px 4px rgba($bg-color, 0.5);
+	color: $bg-color;
 	display: inline-block;
-	margin: 2.0em 0;
+	font-weight: bold;
 	padding: 8px 1.0em;
 	text-align: center;
 	text-decoration: none;
 
 	&:hover {
-		background-color: $button-hover-background-color;
-		color: $button-hover-color;
+		background-color: adjust-color($button-bg-color, $saturation: +5%, $lightness: +5%);
 	}
-	.fa {
+	&_icon {
+		font-size: 1rem;
 		margin-right: 0.5em;
 	}
+	&_text {
+		font-size: 1rem;
+	}
 }
-.screenshot {
-	text-align: center;
 
-	img {
-		max-width: 100%;
+.section {
+	padding-bottom: 64px;
+	padding-top: 64px;
+	position: relative;
+
+	@include sp() {
+		padding-bottom: 32px;
+		padding-top: 32px;
 	}
 
-	&.osx {
-		text-align: left;
+	&_innerLayout {	
+		@include responsive-inner();
 
-		img {
-			width: 294px;
+		position: relative;
+	}
+	&_title {
+		font-size: 2rem;
+	}
+	&_body {
+		margin-top: 16px;
+	}
+	&_buttonLayout {
+		margin-top: 64px;
+		text-align: center;
+
+		@include sp() {
+			margin-top: 32px;
 		}
 	}
 }
-#footer {
-	background: url(../img/footer-bg.png) repeat-x left bottom;
-	font-size: 90%;
-	height: 50px;
-	margin: $footer-spacing auto 0;
-	min-width: $main-width;
-	padding-top: 28px;
-	text-align: center;
+
+.lead {
+	&_featuresLayout {
+		margin-top: 2rem;
+	}
 }
 
-// Decorations
-.ice-l {
-	background: url(../img/ice-l.png) no-repeat left top;
-	height: 94px;
-	left: 32px;
-	position: absolute;
-	top: $iceberg-top;
-	width: 104px;
+.featureList {
+	padding: 0 0 0 1.5em;
 }
-.ice-m {
-	background: url(../img/ice-m.png) no-repeat left top;
-	height: 74px;
-	position: absolute;
-	right: 120px;
-	top: $iceberg-top;
-	width: 94px;
-}
-.ice-s {
-	background: url(../img/ice-s.png) no-repeat left top;
-	height: 54px;
-	position: absolute;
-	right: 32px;
-	top: $iceberg-top;
-	width: 44px;
-}
-.clione {
-	background: url(../img/clione.png) no-repeat left top;
-	height: 40px;
-	left: -80px;
-	position: absolute;
-	width: 30px;
-}
-.anchor {
-	background: url(../img/anchor.png) no-repeat left top;
-	bottom: -($footer-spacing + 2.0em);
-	height: 27px;
-	position: absolute;
-	right: 0;
-	width: 27px;
+.featureListItem {
+	line-height: $p-line-height;
+	list-style-type: none;
+	position: relative;
+
+	& + & {
+		margin-top: 1rem;
+	}
+
+	&_icon {
+		color: $iceberg-green;
+		position: absolute;
+		left: -1.5em;
+		line-height: $p-line-height !important;
+	}
 }
 
-// Palette
-ul.palette {
-	$palette-size: 12px;
+.previewListItem {
+	list-style-type: none;
 
-	margin: 4.0em 0;
-	padding: 8px 0;
-	text-align: center;
-
-	li {
+	@include pc() {
 		display: inline-block;
-		height: $palette-size;
-		margin: 0;
-		width: $palette-size;
-	}
-	li + li {
-		margin-left: 16px;
-	}
+		vertical-align: top;
+		width: percentage((1 - 0.02) / 2);
 
-	.item {
-		border-radius: 6px;
+		&:nth-child(2n + 2) {
+			margin-left: percentage(0.02);
+		}
+		&:nth-child(n + 3) {
+			margin-top: percentage(0.02);
+		}
 	}
+	@include sp() {
+		& + & {
+			margin-top: 16px;
+		}
+	}
+}
+.preview {
+	box-shadow: 0 4px 8px rgba($iceberg-normal-bg, 0.5);
+	position: relative;
+	height: 0;
+	padding-top: percentage(9 / 16);
 
-	$base-hue: 230deg;
-	$normal-bg: hsl(230deg, 20%, 11%);
-	.base0 {background-color: darken($normal-bg, 3%);}
-	.base1 {background-color: $normal-bg;}
-	.base2 {background-color: adjust-color($normal-bg,
-		$saturation: +5%,
-		$lightness: +10%);}
-	.base3 {background-color: hsl($base-hue, 20%, 30%);}
-	.base4 {background-color: hsl($base-hue, 9%, 50%);}
-	.base5 {background-color: hsl($base-hue, 10%, 80%);}
+	&_pre {
+		bottom: 0;
+		left: 0;
+		overflow: scroll;
+		position: absolute;
+		right: 0;
+		top: 0;
 
-	.blue {
-		background-color: hsl(215deg, 37%, 65%);
+		@include sp() {
+			overflow: hidden;
+		}
 	}
-	.green {
-		background-color: hsl(72deg, 35%, 65%);
-	}
-	.lblue {
-		background-color: hsl(190deg, 31%, 65%);
-	}
-	.orange {
-		background-color: hsl(25deg, 65%, 68%);
-	}
-	.purple {
-		background-color: hsl(255deg, 32%, 68%);
-	}
-	.red {
-		background-color: hsl(0, 63%, 68%);
+	&_title {
+		background-color: $iceberg-normal-fg;
+		color: $iceberg-normal-bg;
+		font-weight: bold;
+		padding: 0 0.5em;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 }
 
+.philosophy {
+	&_slidesLayout {
+		margin-top: 32px;
+	}
+}
 
-@import 'iceberg';
+.macos {
+	&_window {
+		margin-bottom: 32px;
+		margin-top: 32px;
+		text-align: center;
+
+		img {
+			border-radius: 3px;
+			box-shadow: 0 8px 16px rgba($iceberg-normal-bg, 0.5);
+			max-width: 100%;
+		}
+	}
+	&_buttonLayout {
+		text-align: center;
+	}
+}
+
+.footer {
+	background-color: $iceberg-linenr-bg;
+	color: $iceberg-comment-fg;
+	font-size: 0.9rem;
+	padding-bottom: 16px;
+	text-align: center;
+
+	@include sp() {
+		padding-top: 32px;
+	}
+}

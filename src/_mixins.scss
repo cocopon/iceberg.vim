@@ -1,0 +1,27 @@
+@mixin pc() {
+	@media screen and (min-width: ($sp-width + 32px + 1px)) {
+		@content;
+	}
+}
+
+@mixin sp() {
+	@media screen and (max-width: $sp-width + 32px) {
+		@content;
+	}
+}
+
+@mixin hide-text() {
+	text-indent: -9999px;
+}
+
+@mixin responsive-inner() {
+	@include pc() {
+		margin-left: auto;
+		margin-right: auto;
+		width: $sp-width;
+	}
+	@include sp() {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}

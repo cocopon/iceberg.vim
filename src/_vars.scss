@@ -1,0 +1,26 @@
+$sp-width: 800px;
+
+$iceberg-normal-bg: hsl(230deg, 20%, 11%);
+$iceberg-normal-fg: hsl(230deg, 10%, 80%);
+$iceberg-blue: hsl(215deg, 37%, 65%);
+$iceberg-green: hsl(72deg, 35%, 65%);
+$iceberg-lblue: hsl(190deg, 32%, 65%);
+$iceberg-orange: hsl(25deg, 65%, 68%);
+$iceberg-purple: hsl(255deg, 32%, 68%);
+$iceberg-red: hsl(0, 63%, 68%);
+$iceberg-comment-fg: hsl(230deg, 12%, 48%);
+$iceberg-linenr-bg: adjust-color($iceberg-normal-bg, $saturation: +5%, $lightness: +5%);
+$iceberg-statuslinenc-bg: darken($iceberg-normal-bg, 3%);
+
+$bg-color: $iceberg-linenr-bg;
+$fg-color: $iceberg-normal-fg;
+
+$font-family-sans: 'Roboto Mono', sans-serif;
+$font-family-title: 'Roboto Mono', sans-serif;
+$font-family-mono: 'Roboto Mono', monospace;
+
+$a-color: $iceberg-blue;
+$button-bg-color: $iceberg-lblue;
+$heading-color: $fg-color;
+
+$p-line-height: 1.8;

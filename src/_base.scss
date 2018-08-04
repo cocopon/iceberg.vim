@@ -1,0 +1,28 @@
+html {
+	background-color: $bg-color;
+	color: $fg-color;
+	font-size: 13px;
+}
+body {
+	background-color: $bg-color;
+	font-family: $font-family-sans;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: $heading-color;
+	font-family: $font-family-title;
+	font-weight: bold;
+}
+pre {
+	font-family: $font-family-mono;
+}
+p {
+	line-height: $p-line-height;
+}
+a {
+	color: $a-color;
+
+	&:hover {
+		background-color: rgba($a-color, 0.3);
+		text-decoration: none;
+	}
+}
