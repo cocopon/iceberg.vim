@@ -121,6 +121,14 @@
 		padding-top: 32px;
 	}
 
+	&#{&}-lead {
+		padding-top: 128px;
+
+		@include sp() {
+			padding-top: 64px;
+		}
+	}
+
 	&_innerLayout {	
 		@include responsive-inner();
 
@@ -194,6 +202,19 @@
 	position: relative;
 	height: 0;
 	padding-top: percentage(9 / 16);
+	position: relative;
+
+	&:after {
+		border: rgba($iceberg-normal-bg, 0.5) solid 1px;
+		bottom: 0;
+		content: '';
+		display: block;
+		left: 0;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
 
 	&_pre {
 		bottom: 0;
@@ -202,10 +223,6 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-
-		@include sp() {
-			overflow: hidden;
-		}
 	}
 	&_title {
 		background-color: $iceberg-normal-fg;
@@ -213,8 +230,8 @@
 		font-weight: bold;
 		padding: 0 0.5em;
 		position: absolute;
-		right: 0;
-		top: 0;
+		right: 1px;
+		top: 1px;
 	}
 }
 
@@ -246,6 +263,7 @@
 	color: $iceberg-comment-fg;
 	font-size: 0.9rem;
 	padding-bottom: 16px;
+	padding-top: 96px;
 	text-align: center;
 
 	@include sp() {
