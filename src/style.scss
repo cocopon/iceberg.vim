@@ -36,12 +36,12 @@
 		&#{&}-s {
 			background-image: url(../img/iceberg-s.svg);
 			height: 32px;
-			right: 595px;
+			right: 627px;
 			top: (-32px / 2);
 			width: 32px;
 
 			@include sp() {
-				right: 499px;
+				right: 531px;
 			}
 		}
 		&#{&}-l {

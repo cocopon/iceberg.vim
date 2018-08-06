@@ -2004,14 +2004,14 @@ a:hover {
 .header_iceberg.header_iceberg-s {
   background-image: url(../img/iceberg-s.svg);
   height: 32px;
-  right: 595px;
+  right: 627px;
   top: -16px;
   width: 32px;
 }
 
 @media screen and (max-width: 832px) {
   .header_iceberg.header_iceberg-s {
-    right: 499px;
+    right: 531px;
   }
 }
 
