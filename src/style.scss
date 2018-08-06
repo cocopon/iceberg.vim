@@ -8,11 +8,28 @@
 
 
 .main {
+	background-color: $iceberg-linenr-bg;
 	overflow: hidden;
+
+	&_skyLayout {
+		background-color: $iceberg-normal-bg;
+	}
+	&_seaLayout {
+		position: relative;
+	}
+	&_ray {	
+		background: url(../img/main-ray.svg) no-repeat top left;
+		background-size: cover;
+		bottom: 0;
+		left: 0;
+		opacity: 0.3;
+		position: absolute;
+		right: 0;
+		top: 512px;
+	}
 }
 
 .header {
-	background-color: $iceberg-normal-bg;
 	padding-bottom: 128px;
 	padding-top: 64px;
 	position: relative;
@@ -91,7 +108,7 @@
 
 .button {
 	background-color: $button-bg-color;
-	box-shadow: 0 2px 4px rgba($bg-color, 0.5);
+	box-shadow: 0 2px 4px rgba($bg-color, 0.3);
 	color: $bg-color;
 	display: inline-block;
 	font-weight: bold;
@@ -114,7 +131,6 @@
 .section {
 	padding-bottom: 64px;
 	padding-top: 64px;
-	position: relative;
 
 	@include sp() {
 		padding-bottom: 32px;
@@ -198,7 +214,7 @@
 	}
 }
 .preview {
-	box-shadow: 0 4px 8px rgba($iceberg-normal-bg, 0.5);
+	box-shadow: 0 2px 4px rgba($bg-color, 0.3);
 	position: relative;
 	height: 0;
 	padding-top: percentage(9 / 16);
@@ -259,11 +275,11 @@
 }
 
 .footer {
-	background-color: $iceberg-linenr-bg;
 	color: $iceberg-comment-fg;
 	font-size: 0.9rem;
 	padding-bottom: 16px;
 	padding-top: 96px;
+	position: relative;
 	text-align: center;
 
 	@include sp() {

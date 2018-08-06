@@ -12,7 +12,7 @@ $iceberg-comment-fg: hsl(230deg, 12%, 48%);
 $iceberg-linenr-bg: adjust-color($iceberg-normal-bg, $saturation: +5%, $lightness: +5%);
 $iceberg-statuslinenc-bg: darken($iceberg-normal-bg, 3%);
 
-$bg-color: $iceberg-linenr-bg;
+$bg-color: $iceberg-normal-bg;
 $fg-color: $iceberg-normal-fg;
 
 $font-family-sans: 'Roboto Mono', sans-serif;

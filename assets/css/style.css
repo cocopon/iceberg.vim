@@ -17,13 +17,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  background-color: #1f2233;
+  background-color: #161822;
   color: #c7c9d1;
   font-size: 13px;
 }
 
 body {
-  background-color: #1f2233;
+  background-color: #161822;
   font-family: "Roboto Mono", sans-serif;
 }
 
@@ -1971,11 +1971,30 @@ a:hover {
 }
 
 .main {
+  background-color: #1f2233;
   overflow: hidden;
 }
 
-.header {
+.main_skyLayout {
   background-color: #161822;
+}
+
+.main_seaLayout {
+  position: relative;
+}
+
+.main_ray {
+  background: url(../img/main-ray.svg) no-repeat top left;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 512px;
+}
+
+.header {
   padding-bottom: 128px;
   padding-top: 64px;
   position: relative;
@@ -2067,8 +2086,8 @@ a:hover {
 
 .button {
   background-color: #89b9c2;
-  box-shadow: 0 2px 4px rgba(31, 34, 51, 0.5);
-  color: #1f2233;
+  box-shadow: 0 2px 4px rgba(22, 24, 34, 0.3);
+  color: #161822;
   display: inline-block;
   font-weight: bold;
   padding: 8px 1.0em;
@@ -2092,7 +2111,6 @@ a:hover {
 .section {
   padding-bottom: 64px;
   padding-top: 64px;
-  position: relative;
 }
 
 @media screen and (max-width: 832px) {
@@ -2200,7 +2218,7 @@ a:hover {
 }
 
 .preview {
-  box-shadow: 0 4px 8px rgba(22, 24, 34, 0.5);
+  box-shadow: 0 2px 4px rgba(22, 24, 34, 0.3);
   position: relative;
   height: 0;
   padding-top: 56.25%;
@@ -2259,11 +2277,11 @@ a:hover {
 }
 
 .footer {
-  background-color: #1f2233;
   color: #6c7189;
   font-size: 0.9rem;
   padding-bottom: 16px;
   padding-top: 96px;
+  position: relative;
   text-align: center;
 }
 
