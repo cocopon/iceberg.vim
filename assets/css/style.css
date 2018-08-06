@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
+  -webkit-text-size-adjust: none;
   background-color: #161822;
   color: #c7c9d1;
   font-size: 13px;
