@@ -121,7 +121,7 @@ hi! link htmlTag Statement
 hi! link jsonQuote Normal
 hi! link phpVarSelector Identifier
 hi! link pythonFunction Title
-hi! link pythonBuiltinFunc Title
+hi! link pythonBuiltinFunc Statement
 hi! link rubyDefine Statement
 hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
