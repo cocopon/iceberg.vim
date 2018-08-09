@@ -397,6 +397,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('phpVarSelector', 'Identifier'))
 
   " python
+  call add(links, pgmnt#hi#link('pythonBuiltinFunc', 'Statement'))
   call add(links, pgmnt#hi#link('pythonFunction', 'Title'))
 
   " ruby

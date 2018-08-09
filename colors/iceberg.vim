@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-08-02 13:01+0900
+" Modified:   2018-08-09 12:03+0900
 " License:    MIT
 
 
@@ -120,6 +120,7 @@ hi! link htmlEndTag Statement
 hi! link htmlTag Statement
 hi! link jsonQuote Normal
 hi! link phpVarSelector Identifier
+hi! link pythonBuiltinFunc Statement
 hi! link pythonFunction Title
 hi! link rubyDefine Statement
 hi! link rubyFunction Title
