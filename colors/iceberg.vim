@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2018-08-09 12:03+0900
+" Modified:   2018-08-09 14:36+0900
 " License:    MIT
 
 
@@ -47,7 +47,7 @@ hi! NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
 hi! SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
 hi! Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi! FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
-hi! Function ctermfg=252 guifg=#c6c8d1
+hi! Function ctermfg=110 guifg=#84a0c6
 hi! Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
 hi! Include ctermfg=110 guifg=#84a0c6
 hi! LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
@@ -120,7 +120,6 @@ hi! link htmlEndTag Statement
 hi! link htmlTag Statement
 hi! link jsonQuote Normal
 hi! link phpVarSelector Identifier
-hi! link pythonBuiltinFunc Statement
 hi! link pythonFunction Title
 hi! link rubyDefine Statement
 hi! link rubyFunction Title
@@ -128,10 +127,8 @@ hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
 hi! link sassClass Special
-hi! link sassFunction Statement
 hi! link shFunction Normal
 hi! link vimContinue Comment
-hi! link vimFuncName Statement
 hi! link vimFuncSID vimFunction
 hi! link vimFuncVar Normal
 hi! link vimFunction Title
@@ -163,7 +160,7 @@ hi! link jsClassDefinition Normal
 hi! link jsClassFuncName Title
 hi! link jsExport Statement
 hi! link jsFuncName Title
-hi! link jsFunction Statement
+hi! link jsFuncCall Normal
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
@@ -183,7 +180,6 @@ hi! link plug1 Normal
 hi! link plug2 Identifier
 hi! link plugDash Comment
 hi! link plugMessage Special
-hi! link processingFunction Statement
 hi! link SignifySignAdd GitGutterAdd
 hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete

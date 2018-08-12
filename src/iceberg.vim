@@ -112,8 +112,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Function', {
-        \   'ctermfg': c.normal_fg,
-        \   'guifg': g.normal_fg,
+        \   'ctermfg': c.blue,
+        \   'guifg': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Identifier', {
@@ -397,7 +397,6 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('phpVarSelector', 'Identifier'))
 
   " python
-  call add(links, pgmnt#hi#link('pythonBuiltinFunc', 'Statement'))
   call add(links, pgmnt#hi#link('pythonFunction', 'Title'))
 
   " ruby
@@ -409,14 +408,12 @@ function! s:create_context() abort
 
   " sass
   call add(links, pgmnt#hi#link('sassClass', 'Special'))
-  call add(links, pgmnt#hi#link('sassFunction', 'Statement'))
 
   " sh
   call add(links, pgmnt#hi#link('shFunction', 'Normal'))
 
   " vim
   call add(links, pgmnt#hi#link('vimContinue', 'Comment'))
-  call add(links, pgmnt#hi#link('vimFuncName', 'Statement'))
   call add(links, pgmnt#hi#link('vimFuncSID', 'vimFunction'))
   call add(links, pgmnt#hi#link('vimFuncVar', 'Normal'))
   call add(links, pgmnt#hi#link('vimFunction', 'Title'))
@@ -527,7 +524,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('jsClassFuncName', 'Title'))
   call add(links, pgmnt#hi#link('jsExport', 'Statement'))
   call add(links, pgmnt#hi#link('jsFuncName', 'Title'))
-  call add(links, pgmnt#hi#link('jsFunction', 'Statement'))
+  call add(links, pgmnt#hi#link('jsFuncCall', 'Normal'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleKeywords', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleOperators', 'Statement'))
@@ -553,9 +550,6 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('plug2', 'Identifier'))
   call add(links, pgmnt#hi#link('plugDash', 'Comment'))
   call add(links, pgmnt#hi#link('plugMessage', 'Special'))
-
-  " [vim-processing](https://github.com/sophacles/vim-processing)
-  call add(links, pgmnt#hi#link('processingFunction', 'Statement'))
 
   " [Signify](https://github.com/mhinz/vim-signify/)
   call add(links, pgmnt#hi#link('SignifySignAdd', 'GitGutterAdd'))
