@@ -1,14 +1,12 @@
 ![Iceberg](https://cocopon.github.io/iceberg.vim/assets/github/20180804/cover.png)
 
-Iceberg is a dark blue color scheme for Vim. It brings a cool-headed perspective
-for your happy coding!
+Iceberg is a well-designed, eye-friendly, dark blue color scheme for Vim and
+Neovim.
 
-![Screenshot](http://cocopon.github.io/iceberg.vim/assets/github/screenshot.png)
+![Screenshot](https://cocopon.github.io/iceberg.vim/assets/github/screenshot.png)
 
-![Palette](https://cocopon.github.io/iceberg.vim/assets/github/palette.png)
-
-See the [official site](http://cocopon.github.io/iceberg.vim/) or the
-[vimonline page](http://www.vim.org/scripts/script.php?script_id=4820) for more
+See the [official site](https://cocopon.github.io/iceberg.vim/) or the
+[vimonline page](https://www.vim.org/scripts/script.php?script_id=4820) for more
 information.
 
 
@@ -43,31 +41,35 @@ information.
 
 
 # Philosophy
-Creator of Iceberg talked about how to create your lovely color scheme in [VimConf 2017][vimconf2017], international Vim conference. [This presentation][vimconf-presentation] also explained the philosophy of Iceberg.
+Creator of Iceberg talked about how to create your lovely color scheme in
+[VimConf 2017][vimconf2017], international Vim conference.
+[This presentation][vimconf-presentation] also explained the philosophy of
+Iceberg.
 
-[![Creating Your Lovely Color Scheme](http://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-presentation]
+[![Creating Your Lovely Color Scheme](https://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-presentation]
 
 
 
 
 # Building your own Iceberg
-1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme, to your Vim.
+1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme,
+   to your Vim.
 
 2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`. If you 
-   make changes, be sure to `:source` this file before step 4 otherwise your color
-   palette changes will not be reflected.
+   make changes, be sure to `:source` this file before step 4 otherwise your
+   color palette changes will not be reflected.
 
 3. To modify highlighting groups or links, edit `src/iceberg.vim`.
 
 4. After editing, compile the source file as below:
 
-    ```vim
-    :e src/iceberg.vim
-    :cd %:h
-    :source %
-    ```
+   ```vim
+   :e src/iceberg.vim
+   :cd %:h
+   :source %
+   ```
 
-    Compiled files will be output into `autoload` directory.
+   Compiled files will be output into `autoload` directory.
 
 
 
@@ -105,8 +107,8 @@ MIT License. See `LICENSE.txt` for more information.
 [signify]:https://github.com/mhinz/vim-signify/
 [sneak]:https://github.com/justinmk/vim-sneak
 [startify]:https://github.com/mhinz/vim-startify
-[syntastic]:http://github.com/vim-syntastic/syntastic
-[terminal-sexy]:http://terminal.sexy
+[syntastic]:https://github.com/vim-syntastic/syntastic
+[terminal-sexy]:https://terminal.sexy
 [typescript-vim]:https://github.com/leafgarland/typescript-vim
 [vim-flow]:https://github.com/flowtype/vim-flow
 [vim-graphql]:https://github.com/jparise/vim-graphql
@@ -115,5 +117,5 @@ MIT License. See `LICENSE.txt` for more information.
 [vim-plug]:https://github.com/junegunn/vim-plug
 [vim-zenspace]:https://github.com/thinca/vim-zenspace
 [vimconf-presentation]:https://speakerdeck.com/cocopon/creating-your-lovely-color-scheme
-[vimconf2017]:http://vimconf.vim-jp.org/2017/
+[vimconf2017]:https://vimconf.vim-jp.org/2017/
 [xresources]:https://gist.github.com/cocopon/1d481941907d12db7a0df2f8806cfd41
