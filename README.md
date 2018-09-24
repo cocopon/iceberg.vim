@@ -81,6 +81,7 @@ Iceberg.
 - [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
 - [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
 - [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish) by [pkazmier](https://github.com/pkazmier)
+- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) by [Aaron](https://github.com/whzup)
 
 NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
 the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
