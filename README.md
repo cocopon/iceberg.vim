@@ -13,6 +13,8 @@ information.
 
 
 # Features
+- Simple: no configuration required and easy to use
+- Fast: pre-compiled to reduce loading time
 - 256-colors terminal support
 - [airline][airline] theme and [lightline][lightline] colorscheme
 - Various plugins support:
@@ -51,7 +53,26 @@ Iceberg.
 
 
 
+# For other environments
+- [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp) by [cocopon](https://github.com/cocopon)
+- [iTerm2](https://github.com/aseom/dotfiles/blob/master/osx/iterm2/iceberg.itermcolors) by [aseom](https://github.com/aseom)
+- [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
+- [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
+- [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
+- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish) by [pkazmier](https://github.com/pkazmier)
+- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) by [Aaron](https://github.com/whzup)
+
+NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
+the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
+as import and export it for the emulator of your choice.
+
+
+
+
 # Building your own Iceberg
+NOTE: This section is for color scheme developers. If you just want to use the
+color scheme, you don't have to follow these steps.
+
 1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme,
    to your Vim.
 
@@ -70,22 +91,6 @@ Iceberg.
    ```
 
    Compiled files will be output into `autoload` directory.
-
-
-
-
-# For other environments
-- [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp) by [cocopon](https://github.com/cocopon)
-- [iTerm2](https://github.com/aseom/dotfiles/blob/master/osx/iterm2/iceberg.itermcolors) by [aseom](https://github.com/aseom)
-- [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
-- [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
-- [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
-- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish) by [pkazmier](https://github.com/pkazmier)
-- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) by [Aaron](https://github.com/whzup)
-
-NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
-the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
-as import and export it for the emulator of your choice.
 
 
 
