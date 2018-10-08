@@ -45,10 +45,9 @@ information.
 # Philosophy
 Creator of Iceberg talked about how to create your lovely color scheme in
 [VimConf 2017][vimconf2017], international Vim conference.
-[This presentation][vimconf-presentation] also explained the philosophy of
-Iceberg.
+[This slides][vimconf-slides] also explained the philosophy of Iceberg.
 
-[![Creating Your Lovely Color Scheme](https://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-presentation]
+[![Creating Your Lovely Color Scheme](https://cocopon.github.io/iceberg.vim/assets/github/creating-your-lovely-color-scheme.png)][vimconf-slides]
 
 
 
@@ -122,6 +121,6 @@ MIT License. See `LICENSE.txt` for more information.
 [vim-markdown]:https://github.com/tpope/vim-markdown
 [vim-plug]:https://github.com/junegunn/vim-plug
 [vim-zenspace]:https://github.com/thinca/vim-zenspace
-[vimconf-presentation]:https://speakerdeck.com/cocopon/creating-your-lovely-color-scheme
+[vimconf-slides]:https://speakerdeck.com/cocopon/creating-your-lovely-color-scheme
 [vimconf2017]:https://vimconf.vim-jp.org/2017/
 [xresources]:https://gist.github.com/cocopon/1d481941907d12db7a0df2f8806cfd41
