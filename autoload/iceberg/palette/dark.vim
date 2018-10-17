@@ -53,6 +53,10 @@ function! iceberg#palette#dark#create() abort
         \   'lightness': +0.50,
         \ })
 
+  " diff
+  let g.difftext_bg = pgmnt#color#mix(g.lblue, g.normal_bg, 0.6)
+  let g.difftext_fg = g.normal_fg
+
   " statusline
   let g.statusline_bg = pgmnt#color#hsl(hue_base, 0.09, 0.55)
   let g.statusline_fg = pgmnt#color#hsl(hue_base, 0.09, 0.10)
@@ -83,6 +87,8 @@ function! iceberg#palette#dark#create() abort
         \   'saturation': +0.08,
         \   'lightness': +0.09,
         \ })
+  let g.tablinesel_bg = g.normal_bg
+  let g.tablinesel_fg = pgmnt#color#mix(g.normal_fg, g.normal_bg, 0.75)
   let g.todo_bg = g.green_tint_bg
   let g.todo_fg = g.green
   let g.visual_bg = pgmnt#color#adjust_color(
@@ -141,6 +147,10 @@ function! iceberg#palette#dark#create() abort
   let c.linenr_fg = 239
   let c.cursorlinenr_bg = 237
   let c.cursorlinenr_fg = 253
+
+  " diff
+  let c.difftext_bg = 30
+  let c.difftext_fg = 195
 
   " statusline
   let c.statusline_bg = 245

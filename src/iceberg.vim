@@ -71,11 +71,11 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'DiffText', {
         \   'cterm': 'NONE',
-        \   'ctermbg': 30,
-        \   'ctermfg': 195,
+        \   'ctermbg': c.difftext_bg,
+        \   'ctermfg': c.difftext_fg,
         \   'gui': 'NONE',
-        \   'guibg': pgmnt#color#mix(g.lblue, g.normal_bg, 0.6),
-        \   'guifg': g.normal_fg,
+        \   'guibg': g.difftext_bg,
+        \   'guifg': g.difftext_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Directory', {
@@ -309,8 +309,8 @@ function! s:create_context() abort
         \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.normal_fg,
         \   'gui': 'NONE',
-        \   'guibg': g.normal_bg,
-        \   'guifg': pgmnt#color#mix(g.normal_fg, g.normal_bg, 0.75),
+        \   'guibg': g.tablinesel_bg,
+        \   'guifg': g.tablinesel_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Title', {
