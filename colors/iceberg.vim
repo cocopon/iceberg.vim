@@ -12,7 +12,7 @@
 " License:    MIT
 
 
-if !has('gui_running') && &t_Co < 256
+if !has('gui_running') && (!has('+termguicolors') || !&termguicolors) && &t_Co < 256
   finish
 endif
 
