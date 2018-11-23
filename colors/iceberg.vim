@@ -11,9 +11,9 @@
 " Modified:   2018-10-18 01:01+0900
 " License:    MIT
 
-
-if !has('gui_running') || !has('+termguicolors') && !&termguicolors && &t_Co < 256
-  finish
+" If we don't: Have a GUI, or termguicolors set, or atleast 256 colors, abort.                                                                                  
+if !(has('gui_running') || has('termguicolors') && &termguicolors || &t_Co >= 256)                                                                              
+  finish                                                                                                                                                        
 endif
 
 set background=dark
