@@ -534,6 +534,7 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('jsClassFuncName', 'Title'))
   call add(links, pgmnt#hi#link('jsExport', 'Statement'))
   call add(links, pgmnt#hi#link('jsFuncName', 'Title'))
+  call add(links, pgmnt#hi#link('jsFutureKeys', 'Statement'))
   call add(links, pgmnt#hi#link('jsFuncCall', 'Normal'))
   call add(links, pgmnt#hi#link('jsGlobalObjects', 'Statement'))
   call add(links, pgmnt#hi#link('jsModuleKeywords', 'Statement'))

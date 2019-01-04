@@ -162,6 +162,7 @@ hi! link jsClassDefinition Normal
 hi! link jsClassFuncName Title
 hi! link jsExport Statement
 hi! link jsFuncName Title
+hi! link jsFutureKeys Statement
 hi! link jsFuncCall Normal
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
