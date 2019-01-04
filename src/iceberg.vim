@@ -452,6 +452,16 @@ function! s:create_context() abort
         \   'guibg': g.linenr_bg,
         \   'guifg': g.orange,
         \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEVirtualTextError', {
+        \   'ctermfg': c.red,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEVirtualTextWarning', {
+        \   'ctermfg': c.orange,
+        \   'guifg': g.orange,
+        \ }))
 
   " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call add(links, pgmnt#hi#link('CtrlPPrtCursor', 'Cursor'))
