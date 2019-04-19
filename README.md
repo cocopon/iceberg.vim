@@ -23,6 +23,7 @@ information.
   / [Denite][denite]
   / [EasyMotion][easymotion]
   / [Git Gutter][git-gutter]
+  / [git-messenger.vim][git-messenger.vim]
   / [Signify][signify]
   / [Sneak][sneak]
   / [Startify][startify]
@@ -106,6 +107,7 @@ MIT License. See `LICENSE.txt` for more information.
 [denite]:https://github.com/Shougo/denite.nvim
 [easymotion]:https://github.com/easymotion/vim-easymotion
 [git-gutter]:https://github.com/airblade/vim-gitgutter
+[git-messenger.vim]:https://github.com/rhysd/git-messenger.vim
 [lightline]:https://github.com/itchyny/lightline.vim
 [neovim]:https://neovim.io/
 [pgmnt]:https://github.com/cocopon/pgmnt.vim

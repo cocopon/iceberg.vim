@@ -528,6 +528,25 @@ function! s:create_context() abort
         \   'guifg': g.red,
         \ }))
 
+  " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
+  call add(links, pgmnt#hi#link('gitmessengerHash', 'Comment'))
+  call add(links, pgmnt#hi#link('gitmessengerHeader', 'Statement'))
+  call add(links, pgmnt#hi#link('gitmessengerHistory', 'Constant'))
+  call extend(rules, pgmnt#hi#group(
+        \ 'gitmessengerEndOfBuffer', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.linenr_fg,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.linenr_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'gitmessengerPopupNormal', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.normal_fg,
+        \ }))
+
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
   call add(links, pgmnt#hi#link('jsClassDefinition', 'Normal'))
