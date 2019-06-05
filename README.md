@@ -54,17 +54,25 @@ Creator of Iceberg talked about how to create your lovely color scheme in
 
 
 # For other environments
-- [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp) by [cocopon](https://github.com/cocopon)
-- [iTerm2](https://github.com/aseom/dotfiles/blob/master/osx/iterm2/iceberg.itermcolors) by [aseom](https://github.com/aseom)
-- [Atom](https://github.com/cocopon/atom-iceberg-syntax/) by [cocopon](https://github.com/cocopon)
-- [Xcode](https://github.com/cocopon/xcode-iceberg) by [cocopon](https://github.com/cocopon)
-- [AppCode](https://github.com/Kuniwak/iceberg.icls) by [Kuniwak](https://github.com/Kuniwak)
-- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish) by [pkazmier](https://github.com/pkazmier)
-- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) by [Aaron](https://github.com/whzup)
+- [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp)
+  by [cocopon]
+- [Visual Studio Code](https://github.com/cocopon/vscode-iceberg-theme)
+  by [cocopon]
+- [Atom](https://github.com/cocopon/atom-iceberg-syntax/)
+  by [cocopon]
+- [Xcode](https://github.com/cocopon/xcode-iceberg)
+  by [cocopon]
+- [AppCode](https://github.com/Kuniwak/iceberg.icls)
+  by [Kuniwak](https://github.com/Kuniwak)
+- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish)
+  by [pkazmier](https://github.com/pkazmier)
+- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
+  by [Aaron](https://github.com/whzup)
 
 NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
-the 16 ANSI colors for many terminal emulators. Use [.Xresources file][xresources]
-as import and export it for the emulator of your choice.
+the 16 ANSI colors for many terminal emulators (e.g. GNOME Terminal, iTerm2,
+etc.). Use [.Xresources file][xresources] as import and export it for
+the emulator of your choice.
 
 
 
@@ -103,6 +111,7 @@ MIT License. See `LICENSE.txt` for more information.
 
 [ale]:https://github.com/w0rp/ale
 [airline]:https://github.com/vim-airline/vim-airline/
+[cocopon]:https://github.com/cocopon
 [ctrlp]:https://github.com/ctrlpvim/ctrlp.vim
 [denite]:https://github.com/Shougo/denite.nvim
 [easymotion]:https://github.com/easymotion/vim-easymotion
