@@ -64,8 +64,6 @@ Creator of Iceberg talked about how to create your lovely color scheme in
   by [cocopon]
 - [AppCode](https://github.com/Kuniwak/iceberg.icls)
   by [Kuniwak](https://github.com/Kuniwak)
-- [Fish](https://github.com/pkazmier/dotfiles/blob/master/.config/fish/functions/bobthefish_colors.fish)
-  by [pkazmier](https://github.com/pkazmier)
 - [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
   by [Aaron](https://github.com/whzup)
 
