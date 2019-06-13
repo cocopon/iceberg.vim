@@ -66,6 +66,8 @@ Creator of Iceberg talked about how to create your lovely color scheme in
   by [Kuniwak](https://github.com/Kuniwak)
 - [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
   by [Aaron](https://github.com/whzup)
+- [Slack sidebar](https://gist.github.com/cocopon/2acffd70883ceb004c9c3117c34a9673)
+  by [cocopon]
 
 NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
 the 16 ANSI colors for many terminal emulators (e.g. GNOME Terminal, iTerm2,
