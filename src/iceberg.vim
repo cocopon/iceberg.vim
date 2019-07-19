@@ -496,6 +496,20 @@ function! s:create_context() abort
         \   'guifg': g.orange,
         \ }))
 
+  " [vim-elixir](https://github.com/elixir-editors/vim-elixir)
+  call add(links, pgmnt#hi#link('elixirBlockDefinition', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirDefine', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirDocSigilDelimiter', 'String'))
+  call add(links, pgmnt#hi#link('elixirDocTest', 'String'))
+  call add(links, pgmnt#hi#link('elixirExUnitMacro', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirExceptionDefine', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirFunctionDeclaration', 'Title'))
+  call add(links, pgmnt#hi#link('elixirKeyword', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirModuleDeclaration', 'Normal'))
+  call add(links, pgmnt#hi#link('elixirModuleDefine', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirPrivateDefine', 'Statement'))
+  call add(links, pgmnt#hi#link('elixirStringDelimiter', 'String'))
+
   " [vim-flow](https://github.com/flowtype/vim-flow)
   call add(links, pgmnt#hi#link('jsFlowMaybe', 'Normal'))
   call add(links, pgmnt#hi#link('jsFlowObject', 'Normal'))

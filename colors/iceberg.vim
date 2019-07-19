@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-04-19 10:02+0900
+" Modified:   2019-07-19 09:22+0900
 " License:    MIT
 
 
@@ -154,6 +154,18 @@ hi! link CtrlPMatch Title
 hi! link CtrlPMode2 StatusLine
 hi! link deniteMatched Normal
 hi! link deniteMatchedChar Title
+hi! link elixirBlockDefinition Statement
+hi! link elixirDefine Statement
+hi! link elixirDocSigilDelimiter String
+hi! link elixirDocTest String
+hi! link elixirExUnitMacro Statement
+hi! link elixirExceptionDefine Statement
+hi! link elixirFunctionDeclaration Title
+hi! link elixirKeyword Statement
+hi! link elixirModuleDeclaration Normal
+hi! link elixirModuleDefine Statement
+hi! link elixirPrivateDefine Statement
+hi! link elixirStringDelimiter String
 hi! link jsFlowMaybe Normal
 hi! link jsFlowObject Normal
 hi! link jsFlowType PreProc

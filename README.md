@@ -33,6 +33,7 @@ information.
   etc.
 - Better syntax highlight with:
   [typescript-vim][typescript-vim]
+  / [vim-elixir][vim-elixir]
   / [vim-flow][vim-flow]
   / [vim-graphql][vim-graphql]
   / [vim-javavscript][vim-javascript]
@@ -126,6 +127,7 @@ MIT License. See `LICENSE.txt` for more information.
 [syntastic]:https://github.com/vim-syntastic/syntastic
 [terminal-sexy]:https://terminal.sexy
 [typescript-vim]:https://github.com/leafgarland/typescript-vim
+[vim-elixir]:https://github.com/elixir-editors/vim-elixir
 [vim-flow]:https://github.com/flowtype/vim-flow
 [vim-graphql]:https://github.com/jparise/vim-graphql
 [vim-javascript]:https://github.com/pangloss/vim-javascript
