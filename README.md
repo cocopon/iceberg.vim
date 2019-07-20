@@ -67,6 +67,8 @@ Creator of Iceberg talked about how to create your lovely color scheme in
   by [Kuniwak](https://github.com/Kuniwak)
 - [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
   by [Aaron](https://github.com/whzup)
+- [st](https://notabug.org/vejetaryenvampir/st-iceberg)
+  by [vejetaryenvampir](https://notabug.org/vejetaryenvampir)
 - [Slack sidebar](https://gist.github.com/cocopon/2acffd70883ceb004c9c3117c34a9673)
   by [cocopon]
 
