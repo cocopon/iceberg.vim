@@ -57,6 +57,8 @@ Creator of Iceberg talked about how to create your lovely color scheme in
 # For other environments
 - [Terminal.app profile](https://cocopon.github.io/iceberg.vim/#macosTerminalApp)
   by [cocopon]
+- [iTerm2](https://github.com/brandonsueur/Iceberg-iTerm2)
+  by [brandonsueur]
 - [Visual Studio Code](https://github.com/cocopon/vscode-iceberg-theme)
   by [cocopon]
 - [Atom](https://github.com/cocopon/atom-iceberg-syntax/)
