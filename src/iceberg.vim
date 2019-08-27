@@ -288,20 +288,20 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'TabLine', {
         \   'cterm': 'NONE',
-        \   'ctermbg': c.statusline_bg,
-        \   'ctermfg': c.statusline_fg,
+        \   'ctermbg': c.statuslinenc_bg,
+        \   'ctermfg': c.statuslinenc_fg,
         \   'gui': 'NONE',
-        \   'guibg': g.statusline_bg,
-        \   'guifg': g.statusline_fg,
+        \   'guibg': g.statuslinenc_bg,
+        \   'guifg': g.statuslinenc_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLineFill', {
         \   'cterm': 'reverse',
-        \   'ctermbg': c.statusline_fg,
-        \   'ctermfg': c.statusline_bg,
+        \   'ctermbg': c.statuslinenc_fg,
+        \   'ctermfg': c.statuslinenc_bg,
         \   'gui': 'reverse',
-        \   'guibg': g.statusline_fg,
-        \   'guifg': g.statusline_bg,
+        \   'guibg': g.statuslinenc_fg,
+        \   'guifg': g.statuslinenc_bg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'TabLineSel', {
