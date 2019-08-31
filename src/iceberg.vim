@@ -312,6 +312,14 @@ function! s:create_context() abort
         \   'guibg': g.tablinesel_bg,
         \   'guifg': g.tablinesel_fg,
         \ }))
+  call add(links, pgmnt#hi#link('TermCursor', 'Cursor'))
+  call extend(rules, pgmnt#hi#group(
+        \ 'TermCursorNC', {
+        \   'ctermbg': c.comment_fg,
+        \   'ctermfg': c.normal_bg,
+        \   'guibg': g.comment_fg,
+        \   'guifg': g.normal_bg,
+        \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Title', {
         \   'ctermfg': c.orange,

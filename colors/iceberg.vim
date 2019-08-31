@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-08-31 16:43+0900
+" Modified:   2019-08-31 16:56+0900
 " License:    MIT
 
 
@@ -80,6 +80,7 @@ hi! Structure ctermfg=110 guifg=#84a0c6
 hi! TabLine cterm=NONE ctermbg=233 ctermfg=238 gui=NONE guibg=#0f1117 guifg=#3e445e
 hi! TabLineFill cterm=reverse ctermbg=238 ctermfg=233 gui=reverse guibg=#3e445e guifg=#0f1117
 hi! TabLineSel cterm=NONE ctermbg=234 ctermfg=252 gui=NONE guibg=#161821 guifg=#9a9ca5
+hi! TermCursorNC ctermbg=242 ctermfg=234 guibg=#6b7089 guifg=#161821
 hi! Title ctermfg=216 gui=NONE guifg=#e2a478
 hi! Todo ctermbg=234 ctermfg=150 guibg=#45493e guifg=#b4be82
 hi! Type ctermfg=110 gui=NONE guifg=#84a0c6
@@ -113,6 +114,7 @@ hi! SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
 hi! ZenSpace ctermbg=203 guibg=#e27878
 hi! icebergALAccentRed ctermfg=203 guifg=#e27878
 
+hi! link TermCursor Cursor
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
 hi! link cssClassNameDot Normal
