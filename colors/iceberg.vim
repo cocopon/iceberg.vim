@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2019-08-27 21:56+0900
+" Modified:   2019-08-31 16:43+0900
 " License:    MIT
 
 
@@ -93,7 +93,7 @@ hi! ALEErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
 hi! ALEWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
 hi! ALEVirtualTextError ctermfg=203 guifg=#e27878
 hi! ALEVirtualTextWarning ctermfg=216 guifg=#e2a478
-hi! CtrlPMode1 ctermbg=241 ctermfg=234 guibg=#5a5f72 guifg=#17171b
+hi! CtrlPMode1 ctermbg=236 ctermfg=242 guibg=#2e313f guifg=#6b7089
 hi! EasyMotionShade ctermfg=239 guifg=#3d425b
 hi! EasyMotionTarget ctermfg=150 guifg=#b4be82
 hi! EasyMotionTarget2First ctermfg=216 guifg=#e2a478
