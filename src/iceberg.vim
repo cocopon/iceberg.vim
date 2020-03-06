@@ -37,6 +37,7 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'CursorLineNr', {
+        \   'cterm': 'NONE',
         \   'ctermbg': c.cursorlinenr_bg,
         \   'ctermfg': c.cursorlinenr_fg,
         \   'guibg': g.cursorlinenr_bg,
