@@ -123,65 +123,65 @@ function! iceberg#palette#light#create() abort
   let c = {}
 
   " palette
-  let c.blue = 110
-  let c.green = 150
-  let c.lblue = 109
-  let c.orange = 216
-  let c.purple = 140
-  let c.red = 203
+  let c.blue = 25
+  let c.green = 64
+  let c.lblue = 31
+  let c.orange = 130
+  let c.purple = 97
+  let c.red = 125
 
   " normal
-  let c.normal_bg = 234
-  let c.normal_fg = 252
+  let c.normal_bg = 254
+  let c.normal_fg = 237
 
   " tint
-  let c.blue_tint_bg   = 24
+  let c.blue_tint_bg   = 117
   let c.blue_tint_fg   = 153
-  let c.green_tint_bg  = 29
-  let c.green_tint_fg  = 158
-  let c.lblue_tint_bg  = 23
-  let c.lblue_tint_fg  = 159
-  let c.purple_tint_bg = 97
+  let c.green_tint_bg  = 79
+  let c.green_tint_fg  = 23
+  let c.lblue_tint_bg  = 116
+  let c.lblue_tint_fg  = 24
+  let c.purple_tint_bg = 110
   let c.purple_tint_fg = 225
-  let c.red_tint_bg    = 95
-  let c.red_tint_fg    = 224
+  let c.red_tint_bg    = 181
+  let c.red_tint_fg    = 89
 
   " linenr
-  let c.linenr_bg = 235
-  let c.linenr_fg = 239
-  let c.cursorlinenr_bg = 237
-  let c.cursorlinenr_fg = 253
+  let c.linenr_bg = 253
+  let c.linenr_fg = 248
+  let c.cursorlinenr_bg = 251
+  let c.cursorlinenr_fg = 237
 
   " diff
-  let c.difftext_bg = 30
-  let c.difftext_fg = 195
+  let c.difftext_bg = 73
+  let c.difftext_fg = 24
 
   " statusline
-  let c.statusline_bg = 245
-  let c.statusline_fg = 234
-  let c.statuslinenc_bg = 233
-  let c.statuslinenc_fg = 238
+  let c.statusline_bg = 243
+  let c.statusline_fg = 252
+  let c.statuslinenc_bg = 251
+  let c.statuslinenc_fg = 244
 
   " pmenu
-  let c.pmenu_bg = 236
-  let c.pmenu_fg = 251
-  let c.pmenusel_bg = 240
-  let c.pmenusel_fg = 255
+  let c.pmenu_bg = 251
+  let c.pmenu_fg = 237
+  let c.pmenusel_bg = 248
+  let c.pmenusel_fg = 235
 
   " misc
-  let c.comment_fg = 242
+  let c.comment_fg = 244
   let c.cursorline_bg = c.linenr_bg
   let c.folded_bg = c.linenr_bg
-  let c.folded_fg = 245
-  let c.matchparen_bg = 237
-  let c.matchparen_fg = 255
-  let c.search_bg = c.orange
-  let c.search_fg = c.normal_bg
-  let c.specialkey_fg = 236
+  let c.folded_fg = 243
+  let c.matchparen_bg = 250
+  let c.matchparen_fg = 0
+  let c.search_bg = 180
+  let c.search_fg = 94
+  let c.specialkey_fg = 251
   let c.todo_bg = c.normal_bg
   let c.todo_fg = c.green
-  let c.visual_bg = 236
-  let c.wildmenu_bg = 255
+  let c.visual_bg = 251
+  let c.wildmenu_bg = 235
   let c.wildmenu_fg = c.statusline_fg
 
   " airline/lightline
