@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-13 11:45+0900
+" Modified:   2020-04-18 11:00+0900
 " License:    MIT
 
 
@@ -243,15 +243,15 @@ if &background == 'light'
     let g:terminal_color_6 = '#3f83a6'
     let g:terminal_color_7 = '#33374c'
     let g:terminal_color_8 = '#8389a3'
-    let g:terminal_color_9 = '#d65f87'
-    let g:terminal_color_10 = '#72a53e'
-    let g:terminal_color_11 = '#d17f46'
-    let g:terminal_color_12 = '#2c5bb7'
-    let g:terminal_color_13 = '#8365c1'
-    let g:terminal_color_14 = '#3f93be'
-    let g:terminal_color_15 = '#393f5f'
+    let g:terminal_color_9 = '#cc3768'
+    let g:terminal_color_10 = '#598030'
+    let g:terminal_color_11 = '#b6662d'
+    let g:terminal_color_12 = '#22478e'
+    let g:terminal_color_13 = '#6845ad'
+    let g:terminal_color_14 = '#327698'
+    let g:terminal_color_15 = '#262a3f'
   else
-    let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#d65f87', '#72a53e', '#d17f46', '#2c5bb7', '#8365c1', '#3f93be', '#393f5f']
+    let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#cc3768', '#598030', '#b6662d', '#22478e', '#6845ad', '#327698', '#262a3f']
   endif
 else
   hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1

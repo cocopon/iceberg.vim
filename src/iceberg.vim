@@ -736,26 +736,8 @@ function! s:create_colors(palette) abort
         \ }))
   " }}}
 
-  let term_colors = [
-        \   g.cursorline_bg,
-        \   g.red,
-        \   g.green,
-        \   g.orange,
-        \   g.blue,
-        \   g.purple,
-        \   g.lblue,
-        \   g.normal_fg,
-        \   g.comment_fg,
-        \   pgmnt#color#adjust_color(g.red,       {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.green,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.orange,    {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.blue,      {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.purple,    {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.lblue,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
-        \ ]
   let quoted_term_colors = map(
-        \ copy(term_colors),
+        \ copy(g.term_colors),
         \ '"''" . v:val . "''"')
 
   let neovim_term_defs = map(

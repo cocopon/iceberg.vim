@@ -103,6 +103,26 @@ function! iceberg#palette#light#create() abort
   let g.wildmenu_bg = pgmnt#color#darken(g.statusline_bg, 0.30)
   let g.wildmenu_fg = g.statusline_fg
 
+  " ansi colors
+  let g.term_colors = [
+        \   g.cursorline_bg,
+        \   g.red,
+        \   g.green,
+        \   g.orange,
+        \   g.blue,
+        \   g.purple,
+        \   g.lblue,
+        \   g.normal_fg,
+        \   g.comment_fg,
+        \   pgmnt#color#adjust_color(g.red,       {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.green,     {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.orange,    {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.blue,      {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.purple,    {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.lblue,     {'saturation': +0.05, 'lightness': -0.05}),
+        \   pgmnt#color#adjust_color(g.normal_fg, {'saturation': +0.05, 'lightness': -0.05}),
+        \ ]
+
   " airline/lightline
   let g.xline_base_bg = pgmnt#color#darken(g.normal_bg, 0.15)
   let g.xline_base_fg = pgmnt#color#adjust_color(
