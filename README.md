@@ -37,7 +37,7 @@ information.
   / [vim-elixir][vim-elixir]
   / [vim-flow][vim-flow]
   / [vim-graphql][vim-graphql]
-  / [vim-javavscript][vim-javascript]
+  / [vim-javascript][vim-javascript]
   / [vim-markdown][vim-markdown]
   etc.
 
