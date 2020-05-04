@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-04 11:45+0900
+" Modified:   2020-05-04 11:57+0900
 " License:    MIT
 
 
@@ -26,6 +26,7 @@ endif
 let g:colors_name = 'iceberg'
 
 
+hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
 hi ColorColumn cterm=NONE ctermbg=235 guibg=#1e2132
 hi CursorColumn cterm=NONE ctermbg=235 guibg=#1e2132
 hi CursorLine cterm=NONE ctermbg=235 guibg=#1e2132
@@ -53,7 +54,6 @@ hi Include ctermfg=110 guifg=#84a0c6
 hi LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
 hi MoreMsg ctermfg=150 guifg=#b4be82
-hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
 hi Operator ctermfg=110 guifg=#84a0c6
 hi Pmenu ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
 hi PmenuSbar ctermbg=236 guibg=#3d425b

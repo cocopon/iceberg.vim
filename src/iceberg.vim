@@ -13,6 +13,13 @@ function! s:create_context() abort
 
   " Rules {{{
   call extend(rules, pgmnt#hi#group(
+        \ 'Normal', {
+        \   'ctermbg': c.normal_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.normal_bg,
+        \   'guifg': g.normal_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
         \ ['ColorColumn', 'CursorColumn', 'CursorLine'], {
         \   'cterm': 'NONE',
         \   'ctermbg': c.cursorline_bg,
@@ -145,13 +152,6 @@ function! s:create_context() abort
         \ 'MoreMsg', {
         \   'ctermfg': c.green,
         \   'guifg': g.green,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'Normal', {
-        \   'ctermbg': c.normal_bg,
-        \   'ctermfg': c.normal_fg,
-        \   'guibg': g.normal_bg,
-        \   'guifg': g.normal_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Operator', {
