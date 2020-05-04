@@ -23,7 +23,9 @@ function! s:create_context() abort
         \ ['ColorColumn', 'CursorColumn', 'CursorLine'], {
         \   'cterm': 'NONE',
         \   'ctermbg': c.cursorline_bg,
+        \   'ctermfg': 'NONE',
         \   'guibg': g.cursorline_bg,
+        \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Comment', {
@@ -168,7 +170,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSbar', {
         \   'ctermbg': c.pmenu_bg,
+        \   'ctermfg': 'NONE',
         \   'guibg': g.pmenu_bg,
+        \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuSel', {
@@ -180,7 +184,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'PmenuThumb', {
         \   'ctermbg': c.pmenu_fg,
+        \   'ctermfg': 'NONE',
         \   'guibg': g.pmenu_fg,
+        \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'PreProc', {
@@ -223,6 +229,7 @@ function! s:create_context() abort
         \   'ctermbg': c.red_tint_bg,
         \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
+        \   'guifg': 'NONE',
         \   'guisp': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -230,6 +237,7 @@ function! s:create_context() abort
         \   'ctermbg': c.blue_tint_bg,
         \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
+        \   'guifg': 'NONE',
         \   'guisp': g.blue,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -237,6 +245,7 @@ function! s:create_context() abort
         \   'ctermbg': c.lblue_tint_bg,
         \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
+        \   'guifg': 'NONE',
         \   'guisp': g.lblue,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -244,6 +253,7 @@ function! s:create_context() abort
         \   'ctermbg': c.purple_tint_bg,
         \   'ctermfg': c.normal_fg,
         \   'gui': 'undercurl',
+        \   'guifg': 'NONE',
         \   'guisp': g.purple,
         \ }))
   call extend(rules, pgmnt#hi#group(
@@ -360,7 +370,9 @@ function! s:create_context() abort
   call extend(rules, pgmnt#hi#group(
         \ 'Visual', {
         \   'ctermbg': c.visual_bg,
+        \   'ctermfg': 'NONE',
         \   'guibg': g.visual_bg,
+        \   'guifg': 'NONE',
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'WildMenu', {
