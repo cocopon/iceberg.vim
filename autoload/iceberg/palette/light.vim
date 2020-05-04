@@ -136,7 +136,7 @@ function! iceberg#palette#light#create() abort
   let g.xline_gradient_fg = g.xline_edge_fg
 
   " plugins
-  let g.easymotion_shade_fg = pgmnt#color#hsl(hue_base, 0.20, 0.30)
+  let g.easymotion_shade_fg = pgmnt#color#hsl(hue_base, 0.15, 0.77)
   " }}}
 
   " cterm {{{
@@ -213,7 +213,7 @@ function! iceberg#palette#light#create() abort
   let c.xline_gradient_fg = c.xline_edge_fg
 
   " plugins
-  let c.easymotion_shade_fg = 239
+  let c.easymotion_shade_fg = 250
   " }}}
 
   return {
