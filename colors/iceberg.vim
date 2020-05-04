@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-04 11:57+0900
+" Modified:   2020-05-04 12:05+0900
 " License:    MIT
 
 
@@ -17,8 +17,8 @@ if !has('gui_running') && &t_Co < 256
 endif
 
 set background=dark
-hi clear
 
+hi clear
 if exists('syntax_on')
   syntax reset
 endif

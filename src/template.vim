@@ -17,8 +17,8 @@ if !has('gui_running') && &t_Co < 256
 endif
 
 set background=dark
-hi clear
 
+hi clear
 if exists('syntax_on')
   syntax reset
 endif
