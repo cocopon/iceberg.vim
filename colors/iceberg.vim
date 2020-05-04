@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-04 12:34+0900
+" Modified:   2020-05-04 17:33+0900
 " License:    MIT
 
 
@@ -31,6 +31,7 @@ hi ColorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
 hi CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
 hi Comment ctermfg=242 guifg=#6b7089
+hi Conceal ctermfg=242 guifg=#6b7089
 hi Constant ctermfg=140 guifg=#a093c7
 hi Cursor ctermbg=252 ctermfg=234 guibg=#c6c8d1 guifg=#161821
 hi CursorLineNr cterm=NONE ctermbg=237 ctermfg=253 guibg=#2a3158 guifg=#cdd1e6
@@ -50,9 +51,12 @@ hi Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
 hi FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi Function ctermfg=110 guifg=#84a0c6
 hi Identifier cterm=NONE ctermfg=109 guifg=#89b8c2
+hi Ignore ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 hi Include ctermfg=110 guifg=#84a0c6
+hi IncSearch cterm=reverse ctermfg=NONE gui=reverse guifg=NONE term=reverse
 hi LineNr ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
 hi MatchParen ctermbg=237 ctermfg=255 guibg=#3e445e guifg=#ffffff
+hi ModeMsg ctermfg=110 guifg=#84a0c6
 hi MoreMsg ctermfg=150 guifg=#b4be82
 hi Operator ctermfg=110 guifg=#84a0c6
 hi Pmenu ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
@@ -87,6 +91,7 @@ hi Type ctermfg=110 gui=NONE guifg=#84a0c6
 hi Underlined cterm=underline ctermfg=110 gui=underline guifg=#84a0c6 term=underline
 hi VertSplit cterm=NONE ctermbg=233 ctermfg=233 gui=NONE guibg=#0f1117 guifg=#0f1117
 hi Visual ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
+hi VisualNOS ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
 hi WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
 hi diffAdded ctermfg=150 guifg=#b4be82
 hi diffRemoved ctermfg=203 guifg=#e27878
@@ -115,6 +120,8 @@ hi ZenSpace ctermbg=203 guibg=#e27878
 hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
 hi! link TermCursor Cursor
+hi! link ToolbarButton TabLineSel
+hi! link ToolbarLine TabLineFill
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
 hi! link cssClassNameDot Normal
