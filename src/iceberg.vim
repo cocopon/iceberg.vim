@@ -172,8 +172,8 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'ModeMsg', {
-        \   'ctermfg': c.blue,
-        \   'guifg': g.blue,
+        \   'ctermfg': c.comment_fg,
+        \   'guifg': g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'MoreMsg', {
