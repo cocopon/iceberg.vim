@@ -3,8 +3,8 @@
 " See the official site for more information:
 " https://github.com/cocopon/pgmnt.vim
 
-function! s:create_context() abort
-  let p = iceberg#palette#dark#create()
+function! s:create_colors(palette) abort
+  let p = a:palette
   let c = p.cterm
   let g = p.gui
 
@@ -78,8 +78,10 @@ function! s:create_context() abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'DiffDelete', {
+        \   'cterm': 'NONE',
         \   'ctermbg': c.red_tint_bg,
         \   'ctermfg': c.red_tint_fg,
+        \   'gui': 'NONE',
         \   'guibg': g.red_tint_bg,
         \   'guifg': g.red_tint_fg,
         \ }))
@@ -734,26 +736,8 @@ function! s:create_context() abort
         \ }))
   " }}}
 
-  let term_colors = [
-        \   g.cursorline_bg,
-        \   g.red,
-        \   g.green,
-        \   g.orange,
-        \   g.blue,
-        \   g.purple,
-        \   g.lblue,
-        \   g.normal_fg,
-        \   g.comment_fg,
-        \   pgmnt#color#adjust_color(g.red,       {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.green,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.orange,    {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.blue,      {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.purple,    {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.lblue,     {'saturation': +0.05, 'lightness': +0.05}),
-        \   pgmnt#color#adjust_color(g.normal_fg, {'saturation': +0.05, 'lightness': +0.05}),
-        \ ]
   let quoted_term_colors = map(
-        \ copy(term_colors),
+        \ copy(g.term_colors),
         \ '"''" . v:val . "''"')
 
   let neovim_term_defs = map(
@@ -766,10 +750,28 @@ function! s:create_context() abort
   
   return {
         \   'links': links,
-        \   'modified': strftime('%Y-%m-%d %H:%M%z'),
         \   'neovim_term_defs': neovim_term_defs,
         \   'rules': rules,
         \   'vim_term_defs': vim_term_defs,
+        \ }
+endfunction
+
+function! s:create_context() abort
+  let d = s:create_colors(
+        \ iceberg#palette#dark#create())
+  let l = s:create_colors(
+        \ iceberg#palette#light#create())
+
+  return {
+        \   'modified': strftime('%Y-%m-%d %H:%M%z'),
+        \   'dark_links': d.links,
+        \   'dark_rules': d.rules,
+        \   'dark_neovim_term_defs': d.neovim_term_defs,
+        \   'dark_vim_term_defs': d.vim_term_defs,
+        \   'light_links': l.links,
+        \   'light_rules': l.rules,
+        \   'light_neovim_term_defs': l.neovim_term_defs,
+        \   'light_vim_term_defs': l.vim_term_defs,
         \ }
 endfunction
 
@@ -779,77 +781,86 @@ call pgmnt#compile(s:create_context(), {
       \ })
 
 function! s:create_xline_context() abort
-  let p = iceberg#palette#dark#create()
-  let c = p.cterm
-  let g = p.gui
-
-  let col_base = string([
-        \   g.xline_base_fg,
-        \   g.xline_base_bg,
-        \   c.xline_base_fg,
-        \   c.xline_base_bg,
-        \ ])
-  let col_edge = string([
-        \   g.xline_edge_fg,
-        \   g.xline_edge_bg,
-        \   c.xline_edge_fg,
-        \   c.xline_edge_bg,
-        \ ])
-  return {
-        \   'col_base': col_base,
-        \   'col_tabfill': col_base,
-        \   'col_edge': col_edge,
-        \   'col_normal': col_edge,
-        \   'col_tabsel': col_edge,
-        \   'col_error': string([
-        \     g.normal_bg,
-        \     g.red,
-        \     c.normal_bg,
-        \     c.red,
-        \   ]),
-        \   'col_gradient': string([
-        \     g.xline_gradient_fg,
-        \     g.xline_gradient_bg,
-        \     c.xline_gradient_fg,
-        \     c.xline_gradient_bg,
-        \   ]),
-        \   'col_nc': string([
-        \     g.statuslinenc_fg,
-        \     g.statuslinenc_bg,
-        \     c.statuslinenc_fg,
-        \     c.statuslinenc_bg,
-        \   ]),
-        \   'col_warning': string([
-        \     g.normal_bg,
-        \     g.orange,
-        \     c.normal_bg,
-        \     c.orange,
-        \   ]),
-        \   'col_insert': string([
-        \     g.normal_bg,
-        \     g.blue,
-        \     c.normal_bg,
-        \     c.blue,
-        \   ]),
-        \   'col_replace': string([
-        \     g.normal_bg,
-        \     g.orange,
-        \     c.normal_bg,
-        \     c.orange,
-        \   ]),
-        \   'col_visual': string([
-        \     g.normal_bg,
-        \     g.green,
-        \     c.normal_bg,
-        \     c.green,
-        \   ]),
-        \   'col_red': string([
-        \     g.red,
-        \     g.normal_bg,
-        \     c.red,
-        \     c.normal_bg,
-        \   ]),
+  let ps = {
+        \   'dark': iceberg#palette#dark#create(),
+        \   'light': iceberg#palette#light#create(),
         \ }
+  let context = {}
+  for [bg, p] in items(ps)
+    let c = p.cterm
+    let g = p.gui
+
+    let col_base = string([
+          \   g.xline_base_fg,
+          \   g.xline_base_bg,
+          \   c.xline_base_fg,
+          \   c.xline_base_bg,
+          \ ])
+    let col_edge = string([
+          \   g.xline_edge_fg,
+          \   g.xline_edge_bg,
+          \   c.xline_edge_fg,
+          \   c.xline_edge_bg,
+          \ ])
+    let prefix = bg . '_col_'
+    let context = extend(context, {
+          \   prefix . 'base': col_base,
+          \   prefix . 'tabfill': col_base,
+          \   prefix . 'edge': col_edge,
+          \   prefix . 'normal': col_edge,
+          \   prefix . 'tabsel': col_edge,
+          \   prefix . 'error': string([
+          \     g.normal_bg,
+          \     g.red,
+          \     c.normal_bg,
+          \     c.red,
+          \   ]),
+          \   prefix . 'gradient': string([
+          \     g.xline_gradient_fg,
+          \     g.xline_gradient_bg,
+          \     c.xline_gradient_fg,
+          \     c.xline_gradient_bg,
+          \   ]),
+          \   prefix . 'nc': string([
+          \     g.statuslinenc_fg,
+          \     g.statuslinenc_bg,
+          \     c.statuslinenc_fg,
+          \     c.statuslinenc_bg,
+          \   ]),
+          \   prefix . 'warning': string([
+          \     g.normal_bg,
+          \     g.orange,
+          \     c.normal_bg,
+          \     c.orange,
+          \   ]),
+          \   prefix . 'insert': string([
+          \     g.normal_bg,
+          \     g.blue,
+          \     c.normal_bg,
+          \     c.blue,
+          \   ]),
+          \   prefix . 'replace': string([
+          \     g.normal_bg,
+          \     g.orange,
+          \     c.normal_bg,
+          \     c.orange,
+          \   ]),
+          \   prefix . 'visual': string([
+          \     g.normal_bg,
+          \     g.green,
+          \     c.normal_bg,
+          \     c.green,
+          \   ]),
+          \   prefix . 'red': string([
+          \     g.red,
+          \     g.normal_bg,
+          \     c.red,
+          \     c.normal_bg,
+          \   ]),
+          \ })
+  endfor
+
+  return context
 endfunction
 
 call pgmnt#compile(
