@@ -8,7 +8,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-04-18 11:00+0900
+" Modified:   2020-05-15 21:44+0900
 " License:    MIT
 
 
@@ -97,7 +97,7 @@ if &background == 'light'
   hi ALEWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ALEVirtualTextError ctermfg=125 guifg=#cc517a
   hi ALEVirtualTextWarning ctermfg=130 guifg=#c57339
-  hi CtrlPMode1 ctermbg=241 ctermfg=252 guibg=#999eb6 guifg=#e8e9ec
+  hi CtrlPMode1 ctermbg=247 ctermfg=252 guibg=#9fa6c0 guifg=#e8e9ec
   hi EasyMotionShade ctermfg=250 guifg=#bbbecd
   hi EasyMotionTarget ctermfg=64 guifg=#668e3d
   hi EasyMotionTarget2First ctermfg=130 guifg=#c57339

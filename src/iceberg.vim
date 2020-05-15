@@ -781,77 +781,86 @@ call pgmnt#compile(s:create_context(), {
       \ })
 
 function! s:create_xline_context() abort
-  let p = iceberg#palette#dark#create()
-  let c = p.cterm
-  let g = p.gui
-
-  let col_base = string([
-        \   g.xline_base_fg,
-        \   g.xline_base_bg,
-        \   c.xline_base_fg,
-        \   c.xline_base_bg,
-        \ ])
-  let col_edge = string([
-        \   g.xline_edge_fg,
-        \   g.xline_edge_bg,
-        \   c.xline_edge_fg,
-        \   c.xline_edge_bg,
-        \ ])
-  return {
-        \   'col_base': col_base,
-        \   'col_tabfill': col_base,
-        \   'col_edge': col_edge,
-        \   'col_normal': col_edge,
-        \   'col_tabsel': col_edge,
-        \   'col_error': string([
-        \     g.normal_bg,
-        \     g.red,
-        \     c.normal_bg,
-        \     c.red,
-        \   ]),
-        \   'col_gradient': string([
-        \     g.xline_gradient_fg,
-        \     g.xline_gradient_bg,
-        \     c.xline_gradient_fg,
-        \     c.xline_gradient_bg,
-        \   ]),
-        \   'col_nc': string([
-        \     g.statuslinenc_fg,
-        \     g.statuslinenc_bg,
-        \     c.statuslinenc_fg,
-        \     c.statuslinenc_bg,
-        \   ]),
-        \   'col_warning': string([
-        \     g.normal_bg,
-        \     g.orange,
-        \     c.normal_bg,
-        \     c.orange,
-        \   ]),
-        \   'col_insert': string([
-        \     g.normal_bg,
-        \     g.blue,
-        \     c.normal_bg,
-        \     c.blue,
-        \   ]),
-        \   'col_replace': string([
-        \     g.normal_bg,
-        \     g.orange,
-        \     c.normal_bg,
-        \     c.orange,
-        \   ]),
-        \   'col_visual': string([
-        \     g.normal_bg,
-        \     g.green,
-        \     c.normal_bg,
-        \     c.green,
-        \   ]),
-        \   'col_red': string([
-        \     g.red,
-        \     g.normal_bg,
-        \     c.red,
-        \     c.normal_bg,
-        \   ]),
+  let ps = {
+        \   'dark': iceberg#palette#dark#create(),
+        \   'light': iceberg#palette#light#create(),
         \ }
+  let context = {}
+  for [bg, p] in items(ps)
+    let c = p.cterm
+    let g = p.gui
+
+    let col_base = string([
+          \   g.xline_base_fg,
+          \   g.xline_base_bg,
+          \   c.xline_base_fg,
+          \   c.xline_base_bg,
+          \ ])
+    let col_edge = string([
+          \   g.xline_edge_fg,
+          \   g.xline_edge_bg,
+          \   c.xline_edge_fg,
+          \   c.xline_edge_bg,
+          \ ])
+    let prefix = bg . '_col_'
+    let context = extend(context, {
+          \   prefix . 'base': col_base,
+          \   prefix . 'tabfill': col_base,
+          \   prefix . 'edge': col_edge,
+          \   prefix . 'normal': col_edge,
+          \   prefix . 'tabsel': col_edge,
+          \   prefix . 'error': string([
+          \     g.normal_bg,
+          \     g.red,
+          \     c.normal_bg,
+          \     c.red,
+          \   ]),
+          \   prefix . 'gradient': string([
+          \     g.xline_gradient_fg,
+          \     g.xline_gradient_bg,
+          \     c.xline_gradient_fg,
+          \     c.xline_gradient_bg,
+          \   ]),
+          \   prefix . 'nc': string([
+          \     g.statuslinenc_fg,
+          \     g.statuslinenc_bg,
+          \     c.statuslinenc_fg,
+          \     c.statuslinenc_bg,
+          \   ]),
+          \   prefix . 'warning': string([
+          \     g.normal_bg,
+          \     g.orange,
+          \     c.normal_bg,
+          \     c.orange,
+          \   ]),
+          \   prefix . 'insert': string([
+          \     g.normal_bg,
+          \     g.blue,
+          \     c.normal_bg,
+          \     c.blue,
+          \   ]),
+          \   prefix . 'replace': string([
+          \     g.normal_bg,
+          \     g.orange,
+          \     c.normal_bg,
+          \     c.orange,
+          \   ]),
+          \   prefix . 'visual': string([
+          \     g.normal_bg,
+          \     g.green,
+          \     c.normal_bg,
+          \     c.green,
+          \   ]),
+          \   prefix . 'red': string([
+          \     g.red,
+          \     g.normal_bg,
+          \     c.red,
+          \     c.normal_bg,
+          \   ]),
+          \ })
+  endfor
+
+  return context
 endfunction
 
 call pgmnt#compile(

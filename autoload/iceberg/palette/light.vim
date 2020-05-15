@@ -124,12 +124,8 @@ function! iceberg#palette#light#create() abort
         \ ]
 
   " airline/lightline
-  let g.xline_base_bg = pgmnt#color#darken(g.normal_bg, 0.15)
-  let g.xline_base_fg = pgmnt#color#adjust_color(
-        \ g.normal_bg, {
-        \   'saturation': -0.10,
-        \   'lightness': -0.35,
-        \ })
+  let g.xline_base_bg = g.statuslinenc_bg
+  let g.xline_base_fg = g.statuslinenc_fg
   let g.xline_edge_bg = g.statusline_bg
   let g.xline_edge_fg = g.statusline_fg
   let g.xline_gradient_bg = pgmnt#color#mix(g.xline_base_bg, g.xline_edge_bg, 0.50)
@@ -205,11 +201,11 @@ function! iceberg#palette#light#create() abort
   let c.wildmenu_fg = c.statusline_fg
 
   " airline/lightline
-  let c.xline_base_bg = 237
-  let c.xline_base_fg = 243
+  let c.xline_base_bg = c.statuslinenc_bg
+  let c.xline_base_fg = c.statuslinenc_fg
   let c.xline_edge_bg = c.statusline_bg
   let c.xline_edge_fg = c.statusline_fg
-  let c.xline_gradient_bg = 241
+  let c.xline_gradient_bg = 247
   let c.xline_gradient_fg = c.xline_edge_fg
 
   " plugins
