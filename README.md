@@ -1,7 +1,6 @@
 ![Iceberg](https://cocopon.github.io/iceberg.vim/assets/github/20180804/cover.png)
 
-Iceberg is a well-designed, eye-friendly, dark blue color scheme for Vim and
-Neovim.
+Iceberg is well-designed, bluish color scheme for Vim and Neovim.
 
 ![Screenshot](https://cocopon.github.io/iceberg.vim/assets/github/screenshot.png)
 
@@ -15,6 +14,7 @@ information.
 # Features
 - Simple: no configuration required and easy to use
 - Fast: pre-compiled to reduce loading time
+- Dark and light background (light version is in public beta)
 - 256-colors terminal support
 - Terminal colors support
 - [airline][airline] theme and [lightline][lightline] colorscheme
@@ -97,9 +97,9 @@ color scheme, you don't have to follow these steps.
 1. Install [cocopon/pgmnt.vim][pgmnt], a template engine for Vim color scheme,
    to your Vim.
 
-2. To modify a color palette, edit `autoload/iceberg/palette/dark.vim`. If you 
-   make changes, be sure to `:source` this file before step 4 otherwise your
-   color palette changes will not be reflected.
+2. To modify a color palette, edit `autoload/iceberg/palette/(dark|light).vim`.
+   If you make changes, be sure to `:source` this file before step 4 otherwise
+   your color palette changes will not be reflected.
 
 3. To modify highlighting groups or links, edit `src/iceberg.vim`.
 

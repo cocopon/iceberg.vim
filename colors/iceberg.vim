@@ -3,12 +3,9 @@
 "  | | |____| ____| ___ < ____| __  / |__ \
 " /___\_____|_____|_____/_____|_| \_\_____/
 "
-"  cool-headed perspective for your coding
-"
-"
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-15 21:44+0900
+" Modified:   2020-05-15 22:08+0900
 " License:    MIT
 
 
