@@ -415,6 +415,12 @@ function! s:create_context() abort
   call add(links, pgmnt#hi#link('rubySharpBang', 'Comment'))
   call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
 
+  " rust
+  call add(links, pgmnt#hi#link('rustFuncCall', 'Special'))
+  call add(links, pgmnt#hi#link('rustFuncName', 'Title'))
+  call add(links, pgmnt#hi#link('rustTrait', 'Constant'))
+  call add(links, pgmnt#hi#link('rustType', 'Constant'))
+
   " sass
   call add(links, pgmnt#hi#link('sassClass', 'Special'))
 
