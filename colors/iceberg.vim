@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-05-15 22:08+0900
+" Modified:   2020-05-19 00:06+0300
 " License:    MIT
 
 
@@ -133,6 +133,10 @@ if &background == 'light'
   hi! link rubyInterpolationDelimiter String
   hi! link rubySharpBang Comment
   hi! link rubyStringDelimiter String
+  hi! link rustFuncCall Special
+  hi! link rustFuncName Title
+  hi! link rustTrait Constant
+  hi! link rustType Constant
   hi! link sassClass Special
   hi! link shFunction Normal
   hi! link vimContinue Comment
@@ -363,6 +367,10 @@ else
   hi! link rubyInterpolationDelimiter String
   hi! link rubySharpBang Comment
   hi! link rubyStringDelimiter String
+  hi! link rustFuncCall Special
+  hi! link rustFuncName Title
+  hi! link rustTrait Constant
+  hi! link rustType Constant
   hi! link sassClass Special
   hi! link shFunction Normal
   hi! link vimContinue Comment
