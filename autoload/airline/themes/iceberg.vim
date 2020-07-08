@@ -48,6 +48,10 @@ function! s:build_palette() abort
         \ col_visual,
         \ col_gradient,
         \ col_base)
+  let p.terminal = airline#themes#generate_color_map(
+        \ col_insert,
+        \ col_gradient,
+        \ col_base)
 
   " Accents
   let p.accents = {
