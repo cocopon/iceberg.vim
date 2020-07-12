@@ -34,7 +34,9 @@ function! s:create_colors(palette) abort
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Conceal', {
+        \   'ctermbg': c.normal_bg,
         \   'ctermfg': c.comment_fg,
+        \   'guibg': g.normal_bg,
         \   'guifg': g.comment_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
