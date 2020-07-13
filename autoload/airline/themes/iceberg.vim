@@ -72,6 +72,11 @@ function! s:build_palette() abort
   let p.replace.airline_warning = col_warning
   let p.visual.airline_warning = col_warning
 
+  " Terminal
+  let p.normal.airline_term = col_base
+  let p.insert.airline_term = col_base
+  let p.visual.airline_term = col_base
+
   return p
 endfunction
 
