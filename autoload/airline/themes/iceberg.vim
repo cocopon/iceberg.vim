@@ -74,7 +74,7 @@ function! s:build_palette() abort
 
   " Terminal
   let p.normal.airline_term = col_base
-  let p.insert.airline_term = col_base
+  let p.terminal.airline_term = col_base
   let p.visual.airline_term = col_base
 
   return p
