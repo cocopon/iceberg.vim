@@ -464,9 +464,8 @@ function! s:create_colors(palette) abort
   call add(links, pgmnt#hi#link('rubyStringDelimiter', 'String'))
 
   " rust
-  call add(links, pgmnt#hi#link('rustFuncCall', 'Special'))
+  call add(links, pgmnt#hi#link('rustFuncCall', 'Normal'))
   call add(links, pgmnt#hi#link('rustFuncName', 'Title'))
-  call add(links, pgmnt#hi#link('rustTrait', 'Constant'))
   call add(links, pgmnt#hi#link('rustType', 'Constant'))
 
   " sass
