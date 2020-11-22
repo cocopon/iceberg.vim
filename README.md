@@ -84,6 +84,8 @@ Creator of Iceberg talked about how to create your lovely color scheme in
   by [gkeep](https://github.com/gkeep)
 - [alacritty](https://github.com/alacritty/alacritty/wiki/Color-schemes#iceberg)
   by [connorlay](https://github.com/connorlay)
+- [iterm2](https://github.com/lamartire/iceberg-iterm) light theme
+  by [lamartire](https://github.com/lamartire)
 
 NOTE: [terminal.sexy][terminal-sexy] provides configuration files for
 the 16 ANSI colors for many terminal emulators (e.g. GNOME Terminal, iTerm2,
