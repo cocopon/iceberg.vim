@@ -8,7 +8,6 @@ function! s:create_colors(palette) abort
   let c = p.cterm
   let g = p.gui
 
-  let links = []
   let rules = []
 
   " Rules {{{
@@ -355,7 +354,6 @@ function! s:create_colors(palette) abort
         \   'guibg': g.tablinesel_bg,
         \   'guifg': g.tablinesel_fg,
         \ }))
-  call add(links, pgmnt#hi#link('TermCursor', 'Cursor'))
   call extend(rules, pgmnt#hi#group(
         \ 'TermCursorNC', {
         \   'ctermbg': c.comment_fg,
@@ -399,8 +397,6 @@ function! s:create_colors(palette) abort
         \   'guibg': g.statuslinenc_bg,
         \   'guifg': g.statuslinenc_bg,
         \ }))
-  call add(links, pgmnt#hi#link('ToolbarButton', 'TabLineSel'))
-  call add(links, pgmnt#hi#link('ToolbarLine', 'TabLineFill'))
   call extend(rules, pgmnt#hi#group(
         \ 'Visual', {
         \   'ctermbg': c.visual_bg,
@@ -425,13 +421,6 @@ function! s:create_colors(palette) abort
   " }}}
 
   " Rules for filetypes {{{
-  " css
-  call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
-  call add(links, pgmnt#hi#link('cssClassName', 'Special'))
-  call add(links, pgmnt#hi#link('cssClassNameDot', 'Normal'))
-  call add(links, pgmnt#hi#link('cssPseudoClassId', 'Special'))
-  call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
-
   " diff
   call extend(rules, pgmnt#hi#group(
         \ 'diffAdded', {
@@ -443,6 +432,181 @@ function! s:create_colors(palette) abort
         \   'ctermfg': c.red,
         \   'guifg': g.red,
         \ }))
+  " }}}
+
+  " Rules for plugins {{{
+  " [ALE](https://github.com/w0rp/ale)
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEErrorSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEWarningSign', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.orange,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.orange,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEVirtualTextError', {
+        \   'ctermfg': c.red,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEVirtualTextWarning', {
+        \   'ctermfg': c.orange,
+        \   'guifg': g.orange,
+        \ }))
+
+  " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
+  call extend(rules, pgmnt#hi#group(
+        \ 'CtrlPMode1', {
+        \   'ctermbg': c.xline_gradient_bg,
+        \   'ctermfg': c.xline_gradient_fg,
+        \   'guibg': g.xline_gradient_bg,
+        \   'guifg': g.xline_gradient_fg,
+        \ }))
+
+  " [EasyMotion](https://github.com/easymotion/vim-easymotion)
+  call extend(rules, pgmnt#hi#group(
+        \ 'EasyMotionShade', {
+        \   'ctermfg': c.easymotion_shade_fg,
+        \   'guifg': g.easymotion_shade_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'EasyMotionTarget', {
+        \   'ctermfg': c.green,
+        \   'guifg': g.green,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['EasyMotionTarget2First', 'EasyMotionTarget2Second'], {
+        \   'ctermfg': c.orange,
+        \   'guifg': g.orange,
+        \ }))
+
+  " [Git Gutter](https://github.com/airblade/vim-gitgutter)
+  call extend(rules, pgmnt#hi#group(
+        \ 'GitGutterAdd', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.green,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.green,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['GitGutterChange', 'GitGutterChangeDelete'], {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.lblue,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.lblue,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'GitGutterDelete', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+
+  " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
+  call extend(rules, pgmnt#hi#group(
+        \ 'gitmessengerEndOfBuffer', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.linenr_fg,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.linenr_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'gitmessengerPopupNormal', {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.normal_fg,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.normal_fg,
+        \ }))
+
+  " [Sneak](https://github.com/justinmk/vim-sneak/)
+  call extend(rules, pgmnt#hi#group(
+        \ 'Sneak', {
+        \   'ctermbg': c.purple,
+        \   'ctermfg': c.normal_bg,
+        \   'guibg': g.purple,
+        \   'guifg': g.normal_bg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'SneakScope', {
+        \   'ctermbg': c.visual_bg,
+        \   'ctermfg': c.comment_fg,
+        \   'guibg': g.visual_bg,
+        \   'guifg': g.comment_fg,
+        \ }))
+  
+  " [Syntastic](http://github.com/vim-syntastic/syntastic)
+  call extend(rules, pgmnt#hi#group(
+        \ ['SyntasticErrorSign', 'SyntasticStyleErrorSign'], {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.red,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.red,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['SyntasticStyleWarningSign', 'SyntasticWarningSign'], {
+        \   'ctermbg': c.linenr_bg,
+        \   'ctermfg': c.orange,
+        \   'guibg': g.linenr_bg,
+        \   'guifg': g.orange,
+        \ }))
+
+  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
+  call extend(rules, pgmnt#hi#group(
+        \ 'ZenSpace', {
+        \   'ctermbg': c.red,
+        \   'guibg': g.red,
+        \ }))
+  " }}}
+
+  " Palettes for statusline plugins {{{
+  call extend(rules, pgmnt#hi#group(
+        \ 'icebergALAccentRed', {
+        \   'ctermfg': c.red,
+        \   'guifg': g.red,
+        \ }))
+  " }}}
+
+  let quoted_term_colors = map(
+        \ copy(g.term_colors),
+        \ '"''" . v:val . "''"')
+
+  let neovim_term_defs = map(
+        \ copy(quoted_term_colors),
+        \ '"let g:terminal_color_" . v:key . " = " . v:val')
+  let vim_term_defs = printf(
+        \ 'let g:terminal_ansi_colors = [%s]',
+        \ join(quoted_term_colors, ', '),
+        \ )
+  
+  return {
+        \   'neovim_term_defs': neovim_term_defs,
+        \   'rules': rules,
+        \   'vim_term_defs': vim_term_defs,
+        \ }
+endfunction
+
+function! s:create_links() abort
+  let links = []
+
+  call add(links, pgmnt#hi#link('TermCursor', 'Cursor'))
+  call add(links, pgmnt#hi#link('ToolbarButton', 'TabLineSel'))
+  call add(links, pgmnt#hi#link('ToolbarLine', 'TabLineFill'))
+
+  " Rules for filetypes {{{
+  " css
+  call add(links, pgmnt#hi#link('cssBraces', 'Delimiter'))
+  call add(links, pgmnt#hi#link('cssClassName', 'Special'))
+  call add(links, pgmnt#hi#link('cssClassNameDot', 'Normal'))
+  call add(links, pgmnt#hi#link('cssPseudoClassId', 'Special'))
+  call add(links, pgmnt#hi#link('cssTagName', 'Statement'))
 
   " help
   call add(links, pgmnt#hi#link('helpHyperTextJump', 'Constant'))
@@ -504,64 +668,14 @@ function! s:create_colors(palette) abort
   " }}}
 
   " Rules for plugins {{{
-  " [ALE](https://github.com/w0rp/ale)
-  call extend(rules, pgmnt#hi#group(
-        \ 'ALEErrorSign', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.red,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.red,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'ALEWarningSign', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.orange,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.orange,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'ALEVirtualTextError', {
-        \   'ctermfg': c.red,
-        \   'guifg': g.red,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'ALEVirtualTextWarning', {
-        \   'ctermfg': c.orange,
-        \   'guifg': g.orange,
-        \ }))
-
   " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call add(links, pgmnt#hi#link('CtrlPPrtCursor', 'Cursor'))
   call add(links, pgmnt#hi#link('CtrlPMatch', 'Title'))
-  call extend(rules, pgmnt#hi#group(
-        \ 'CtrlPMode1', {
-        \   'ctermbg': c.xline_gradient_bg,
-        \   'ctermfg': c.xline_gradient_fg,
-        \   'guibg': g.xline_gradient_bg,
-        \   'guifg': g.xline_gradient_fg,
-        \ }))
   call add(links, pgmnt#hi#link('CtrlPMode2', 'StatusLine'))
 
   " [Denite](https://github.com/Shougo/denite.nvim)
   call add(links, pgmnt#hi#link('deniteMatched', 'Normal'))
   call add(links, pgmnt#hi#link('deniteMatchedChar', 'Title'))
-
-  " [EasyMotion](https://github.com/easymotion/vim-easymotion)
-  call extend(rules, pgmnt#hi#group(
-        \ 'EasyMotionShade', {
-        \   'ctermfg': c.easymotion_shade_fg,
-        \   'guifg': g.easymotion_shade_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'EasyMotionTarget', {
-        \   'ctermfg': c.green,
-        \   'guifg': g.green,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ ['EasyMotionTarget2First', 'EasyMotionTarget2Second'], {
-        \   'ctermfg': c.orange,
-        \   'guifg': g.orange,
-        \ }))
 
   " [vim-elixir](https://github.com/elixir-editors/vim-elixir)
   call add(links, pgmnt#hi#link('elixirBlockDefinition', 'Statement'))
@@ -586,47 +700,10 @@ function! s:create_colors(palette) abort
   call add(links, pgmnt#hi#link('graphqlName', 'Normal'))
   call add(links, pgmnt#hi#link('graphqlOperator', 'Normal'))
 
-  " [Git Gutter](https://github.com/airblade/vim-gitgutter)
-  call extend(rules, pgmnt#hi#group(
-        \ 'GitGutterAdd', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.green,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.green,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ ['GitGutterChange', 'GitGutterChangeDelete'], {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.lblue,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.lblue,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'GitGutterDelete', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.red,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.red,
-        \ }))
-
   " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
   call add(links, pgmnt#hi#link('gitmessengerHash', 'Comment'))
   call add(links, pgmnt#hi#link('gitmessengerHeader', 'Statement'))
   call add(links, pgmnt#hi#link('gitmessengerHistory', 'Constant'))
-  call extend(rules, pgmnt#hi#group(
-        \ 'gitmessengerEndOfBuffer', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.linenr_fg,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.linenr_fg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'gitmessengerPopupNormal', {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.normal_fg,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.normal_fg,
-        \ }))
 
   " [vim-javascript](https://github.com/pangloss/vim-javascript)
   call add(links, pgmnt#hi#link('jsArrowFunction', 'Operator'))
@@ -669,22 +746,6 @@ function! s:create_colors(palette) abort
   call add(links, pgmnt#hi#link('SignifySignDelete', 'GitGutterDelete'))
   call add(links, pgmnt#hi#link('SignifySignDeleteFirstLine', 'SignifySignDelete'))
 
-  " [Sneak](https://github.com/justinmk/vim-sneak/)
-  call extend(rules, pgmnt#hi#group(
-        \ 'Sneak', {
-        \   'ctermbg': c.purple,
-        \   'ctermfg': c.normal_bg,
-        \   'guibg': g.purple,
-        \   'guifg': g.normal_bg,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ 'SneakScope', {
-        \   'ctermbg': c.visual_bg,
-        \   'ctermfg': c.comment_fg,
-        \   'guibg': g.visual_bg,
-        \   'guifg': g.comment_fg,
-        \ }))
-
   " [Startify](https://github.com/mhinz/vim-startify)
   call add(links, pgmnt#hi#link('StartifyBracket', 'Comment'))
   call add(links, pgmnt#hi#link('StartifyFile', 'Identifier'))
@@ -698,22 +759,6 @@ function! s:create_colors(palette) abort
 
   " [SVSS](https://github.com/cocopon/svss.vim)
   call add(links, pgmnt#hi#link('svssBraces', 'Delimiter'))
-  
-  " [Syntastic](http://github.com/vim-syntastic/syntastic)
-  call extend(rules, pgmnt#hi#group(
-        \ ['SyntasticErrorSign', 'SyntasticStyleErrorSign'], {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.red,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.red,
-        \ }))
-  call extend(rules, pgmnt#hi#group(
-        \ ['SyntasticStyleWarningSign', 'SyntasticWarningSign'], {
-        \   'ctermbg': c.linenr_bg,
-        \   'ctermfg': c.orange,
-        \   'guibg': g.linenr_bg,
-        \   'guifg': g.orange,
-        \ }))
 
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
   call add(links, pgmnt#hi#link('swiftIdentifier', 'Normal'))
@@ -729,41 +774,9 @@ function! s:create_colors(palette) abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'Normal'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'Normal'))
-
-  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
-  call extend(rules, pgmnt#hi#group(
-        \ 'ZenSpace', {
-        \   'ctermbg': c.red,
-        \   'guibg': g.red,
-        \ }))
   " }}}
 
-  " Palettes for statusline plugins {{{
-  call extend(rules, pgmnt#hi#group(
-        \ 'icebergALAccentRed', {
-        \   'ctermfg': c.red,
-        \   'guifg': g.red,
-        \ }))
-  " }}}
-
-  let quoted_term_colors = map(
-        \ copy(g.term_colors),
-        \ '"''" . v:val . "''"')
-
-  let neovim_term_defs = map(
-        \ copy(quoted_term_colors),
-        \ '"let g:terminal_color_" . v:key . " = " . v:val')
-  let vim_term_defs = printf(
-        \ 'let g:terminal_ansi_colors = [%s]',
-        \ join(quoted_term_colors, ', '),
-        \ )
-  
-  return {
-        \   'links': links,
-        \   'neovim_term_defs': neovim_term_defs,
-        \   'rules': rules,
-        \   'vim_term_defs': vim_term_defs,
-        \ }
+  return links
 endfunction
 
 function! s:create_context() abort
@@ -771,17 +784,17 @@ function! s:create_context() abort
         \ iceberg#palette#dark#create())
   let l = s:create_colors(
         \ iceberg#palette#light#create())
+  let links = s:create_links()
 
   return {
         \   'modified': strftime('%Y-%m-%d %H:%M%z'),
-        \   'dark_links': d.links,
         \   'dark_rules': d.rules,
         \   'dark_neovim_term_defs': d.neovim_term_defs,
         \   'dark_vim_term_defs': d.vim_term_defs,
-        \   'light_links': l.links,
         \   'light_rules': l.rules,
         \   'light_neovim_term_defs': l.neovim_term_defs,
         \   'light_vim_term_defs': l.vim_term_defs,
+        \   'links': links,
         \ }
 endfunction
 
