@@ -41,7 +41,12 @@ if &background == 'light'
   hi WarningMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
   hi EndOfBuffer ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
   hi NonText ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
-  hi SpecialKey ctermfg=244 guifg=#8389a3
+  if has('nvim')
+    hi SpecialKey ctermfg=244 guifg=#8389a3
+    hi Whitespace ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
+  else
+    hi SpecialKey ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
+  endif
   hi Folded ctermbg=253 ctermfg=243 guibg=#dcdfe7 guifg=#788098
   hi FoldColumn ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
   hi Function ctermfg=25 guifg=#2d539e
@@ -274,7 +279,12 @@ else
   hi WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
   hi EndOfBuffer ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
   hi NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-  hi SpecialKey ctermfg=242 guifg=#6b7089
+  if has('nvim')
+    hi SpecialKey ctermfg=242 guifg=#6b7089
+    hi Whitespace ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+  else
+    hi SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
+  endif
   hi Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
   hi FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi Function ctermfg=110 guifg=#84a0c6
