@@ -22,7 +22,6 @@ let g:colors_name = 'iceberg'
 
 if &background == 'light'
   {{ light_rules }}
-  {{ light_links }}
 
   if has('nvim')
     {{ light_neovim_term_defs }}
@@ -31,7 +30,6 @@ if &background == 'light'
   endif
 else
   {{ dark_rules }}
-  {{ dark_links }}
 
   if has('nvim')
     {{ dark_neovim_term_defs }}
@@ -39,6 +37,8 @@ else
     {{ dark_vim_term_defs }}
   endif
 endif
+
+{{ links }}
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
