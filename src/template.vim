@@ -39,3 +39,7 @@ else
     {{ dark_vim_term_defs }}
   endif
 endif
+
+if !has('nvim')
+  hi! link SpecialKey Whitespace
+endif
