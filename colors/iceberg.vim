@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-07-20 14:00+0300
+" Modified:   2020-12-25 11:21+0900
 " License:    MIT
 
 
@@ -39,14 +39,9 @@ if &background == 'light'
   hi Error ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
   hi ErrorMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
   hi WarningMsg ctermbg=254 ctermfg=125 guibg=#e8e9ec guifg=#cc517a
-  hi EndOfBuffer ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
-  hi NonText ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
-  if has('nvim')
-    hi SpecialKey ctermfg=244 guifg=#8389a3
-    hi Whitespace ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
-  else
-    hi SpecialKey ctermbg=254 ctermfg=251 guibg=#e8e9ec guifg=#cbcfda
-  endif
+  hi EndOfBuffer ctermfg=251 guifg=#cbcfda
+  hi NonText ctermfg=251 guifg=#cbcfda
+  hi Whitespace ctermfg=251 guifg=#cbcfda
   hi Folded ctermbg=253 ctermfg=243 guibg=#dcdfe7 guifg=#788098
   hi FoldColumn ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
   hi Function ctermfg=25 guifg=#2d539e
@@ -69,6 +64,7 @@ if &background == 'light'
   hi Search ctermbg=180 ctermfg=94 guibg=#eac6ad guifg=#85512c
   hi SignColumn ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
   hi Special ctermfg=64 guifg=#668e3d
+  hi SpecialKey ctermfg=248 guifg=#a5b0d3
   hi SpellBad ctermbg=181 ctermfg=237 gui=undercurl guifg=NONE guisp=#cc517a
   hi SpellCap ctermbg=117 ctermfg=237 gui=undercurl guifg=NONE guisp=#2d539e
   hi SpellLocal ctermbg=116 ctermfg=237 gui=undercurl guifg=NONE guisp=#3f83a6
@@ -277,14 +273,9 @@ else
   hi Error ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
   hi ErrorMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
   hi WarningMsg ctermbg=234 ctermfg=203 guibg=#161821 guifg=#e27878
-  hi EndOfBuffer ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-  hi NonText ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-  if has('nvim')
-    hi SpecialKey ctermfg=242 guifg=#6b7089
-    hi Whitespace ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-  else
-    hi SpecialKey ctermbg=234 ctermfg=236 guibg=#161821 guifg=#242940
-  endif
+  hi EndOfBuffer ctermfg=236 guifg=#242940
+  hi NonText ctermfg=236 guifg=#242940
+  hi Whitespace ctermfg=236 guifg=#242940
   hi Folded ctermbg=235 ctermfg=245 guibg=#1e2132 guifg=#686f9a
   hi FoldColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi Function ctermfg=110 guifg=#84a0c6
@@ -307,6 +298,7 @@ else
   hi Search ctermbg=216 ctermfg=234 guibg=#e4aa80 guifg=#392313
   hi SignColumn ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
   hi Special ctermfg=150 guifg=#b4be82
+  hi SpecialKey ctermfg=240 guifg=#515e97
   hi SpellBad ctermbg=95 ctermfg=252 gui=undercurl guifg=NONE guisp=#e27878
   hi SpellCap ctermbg=24 ctermfg=252 gui=undercurl guifg=NONE guisp=#84a0c6
   hi SpellLocal ctermbg=23 ctermfg=252 gui=undercurl guifg=NONE guisp=#89b8c2
@@ -496,4 +488,8 @@ else
   else
     let g:terminal_ansi_colors = ['#1e2132', '#e27878', '#b4be82', '#e2a478', '#84a0c6', '#a093c7', '#89b8c2', '#c6c8d1', '#6b7089', '#e98989', '#c0ca8e', '#e9b189', '#91acd1', '#ada0d3', '#95c4ce', '#d2d4de']
   endif
+endif
+
+if !has('nvim')
+  hi! link SpecialKey Whitespace
 endif

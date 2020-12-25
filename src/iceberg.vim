@@ -109,11 +109,9 @@ function! s:create_colors(palette) abort
         \   'guifg': g.red,
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ ['EndOfBuffer', 'NonText', 'SpecialKey'], {
-        \   'ctermbg': c.normal_bg,
-        \   'ctermfg': c.specialkey_fg,
-        \   'guibg': g.normal_bg,
-        \   'guifg': g.specialkey_fg,
+        \ ['EndOfBuffer', 'NonText', 'Whitespace'], {
+        \   'ctermfg': c.whitespace_fg,
+        \   'guifg': g.whitespace_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'Folded', {
@@ -252,6 +250,11 @@ function! s:create_colors(palette) abort
         \ 'Special', {
         \   'ctermfg': c.green,
         \   'guifg': g.green,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'SpecialKey', {
+        \   'ctermfg': c.specialkey_fg,
+        \   'guifg': g.specialkey_fg,
         \ }))
   call extend(rules, pgmnt#hi#group(
         \ 'SpellBad', {
