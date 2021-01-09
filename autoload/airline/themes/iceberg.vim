@@ -14,6 +14,7 @@ function! s:build_palette() abort
     let col_replace  = ['#e8e9ec', '#c57339', 254, 130]
     let col_visual   = ['#e8e9ec', '#668e3d', 254, 64]
     let col_red      = ['#cc517a', '#e8e9ec', 125, 254]
+    let col_command  = ['#e8e9ec', '#7759b4', 254, 97]
   else
     let col_base     = ['#3e445e', '#0f1117', 238, 233]
     let col_edge     = ['#17171b', '#818596', 234, 245]
@@ -25,6 +26,7 @@ function! s:build_palette() abort
     let col_replace  = ['#161821', '#e2a478', 234, 216]
     let col_visual   = ['#161821', '#b4be82', 234, 150]
     let col_red      = ['#e27878', '#161821', 203, 234]
+    let col_command  = ['#161821', '#a093c7', 234, 140]
   endif
 
   let p = {}
@@ -52,6 +54,10 @@ function! s:build_palette() abort
         \ col_insert,
         \ col_gradient,
         \ col_base)
+  let p.commandline = airline#themes#generate_color_map(
+        \ col_command,
+        \ col_gradient,
+        \ col_base)
 
   " Accents
   let p.accents = {
@@ -64,6 +70,7 @@ function! s:build_palette() abort
   let p.normal.airline_error = col_error
   let p.replace.airline_error = col_error
   let p.visual.airline_error = col_error
+  let p.commandline.airline_error = col_error
 
   " Warning
   let p.inactive.airline_warning = col_warning
@@ -71,6 +78,7 @@ function! s:build_palette() abort
   let p.normal.airline_warning = col_warning
   let p.replace.airline_warning = col_warning
   let p.visual.airline_warning = col_warning
+  let p.commandline.airline_warning = col_warning
 
   " Terminal
   let p.normal.airline_term = col_base

@@ -14,6 +14,7 @@ function! s:build_palette() abort
     let col_replace  = {{light_col_replace}}
     let col_visual   = {{light_col_visual}}
     let col_red      = {{light_col_red}}
+    let col_command  = {{light_col_command}}
   else
     let col_base     = {{dark_col_base}}
     let col_edge     = {{dark_col_edge}}
@@ -25,6 +26,7 @@ function! s:build_palette() abort
     let col_replace  = {{dark_col_replace}}
     let col_visual   = {{dark_col_visual}}
     let col_red      = {{dark_col_red}}
+    let col_command  = {{dark_col_command}}
   endif
 
   let p = {}
@@ -52,6 +54,10 @@ function! s:build_palette() abort
         \ col_insert,
         \ col_gradient,
         \ col_base)
+  let p.commandline = airline#themes#generate_color_map(
+        \ col_command,
+        \ col_gradient,
+        \ col_base)
 
   " Accents
   let p.accents = {
@@ -64,6 +70,7 @@ function! s:build_palette() abort
   let p.normal.airline_error = col_error
   let p.replace.airline_error = col_error
   let p.visual.airline_error = col_error
+  let p.commandline.airline_error = col_error
 
   " Warning
   let p.inactive.airline_warning = col_warning
@@ -71,6 +78,7 @@ function! s:build_palette() abort
   let p.normal.airline_warning = col_warning
   let p.replace.airline_warning = col_warning
   let p.visual.airline_warning = col_warning
+  let p.commandline.airline_warning = col_warning
 
   " Terminal
   let p.normal.airline_term = col_base
