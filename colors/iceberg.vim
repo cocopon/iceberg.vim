@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-12-25 11:57+0900
+" Modified:   2021-02-20 19:41-0800
 " License:    MIT
 
 
@@ -95,6 +95,9 @@ if &background == 'light'
   hi ALEWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ALEVirtualTextError ctermfg=125 guifg=#cc517a
   hi ALEVirtualTextWarning ctermfg=130 guifg=#c57339
+  hi ALEInfo cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
+  hi ALEWarning cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
+  hi ALEError cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
   hi CtrlPMode1 ctermbg=247 ctermfg=252 guibg=#9fa6c0 guifg=#e8e9ec
   hi EasyMotionShade ctermfg=250 guifg=#bbbecd
   hi EasyMotionTarget ctermfg=64 guifg=#668e3d
@@ -210,6 +213,9 @@ else
   hi ALEWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi ALEVirtualTextError ctermfg=203 guifg=#e27878
   hi ALEVirtualTextWarning ctermfg=216 guifg=#e2a478
+  hi ALEInfo cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
+  hi ALEWarning cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
+  hi ALEError cterm=underline ctermbg=NONE ctermfg=NONE gui=undercurl guibg=NONE guifg=NONE term=underline
   hi CtrlPMode1 ctermbg=236 ctermfg=242 guibg=#2e313f guifg=#6b7089
   hi EasyMotionShade ctermfg=239 guifg=#3d425b
   hi EasyMotionTarget ctermfg=150 guifg=#b4be82
