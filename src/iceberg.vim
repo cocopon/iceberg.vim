@@ -460,6 +460,36 @@ function! s:create_colors(palette) abort
         \   'ctermfg': c.orange,
         \   'guifg': g.orange,
         \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEInfo', {
+        \   'cterm': 'underline',
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': 'NONE',
+        \   'gui': 'undercurl',
+        \   'guibg': 'NONE',
+        \   'guifg': 'NONE',
+        \   'term': 'underline',
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEWarning', {
+        \   'cterm': 'underline',
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': 'NONE',
+        \   'gui': 'undercurl',
+        \   'guibg': 'NONE',
+        \   'guifg': 'NONE',
+        \   'term': 'underline',
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'ALEError', {
+        \   'cterm': 'underline',
+        \   'ctermbg': 'NONE',
+        \   'ctermfg': 'NONE',
+        \   'gui': 'undercurl',
+        \   'guibg': 'NONE',
+        \   'guifg': 'NONE',
+        \   'term': 'underline',
+        \ }))
 
   " [CtrlP](https://github.com/ctrlpvim/ctrlp.vim)
   call extend(rules, pgmnt#hi#group(
