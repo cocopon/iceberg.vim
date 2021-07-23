@@ -842,6 +842,16 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
+
+  " Neovim built-in LSP
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ErrorMsg'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint','ALEVirtualTextWarning'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignError','ALEErrorSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning','ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation','ALEWarningSign'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsSignHint','ALEWarningSign'))
   " }}}
 
   return links

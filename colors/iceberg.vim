@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-12-25 14:23+0900
+" Modified:   2021-12-27 20:00+0900
 " License:    MIT
 
 
@@ -421,6 +421,14 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
+hi! link LspDiagnosticsDefaultError ErrorMsg
+hi! link LspDiagnosticsDefaultWarning ALEVirtualTextWarning
+hi! link LspDiagnosticsDefaultInformation ALEVirtualTextWarning
+hi! link LspDiagnosticsDefaultHint ALEVirtualTextWarning
+hi! link LspDiagnosticsSignError ALEErrorSign
+hi! link LspDiagnosticsSignWarning ALEWarningSign
+hi! link LspDiagnosticsSignInformation ALEWarningSign
+hi! link LspDiagnosticsSignHint ALEWarningSign
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
