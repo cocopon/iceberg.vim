@@ -843,7 +843,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
 
-  " Neovim built-in LSP
+  " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ErrorMsg'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
