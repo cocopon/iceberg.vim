@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-12-27 20:00+0900
+" Modified:   2021-12-27 20:02+0900
 " License:    MIT
 
 
@@ -119,6 +119,10 @@ if &background == 'light'
   hi TSMethod ctermfg=237 guifg=#505695
   hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi ZenSpace ctermbg=125 guibg=#cc517a
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
@@ -240,6 +244,10 @@ else
   hi TSMethod ctermfg=252 guifg=#a3adcb
   hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi ZenSpace ctermbg=203 guibg=#e27878
+  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
@@ -421,7 +429,7 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
-hi! link LspDiagnosticsDefaultError ErrorMsg
+hi! link LspDiagnosticsDefaultError ALEVirtualTextError
 hi! link LspDiagnosticsDefaultWarning ALEVirtualTextWarning
 hi! link LspDiagnosticsDefaultInformation ALEVirtualTextWarning
 hi! link LspDiagnosticsDefaultHint ALEVirtualTextWarning

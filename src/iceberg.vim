@@ -594,6 +594,19 @@ function! s:create_colors(palette) abort
         \ }))
   " }}}
 
+  " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
+  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'orange', 'Hint': 'orange'})
+    call extend(rules, pgmnt#hi#group(
+          \ 'LspDiagnosticsUnderline'..key, {
+          \   'cterm': 'underline',
+          \   'gui': 'underline',
+          \   'term': 'underline',
+          \   'ctermfg': eval('c.'..value),
+          \   'guifg': eval('g.'.value),
+          \ }))
+  endfor
+  " }}}
+
   " Palettes for statusline plugins {{{
   call extend(rules, pgmnt#hi#group(
         \ 'icebergALAccentRed', {
@@ -844,7 +857,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
 
   " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ErrorMsg'))
+  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ALEVirtualTextError'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
   call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint','ALEVirtualTextWarning'))
