@@ -123,6 +123,10 @@ if &background == 'light'
   hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
   hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
+  hi DiagnosticUnderlineInformation cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi DiagnosticUnderlineHint cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi DiagnosticUnderlineWarning cterm=underline ctermfg=130 gui=underline guifg=#c57339 term=underline
+  hi DiagnosticUnderlineError cterm=underline ctermfg=125 gui=underline guifg=#cc517a term=underline
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
@@ -248,6 +252,10 @@ else
   hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
   hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
+  hi DiagnosticUnderlineInformation cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi DiagnosticUnderlineHint cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi DiagnosticUnderlineWarning cterm=underline ctermfg=216 gui=underline guifg=#e2a478 term=underline
+  hi DiagnosticUnderlineError cterm=underline ctermfg=203 gui=underline guifg=#e27878 term=underline
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
@@ -437,6 +445,14 @@ hi! link LspDiagnosticsSignError ALEErrorSign
 hi! link LspDiagnosticsSignWarning ALEWarningSign
 hi! link LspDiagnosticsSignInformation ALEWarningSign
 hi! link LspDiagnosticsSignHint ALEWarningSign
+hi! link DiagnosticError ALEVirtualTextError
+hi! link DiagnosticWarning ALEVirtualTextWarning
+hi! link DiagnosticInformation ALEVirtualTextWarning
+hi! link DiagnosticHint ALEVirtualTextWarning
+hi! link DiagnosticSignError ALEErrorSign
+hi! link DiagnosticSignWarning ALEWarningSign
+hi! link DiagnosticSignInformation ALEWarningSign
+hi! link DiagnosticSignHint ALEWarningSign
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
