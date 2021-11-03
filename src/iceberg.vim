@@ -643,6 +643,15 @@ function! s:create_colors(palette) abort
           \   'guifg': eval('g.'..value),
           \ }))
   endfor
+  " Info color is hard to read within floating window, so use normal text
+  " color instead.
+  call extend(rules, pgmnt#hi#group(
+        \ 'DiagnosticFloatingHint', {
+        \   'ctermbg': c.pmenu_bg,
+        \   'ctermfg': c.pmenu_fg,
+        \   'guibg': g.pmenu_bg,
+        \   'guifg': g.pmenu_fg,
+        \ }))
   " }}}
 
   " Palettes for statusline plugins {{{
