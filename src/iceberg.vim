@@ -596,27 +596,51 @@ function! s:create_colors(palette) abort
 
   " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
   " It is deprecated in favor of 'Diagnostic*' below.
-  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'orange', 'Hint': 'orange'})
+  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'blue', 'Hint': 'linenr_fg'})
     call extend(rules, pgmnt#hi#group(
           \ 'LspDiagnosticsUnderline'..key, {
           \   'cterm': 'underline',
           \   'gui': 'underline',
           \   'term': 'underline',
           \   'ctermfg': eval('c.'..value),
-          \   'guifg': eval('g.'.value),
+          \   'guisp': eval('g.'..value),
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'LspDiagnosticsDefault'..key, {
+          \   'ctermfg': eval('c.'..value),
+          \   'guifg': eval('g.'..value),
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'LspDiagnosticsSign'..key, {
+          \   'ctermbg': c.linenr_bg,
+          \   'ctermfg': eval('c.'..value),
+          \   'guibg': g.linenr_bg,
+          \   'guifg': eval('g.'..value),
           \ }))
   endfor
   " }}}
 
   " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html)
-  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'orange', 'Hint': 'orange'})
+  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'blue', 'Hint': 'linenr_fg'})
     call extend(rules, pgmnt#hi#group(
           \ 'DiagnosticUnderline'..key, {
           \   'cterm': 'underline',
           \   'gui': 'underline',
           \   'term': 'underline',
           \   'ctermfg': eval('c.'..value),
-          \   'guifg': eval('g.'.value),
+          \   'guisp': eval('g.'..value),
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'Diagnostic'..key, {
+          \   'ctermfg': eval('c.'..value),
+          \   'guifg': eval('g.'..value),
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'DiagnosticSign'..key, {
+          \   'ctermbg': c.linenr_bg,
+          \   'ctermfg': eval('c.'..value),
+          \   'guibg': g.linenr_bg,
+          \   'guifg': eval('g.'..value),
           \ }))
   endfor
   " }}}
@@ -869,29 +893,6 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
-
-  " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
-  " It is deprecated in favor of 'Diagnostic*' below.
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultError','ALEVirtualTextError'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultWarning','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultInformation','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsDefaultHint','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignError','ALEErrorSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignWarning','ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignInformation','ALEWarningSign'))
-  call add(links, pgmnt#hi#link('LspDiagnosticsSignHint','ALEWarningSign'))
-  " }}}
-
-  " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html)
-  call add(links, pgmnt#hi#link('DiagnosticError','ALEVirtualTextError'))
-  call add(links, pgmnt#hi#link('DiagnosticWarning','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('DiagnosticInformation','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('DiagnosticHint','ALEVirtualTextWarning'))
-  call add(links, pgmnt#hi#link('DiagnosticSignError','ALEErrorSign'))
-  call add(links, pgmnt#hi#link('DiagnosticSignWarning','ALEWarningSign'))
-  call add(links, pgmnt#hi#link('DiagnosticSignInformation','ALEWarningSign'))
-  call add(links, pgmnt#hi#link('DiagnosticSignHint','ALEWarningSign'))
-  " }}}
 
   return links
 endfunction
