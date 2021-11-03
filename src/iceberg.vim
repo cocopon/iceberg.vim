@@ -621,7 +621,7 @@ function! s:create_colors(palette) abort
   " }}}
 
   " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html)
-  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'blue', 'Hint': 'linenr_fg'})
+  for [key, value] in items({'Error': 'red', 'Warn': 'orange', 'Info': 'blue', 'Hint': 'linenr_fg'})
     call extend(rules, pgmnt#hi#group(
           \ 'DiagnosticUnderline'..key, {
           \   'cterm': 'underline',

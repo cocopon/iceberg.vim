@@ -131,15 +131,15 @@ if &background == 'light'
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
   hi LspDiagnosticsDefaultError ctermfg=125 guifg=#cc517a
   hi LspDiagnosticsSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
-  hi DiagnosticUnderlineInformation cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
-  hi DiagnosticInformation ctermfg=25 guifg=#2d539e
-  hi DiagnosticSignInformation ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
+  hi DiagnosticUnderlineInfo cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
+  hi DiagnosticInfo ctermfg=25 guifg=#2d539e
+  hi DiagnosticSignInfo ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
   hi DiagnosticUnderlineHint cterm=underline ctermfg=248 gui=underline guisp=#9fa7bd term=underline
   hi DiagnosticHint ctermfg=248 guifg=#9fa7bd
   hi DiagnosticSignHint ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
-  hi DiagnosticUnderlineWarning cterm=underline ctermfg=130 gui=underline guisp=#c57339 term=underline
-  hi DiagnosticWarning ctermfg=130 guifg=#c57339
-  hi DiagnosticSignWarning ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
+  hi DiagnosticUnderlineWarn cterm=underline ctermfg=130 gui=underline guisp=#c57339 term=underline
+  hi DiagnosticWarn ctermfg=130 guifg=#c57339
+  hi DiagnosticSignWarn ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi DiagnosticUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
   hi DiagnosticError ctermfg=125 guifg=#cc517a
   hi DiagnosticSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
@@ -276,15 +276,15 @@ else
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
   hi LspDiagnosticsDefaultError ctermfg=203 guifg=#e27878
   hi LspDiagnosticsSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
-  hi DiagnosticUnderlineInformation cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
-  hi DiagnosticInformation ctermfg=110 guifg=#84a0c6
-  hi DiagnosticSignInformation ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
+  hi DiagnosticUnderlineInfo cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
+  hi DiagnosticInfo ctermfg=110 guifg=#84a0c6
+  hi DiagnosticSignInfo ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
   hi DiagnosticUnderlineHint cterm=underline ctermfg=239 gui=underline guisp=#444b71 term=underline
   hi DiagnosticHint ctermfg=239 guifg=#444b71
   hi DiagnosticSignHint ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
-  hi DiagnosticUnderlineWarning cterm=underline ctermfg=216 gui=underline guisp=#e2a478 term=underline
-  hi DiagnosticWarning ctermfg=216 guifg=#e2a478
-  hi DiagnosticSignWarning ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
+  hi DiagnosticUnderlineWarn cterm=underline ctermfg=216 gui=underline guisp=#e2a478 term=underline
+  hi DiagnosticWarn ctermfg=216 guifg=#e2a478
+  hi DiagnosticSignWarn ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi DiagnosticUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
   hi DiagnosticError ctermfg=203 guifg=#e27878
   hi DiagnosticSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
