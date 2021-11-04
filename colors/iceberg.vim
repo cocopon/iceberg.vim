@@ -131,6 +131,7 @@ if &background == 'light'
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
   hi LspDiagnosticsDefaultError ctermfg=125 guifg=#cc517a
   hi LspDiagnosticsSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
+  hi LspDiagnosticsFloatingHint ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#33374c
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
   hi DiagnosticInfo ctermfg=25 guifg=#2d539e
   hi DiagnosticSignInfo ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
@@ -277,6 +278,7 @@ else
   hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
   hi LspDiagnosticsDefaultError ctermfg=203 guifg=#e27878
   hi LspDiagnosticsSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
+  hi LspDiagnosticsFloatingHint ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
   hi DiagnosticInfo ctermfg=110 guifg=#84a0c6
   hi DiagnosticSignInfo ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
