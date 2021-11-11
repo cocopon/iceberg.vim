@@ -764,16 +764,16 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('swiftIdentifier', 'Normal'))
 
   " [typescript-vim](https://github.com/leafgarland/typescript-vim)
-  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Normal'))
-  call add(links, pgmnt#hi#link('typescriptBraces', 'Normal'))
-  call add(links, pgmnt#hi#link('typescriptEndColons', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Noise'))
+  call add(links, pgmnt#hi#link('typescriptBraces', 'jsFuncBraces'))
+  call add(links, pgmnt#hi#link('typescriptEndColons', 'Noise'))
   call add(links, pgmnt#hi#link('typescriptFuncKeyword', 'Statement'))
   call add(links, pgmnt#hi#link('typescriptGlobalObjects', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'Noise'))
   call add(links, pgmnt#hi#link('typescriptIdentifier', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptMessage', 'Normal'))
-  call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
-  call add(links, pgmnt#hi#link('typescriptParens', 'Normal'))
+  call add(links, pgmnt#hi#link('typescriptMessage', 'Noise'))
+  call add(links, pgmnt#hi#link('typescriptNull', 'jsNull'))
+  call add(links, pgmnt#hi#link('typescriptParens', 'jsParens'))
   " }}}
 
   return links

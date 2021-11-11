@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-12-25 11:57+0900
+" Modified:   2021-11-11 11:53-0500
 " License:    MIT
 
 
@@ -361,16 +361,16 @@ hi! link StartifySlash Comment
 hi! link StartifySpecial Normal
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
-hi! link typescriptAjaxMethods Normal
-hi! link typescriptBraces Normal
-hi! link typescriptEndColons Normal
+hi! link typescriptAjaxMethods Noise
+hi! link typescriptBraces jsFuncBraces
+hi! link typescriptEndColons Noise
 hi! link typescriptFuncKeyword Statement
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties Normal
+hi! link typescriptHtmlElemProperties Noise
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage Normal
-hi! link typescriptNull Constant
-hi! link typescriptParens Normal
+hi! link typescriptMessage Noise
+hi! link typescriptNull jsNull
+hi! link typescriptParens jsParens
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
