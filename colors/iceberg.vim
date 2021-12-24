@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2020-12-25 11:57+0900
+" Modified:   2021-12-24 18:59+0900
 " License:    MIT
 
 
@@ -112,6 +112,11 @@ if &background == 'light'
   hi SyntasticStyleErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
+  hi TSFunction ctermfg=237 guifg=#505695
+  hi TSFunctionBuiltin ctermfg=237 guifg=#505695
+  hi TSFunctionMacro ctermfg=237 guifg=#505695
+  hi TSMethod ctermfg=237 guifg=#505695
+  hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi ZenSpace ctermbg=125 guibg=#cc517a
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
@@ -227,6 +232,11 @@ else
   hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
+  hi TSFunction ctermfg=252 guifg=#a3adcb
+  hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
+  hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
+  hi TSMethod ctermfg=252 guifg=#a3adcb
+  hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi ZenSpace ctermbg=203 guibg=#e27878
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
@@ -361,6 +371,44 @@ hi! link StartifySlash Comment
 hi! link StartifySpecial Normal
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier Normal
+hi! link TSAttribute Special
+hi! link TSBoolean Constant
+hi! link TSCharacter Constant
+hi! link TSComment Comment
+hi! link TSConstructor Normal
+hi! link TSConditional Statement
+hi! link TSConstant Constant
+hi! link TSConstBuiltin Constant
+hi! link TSConstMacro Constant
+hi! link TSError Error
+hi! link TSException Statement
+hi! link TSField Normal
+hi! link TSFloat Constant
+hi! link TSInclude Statement
+hi! link TSKeyword Statement
+hi! link TSKeywordFunction Function
+hi! link TSLabel Special
+hi! link TSNamespace Statement
+hi! link TSNumber Constant
+hi! link TSOperator Normal
+hi! link TSParameter Normal
+hi! link TSParameterReference Normal
+hi! link TSProperty TSField
+hi! link TSPunctDelimiter Normal
+hi! link TSPunctBracket Normal
+hi! link TSPunctSpecial Special
+hi! link TSRepeat Statement
+hi! link TSString String
+hi! link TSStringRegex String
+hi! link TSStringEscape Special
+hi! link TSTag htmlTagName
+hi! link TSTagDelimiter htmlTagName
+hi! link TSText Normal
+hi! link TSTitle Title
+hi! link TSType Type
+hi! link TSTypeBuiltin Type
+hi! link TSVariable Normal
+hi! link TSVariableBuiltin Statement
 hi! link typescriptAjaxMethods Normal
 hi! link typescriptBraces Normal
 hi! link typescriptEndColons Normal
