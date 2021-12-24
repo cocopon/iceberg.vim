@@ -558,6 +558,26 @@ function! s:create_colors(palette) abort
         \   'guifg': g.orange,
         \ }))
 
+  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  call extend(rules, pgmnt#hi#group(
+        \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro'], {
+        \   'ctermfg': c.pale,
+        \   'guifg': g.pale,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['TSMethod'], {
+        \   'ctermfg': c.pale,
+        \   'guifg': g.pale,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['TSURI'], {
+        \   'cterm': 'underline',
+        \   'ctermfg': c.lblue,
+        \   'gui': 'underline',
+        \   'guifg': g.lblue,
+        \   'term': 'underline',
+        \ }))
+
   " [zenspace.vim](https://github.com/thinca/vim-zenspace)
   call extend(rules, pgmnt#hi#group(
         \ 'ZenSpace', {
@@ -762,6 +782,46 @@ function! s:create_links() abort
 
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
   call add(links, pgmnt#hi#link('swiftIdentifier', 'Normal'))
+
+  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  call add(links, pgmnt#hi#link('TSAttribute', 'Special'))
+  call add(links, pgmnt#hi#link('TSBoolean', 'Constant'))
+  call add(links, pgmnt#hi#link('TSCharacter', 'Constant'))
+  call add(links, pgmnt#hi#link('TSComment', 'Comment'))
+  call add(links, pgmnt#hi#link('TSConstructor', 'Normal'))
+  call add(links, pgmnt#hi#link('TSConditional', 'Statement'))
+  call add(links, pgmnt#hi#link('TSConstant', 'Constant'))
+  call add(links, pgmnt#hi#link('TSConstBuiltin', 'Constant'))
+  call add(links, pgmnt#hi#link('TSConstMacro', 'Constant'))
+  call add(links, pgmnt#hi#link('TSError', 'Error'))
+  call add(links, pgmnt#hi#link('TSException', 'Statement'))
+  call add(links, pgmnt#hi#link('TSField', 'Normal'))
+  call add(links, pgmnt#hi#link('TSFloat', 'Constant'))
+  call add(links, pgmnt#hi#link('TSInclude', 'Statement'))
+  call add(links, pgmnt#hi#link('TSKeyword', 'Statement'))
+  call add(links, pgmnt#hi#link('TSKeywordFunction', 'Function'))
+  call add(links, pgmnt#hi#link('TSLabel', 'Special'))
+  call add(links, pgmnt#hi#link('TSNamespace', 'Statement'))
+  call add(links, pgmnt#hi#link('TSNumber', 'Constant'))
+  call add(links, pgmnt#hi#link('TSOperator', 'Normal'))
+  call add(links, pgmnt#hi#link('TSParameter', 'Normal'))
+  call add(links, pgmnt#hi#link('TSParameterReference', 'Normal'))
+  call add(links, pgmnt#hi#link('TSProperty', 'TSField'))
+  call add(links, pgmnt#hi#link('TSPunctDelimiter', 'Normal'))
+  call add(links, pgmnt#hi#link('TSPunctBracket', 'Normal'))
+  call add(links, pgmnt#hi#link('TSPunctSpecial', 'Special'))
+  call add(links, pgmnt#hi#link('TSRepeat', 'Statement'))
+  call add(links, pgmnt#hi#link('TSString', 'String'))
+  call add(links, pgmnt#hi#link('TSStringRegex', 'String'))
+  call add(links, pgmnt#hi#link('TSStringEscape', 'Special'))
+  call add(links, pgmnt#hi#link('TSTag', 'htmlTagName'))
+  call add(links, pgmnt#hi#link('TSTagDelimiter', 'htmlTagName'))
+  call add(links, pgmnt#hi#link('TSText', 'Normal'))
+  call add(links, pgmnt#hi#link('TSTitle', 'Title'))
+  call add(links, pgmnt#hi#link('TSType', 'Type'))
+  call add(links, pgmnt#hi#link('TSTypeBuiltin', 'Type'))
+  call add(links, pgmnt#hi#link('TSVariable', 'Normal'))
+  call add(links, pgmnt#hi#link('TSVariableBuiltin', 'Statement'))
 
   " [typescript-vim](https://github.com/leafgarland/typescript-vim)
   call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Normal'))
