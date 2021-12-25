@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-12-25 14:07+0900
+" Modified:   2021-12-25 14:13+0900
 " License:    MIT
 
 
@@ -89,6 +89,7 @@ if &background == 'light'
   hi Visual ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi VisualNOS ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi WildMenu ctermbg=235 ctermfg=252 guibg=#32364c guifg=#e8e9ec
+  hi icebergNormalFg ctermfg=237 guifg=#33374c
   hi diffAdded ctermfg=64 guifg=#668e3d
   hi diffRemoved ctermfg=125 guifg=#cc517a
   hi ALEErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
@@ -209,6 +210,7 @@ else
   hi Visual ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi VisualNOS ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
+  hi icebergNormalFg ctermfg=252 guifg=#c6c8d1
   hi diffAdded ctermfg=150 guifg=#b4be82
   hi diffRemoved ctermfg=203 guifg=#e27878
   hi ALEErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
@@ -409,16 +411,16 @@ hi! link TSType Type
 hi! link TSTypeBuiltin Type
 hi! link TSVariable Normal
 hi! link TSVariableBuiltin Statement
-hi! link typescriptAjaxMethods Noise
-hi! link typescriptBraces jsFuncBraces
-hi! link typescriptEndColons Noise
+hi! link typescriptAjaxMethods icebergNormalFg
+hi! link typescriptBraces icebergNormalFg
+hi! link typescriptEndColons icebergNormalFg
 hi! link typescriptFuncKeyword Statement
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties Noise
+hi! link typescriptHtmlElemProperties icebergNormalFg
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage Noise
-hi! link typescriptNull jsNull
-hi! link typescriptParens jsParens
+hi! link typescriptMessage icebergNormalFg
+hi! link typescriptNull Constant
+hi! link typescriptParens icebergNormalFg
 
 if !has('nvim')
   hi! link SpecialKey Whitespace

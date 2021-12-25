@@ -420,6 +420,14 @@ function! s:create_colors(palette) abort
         \ }))
   " }}}
 
+  " Custom rules {{{
+  call extend(rules, pgmnt#hi#group(
+        \ 'icebergNormalFg', {
+        \   'ctermfg': c.normal_fg,
+        \   'guifg': g.normal_fg,
+        \ }))
+  " }}}
+
   " Rules for filetypes {{{
   " diff
   call extend(rules, pgmnt#hi#group(
@@ -824,16 +832,16 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSVariableBuiltin', 'Statement'))
 
   " [typescript-vim](https://github.com/leafgarland/typescript-vim)
-  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'Noise'))
-  call add(links, pgmnt#hi#link('typescriptBraces', 'jsFuncBraces'))
-  call add(links, pgmnt#hi#link('typescriptEndColons', 'Noise'))
+  call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'icebergNormalFg'))
+  call add(links, pgmnt#hi#link('typescriptBraces', 'icebergNormalFg'))
+  call add(links, pgmnt#hi#link('typescriptEndColons', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('typescriptFuncKeyword', 'Statement'))
   call add(links, pgmnt#hi#link('typescriptGlobalObjects', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'Noise'))
+  call add(links, pgmnt#hi#link('typescriptHtmlElemProperties', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('typescriptIdentifier', 'Statement'))
-  call add(links, pgmnt#hi#link('typescriptMessage', 'Noise'))
-  call add(links, pgmnt#hi#link('typescriptNull', 'jsNull'))
-  call add(links, pgmnt#hi#link('typescriptParens', 'jsParens'))
+  call add(links, pgmnt#hi#link('typescriptMessage', 'icebergNormalFg'))
+  call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
+  call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
   " }}}
 
   return links
