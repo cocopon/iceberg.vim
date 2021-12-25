@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-12-24 18:59+0900
+" Modified:   2021-12-25 14:23+0900
 " License:    MIT
 
 
@@ -89,6 +89,7 @@ if &background == 'light'
   hi Visual ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi VisualNOS ctermbg=251 ctermfg=NONE guibg=#c9cdd7 guifg=NONE
   hi WildMenu ctermbg=235 ctermfg=252 guibg=#32364c guifg=#e8e9ec
+  hi icebergNormalFg ctermfg=237 guifg=#33374c
   hi diffAdded ctermfg=64 guifg=#668e3d
   hi diffRemoved ctermfg=125 guifg=#cc517a
   hi ALEErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
@@ -209,6 +210,7 @@ else
   hi Visual ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi VisualNOS ctermbg=236 ctermfg=NONE guibg=#272c42 guifg=NONE
   hi WildMenu ctermbg=255 ctermfg=234 guibg=#d4d5db guifg=#17171b
+  hi icebergNormalFg ctermfg=252 guifg=#c6c8d1
   hi diffAdded ctermfg=150 guifg=#b4be82
   hi diffRemoved ctermfg=203 guifg=#e27878
   hi ALEErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
@@ -267,14 +269,14 @@ hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
-hi! link cssClassNameDot Normal
+hi! link cssClassNameDot icebergNormalFg
 hi! link cssPseudoClassId Special
 hi! link cssTagName Statement
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
-hi! link jsonQuote Normal
+hi! link jsonQuote icebergNormalFg
 hi! link phpVarSelector Identifier
 hi! link pythonFunction Title
 hi! link rubyDefine Statement
@@ -282,21 +284,21 @@ hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
-hi! link rustFuncCall Normal
+hi! link rustFuncCall icebergNormalFg
 hi! link rustFuncName Title
 hi! link rustType Constant
 hi! link sassClass Special
-hi! link shFunction Normal
+hi! link shFunction icebergNormalFg
 hi! link vimContinue Comment
 hi! link vimFuncSID vimFunction
-hi! link vimFuncVar Normal
+hi! link vimFuncVar icebergNormalFg
 hi! link vimFunction Title
 hi! link vimGroup Statement
 hi! link vimHiGroup Statement
 hi! link vimHiTerm Identifier
 hi! link vimMapModKey Special
 hi! link vimOption Identifier
-hi! link vimVar Normal
+hi! link vimVar icebergNormalFg
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
@@ -307,7 +309,7 @@ hi! link yamlKeyValueDelimiter Delimiter
 hi! link CtrlPPrtCursor Cursor
 hi! link CtrlPMatch Title
 hi! link CtrlPMode2 StatusLine
-hi! link deniteMatched Normal
+hi! link deniteMatched icebergNormalFg
 hi! link deniteMatchedChar Title
 hi! link elixirBlockDefinition Statement
 hi! link elixirDefine Statement
@@ -317,25 +319,25 @@ hi! link elixirExUnitMacro Statement
 hi! link elixirExceptionDefine Statement
 hi! link elixirFunctionDeclaration Title
 hi! link elixirKeyword Statement
-hi! link elixirModuleDeclaration Normal
+hi! link elixirModuleDeclaration icebergNormalFg
 hi! link elixirModuleDefine Statement
 hi! link elixirPrivateDefine Statement
 hi! link elixirStringDelimiter String
-hi! link jsFlowMaybe Normal
-hi! link jsFlowObject Normal
+hi! link jsFlowMaybe icebergNormalFg
+hi! link jsFlowObject icebergNormalFg
 hi! link jsFlowType PreProc
-hi! link graphqlName Normal
-hi! link graphqlOperator Normal
+hi! link graphqlName icebergNormalFg
+hi! link graphqlOperator icebergNormalFg
 hi! link gitmessengerHash Comment
 hi! link gitmessengerHeader Statement
 hi! link gitmessengerHistory Constant
 hi! link jsArrowFunction Operator
-hi! link jsClassDefinition Normal
+hi! link jsClassDefinition icebergNormalFg
 hi! link jsClassFuncName Title
 hi! link jsExport Statement
 hi! link jsFuncName Title
 hi! link jsFutureKeys Statement
-hi! link jsFuncCall Normal
+hi! link jsFuncCall icebergNormalFg
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
@@ -351,7 +353,7 @@ hi! link markdownCodeDelimiter String
 hi! link markdownHeadingDelimiter Comment
 hi! link markdownRule Comment
 hi! link ngxDirective Statement
-hi! link plug1 Normal
+hi! link plug1 icebergNormalFg
 hi! link plug2 Identifier
 hi! link plugDash Comment
 hi! link plugMessage Special
@@ -368,21 +370,21 @@ hi! link StartifyNumber Special
 hi! link StartifyPath Comment
 hi! link StartifySection Statement
 hi! link StartifySlash Comment
-hi! link StartifySpecial Normal
+hi! link StartifySpecial icebergNormalFg
 hi! link svssBraces Delimiter
-hi! link swiftIdentifier Normal
+hi! link swiftIdentifier icebergNormalFg
 hi! link TSAttribute Special
 hi! link TSBoolean Constant
 hi! link TSCharacter Constant
 hi! link TSComment Comment
-hi! link TSConstructor Normal
+hi! link TSConstructor icebergNormalFg
 hi! link TSConditional Statement
 hi! link TSConstant Constant
 hi! link TSConstBuiltin Constant
 hi! link TSConstMacro Constant
 hi! link TSError Error
 hi! link TSException Statement
-hi! link TSField Normal
+hi! link TSField icebergNormalFg
 hi! link TSFloat Constant
 hi! link TSInclude Statement
 hi! link TSKeyword Statement
@@ -390,12 +392,12 @@ hi! link TSKeywordFunction Function
 hi! link TSLabel Special
 hi! link TSNamespace Statement
 hi! link TSNumber Constant
-hi! link TSOperator Normal
-hi! link TSParameter Normal
-hi! link TSParameterReference Normal
+hi! link TSOperator icebergNormalFg
+hi! link TSParameter icebergNormalFg
+hi! link TSParameterReference icebergNormalFg
 hi! link TSProperty TSField
-hi! link TSPunctDelimiter Normal
-hi! link TSPunctBracket Normal
+hi! link TSPunctDelimiter icebergNormalFg
+hi! link TSPunctBracket icebergNormalFg
 hi! link TSPunctSpecial Special
 hi! link TSRepeat Statement
 hi! link TSString String
@@ -403,22 +405,22 @@ hi! link TSStringRegex String
 hi! link TSStringEscape Special
 hi! link TSTag htmlTagName
 hi! link TSTagDelimiter htmlTagName
-hi! link TSText Normal
+hi! link TSText icebergNormalFg
 hi! link TSTitle Title
 hi! link TSType Type
 hi! link TSTypeBuiltin Type
-hi! link TSVariable Normal
+hi! link TSVariable icebergNormalFg
 hi! link TSVariableBuiltin Statement
-hi! link typescriptAjaxMethods Normal
-hi! link typescriptBraces Normal
-hi! link typescriptEndColons Normal
+hi! link typescriptAjaxMethods icebergNormalFg
+hi! link typescriptBraces icebergNormalFg
+hi! link typescriptEndColons icebergNormalFg
 hi! link typescriptFuncKeyword Statement
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties Normal
+hi! link typescriptHtmlElemProperties icebergNormalFg
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage Normal
+hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
-hi! link typescriptParens Normal
+hi! link typescriptParens icebergNormalFg
 
 if !has('nvim')
   hi! link SpecialKey Whitespace
