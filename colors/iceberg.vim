@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2021-12-27 20:03+0900
+" Modified:   2021-12-27 20:06+0900
 " License:    MIT
 
 
@@ -119,19 +119,6 @@ if &background == 'light'
   hi TSMethod ctermfg=237 guifg=#505695
   hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi ZenSpace ctermbg=125 guibg=#cc517a
-  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
-  hi LspDiagnosticsDefaultInformation ctermfg=25 guifg=#2d539e
-  hi LspDiagnosticsSignInformation ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
-  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=248 gui=underline guisp=#9fa7bd term=underline
-  hi LspDiagnosticsDefaultHint ctermfg=248 guifg=#9fa7bd
-  hi LspDiagnosticsSignHint ctermbg=253 ctermfg=248 guibg=#dcdfe7 guifg=#9fa7bd
-  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=130 gui=underline guisp=#c57339 term=underline
-  hi LspDiagnosticsDefaultWarning ctermfg=130 guifg=#c57339
-  hi LspDiagnosticsSignWarning ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
-  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=125 gui=underline guisp=#cc517a term=underline
-  hi LspDiagnosticsDefaultError ctermfg=125 guifg=#cc517a
-  hi LspDiagnosticsSignError ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
-  hi LspDiagnosticsFloatingHint ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#33374c
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=25 gui=underline guisp=#2d539e term=underline
   hi DiagnosticInfo ctermfg=25 guifg=#2d539e
   hi DiagnosticSignInfo ctermbg=253 ctermfg=25 guibg=#dcdfe7 guifg=#2d539e
@@ -266,19 +253,6 @@ else
   hi TSMethod ctermfg=252 guifg=#a3adcb
   hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi ZenSpace ctermbg=203 guibg=#e27878
-  hi LspDiagnosticsUnderlineInformation cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
-  hi LspDiagnosticsDefaultInformation ctermfg=110 guifg=#84a0c6
-  hi LspDiagnosticsSignInformation ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6
-  hi LspDiagnosticsUnderlineHint cterm=underline ctermfg=239 gui=underline guisp=#444b71 term=underline
-  hi LspDiagnosticsDefaultHint ctermfg=239 guifg=#444b71
-  hi LspDiagnosticsSignHint ctermbg=235 ctermfg=239 guibg=#1e2132 guifg=#444b71
-  hi LspDiagnosticsUnderlineWarning cterm=underline ctermfg=216 gui=underline guisp=#e2a478 term=underline
-  hi LspDiagnosticsDefaultWarning ctermfg=216 guifg=#e2a478
-  hi LspDiagnosticsSignWarning ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
-  hi LspDiagnosticsUnderlineError cterm=underline ctermfg=203 gui=underline guisp=#e27878 term=underline
-  hi LspDiagnosticsDefaultError ctermfg=203 guifg=#e27878
-  hi LspDiagnosticsSignError ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
-  hi LspDiagnosticsFloatingHint ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=110 gui=underline guisp=#84a0c6 term=underline
   hi DiagnosticInfo ctermfg=110 guifg=#84a0c6
   hi DiagnosticSignInfo ctermbg=235 ctermfg=110 guibg=#1e2132 guifg=#84a0c6

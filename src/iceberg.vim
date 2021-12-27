@@ -594,42 +594,7 @@ function! s:create_colors(palette) abort
         \ }))
   " }}}
 
-  " [Neovim built-in LSP](https://neovim.io/doc/user/lsp.html)
-  " It is deprecated in favor of 'Diagnostic*' below.
-  for [key, value] in items({'Error': 'red', 'Warning': 'orange', 'Information': 'blue', 'Hint': 'linenr_fg'})
-    call extend(rules, pgmnt#hi#group(
-          \ 'LspDiagnosticsUnderline'..key, {
-          \   'cterm': 'underline',
-          \   'gui': 'underline',
-          \   'term': 'underline',
-          \   'ctermfg': eval('c.'..value),
-          \   'guisp': eval('g.'..value),
-          \ }))
-    call extend(rules, pgmnt#hi#group(
-          \ 'LspDiagnosticsDefault'..key, {
-          \   'ctermfg': eval('c.'..value),
-          \   'guifg': eval('g.'..value),
-          \ }))
-    call extend(rules, pgmnt#hi#group(
-          \ 'LspDiagnosticsSign'..key, {
-          \   'ctermbg': c.linenr_bg,
-          \   'ctermfg': eval('c.'..value),
-          \   'guibg': g.linenr_bg,
-          \   'guifg': eval('g.'..value),
-          \ }))
-  endfor
-  " Info color is hard to read within floating window, so use normal text
-  " color instead.
-  call extend(rules, pgmnt#hi#group(
-        \ 'LspDiagnosticsFloatingHint', {
-        \   'ctermbg': c.pmenu_bg,
-        \   'ctermfg': c.pmenu_fg,
-        \   'guibg': g.pmenu_bg,
-        \   'guifg': g.pmenu_fg,
-        \ }))
-  " }}}
-
-  " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html)
+  " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
   for [key, value] in items({'Error': 'red', 'Warn': 'orange', 'Info': 'blue', 'Hint': 'linenr_fg'})
     call extend(rules, pgmnt#hi#group(
           \ 'DiagnosticUnderline'..key, {
@@ -911,6 +876,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('typescriptMessage', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('typescriptNull', 'Constant'))
   call add(links, pgmnt#hi#link('typescriptParens', 'icebergNormalFg'))
+  " }}}
 
   return links
 endfunction
