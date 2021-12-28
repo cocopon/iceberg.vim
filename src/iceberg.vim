@@ -597,8 +597,8 @@ function! s:create_colors(palette) abort
   " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
   for [group, color] in items({
         \   'Error': 'red',
-        \   'Hint': 'linenr_fg',
-        \   'Info': 'blue',
+        \   'Hint': 'comment_fg',
+        \   'Info': 'lblue',
         \   'Warn': 'orange',
         \ })
     call extend(rules, pgmnt#hi#group(
