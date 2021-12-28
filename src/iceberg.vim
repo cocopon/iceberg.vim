@@ -595,26 +595,31 @@ function! s:create_colors(palette) abort
   " }}}
 
   " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
-  for [key, value] in items({'Error': 'red', 'Warn': 'orange', 'Info': 'blue', 'Hint': 'linenr_fg'})
+  for [group, color] in items({
+        \   'Error': 'red',
+        \   'Hint': 'linenr_fg',
+        \   'Info': 'blue',
+        \   'Warn': 'orange',
+        \ })
     call extend(rules, pgmnt#hi#group(
-          \ 'DiagnosticUnderline'..key, {
+          \ 'DiagnosticUnderline' . group, {
           \   'cterm': 'underline',
+          \   'ctermfg': c[color],
           \   'gui': 'underline',
+          \   'guisp': g[color],
           \   'term': 'underline',
-          \   'ctermfg': eval('c.'..value),
-          \   'guisp': eval('g.'..value),
           \ }))
     call extend(rules, pgmnt#hi#group(
-          \ 'Diagnostic'..key, {
-          \   'ctermfg': eval('c.'..value),
-          \   'guifg': eval('g.'..value),
+          \ 'Diagnostic' . group, {
+          \   'ctermfg': c[color],
+          \   'guifg': g[color],
           \ }))
     call extend(rules, pgmnt#hi#group(
-          \ 'DiagnosticSign'..key, {
+          \ 'DiagnosticSign' . group, {
           \   'ctermbg': c.linenr_bg,
-          \   'ctermfg': eval('c.'..value),
+          \   'ctermfg': c[color],
           \   'guibg': g.linenr_bg,
-          \   'guifg': eval('g.'..value),
+          \   'guifg': g[color],
           \ }))
   endfor
   " Info color is hard to read within floating window, so use normal text
