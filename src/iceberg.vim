@@ -594,6 +594,45 @@ function! s:create_colors(palette) abort
         \ }))
   " }}}
 
+  " [Neovim built-in diagnostics](https://neovim.io/doc/user/diagnostic.html) {{{
+  for [group, color] in items({
+        \   'Error': 'red',
+        \   'Hint': 'comment_fg',
+        \   'Info': 'lblue',
+        \   'Warn': 'orange',
+        \ })
+    call extend(rules, pgmnt#hi#group(
+          \ 'DiagnosticUnderline' . group, {
+          \   'cterm': 'underline',
+          \   'ctermfg': c[color],
+          \   'gui': 'underline',
+          \   'guisp': g[color],
+          \   'term': 'underline',
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'Diagnostic' . group, {
+          \   'ctermfg': c[color],
+          \   'guifg': g[color],
+          \ }))
+    call extend(rules, pgmnt#hi#group(
+          \ 'DiagnosticSign' . group, {
+          \   'ctermbg': c.linenr_bg,
+          \   'ctermfg': c[color],
+          \   'guibg': g.linenr_bg,
+          \   'guifg': g[color],
+          \ }))
+  endfor
+  " Info color is hard to read within floating window, so use normal text
+  " color instead.
+  call extend(rules, pgmnt#hi#group(
+        \ 'DiagnosticFloatingHint', {
+        \   'ctermbg': c.pmenu_bg,
+        \   'ctermfg': c.pmenu_fg,
+        \   'guibg': g.pmenu_bg,
+        \   'guifg': g.pmenu_fg,
+        \ }))
+  " }}}
+
   " Palettes for statusline plugins {{{
   call extend(rules, pgmnt#hi#group(
         \ 'icebergALAccentRed', {
