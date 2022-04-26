@@ -862,6 +862,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSStringRegex', 'String'))
   call add(links, pgmnt#hi#link('TSStringEscape', 'Special'))
   call add(links, pgmnt#hi#link('TSTag', 'htmlTagName'))
+  call add(links, pgmnt#hi#link('TSTagAttribute', 'htmlArg'))
   call add(links, pgmnt#hi#link('TSTagDelimiter', 'htmlTagName'))
   call add(links, pgmnt#hi#link('TSText', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSTitle', 'Title'))
