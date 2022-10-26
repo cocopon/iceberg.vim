@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2022-04-26 21:56+0900
+" Modified:   2022-10-26 22:47+0900
 " License:    MIT
 
 
@@ -113,11 +113,11 @@ if &background == 'light'
   hi SyntasticStyleErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
-  hi TSFunction ctermfg=237 guifg=#505695
-  hi TSFunctionBuiltin ctermfg=237 guifg=#505695
-  hi TSFunctionMacro ctermfg=237 guifg=#505695
-  hi TSMethod ctermfg=237 guifg=#505695
-  hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
+  hi @function ctermfg=237 guifg=#505695
+  hi @function.builtin ctermfg=237 guifg=#505695
+  hi @function.macro ctermfg=237 guifg=#505695
+  hi @method ctermfg=237 guifg=#505695
+  hi @text.uri cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi ZenSpace ctermbg=125 guibg=#cc517a
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=31 gui=underline guisp=#3f83a6 term=underline
   hi DiagnosticInfo ctermfg=31 guifg=#3f83a6
@@ -247,11 +247,11 @@ else
   hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
-  hi TSFunction ctermfg=252 guifg=#a3adcb
-  hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
-  hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
-  hi TSMethod ctermfg=252 guifg=#a3adcb
-  hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
+  hi @function ctermfg=252 guifg=#a3adcb
+  hi @function.builtin ctermfg=252 guifg=#a3adcb
+  hi @function.macro ctermfg=252 guifg=#a3adcb
+  hi @method ctermfg=252 guifg=#a3adcb
+  hi @text.uri cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi ZenSpace ctermbg=203 guibg=#e27878
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=109 gui=underline guisp=#89b8c2 term=underline
   hi DiagnosticInfo ctermfg=109 guifg=#89b8c2
@@ -399,45 +399,45 @@ hi! link StartifySlash Comment
 hi! link StartifySpecial icebergNormalFg
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier icebergNormalFg
-hi! link TSAttribute Special
-hi! link TSBoolean Constant
-hi! link TSCharacter Constant
-hi! link TSComment Comment
-hi! link TSConstructor icebergNormalFg
-hi! link TSConditional Statement
-hi! link TSConstant Constant
-hi! link TSConstBuiltin Constant
-hi! link TSConstMacro Constant
-hi! link TSError Error
-hi! link TSException Statement
-hi! link TSField icebergNormalFg
-hi! link TSFloat Constant
-hi! link TSInclude Statement
-hi! link TSKeyword Statement
-hi! link TSKeywordFunction Function
-hi! link TSLabel Special
-hi! link TSNamespace Statement
-hi! link TSNumber Constant
-hi! link TSOperator icebergNormalFg
-hi! link TSParameter icebergNormalFg
-hi! link TSParameterReference icebergNormalFg
-hi! link TSProperty TSField
-hi! link TSPunctDelimiter icebergNormalFg
-hi! link TSPunctBracket icebergNormalFg
-hi! link TSPunctSpecial Special
-hi! link TSRepeat Statement
-hi! link TSString String
-hi! link TSStringRegex String
-hi! link TSStringEscape Special
-hi! link TSTag htmlTagName
-hi! link TSTagAttribute htmlArg
-hi! link TSTagDelimiter htmlTagName
-hi! link TSText icebergNormalFg
-hi! link TSTitle Title
-hi! link TSType Type
-hi! link TSTypeBuiltin Type
-hi! link TSVariable icebergNormalFg
-hi! link TSVariableBuiltin Statement
+hi! link @attribute Special
+hi! link @boolean Constant
+hi! link @character Constant
+hi! link @comment Comment
+hi! link @constructor icebergNormalFg
+hi! link @conditional Statement
+hi! link @constant Constant
+hi! link @constant.builtin Constant
+hi! link @constant.macro Constant
+hi! link @error Error
+hi! link @exception Statement
+hi! link @field icebergNormalFg
+hi! link @float Constant
+hi! link @include Statement
+hi! link @keyword Statement
+hi! link @keyword.function Function
+hi! link @label Special
+hi! link @namespace Statement
+hi! link @number Constant
+hi! link @operator icebergNormalFg
+hi! link @parameter icebergNormalFg
+hi! link @parameter.reference icebergNormalFg
+hi! link @property icebergNormalFg
+hi! link @punctuation.delimiter icebergNormalFg
+hi! link @punctuation.bracket icebergNormalFg
+hi! link @punctuation.special Special
+hi! link @repeat Statement
+hi! link @string String
+hi! link @string.regex String
+hi! link @string.escape Special
+hi! link @tag htmlTagName
+hi! link @tag.attribute htmlArg
+hi! link @tag.delimiter htmlTagName
+hi! link @text icebergNormalFg
+hi! link @text.title Title
+hi! link @type Type
+hi! link @type.builtin Type
+hi! link @variable icebergNormalFg
+hi! link @variable.builtin Statement
 hi! link typescriptAjaxMethods icebergNormalFg
 hi! link typescriptBraces icebergNormalFg
 hi! link typescriptEndColons icebergNormalFg
