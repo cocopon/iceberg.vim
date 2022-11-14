@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2022-10-26 22:47+0900
+" Modified:   2022-11-14 13:51+0900
 " License:    MIT
 
 
@@ -113,10 +113,15 @@ if &background == 'light'
   hi SyntasticStyleErrorSign ctermbg=253 ctermfg=125 guibg=#dcdfe7 guifg=#cc517a
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
+  hi TSFunction ctermfg=237 guifg=#505695
+  hi TSFunctionBuiltin ctermfg=237 guifg=#505695
+  hi TSFunctionMacro ctermfg=237 guifg=#505695
   hi @function ctermfg=237 guifg=#505695
   hi @function.builtin ctermfg=237 guifg=#505695
   hi @function.macro ctermfg=237 guifg=#505695
+  hi TSMethod ctermfg=237 guifg=#505695
   hi @method ctermfg=237 guifg=#505695
+  hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi @text.uri cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi ZenSpace ctermbg=125 guibg=#cc517a
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=31 gui=underline guisp=#3f83a6 term=underline
@@ -247,10 +252,15 @@ else
   hi SyntasticStyleErrorSign ctermbg=235 ctermfg=203 guibg=#1e2132 guifg=#e27878
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
+  hi TSFunction ctermfg=252 guifg=#a3adcb
+  hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
+  hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
   hi @function ctermfg=252 guifg=#a3adcb
   hi @function.builtin ctermfg=252 guifg=#a3adcb
   hi @function.macro ctermfg=252 guifg=#a3adcb
+  hi TSMethod ctermfg=252 guifg=#a3adcb
   hi @method ctermfg=252 guifg=#a3adcb
+  hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi @text.uri cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi ZenSpace ctermbg=203 guibg=#e27878
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=109 gui=underline guisp=#89b8c2 term=underline
@@ -434,10 +444,50 @@ hi! link @tag.attribute htmlArg
 hi! link @tag.delimiter htmlTagName
 hi! link @text icebergNormalFg
 hi! link @text.title Title
+hi! link @text.note Todo
 hi! link @type Type
 hi! link @type.builtin Type
 hi! link @variable icebergNormalFg
 hi! link @variable.builtin Statement
+hi! link TSAttribute @attribute
+hi! link TSBoolean @boolean
+hi! link TSCharacter @character
+hi! link TSComment @comment
+hi! link TSConstructor @constructor
+hi! link TSConditional @conditional
+hi! link TSConstant @constant
+hi! link TSConstBuiltin @constant.builtin
+hi! link TSConstMacro @constant.macro
+hi! link TSError @error
+hi! link TSException @exception
+hi! link TSField @field
+hi! link TSFloat @float
+hi! link TSInclude @include
+hi! link TSKeyword @keyword
+hi! link TSKeywordFunction @keyword.function
+hi! link TSLabel @label
+hi! link TSNamespace @namespace
+hi! link TSNumber @number
+hi! link TSOperator @operator
+hi! link TSParameter @parameter
+hi! link TSParameterReference @parameter.reference
+hi! link TSProperty @property
+hi! link TSPunctDelimiter @punctuation.delimiter
+hi! link TSPunctBracket @punctuation.bracket
+hi! link TSPunctSpecial @punctuation.special
+hi! link TSRepeat @repeat
+hi! link TSString @string
+hi! link TSStringRegex @string.regex
+hi! link TSStringEscape @string.escape
+hi! link TSTag @tag
+hi! link TSTagAttribute @tag.attribute
+hi! link TSTagDelimiter @tag.delimiter
+hi! link TSText @text
+hi! link TSTitle @text.title
+hi! link TSType @type
+hi! link TSTypeBuiltin @type.builtin
+hi! link TSVariable @variable
+hi! link TSVariableBuiltin @variable.builtin
 hi! link typescriptAjaxMethods icebergNormalFg
 hi! link typescriptBraces icebergNormalFg
 hi! link typescriptEndColons icebergNormalFg

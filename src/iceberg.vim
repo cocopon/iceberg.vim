@@ -568,17 +568,17 @@ function! s:create_colors(palette) abort
 
   " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
   call extend(rules, pgmnt#hi#group(
-        \ ['@function', '@function.builtin', '@function.macro'], {
+        \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro', '@function', '@function.builtin', '@function.macro'], {
         \   'ctermfg': c.pale,
         \   'guifg': g.pale,
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ ['@method'], {
+        \ ['TSMethod', '@method'], {
         \   'ctermfg': c.pale,
         \   'guifg': g.pale,
         \ }))
   call extend(rules, pgmnt#hi#group(
-        \ ['@text.uri'], {
+        \ ['TSURI', '@text.uri'], {
         \   'cterm': 'underline',
         \   'ctermfg': c.lblue,
         \   'gui': 'underline',
@@ -866,10 +866,51 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('@tag.delimiter', 'htmlTagName'))
   call add(links, pgmnt#hi#link('@text', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('@text.title', 'Title'))
+  call add(links, pgmnt#hi#link('@text.note', 'Todo'))
   call add(links, pgmnt#hi#link('@type', 'Type'))
   call add(links, pgmnt#hi#link('@type.builtin', 'Type'))
   call add(links, pgmnt#hi#link('@variable', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('@variable.builtin', 'Statement'))
+
+  call add(links, pgmnt#hi#link('TSAttribute', '@attribute'))
+  call add(links, pgmnt#hi#link('TSBoolean', '@boolean'))
+  call add(links, pgmnt#hi#link('TSCharacter', '@character'))
+  call add(links, pgmnt#hi#link('TSComment', '@comment'))
+  call add(links, pgmnt#hi#link('TSConstructor', '@constructor'))
+  call add(links, pgmnt#hi#link('TSConditional', '@conditional'))
+  call add(links, pgmnt#hi#link('TSConstant', '@constant'))
+  call add(links, pgmnt#hi#link('TSConstBuiltin', '@constant.builtin'))
+  call add(links, pgmnt#hi#link('TSConstMacro', '@constant.macro'))
+  call add(links, pgmnt#hi#link('TSError', '@error'))
+  call add(links, pgmnt#hi#link('TSException', '@exception'))
+  call add(links, pgmnt#hi#link('TSField', '@field'))
+  call add(links, pgmnt#hi#link('TSFloat', '@float'))
+  call add(links, pgmnt#hi#link('TSInclude', '@include'))
+  call add(links, pgmnt#hi#link('TSKeyword', '@keyword'))
+  call add(links, pgmnt#hi#link('TSKeywordFunction', '@keyword.function'))
+  call add(links, pgmnt#hi#link('TSLabel', '@label'))
+  call add(links, pgmnt#hi#link('TSNamespace', '@namespace'))
+  call add(links, pgmnt#hi#link('TSNumber', '@number'))
+  call add(links, pgmnt#hi#link('TSOperator', '@operator'))
+  call add(links, pgmnt#hi#link('TSParameter', '@parameter'))
+  call add(links, pgmnt#hi#link('TSParameterReference', '@parameter.reference'))
+  call add(links, pgmnt#hi#link('TSProperty', '@property'))
+  call add(links, pgmnt#hi#link('TSPunctDelimiter', '@punctuation.delimiter'))
+  call add(links, pgmnt#hi#link('TSPunctBracket', '@punctuation.bracket'))
+  call add(links, pgmnt#hi#link('TSPunctSpecial', '@punctuation.special'))
+  call add(links, pgmnt#hi#link('TSRepeat', '@repeat'))
+  call add(links, pgmnt#hi#link('TSString', '@string'))
+  call add(links, pgmnt#hi#link('TSStringRegex', '@string.regex'))
+  call add(links, pgmnt#hi#link('TSStringEscape', '@string.escape'))
+  call add(links, pgmnt#hi#link('TSTag', '@tag'))
+  call add(links, pgmnt#hi#link('TSTagAttribute', '@tag.attribute'))
+  call add(links, pgmnt#hi#link('TSTagDelimiter', '@tag.delimiter'))
+  call add(links, pgmnt#hi#link('TSText', '@text'))
+  call add(links, pgmnt#hi#link('TSTitle', '@text.title'))
+  call add(links, pgmnt#hi#link('TSType', '@type'))
+  call add(links, pgmnt#hi#link('TSTypeBuiltin', '@type.builtin'))
+  call add(links, pgmnt#hi#link('TSVariable', '@variable'))
+  call add(links, pgmnt#hi#link('TSVariableBuiltin', '@variable.builtin'))
 
   " [typescript-vim](https://github.com/leafgarland/typescript-vim)
   call add(links, pgmnt#hi#link('typescriptAjaxMethods', 'icebergNormalFg'))
