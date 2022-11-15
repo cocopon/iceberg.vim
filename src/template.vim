@@ -24,6 +24,7 @@ if &background == 'light'
   {{ light_rules }}
 
   if has('nvim')
+    {{ light_neovim_rules }}
     {{ light_neovim_term_defs }}
   else
     {{ light_vim_term_defs }}
@@ -32,6 +33,7 @@ else
   {{ dark_rules }}
 
   if has('nvim')
+    {{ dark_neovim_rules }}
     {{ dark_neovim_term_defs }}
   else
     {{ dark_vim_term_defs }}
@@ -40,6 +42,8 @@ endif
 
 {{ links }}
 
-if !has('nvim')
+if has('nvim')
+  {{ neovim_links }}
+else
   hi! link SpecialKey Whitespace
 endif
