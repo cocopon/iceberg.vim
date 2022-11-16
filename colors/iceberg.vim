@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2022-11-15 13:38+0900
+" Modified:   2022-11-16 22:13+0900
 " License:    MIT
 
 
@@ -114,6 +114,11 @@ if &background == 'light'
   hi SyntasticStyleWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi SyntasticWarningSign ctermbg=253 ctermfg=130 guibg=#dcdfe7 guifg=#c57339
   hi ZenSpace ctermbg=125 guibg=#cc517a
+  hi TSFunction ctermfg=237 guifg=#505695
+  hi TSFunctionBuiltin ctermfg=237 guifg=#505695
+  hi TSFunctionMacro ctermfg=237 guifg=#505695
+  hi TSMethod ctermfg=237 guifg=#505695
+  hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=31 gui=underline guisp=#3f83a6 term=underline
   hi DiagnosticInfo ctermfg=31 guifg=#3f83a6
   hi DiagnosticSignInfo ctermbg=253 ctermfg=31 guibg=#dcdfe7 guifg=#3f83a6
@@ -130,16 +135,6 @@ if &background == 'light'
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
   if has('nvim')
-    hi TSFunction ctermfg=237 guifg=#505695
-    hi TSFunctionBuiltin ctermfg=237 guifg=#505695
-    hi TSFunctionMacro ctermfg=237 guifg=#505695
-    hi @function ctermfg=237 guifg=#505695
-    hi @function.builtin ctermfg=237 guifg=#505695
-    hi @function.macro ctermfg=237 guifg=#505695
-    hi TSMethod ctermfg=237 guifg=#505695
-    hi @method ctermfg=237 guifg=#505695
-    hi TSURI cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
-    hi @text.uri cterm=underline ctermfg=31 gui=underline guifg=#3f83a6 term=underline
     let g:terminal_color_0 = '#dcdfe7'
     let g:terminal_color_1 = '#cc517a'
     let g:terminal_color_2 = '#668e3d'
@@ -253,6 +248,11 @@ else
   hi SyntasticStyleWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi SyntasticWarningSign ctermbg=235 ctermfg=216 guibg=#1e2132 guifg=#e2a478
   hi ZenSpace ctermbg=203 guibg=#e27878
+  hi TSFunction ctermfg=252 guifg=#a3adcb
+  hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
+  hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
+  hi TSMethod ctermfg=252 guifg=#a3adcb
+  hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
   hi DiagnosticUnderlineInfo cterm=underline ctermfg=109 gui=underline guisp=#89b8c2 term=underline
   hi DiagnosticInfo ctermfg=109 guifg=#89b8c2
   hi DiagnosticSignInfo ctermbg=235 ctermfg=109 guibg=#1e2132 guifg=#89b8c2
@@ -269,16 +269,6 @@ else
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
   if has('nvim')
-    hi TSFunction ctermfg=252 guifg=#a3adcb
-    hi TSFunctionBuiltin ctermfg=252 guifg=#a3adcb
-    hi TSFunctionMacro ctermfg=252 guifg=#a3adcb
-    hi @function ctermfg=252 guifg=#a3adcb
-    hi @function.builtin ctermfg=252 guifg=#a3adcb
-    hi @function.macro ctermfg=252 guifg=#a3adcb
-    hi TSMethod ctermfg=252 guifg=#a3adcb
-    hi @method ctermfg=252 guifg=#a3adcb
-    hi TSURI cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
-    hi @text.uri cterm=underline ctermfg=109 gui=underline guifg=#89b8c2 term=underline
     let g:terminal_color_0 = '#1e2132'
     let g:terminal_color_1 = '#e27878'
     let g:terminal_color_2 = '#b4be82'
@@ -409,6 +399,45 @@ hi! link StartifySlash Comment
 hi! link StartifySpecial icebergNormalFg
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier icebergNormalFg
+hi! link TSAttribute Special
+hi! link TSBoolean Constant
+hi! link TSCharacter Constant
+hi! link TSComment Comment
+hi! link TSConstructor icebergNormalFg
+hi! link TSConditional Statement
+hi! link TSConstant Constant
+hi! link TSConstBuiltin Constant
+hi! link TSConstMacro Constant
+hi! link TSError Error
+hi! link TSException Statement
+hi! link TSField icebergNormalFg
+hi! link TSFloat Constant
+hi! link TSInclude Statement
+hi! link TSKeyword Statement
+hi! link TSKeywordFunction Function
+hi! link TSLabel Special
+hi! link TSNamespace Statement
+hi! link TSNumber Constant
+hi! link TSOperator icebergNormalFg
+hi! link TSParameter icebergNormalFg
+hi! link TSParameterReference icebergNormalFg
+hi! link TSProperty icebergNormalFg
+hi! link TSPunctDelimiter icebergNormalFg
+hi! link TSPunctBracket icebergNormalFg
+hi! link TSPunctSpecial Special
+hi! link TSRepeat Statement
+hi! link TSString String
+hi! link TSStringRegex String
+hi! link TSStringEscape Special
+hi! link TSTag htmlTagName
+hi! link TSTagAttribute htmlArg
+hi! link TSTagDelimiter htmlTagName
+hi! link TSText icebergNormalFg
+hi! link TSTitle Title
+hi! link TSType Type
+hi! link TSTypeBuiltin Type
+hi! link TSVariable icebergNormalFg
+hi! link TSVariableBuiltin Statement
 hi! link typescriptAjaxMethods icebergNormalFg
 hi! link typescriptBraces icebergNormalFg
 hi! link typescriptEndColons icebergNormalFg
@@ -420,86 +449,54 @@ hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
 
-if has('nvim')
-  hi! link @attribute Special
-  hi! link @boolean Constant
-  hi! link @character Constant
-  hi! link @comment Comment
-  hi! link @constructor icebergNormalFg
-  hi! link @conditional Statement
-  hi! link @constant Constant
-  hi! link @constant.builtin Constant
-  hi! link @constant.macro Constant
-  hi! link @error Error
-  hi! link @exception Statement
-  hi! link @field icebergNormalFg
-  hi! link @float Constant
-  hi! link @include Statement
-  hi! link @keyword Statement
-  hi! link @keyword.function Function
-  hi! link @label Special
-  hi! link @namespace Statement
-  hi! link @number Constant
-  hi! link @operator icebergNormalFg
-  hi! link @parameter icebergNormalFg
-  hi! link @parameter.reference icebergNormalFg
-  hi! link @property icebergNormalFg
-  hi! link @punctuation.delimiter icebergNormalFg
-  hi! link @punctuation.bracket icebergNormalFg
-  hi! link @punctuation.special Special
-  hi! link @repeat Statement
-  hi! link @string String
-  hi! link @string.regex String
-  hi! link @string.escape Special
-  hi! link @tag htmlTagName
-  hi! link @tag.attribute htmlArg
-  hi! link @tag.delimiter htmlTagName
-  hi! link @text icebergNormalFg
-  hi! link @text.title Title
+if has('nvim-0.8')
+  hi! link @attribute TSAttribute
+  hi! link @boolean TSBoolean
+  hi! link @character TSCharacter
+  hi! link @comment TSComment
+  hi! link @constructor TSConstructor
+  hi! link @conditional TSConditional
+  hi! link @constant TSConstant
+  hi! link @constant.builtin TSConstBuiltin
+  hi! link @constant.macro TSConstMacro
+  hi! link @error TSError
+  hi! link @exception TSException
+  hi! link @field TSField
+  hi! link @float TSFloat
+  hi! link @function TSFunction
+  hi! link @function.builtin TSFunctionBuiltin
+  hi! link @function.macro TSFunctionMacro
+  hi! link @include TSInclude
+  hi! link @keyword TSKeyword
+  hi! link @keyword.function TSKeywordFunction
+  hi! link @label TSLabel
+  hi! link @method TSMethod
+  hi! link @namespace TSNamespace
+  hi! link @number TSNumber
+  hi! link @operator TSOperator
+  hi! link @parameter TSParameter
+  hi! link @parameter.reference TSParameterReference
+  hi! link @property TSProperty
+  hi! link @punctuation.delimiter TSPunctDelimiter
+  hi! link @punctuation.bracket TSPunctBracket
+  hi! link @punctuation.special TSPunctSpecial
+  hi! link @repeat TSRepeat
+  hi! link @string TSString
+  hi! link @string.regex TSStringRegex
+  hi! link @string.escape TSStringEscape
+  hi! link @tag TSTag
+  hi! link @tag.attribute TSTagAttribute
+  hi! link @tag.delimiter TSTagDelimiter
+  hi! link @text TSText
   hi! link @text.note Todo
-  hi! link @type Type
-  hi! link @type.builtin Type
-  hi! link @variable icebergNormalFg
-  hi! link @variable.builtin Statement
-  hi! link TSAttribute @attribute
-  hi! link TSBoolean @boolean
-  hi! link TSCharacter @character
-  hi! link TSComment @comment
-  hi! link TSConstructor @constructor
-  hi! link TSConditional @conditional
-  hi! link TSConstant @constant
-  hi! link TSConstBuiltin @constant.builtin
-  hi! link TSConstMacro @constant.macro
-  hi! link TSError @error
-  hi! link TSException @exception
-  hi! link TSField @field
-  hi! link TSFloat @float
-  hi! link TSInclude @include
-  hi! link TSKeyword @keyword
-  hi! link TSKeywordFunction @keyword.function
-  hi! link TSLabel @label
-  hi! link TSNamespace @namespace
-  hi! link TSNumber @number
-  hi! link TSOperator @operator
-  hi! link TSParameter @parameter
-  hi! link TSParameterReference @parameter.reference
-  hi! link TSProperty @property
-  hi! link TSPunctDelimiter @punctuation.delimiter
-  hi! link TSPunctBracket @punctuation.bracket
-  hi! link TSPunctSpecial @punctuation.special
-  hi! link TSRepeat @repeat
-  hi! link TSString @string
-  hi! link TSStringRegex @string.regex
-  hi! link TSStringEscape @string.escape
-  hi! link TSTag @tag
-  hi! link TSTagAttribute @tag.attribute
-  hi! link TSTagDelimiter @tag.delimiter
-  hi! link TSText @text
-  hi! link TSTitle @text.title
-  hi! link TSType @type
-  hi! link TSTypeBuiltin @type.builtin
-  hi! link TSVariable @variable
-  hi! link TSVariableBuiltin @variable.builtin
-else
+  hi! link @text.title TSTitle
+  hi! link @text.uri TSURI
+  hi! link @type TSType
+  hi! link @type.builtin TSTypeBuiltin
+  hi! link @variable TSVariable
+  hi! link @variable.builtin TSVariableBuiltin
+endif
+
+if !has('nvim')
   hi! link SpecialKey Whitespace
 endif
