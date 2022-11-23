@@ -566,7 +566,14 @@ function! s:create_colors(palette) abort
         \   'guifg': g.orange,
         \ }))
 
-  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
+  call extend(rules, pgmnt#hi#group(
+        \ 'ZenSpace', {
+        \   'ctermbg': c.red,
+        \   'guibg': g.red,
+        \ }))
+
+  " [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   call extend(rules, pgmnt#hi#group(
         \ ['TSFunction', 'TSFunctionBuiltin', 'TSFunctionMacro'], {
         \   'ctermfg': c.pale,
@@ -584,13 +591,6 @@ function! s:create_colors(palette) abort
         \   'gui': 'underline',
         \   'guifg': g.lblue,
         \   'term': 'underline',
-        \ }))
-
-  " [zenspace.vim](https://github.com/thinca/vim-zenspace)
-  call extend(rules, pgmnt#hi#group(
-        \ 'ZenSpace', {
-        \   'ctermbg': c.red,
-        \   'guibg': g.red,
         \ }))
   " }}}
 
@@ -830,7 +830,7 @@ function! s:create_links() abort
   " [vim-swift](https://github.com/toyamarinyon/vim-swift)
   call add(links, pgmnt#hi#link('swiftIdentifier', 'icebergNormalFg'))
 
-  " [Tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  " [nvim-treesitter (old declaration)](https://github.com/nvim-treesitter/nvim-treesitter)
   call add(links, pgmnt#hi#link('TSAttribute', 'Special'))
   call add(links, pgmnt#hi#link('TSBoolean', 'Constant'))
   call add(links, pgmnt#hi#link('TSCharacter', 'Constant'))
@@ -853,7 +853,7 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('TSOperator', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSParameter', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSParameterReference', 'icebergNormalFg'))
-  call add(links, pgmnt#hi#link('TSProperty', 'TSField'))
+  call add(links, pgmnt#hi#link('TSProperty', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSPunctDelimiter', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSPunctBracket', 'icebergNormalFg'))
   call add(links, pgmnt#hi#link('TSPunctSpecial', 'Special'))
@@ -887,12 +887,68 @@ function! s:create_links() abort
   return links
 endfunction
 
+function! s:create_neovim_08_links() abort
+  let links = []
+
+  " Rules for only Neovim 0.8 or higher plugins {{{
+  " [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  call add(links, pgmnt#hi#link('@attribute', 'TSAttribute'))
+  call add(links, pgmnt#hi#link('@boolean', 'TSBoolean'))
+  call add(links, pgmnt#hi#link('@character', 'TSCharacter'))
+  call add(links, pgmnt#hi#link('@comment', 'TSComment'))
+  call add(links, pgmnt#hi#link('@constructor', 'TSConstructor'))
+  call add(links, pgmnt#hi#link('@conditional', 'TSConditional'))
+  call add(links, pgmnt#hi#link('@constant', 'TSConstant'))
+  call add(links, pgmnt#hi#link('@constant.builtin', 'TSConstBuiltin'))
+  call add(links, pgmnt#hi#link('@constant.macro', 'TSConstMacro'))
+  call add(links, pgmnt#hi#link('@error', 'TSError'))
+  call add(links, pgmnt#hi#link('@exception', 'TSException'))
+  call add(links, pgmnt#hi#link('@field', 'TSField'))
+  call add(links, pgmnt#hi#link('@float', 'TSFloat'))
+  call add(links, pgmnt#hi#link('@function', 'TSFunction'))
+  call add(links, pgmnt#hi#link('@function.builtin', 'TSFunctionBuiltin'))
+  call add(links, pgmnt#hi#link('@function.macro', 'TSFunctionMacro'))
+  call add(links, pgmnt#hi#link('@include', 'TSInclude'))
+  call add(links, pgmnt#hi#link('@keyword', 'TSKeyword'))
+  call add(links, pgmnt#hi#link('@keyword.function', 'TSKeywordFunction'))
+  call add(links, pgmnt#hi#link('@label', 'TSLabel'))
+  call add(links, pgmnt#hi#link('@method', 'TSMethod'))
+  call add(links, pgmnt#hi#link('@namespace', 'TSNamespace'))
+  call add(links, pgmnt#hi#link('@number', 'TSNumber'))
+  call add(links, pgmnt#hi#link('@operator', 'TSOperator'))
+  call add(links, pgmnt#hi#link('@parameter', 'TSParameter'))
+  call add(links, pgmnt#hi#link('@parameter.reference', 'TSParameterReference'))
+  call add(links, pgmnt#hi#link('@property', 'TSProperty'))
+  call add(links, pgmnt#hi#link('@punctuation.delimiter', 'TSPunctDelimiter'))
+  call add(links, pgmnt#hi#link('@punctuation.bracket', 'TSPunctBracket'))
+  call add(links, pgmnt#hi#link('@punctuation.special', 'TSPunctSpecial'))
+  call add(links, pgmnt#hi#link('@repeat', 'TSRepeat'))
+  call add(links, pgmnt#hi#link('@string', 'TSString'))
+  call add(links, pgmnt#hi#link('@string.regex', 'TSStringRegex'))
+  call add(links, pgmnt#hi#link('@string.escape', 'TSStringEscape'))
+  call add(links, pgmnt#hi#link('@tag', 'TSTag'))
+  call add(links, pgmnt#hi#link('@tag.attribute', 'TSTagAttribute'))
+  call add(links, pgmnt#hi#link('@tag.delimiter', 'TSTagDelimiter'))
+  call add(links, pgmnt#hi#link('@text', 'TSText'))
+  call add(links, pgmnt#hi#link('@text.note', 'Todo'))
+  call add(links, pgmnt#hi#link('@text.title', 'TSTitle'))
+  call add(links, pgmnt#hi#link('@text.uri', 'TSURI'))
+  call add(links, pgmnt#hi#link('@type', 'TSType'))
+  call add(links, pgmnt#hi#link('@type.builtin', 'TSTypeBuiltin'))
+  call add(links, pgmnt#hi#link('@variable', 'TSVariable'))
+  call add(links, pgmnt#hi#link('@variable.builtin', 'TSVariableBuiltin'))
+  " }}}
+
+  return links
+endfunction
+
 function! s:create_context() abort
   let d = s:create_colors(
         \ iceberg#palette#dark#create())
   let l = s:create_colors(
         \ iceberg#palette#light#create())
   let links = s:create_links()
+  let neovim_08_links = s:create_neovim_08_links()
 
   return {
         \   'modified': strftime('%Y-%m-%d %H:%M%z'),
@@ -903,6 +959,7 @@ function! s:create_context() abort
         \   'light_neovim_term_defs': l.neovim_term_defs,
         \   'light_vim_term_defs': l.vim_term_defs,
         \   'links': links,
+        \   'neovim_08_links': neovim_08_links,
         \ }
 endfunction
 

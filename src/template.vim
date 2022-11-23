@@ -40,6 +40,10 @@ endif
 
 {{ links }}
 
+if has('nvim-0.8')
+  {{ neovim_08_links }}
+endif
+
 if !has('nvim')
   hi! link SpecialKey Whitespace
 endif
