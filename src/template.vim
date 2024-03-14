@@ -44,6 +44,8 @@ if has('nvim-0.8')
   {{ neovim_08_links }}
 endif
 
-if !has('nvim')
+let g:iceberg_specialkey_ws = get(g:, 'iceberg_specialkey_ws', has('nvim') ? 0 : 1)
+
+if iceberg_specialkey_ws
   hi! link SpecialKey Whitespace
 endif
