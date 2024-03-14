@@ -1,0 +1,4 @@
+set -x
+vim -c 'cd %:h' -c 'source %' -c ':x' src/iceberg.vim
+
+
