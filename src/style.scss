@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,700');
+@use 'sass:color';
+@use 'sass:math';
 
-@import 'vars';
-@import 'mixins';
-@import 'reset';
-@import 'base';
-@import 'iceberg';
-
+@use 'vars';
+@use 'mixins';
+@use 'reset';
+@use 'base';
+@use 'iceberg';
 
 .main {
-	background-color: $iceberg-linenr-bg;
+	background-color: var(--color-linenr-bg);
 	overflow: hidden;
 
 	&_skyLayout {
-		background-color: $iceberg-normal-bg;
+		background-color: var(--color-normal-bg);
 	}
 	&_seaLayout {
 		position: relative;
@@ -34,7 +34,7 @@
 	padding-top: 64px;
 	position: relative;
 
-	@include sp() {
+	@include mixins.sp() {
 		padding-bottom: 256px;
 	}
 
@@ -54,10 +54,10 @@
 			background-image: url(../img/iceberg-s.svg);
 			height: 32px;
 			right: 627px;
-			top: (-32px / 2);
+			top: math.div(-32px, 2);
 			width: 32px;
 
-			@include sp() {
+			@include mixins.sp() {
 				right: 531px;
 			}
 		}
@@ -65,10 +65,10 @@
 			background-image: url(../img/iceberg-l.svg);
 			height: 476px;
 			right: -32px;
-			top: (-476px / 2);
+			top: math.div(-476px, 2);
 			width: 595px;
 
-			@include sp() {
+			@include mixins.sp() {
 				right: -128px;
 			}
 		}
@@ -78,7 +78,7 @@
 		padding-right: 64px;
 		position: relative;
 
-		@include sp() {
+		@include mixins.sp() {
 			padding-left: 16px;
 			padding-right: 16px;
 		}
@@ -87,12 +87,14 @@
 		max-width: 377px;
 	}
 	&_title {
-		@include hide-text();
+		@include mixins.hide-text();
 
-		background: url(../img/title.svg) no-repeat center;
-		background-size: contain;
-		height: 0;
-		padding-top: percentage(95 / 377);
+		& {
+			background: url(../img/title.svg) no-repeat center;
+			background-size: contain;
+			height: 0;
+			padding-top: math.percentage(math.div(95, 377));
+		}
 	}
 	&_bannerLayout {
 		font-size: 0;
@@ -107,9 +109,9 @@
 }
 
 .button {
-	background-color: $button-bg-color;
-	box-shadow: 0 2px 4px rgba($bg-color, 0.3);
-	color: $bg-color;
+	background-color: var(--color-button-bg);
+	box-shadow: 0 2px 4px rgba(var(--color-bg), 0.3);
+	color: var(--color-bg);
 	display: inline-block;
 	font-weight: bold;
 	padding: 8px 1.0em;
@@ -117,7 +119,7 @@
 	text-decoration: none;
 
 	&:hover {
-		background-color: adjust-color($button-bg-color, $saturation: +5%, $lightness: +5%);
+		background-color: var(--color-button-bg-hover);
 	}
 	&_icon {
 		font-size: 1rem;
@@ -132,7 +134,7 @@
 	padding-bottom: 64px;
 	padding-top: 64px;
 
-	@include sp() {
+	@include mixins.sp() {
 		padding-bottom: 32px;
 		padding-top: 32px;
 	}
@@ -140,15 +142,17 @@
 	&#{&}-lead {
 		padding-top: 128px;
 
-		@include sp() {
+		@include mixins.sp() {
 			padding-top: 64px;
 		}
 	}
 
 	&_innerLayout {	
-		@include responsive-inner();
+		@include mixins.responsive-inner();
 
-		position: relative;
+		& {
+			position: relative;
+		}
 	}
 	&_title {
 		font-size: 2rem;
@@ -160,7 +164,7 @@
 		margin-top: 64px;
 		text-align: center;
 
-		@include sp() {
+		@include mixins.sp() {
 			margin-top: 32px;
 		}
 	}
@@ -176,7 +180,7 @@
 	padding: 0 0 0 1.5em;
 }
 .featureListItem {
-	line-height: $p-line-height;
+	line-height: var(--p-line-height);
 	list-style-type: none;
 	position: relative;
 
@@ -185,43 +189,43 @@
 	}
 
 	&_icon {
-		color: $iceberg-green;
+		color: var(--color-green);
 		position: absolute;
 		left: -1.5em;
-		line-height: $p-line-height !important;
+		line-height: var(--p-line-height) !important;
 	}
 }
 
 .previewListItem {
 	list-style-type: none;
 
-	@include pc() {
+	@include mixins.pc() {
 		display: inline-block;
 		vertical-align: top;
-		width: percentage((1 - 0.02) / 2);
+		width: math.percentage(math.div(1 - 0.02, 2));
 
 		&:nth-child(2n + 2) {
-			margin-left: percentage(0.02);
+			margin-left:math.percentage(0.02);
 		}
 		&:nth-child(n + 3) {
-			margin-top: percentage(0.02);
+			margin-top:math.percentage(0.02);
 		}
 	}
-	@include sp() {
+	@include mixins.sp() {
 		& + & {
 			margin-top: 16px;
 		}
 	}
 }
 .preview {
-	box-shadow: 0 2px 4px rgba($bg-color, 0.3);
+	box-shadow: 0 2px 4px rgba(var(--color-bg), 0.3);
 	position: relative;
 	height: 0;
-	padding-top: percentage(9 / 16);
+	padding-top:math.percentage(math.div(9, 16));
 	position: relative;
 
 	&:after {
-		border: rgba($iceberg-normal-bg, 0.5) solid 1px;
+		border: rgba(var(--color-normal-bg), 0.5) solid 1px;
 		bottom: 0;
 		content: '';
 		display: block;
@@ -241,8 +245,8 @@
 		top: 0;
 	}
 	&_title {
-		background-color: $iceberg-normal-fg;
-		color: $iceberg-normal-bg;
+		background-color: var(--color-normal-fg);
+		color: var(--color-normal-bg);
 		font-weight: bold;
 		padding: 0 0.5em;
 		position: absolute;
@@ -265,7 +269,7 @@
 
 		img {
 			border-radius: 3px;
-			box-shadow: 0 8px 16px rgba($iceberg-normal-bg, 0.5);
+			box-shadow: 0 8px 16px rgba(var(--color-normal-bg), 0.5);
 			max-width: 100%;
 		}
 	}
@@ -275,14 +279,14 @@
 }
 
 .footer {
-	color: $iceberg-comment-fg;
+	color: var(--color-comment-fg);
 	font-size: 0.9rem;
 	padding-bottom: 16px;
 	padding-top: 96px;
 	position: relative;
 	text-align: center;
 
-	@include sp() {
+	@include mixins.sp() {
 		padding-top: 32px;
 	}
 }

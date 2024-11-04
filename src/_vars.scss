@@ -1,26 +1,33 @@
-$sp-width: 800px;
+@use 'sass:color';
 
-$iceberg-normal-bg: hsl(230deg, 20%, 11%);
-$iceberg-normal-fg: hsl(230deg, 10%, 80%);
-$iceberg-blue: hsl(215deg, 37%, 65%);
-$iceberg-green: hsl(72deg, 35%, 65%);
-$iceberg-lblue: hsl(190deg, 32%, 65%);
-$iceberg-orange: hsl(25deg, 65%, 68%);
-$iceberg-purple: hsl(255deg, 32%, 68%);
-$iceberg-red: hsl(0, 63%, 68%);
-$iceberg-comment-fg: hsl(230deg, 12%, 48%);
-$iceberg-linenr-bg: adjust-color($iceberg-normal-bg, $saturation: +5%, $lightness: +5%);
-$iceberg-statuslinenc-bg: darken($iceberg-normal-bg, 3%);
+:root {
+	$normal-bg: hsl(230deg, 20%, 11%);
+	$color-lblue: hsl(190deg, 32%, 65%);
 
-$bg-color: $iceberg-normal-bg;
-$fg-color: $iceberg-normal-fg;
+	--color-normal-bg: #{$normal-bg};
+	--color-normal-fg: hsl(230deg, 10%, 80%);
+	--color-blue: hsl(215deg, 37%, 65%);
+	--color-green: hsl(72deg, 35%, 65%);
+	--color-lblue: #{$color-lblue};
+	--color-orange: hsl(25deg, 65%, 68%);
+	--color-purple: hsl(255deg, 32%, 68%);
+	--color-red: hsl(0, 63%, 68%);
+	--color-comment-fg: hsl(230deg, 12%, 48%);
 
-$font-family-sans: 'Roboto Mono', sans-serif;
-$font-family-title: 'Roboto Mono', sans-serif;
-$font-family-mono: 'Roboto Mono', monospace;
+	--color-linenr-bg: #{color.adjust($normal-bg, $saturation: +5%, $lightness: +5%)};
+	--color-statuslinenc-bg: #{color.adjust($normal-bg, $lightness: -3%)};
 
-$a-color: $iceberg-blue;
-$button-bg-color: $iceberg-lblue;
-$heading-color: $fg-color;
+	--color-a: var(--color-blue);
+	--color-bg: var(--color-normal-bg);
+	--color-fg: var(--color-normal-fg);
+	--color-heading: var(--color-fg);
 
-$p-line-height: 1.8;
+	--color-button-bg: #{$color-lblue};
+	--color-button-bg-hover: #{color.adjust($color-lblue, $saturation: +5%, $lightness: +5%)};
+
+	--font-family-sans: 'Roboto Mono', sans-serif;
+	--font-family-title: 'Roboto Mono', sans-serif;
+	--font-family-mono: 'Roboto Mono', monospace;
+
+	--p-line-height: 1.8;
+}

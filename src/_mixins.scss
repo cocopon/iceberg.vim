@@ -1,3 +1,5 @@
+$sp-width: 800px;
+
 @mixin pc() {
 	@media screen and (min-width: ($sp-width + 32px + 1px)) {
 		@content;
@@ -5,7 +7,7 @@
 }
 
 @mixin sp() {
-	@media screen and (max-width: $sp-width + 32px) {
+	@media screen and (max-width: ($sp-width + 32px)) {
 		@content;
 	}
 }
