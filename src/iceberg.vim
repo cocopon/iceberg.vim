@@ -518,6 +518,29 @@ function! s:create_colors(palette) abort
         \   'guifg': g.red,
         \ }))
 
+  " [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
+  call extend(rules, pgmnt#hi#group(
+        \ 'GitSignsStagedAdd', {
+        \   'ctermbg': c.green_tint_bg,
+        \   'ctermfg': c.green_tint_fg,
+        \   'guibg': g.green_tint_bg,
+        \   'guifg': g.green_tint_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ ['GitSignsStagedChange', 'GitSignsStagedChangeDelete'], {
+        \   'ctermbg': c.lblue_tint_bg,
+        \   'ctermfg': c.lblue_tint_fg,
+        \   'guibg': g.lblue_tint_bg,
+        \   'guifg': g.lblue_tint_fg,
+        \ }))
+  call extend(rules, pgmnt#hi#group(
+        \ 'GitSignsStagedDelete', {
+        \   'ctermbg': c.red_tint_bg,
+        \   'ctermfg': c.red_tint_fg,
+        \   'guibg': g.red_tint_bg,
+        \   'guifg': g.red_tint_bg,
+        \ }))
+
   " [git-messenger.vim](https://github.com/rhysd/git-messenger.vim)
   call extend(rules, pgmnt#hi#group(
         \ 'gitmessengerEndOfBuffer', {
