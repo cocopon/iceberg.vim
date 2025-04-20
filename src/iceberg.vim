@@ -813,6 +813,16 @@ function! s:create_links() abort
   call add(links, pgmnt#hi#link('SignifySignDelete', 'GitGutterDelete'))
   call add(links, pgmnt#hi#link('SignifySignDeleteFirstLine', 'SignifySignDelete'))
 
+  " [GitSigns](https://github.com/lewis6991/gitsigns.nvim)
+  call add(links, pgmnt#hi#link('GitSignsAdd', 'GitGutterAdd'))
+  call add(links, pgmnt#hi#link('GitSignsChange', 'GitGutterChange'))
+  call add(links, pgmnt#hi#link('GitSignsChangeDelete', 'GitGutterChangeDelete'))
+  call add(links, pgmnt#hi#link('GitSignsDelete', 'GitGutterDelete'))
+  call add(links, pgmnt#hi#link('GitSignsStagedAdd', 'DiffAdd'))
+  call add(links, pgmnt#hi#link('GitSignsStagedChange', 'DiffChange'))
+  call add(links, pgmnt#hi#link('GitSignsStagedChangeDelete', 'DiffChange'))
+  call add(links, pgmnt#hi#link('GitSignsStagedDelete', 'DiffDelete'))
+
   " [Startify](https://github.com/mhinz/vim-startify)
   call add(links, pgmnt#hi#link('StartifyBracket', 'Comment'))
   call add(links, pgmnt#hi#link('StartifyFile', 'Identifier'))
