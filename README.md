@@ -25,6 +25,7 @@ information.
   / [EasyMotion][easymotion]
   / [Git Gutter][git-gutter]
   / [git-messenger.vim][git-messenger.vim]
+  / [gitsigns.nvim][gitsigns.nvim]
   / [Signify][signify]
   / [Sneak][sneak]
   / [Startify][startify]
@@ -149,6 +150,7 @@ MIT License. See `LICENSE.txt` for more information.
 [easymotion]:https://github.com/easymotion/vim-easymotion
 [git-gutter]:https://github.com/airblade/vim-gitgutter
 [git-messenger.vim]:https://github.com/rhysd/git-messenger.vim
+[gitsigns.nvim]:https://github.com/lewis6991/gitsigns.nvim
 [lightline]:https://github.com/itchyny/lightline.vim
 [neovim]:https://neovim.io/
 [pgmnt]:https://github.com/cocopon/pgmnt.vim
