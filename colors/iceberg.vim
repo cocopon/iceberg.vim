@@ -388,6 +388,14 @@ hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete
 hi! link SignifySignDelete GitGutterDelete
 hi! link SignifySignDeleteFirstLine SignifySignDelete
+hi! link GitSignsAdd GitGutterAdd
+hi! link GitSignsChange GitGutterChange
+hi! link GitSignsChangeDelete GitGutterChangeDelete
+hi! link GitSignsDelete GitGutterDelete
+hi! link GitSignsStagedAdd DiffAdd
+hi! link GitSignsStagedChange DiffChange
+hi! link GitSignsStagedChangeDelete DiffChange
+hi! link GitSignsStagedDelete DiffDelete
 hi! link StartifyBracket Comment
 hi! link StartifyFile Identifier
 hi! link StartifyFooter Constant
