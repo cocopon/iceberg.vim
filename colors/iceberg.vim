@@ -5,7 +5,7 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2022-11-16 22:13+0900
+" Modified:   2024-03-14 07:58-0400
 " License:    MIT
 
 
@@ -497,6 +497,8 @@ if has('nvim-0.8')
   hi! link @variable.builtin TSVariableBuiltin
 endif
 
-if !has('nvim')
+let g:iceberg_specialkey_ws = get(g:, 'iceberg_specialkey_ws', has('nvim') ? 0 : 1)
+
+if iceberg_specialkey_ws
   hi! link SpecialKey Whitespace
 endif
