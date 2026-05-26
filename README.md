@@ -117,20 +117,11 @@ color scheme, you don't have to follow these steps.
    to your Vim.
 
 2. To modify a color palette, edit `autoload/iceberg/palette/(dark|light).vim`.
-   If you make changes, be sure to `:source` this file before step 4 otherwise
-   your color palette changes will not be reflected.
+   To modify highlighting groups or links, edit `src/iceberg.vim`.
 
-3. To modify highlighting groups or links, edit `src/iceberg.vim`.
-
-4. After editing, compile the source file as below:
-
-   ```vim
-   :e src/iceberg.vim
-   :cd %:h
-   :source %
-   ```
-
-   Compiled files will be output into `autoload` directory.
+3. Run `make` from the top-level project directory. (If you are using Neovim
+   rather than Vim, run `make VIM=nvim` or edit the makefile to set
+   `VIM=nvim`.) Compiled files will be output into `autoload` directory.
 
 
 
